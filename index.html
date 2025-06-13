@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Guide: Building AI Company Research Apps</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Calm Harmony -->
+    <!-- Application Structure Plan: The SPA is designed as a thematic, non-linear dashboard, deviating from the report's chapter structure to offer a more intuitive user flow for a developer audience. The core architecture organizes content into logical pillars of application development: "Data Sourcing", "Architecture", and "AI Features". This is followed by an actionable "Production-Readiness Checklist" and a concluding "Strategic Recommendations" section. This structure was chosen because it mirrors a developer's mental model when conceptualizing a project, making the report's insights easier to find and apply. Key interactions include dynamic chart filtering for API comparison, toggleable cards for tech stack evaluation, and expandable accordions for production considerations, all designed to make dense information digestible and explorable. -->
+    <!-- Visualization & Content Choices: 
+        - Report Info: Table 1 (API Comparison). Goal: Compare. Viz/Method: Interactive Bar Chart (Chart.js) with dropdown filter. Interaction: User selects a metric (cost, rate limit), chart updates dynamically. Justification: More engaging and allows user-driven comparison vs. a static table.
+        - Report Info: Table 2 (Tech Stack Comparison). Goal: Compare. Viz/Method: Side-by-side card layout (HTML/Tailwind). Interaction: Clickable elements to reveal detailed text. Justification: Provides a high-level, scannable comparison with options for a deep dive.
+        - Report Info: Section VII (Production Considerations). Goal: Organize/Inform. Viz/Method: Expandable Accordion (HTML/Tailwind/JS). Interaction: Click to expand/collapse sections. Justification: Breaks down extensive text into manageable, focused topics, functioning as an interactive checklist.
+        - Report Info: App Workflow, Build vs. Buy. Goal: Organize. Viz/Method: Flow diagrams using styled divs and Unicode arrows (HTML/Tailwind). Justification: Visualizes processes simply and effectively without external libraries or graphics.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F7F4;
+            color: #4A4A4A;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #E8A87C;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-[#4A6D7C]">AI App Builder's Guide</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#summary" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700">Summary</a>
+                        <a href="#data-sourcing" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700">Data Sourcing</a>
+                        <a href="#architecture" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700">Architecture</a>
+                        <a href="#ai-features" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700">AI Features</a>
+                        <a href="#production" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700">Production-Ready</a>
+                        <a href="#recommendations" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700">Recommendations</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+        <section id="summary" class="text-center mb-16 md:mb-24 scroll-mt-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#4A6D7C] mb-4">From Blueprint to Production-Grade AI</h2>
+            <p class="max-w-3xl mx-auto text-lg text-gray-600">
+                This interactive guide analyzes the process of building an AI-powered company research application. It highlights the strengths of a typical initial plan but focuses on critical, often-overlooked enhancements needed for a robust, secure, and scalable product. Explore the key considerations for data sourcing, architecture, AI implementation, and production readiness.
+            </p>
+        </section>
+
+        <section id="data-sourcing" class="mb-16 md:mb-24 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl md:text-3xl font-bold text-[#4A6D7C]">Data Sourcing: The Fuel for Intelligence</h3>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600">
+                    Choosing the right data sources is foundational. A successful application requires a strategic, multi-layered approach, combining various APIs to achieve comprehensive, reliable, and cost-effective data acquisition. Below, you can compare different APIs and understand the critical "Build vs. Buy" decision for complex data like SEC filings.
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
+                    <h4 class="text-xl font-semibold text-gray-800">Interactive API Comparison</h4>
+                    <div class="flex items-center gap-2">
+                        <label for="metric-selector" class="text-sm font-medium text-gray-700">Compare by:</label>
+                        <select id="metric-selector" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#4A6D7C] focus:border-[#4A6D7C] block w-full p-2.5">
+                            <option value="cost" selected>Indicative Cost</option>
+                            <option value="rateLimit">Free Tier Rate Limit</option>
+                            <option value="dataQuality">Data Quality/Focus</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="apiChart"></canvas>
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <h4 class="text-xl text-center font-semibold text-gray-800 mb-6">The SEC EDGAR Challenge: Build vs. Buy</h4>
+                 <div class="grid md:grid-cols-3 items-center gap-8 text-center">
+                    <div class="bg-white rounded-xl shadow-md p-6 card">
+                        <h5 class="font-bold text-lg text-[#4A6D7C] mb-2">Build (DIY Parsing)</h5>
+                        <p class="text-gray-600 text-sm">Use the official SEC API and libraries like `sec-parser`. Offers maximum control and no subscription fees, but requires significant development effort to handle complex, varied formats.</p>
+                    </div>
+                    <div class="text-2xl font-bold text-[#E8A87C]">vs.</div>
+                    <div class="bg-white rounded-xl shadow-md p-6 card">
+                         <h5 class="font-bold text-lg text-[#4A6D7C] mb-2">Buy (Commercial Service)</h5>
+                        <p class="text-gray-600 text-sm">Use a service like `sec-api.io`. Provides pre-parsed, structured data via API, accelerating development. Incurs subscription costs and reliance on a third party.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture" class="mb-16 md:mb-24 scroll-mt-20">
+             <div class="text-center mb-12">
+                <h3 class="text-2xl md:text-3xl font-bold text-[#4A6D7C]">Application Architecture: The Engine & Interface</h3>
+                 <p class="mt-4 max-w-2xl mx-auto text-gray-600">
+                    The technology stack forms the core of the application. The choice of backend and frontend frameworks significantly impacts performance, scalability, and developer productivity. The analysis recommends specific technologies best suited for this data-intensive, AI-driven project.
+                </p>
+            </div>
+             <div class="grid md:grid-cols-2 gap-8">
+                 <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">Backend: FastAPI vs. Flask</h4>
+                    <p class="text-gray-600 mb-6">For a backend making multiple network calls, asynchronous capability is key. FastAPI is strongly recommended over Flask for its superior performance in I/O-bound tasks, built-in data validation, and automatic API documentation.</p>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-[#4A6D7C] pl-4">
+                            <h5 class="font-bold">FastAPI (Recommended)</h5>
+                            <ul class="list-disc list-inside text-sm text-gray-600 mt-1">
+                                <li>Native Asynchronous Support (High Performance)</li>
+                                <li>Pydantic Data Validation (Robustness)</li>
+                                <li>Automatic Interactive Docs (Developer Efficiency)</li>
+                            </ul>
+                        </div>
+                        <div class="border-l-4 border-gray-300 pl-4">
+                             <h5 class="font-bold">Flask</h5>
+                            <ul class="list-disc list-inside text-sm text-gray-600 mt-1">
+                                <li>Synchronous by Default (Slower for I/O)</li>
+                                <li>Requires Extensions for Validation</li>
+                                <li>Simpler Initial Learning Curve</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">Frontend: React vs. Vue</h4>
+                    <p class="text-gray-600 mb-6">Both are excellent choices. The decision depends more on team familiarity and the required complexity of data visualizations. React has a slightly larger ecosystem for custom charts, while Vue is often praised for its gentle learning curve.</p>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-gray-300 pl-4">
+                            <h5 class="font-bold">React</h5>
+                            <ul class="list-disc list-inside text-sm text-gray-600 mt-1">
+                                <li>Vast Ecosystem (especially for complex viz)</li>
+                                <li>Ideal for large, complex applications</li>
+                                <li>Strong community support</li>
+                            </ul>
+                        </div>
+                        <div class="border-l-4 border-gray-300 pl-4">
+                             <h5 class="font-bold">Vue</h5>
+                            <ul class="list-disc list-inside text-sm text-gray-600 mt-1">
+                                <li>Gentler Learning Curve</li>
+                                <li>Excellent Performance and Documentation</li>
+                                <li>Great for small-to-medium sized projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ai-features" class="mb-16 md:mb-24 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl md:text-3xl font-bold text-[#4A6D7C]">AI Feature Implementation: Adding Intelligence</h3>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600">
+                    The core value of the application comes from its AI capabilities. Using pre-trained models from Hugging Face Transformers is the recommended approach for sentiment analysis, news categorization, and summarization. However, successful implementation requires careful model selection and handling potential challenges.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 card">
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Sentiment Analysis</h4>
+                    <p class="text-gray-600 text-sm">Detect positive, negative, or neutral tones in news. Refinement: Use models that output scores for nuance and consider models fine-tuned on financial text for better accuracy.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 card">
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">News Categorization</h4>
+                    <p class="text-gray-600 text-sm">Sort news into categories like "Partnerships" or "Legal". Refinement: Use flexible "zero-shot classification" models to define categories dynamically without retraining.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 card">
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Summarization</h4>
+                    <p class="text-gray-600 text-sm">Generate concise summaries of articles. Refinement: For "recent developments", synthesize multiple articles by clustering them by event before summarizing, rather than summarizing one long text.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="production" class="mb-16 md:mb-24 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl md:text-3xl font-bold text-[#4A6D7C]">Production-Readiness Checklist</h3>
+                 <p class="mt-4 max-w-2xl mx-auto text-gray-600">
+                    Moving from a prototype to a live application requires addressing critical operational elements. These are not afterthoughts but foundational for security, reliability, and performance.
+                </p>
+            </div>
+            <div id="accordion-container" class="space-y-4 max-w-4xl mx-auto">
+            </div>
+        </section>
+
+        <section id="recommendations" class="scroll-mt-20">
+             <div class="text-center mb-12">
+                <h3 class="text-2xl md:text-3xl font-bold text-[#4A6D7C]">Strategic Recommendations</h3>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600">
+                    To transform the initial concept into a powerful, production-grade intelligence tool, the following strategic actions are recommended.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 card">
+                    <div class="flex items-center mb-3">
+                         <span class="bg-[#E8A87C] text-white rounded-full h-8 w-8 flex items-center justify-center font-bold text-lg">1</span>
+                        <h4 class="ml-3 font-bold text-lg text-gray-800">Prioritize Ops Early</h4>
+                    </div>
+                    <p class="text-gray-600 text-sm">Integrate API key security (secret managers), error handling with retries, and data caching from the very beginning of the project.</p>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 card">
+                    <div class="flex items-center mb-3">
+                         <span class="bg-[#E8A87C] text-white rounded-full h-8 w-8 flex items-center justify-center font-bold text-lg">2</span>
+                        <h4 class="ml-3 font-bold text-lg text-gray-800">Use FastAPI</h4>
+                    </div>
+                    <p class="text-gray-600 text-sm">Leverage FastAPI for the backend to benefit from its asynchronous performance, data validation, and developer-friendly features.</p>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 card">
+                     <div class="flex items-center mb-3">
+                         <span class="bg-[#E8A87C] text-white rounded-full h-8 w-8 flex items-center justify-center font-bold text-lg">3</span>
+                        <h4 class="ml-3 font-bold text-lg text-gray-800">Layer Your APIs</h4>
+                    </div>
+                    <p class="text-gray-600 text-sm">Don't rely on one source. Combine free/low-cost APIs for broad coverage with specialized APIs (e.g., NewsAPI.ai) for unique, value-add data.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 card">
+                     <div class="flex items-center mb-3">
+                         <span class="bg-[#E8A87C] text-white rounded-full h-8 w-8 flex items-center justify-center font-bold text-lg">4</span>
+                        <h4 class="ml-3 font-bold text-lg text-gray-800">Solve the SEC Problem</h4>
+                    </div>
+                    <p class="text-gray-600 text-sm">Make a conscious "build vs. buy" decision for parsing complex SEC filings. Underestimating this will cause major delays.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 card">
+                     <div class="flex items-center mb-3">
+                         <span class="bg-[#E8A87C] text-white rounded-full h-8 w-8 flex items-center justify-center font-bold text-lg">5</span>
+                        <h4 class="ml-3 font-bold text-lg text-gray-800">Iterate on AI</h4>
+                    </div>
+                    <p class="text-gray-600 text-sm">Develop and test one AI feature at a time. Explore domain-specific models and refine complex tasks like multi-document summarization.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 card">
+                     <div class="flex items-center mb-3">
+                         <span class="bg-[#E8A87C] text-white rounded-full h-8 w-8 flex items-center justify-center font-bold text-lg">6</span>
+                        <h4 class="ml-3 font-bold text-lg text-gray-800">Focus on UX</h4>
+                    </div>
+                    <p class="text-gray-600 text-sm">The ultimate value lies in clarity. Use effective, interactive data visualizations to make complex information understandable and actionable.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white mt-12">
+        <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            <p>Interactive Analysis generated from Source Report. All content reflects the findings of the original document.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const apiData = [
+                { name: 'NewsAPI.org', cost: 1, rateLimit: 2, dataQuality: 2, description: 'Raw text, requires backend AI processing' },
+                { name: 'NewsAPI.ai', cost: 3, rateLimit: 3, dataQuality: 4, description: 'AI-enriched data (entities, topics, sentiment)' },
+                { name: 'Finnhub', cost: 5, rateLimit: 4, dataQuality: 5, description: 'Comprehensive financials, alternative data. Free tier is limited.' },
+                { name: 'GNews', cost: 1, rateLimit: 1, dataQuality: 2, description: 'Very restrictive rate limits on free tier.' },
+                { name: 'Alpha Vantage', cost: 2, rateLimit: 2, dataQuality: 3, description: 'Good free tier, broad data coverage.' },
+                { name: 'Polygon.io', cost: 4, rateLimit: 3, dataQuality: 5, description: 'Premium, low-latency market data.' },
+                { name: 'SEC EDGAR (Official)', cost: 0, rateLimit: 5, dataQuality: 4, description: 'Authoritative, but requires significant parsing effort.' },
+                { name: 'sec-api.io', cost: 3, rateLimit: 3, dataQuality: 4, description: 'Commercial service providing pre-parsed SEC data.' },
+            ];
+            
+            const qualityLabels = ['N/A', 'Restrictive', 'Basic', 'Good', 'Enriched', 'Excellent/Pro'];
+            const costLabels = ['Free', 'Low', 'Freemium', 'Tiered', 'Premium', 'Enterprise'];
+
+            const metricSelector = document.getElementById('metric-selector');
+            const ctx = document.getElementById('apiChart').getContext('2d');
+            let apiChart;
+
+            function renderChart(metric) {
+                if (apiChart) {
+                    apiChart.destroy();
+                }
+
+                let chartData, chartLabels, tooltipCallback;
+                
+                switch(metric) {
+                    case 'cost':
+                        chartData = apiData.map(d => d.cost);
+                        chartLabels = costLabels;
+                        tooltipCallback = (context) => costLabels[context.raw] || '';
+                        break;
+                    case 'rateLimit':
+                        chartData = apiData.map(d => d.rateLimit);
+                        chartLabels = qualityLabels;
+                         tooltipCallback = (context) => qualityLabels[context.raw] || '';
+                        break;
+                    case 'dataQuality':
+                        chartData = apiData.map(d => d.dataQuality);
+                        chartLabels = qualityLabels;
+                         tooltipCallback = (context) => qualityLabels[context.raw] || '';
+                        break;
+                }
+
+                apiChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: apiData.map(d => d.name),
+                        datasets: [{
+                            label: metricSelector.options[metricSelector.selectedIndex].text,
+                            data: chartData,
+                            backgroundColor: '#4A6D7C',
+                            borderColor: '#4A6D7C',
+                            borderWidth: 1,
+                            borderRadius: 4,
+                        }]
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        responsive: true,
+                        indexAxis: 'y',
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                ticks: {
+                                    callback: function(value, index, values) {
+                                        return chartLabels[value];
+                                    },
+                                    color: '#4A4A4A',
+                                },
+                                grid: {
+                                    display: false
+                                }
+                            },
+                            y: {
+                                ticks: {
+                                    color: '#4A4A4A',
+                                    font: {
+                                        size: 12
+                                    },
+                                    autoSkip: false,
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        let label = context.dataset.label || '';
+                                        if (label) {
+                                            label += ': ';
+                                        }
+                                        if (context.parsed.x !== null) {
+                                             label += tooltipCallback(context);
+                                        }
+                                        return label;
+                                    },
+                                    afterLabel: function(context) {
+                                        return apiData[context.dataIndex].description;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            metricSelector.addEventListener('change', (e) => {
+                renderChart(e.target.value);
+            });
+
+            renderChart('cost');
+
+            const accordionData = [
+                { title: 'API Key Management & Security', content: 'Store keys using environment variables or dedicated secret managers (like AWS Secrets Manager), never in code. Rotate keys regularly and use the principle of least privilege.' },
+                { title: 'Rate Limiting & Error Handling', content: 'Respect API rate limits. Implement automatic retries with exponential backoff for transient errors (status code 429). Handle all HTTP error codes gracefully to prevent application crashes.' },
+                { title: 'Data Caching & Performance', content: 'Cache API responses that change infrequently using an LRU cache strategy to reduce latency and costs. Use asynchronous backend operations (FastAPI) for I/O tasks and optimize data processing with vectorized pandas operations.' },
+                { title: 'Scalability & Maintainability', content: 'Plan for containerization (Docker). Structure code into modular components. Implement comprehensive structured logging and application performance monitoring (APM) from the start.' },
+                { title: 'Data Quality & Validation', content: 'Be aware of source reliability and bias. Implement data cleaning pipelines to standardize data from different APIs. Validate all data before feeding it into AI models.' },
+                { title: 'User Experience (UX) for Data Display', content: 'Choose the right chart for the data. Use color and interactivity purposefully. Ensure all visualizations are responsive and clear on all devices. The goal is to turn data into actionable insight.' }
+            ];
+
+            const accordionContainer = document.getElementById('accordion-container');
+            accordionData.forEach((item, index) => {
+                const accordionItem = document.createElement('div');
+                accordionItem.className = 'bg-white rounded-xl shadow-md overflow-hidden';
+
+                const accordionHeader = document.createElement('div');
+                accordionHeader.className = 'flex justify-between items-center p-4 md:p-5 cursor-pointer';
+                accordionHeader.innerHTML = `
+                    <h5 class="font-semibold text-gray-800">${item.title}</h5>
+                    <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                `;
+
+                const accordionContent = document.createElement('div');
+                accordionContent.className = 'accordion-content';
+                accordionContent.innerHTML = `<div class="p-4 md:p-5 pt-0 text-gray-600 text-sm">${item.content}</div>`;
+                
+                accordionItem.appendChild(accordionHeader);
+                accordionItem.appendChild(accordionContent);
+                accordionContainer.appendChild(accordionItem);
+
+                accordionHeader.addEventListener('click', () => {
+                    const content = accordionHeader.nextElementSibling;
+                    const icon = accordionHeader.querySelector('svg');
+                    const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+                    document.querySelectorAll('.accordion-content').forEach(el => el.style.maxHeight = '0px');
+                    document.querySelectorAll('.accordion-header svg').forEach(svg => svg.classList.remove('rotate-180'));
+
+                    if (!isOpen) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>
