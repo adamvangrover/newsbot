@@ -155,8 +155,6 @@ The `NewsBot` application (the codebase this `analyst_playbook` folder might res
 This playbook, in conjunction with tools like the conceptual NewsBot and the provided LLM prompt library, aims to create a powerful and flexible environment for financial analysis and reporting.
 
 
-
-=======
 ---
 
 ## VII. Example Report Scenarios
@@ -182,6 +180,7 @@ You can find these examples in the current directory:
 
 These examples can be used as templates or inspiration when drafting your own analytical reports for similar situations. Remember to replace all fictional details with your actual research findings.
 =======
+=======
 
 ---
 
@@ -195,5 +194,26 @@ For analysts looking to deepen their understanding and utilization of AI, especi
     *   **Purpose:** To empower analysts to experiment further, refine their AI interaction strategies, and better understand both the potential and limitations of current AI technologies in their domain.
 
 This advanced guide complements the foundational knowledge in this playbook and the structured prompts in the LLM Prompt Library.
+
+
+
+---
+
+## Core Playbook Resources
+
+This playbook is complemented by several key resources located in this directory, designed to enhance your research and analysis workflow:
+
+*   **[Main Orchestrator Prompt for LLMs](./00_main_orchestrator_prompt.md) (`00_main_orchestrator_prompt.md`):** Your primary starting point for guiding a Large Language Model (LLM) through the comprehensive financial report generation process. It outlines a multi-phase strategy from capability assessment to final report compilation.
+
+*   **[LLM Prompt Library](./01_llm_prompt_library.json) (`01_llm_prompt_library.json`):** A detailed JSON library containing specialized sub-prompts. These are structured for various tasks including LLM environment assessment, diverse data gathering techniques (web search, conceptual NewsBot API interaction), in-depth analysis (sentiment, thematic, SWOT, catalysts, risks), and final report generation (drafting, citation, methodology). Many prompts are designed to encourage structured JSON output from LLMs.
+
+*   **[Advanced AI Usage Guide](./04_advanced_ai_usage_guide.md) (`04_advanced_ai_usage_guide.md`):** This guide explores more sophisticated prompt engineering techniques, strategies for structuring data for AI, conceptual overviews of advanced AI architectures (like RAG and LLM Agents), a set of portable high-impact prompts for ongoing monitoring, the critical role of Human-in-the-Loop (HITL) processes, and future trends in AI for financial analysis.
+
+*   **[Data Sourcing Guide for Financial Analysis](./05_data_sourcing_guide.md) (`05_data_sourcing_guide.md`):** An overview of diverse data sources crucial for financial analysis, including traditional financial statements, news feeds (RSS, APIs), market data providers, web sources, social media, alternative data, and simulated/synthetic data. It includes a framework for assessing the veracity and validity of these sources.
+
+*   **Example Report Scenarios (`example_*.md` files):** Located in this directory, these illustrative reports showcase outputs for scenarios like negative news events, Politically Exposed Person (PEP) assessments, and financial performance snapshots. They are detailed further in **Section VII: Example Report Scenarios** of this README (Note: original section numbering is preserved here; if this 'Core Resources' section is moved earlier by a human, subsequent section numbers in the main body would effectively shift).
+
+The main body of this README (starting with "I. Foundational Research Techniques") provides detailed strategies and best practices applicable to both manual and AI-assisted financial analysis. Refer to these resources to maximize the effectiveness of your research and reporting.
+
 =======
 =======
