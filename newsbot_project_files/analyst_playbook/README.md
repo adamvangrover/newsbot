@@ -155,6 +155,8 @@ The `NewsBot` application (the codebase this `analyst_playbook` folder might res
 This playbook, in conjunction with tools like the conceptual NewsBot and the provided LLM prompt library, aims to create a powerful and flexible environment for financial analysis and reporting.
 
 
+
+=======
 ---
 
 ## VII. Example Report Scenarios
@@ -179,4 +181,19 @@ You can find these examples in the current directory:
     *   **Focus:** Highlighting deviations from financial expectations, analyzing market reactions, and identifying key points for strategic discussion by senior management.
 
 These examples can be used as templates or inspiration when drafting your own analytical reports for similar situations. Remember to replace all fictional details with your actual research findings.
+=======
+
+---
+
+## VIII. Advanced AI Usage and Further Learning
+
+For analysts looking to deepen their understanding and utilization of AI, especially Large Language Models (LLMs), beyond the initial prompts and workflows, an advanced guide is available:
+
+*   **[Advanced AI Usage Guide for Financial Analysis](./04_advanced_ai_usage_guide.md)**
+    *   **File:** `04_advanced_ai_usage_guide.md`
+    *   **Content:** This guide explores more sophisticated prompt engineering techniques (e.g., Chain-of-Thought, Few-Shot, Role Prompting), considerations for structuring data for AI, conceptual overviews of advanced AI architectures like Retrieval Augmented Generation (RAG) and LLM Agents, a collection of simple high-impact portable prompts for portfolio monitoring, the critical role of Human-in-the-Loop (HITL) processes, and thoughts on the future evolution of AI in financial analysis.
+    *   **Purpose:** To empower analysts to experiment further, refine their AI interaction strategies, and better understand both the potential and limitations of current AI technologies in their domain.
+
+This advanced guide complements the foundational knowledge in this playbook and the structured prompts in the LLM Prompt Library.
+=======
 =======
