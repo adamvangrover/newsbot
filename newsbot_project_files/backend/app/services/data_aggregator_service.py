@@ -1,7 +1,7 @@
 import requests
 from tenacity import retry, stop_after_attempt, wait_exponential, RetryError # Ensure RetryError is imported
 from functools import lru_cache
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict, Any 
 
 from newsbot_project_files.backend.app.core.config import settings
 from newsbot_project_files.backend.app.schemas.company import CompanyProfile, HistoricalStockData, StockDataPoint
@@ -17,7 +17,7 @@ class DataAggregatorService:
         self.alpha_vantage_api_key = settings.ALPHA_VANTAGE_API_KEY
         self.finnhub_base_url = "https://finnhub.io/api/v1"
         self.alpha_vantage_base_url = "https://www.alphavantage.co/query"
-
+        
         if not self.finnhub_api_key or self.finnhub_api_key == "your_finnhub_api_key_here":
             logger.warning("Finnhub API key is not configured or is using a placeholder.")
         if not self.alpha_vantage_api_key or self.alpha_vantage_api_key == "your_alpha_vantage_api_key_here":
@@ -30,17 +30,17 @@ class DataAggregatorService:
         if not self.finnhub_api_key or self.finnhub_api_key == "your_finnhub_api_key_here":
             logger.error(f"Finnhub API key missing. Cannot fetch profile for {ticker}.")
             return None # Explicitly return None if key is missing
-
+        
         params = {"symbol": ticker, "token": self.finnhub_api_key}
         try:
             response = requests.get(f"{self.finnhub_base_url}/stock/profile2", params=params, timeout=10)
-            response.raise_for_status()
+            response.raise_for_status() 
             data = response.json()
-
-            if not data or not isinstance(data, dict) or not data.get('name'):
+            
+            if not data or not isinstance(data, dict) or not data.get('name'): 
                 logger.warning(f"No substantive profile data found for ticker: {ticker} from Finnhub. Response: {data}")
                 return None
-
+            
             if 'ticker' not in data or not data['ticker']:
                 data['ticker'] = ticker
 
@@ -60,7 +60,7 @@ class DataAggregatorService:
         except requests.exceptions.RequestException as req_err: # Includes Timeout, ConnectionError etc. These should be retried.
             logger.warning(f"Request error fetching profile for {ticker} (attempt {req_err.retry.attempt_number if hasattr(req_err, 'retry') else 'N/A'}): {req_err}. Will retry if applicable.")
             raise # Reraise to allow tenacity to handle retries
-        except Exception as e:
+        except Exception as e: 
             logger.error(f"Unexpected error (e.g., JSON parsing, Pydantic validation) for profile {ticker}: {e}", exc_info=True)
             return None
 
@@ -104,21 +104,21 @@ class DataAggregatorService:
                         except (ValueError, TypeError) as ve:
                             logger.error(f"Could not convert datetime '{article_data.get('datetime')}' to int for article {article_data.get('id')}: {ve}")
                             continue # Skip this article if datetime is crucial and invalid
-
+                    
                     articles.append(NewsArticle(**article_data))
-                except Exception as p_err:
+                except Exception as p_err: 
                     logger.error(f"Error parsing article for {ticker} (ID: {article_data.get('id', 'N/A')} Headline: {article_data.get('headline', 'N/A')[:50]}...): {p_err}", exc_info=False)
-
+            
             logger.info(f"Successfully fetched and parsed {len(articles)} news articles for {ticker} from Finnhub.")
             return articles
         except requests.exceptions.HTTPError as http_err:
             logger.error(f"HTTP error fetching news for {ticker}: {http_err}. Status: {http_err.response.status_code}. Response: {http_err.response.text[:200]}")
             if http_err.response.status_code in [401, 403]:
                 logger.error(f"Finnhub API key may be invalid or lacking permissions for {ticker}.")
-            return []
+            return [] 
         except requests.exceptions.RequestException as req_err:
             logger.warning(f"Request error fetching news for {ticker} (attempt N/A): {req_err}. Will retry if applicable.") # Tenacity handles attempt numbers internally if reraised
-            raise
+            raise 
         except Exception as e:
             logger.error(f"Unexpected error (e.g., JSON parsing, Pydantic validation) for news {ticker}: {e}", exc_info=True)
             return []
@@ -140,7 +140,7 @@ class DataAggregatorService:
             if "Error Message" in data:
                 logger.error(f"Alpha Vantage API error for {ticker}: {data['Error Message']}")
                 return None # Specific error from AV, no retry needed.
-            if "Information" in data and "Time Series (Daily)" not in data :
+            if "Information" in data and "Time Series (Daily)" not in data : 
                 logger.warning(f"Alpha Vantage API info for {ticker} (and no data returned): {data['Information']}")
                 # This could be a rate limit message, which tenacity might help with if it leads to a RequestException on retry.
                 # If it's a permanent issue for this ticker, returning None is correct.
@@ -151,7 +151,7 @@ class DataAggregatorService:
             if time_series_key not in data or not isinstance(data[time_series_key], dict):
                 logger.warning(f"No '{time_series_key}' data or incorrect format for {ticker} in Alpha Vantage response. Note: {data.get('Note', 'No specific note found.')}")
                 return None
-
+            
             daily_data = data[time_series_key]
             prices: List[StockDataPoint] = []
             for date_str, values_dict in daily_data.items():
@@ -168,7 +168,7 @@ class DataAggregatorService:
                 except (KeyError, ValueError, TypeError) as val_err:
                     logger.error(f"Error parsing stock data point for {ticker} on date {date_str}: {val_err}. Data: {values_dict}", exc_info=False)
                     # Continue to try parsing other dates
-
+            
             if not prices:
                 logger.warning(f"No valid stock price points parsed for {ticker} from Alpha Vantage data. Initial data had {len(daily_data)} entries.")
                 return None
@@ -190,6 +190,7 @@ class DataAggregatorService:
         except requests.exceptions.RequestException as req_err:
             logger.warning(f"Request error fetching stock prices for {ticker} (attempt N/A): {req_err}. Will retry if applicable.")
             raise # Reraise for tenacity
-        except Exception as e:
+        except Exception as e: 
             logger.error(f"Unexpected error (e.g., JSON parsing, Pydantic validation) for stock prices {ticker}: {e}", exc_info=True)
             return None
+
