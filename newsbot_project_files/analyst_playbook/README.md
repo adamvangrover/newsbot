@@ -153,3 +153,30 @@ The `NewsBot` application (the codebase this `analyst_playbook` folder might res
 *   **Playbook & NewsBot Synergy:** This playbook would then guide the analyst on how to *use* NewsBot's output effectively, how to supplement it with other research, and how to integrate it into their final report. The LLM prompts in the library already include branches for using NewsBot API data if available.
 
 This playbook, in conjunction with tools like the conceptual NewsBot and the provided LLM prompt library, aims to create a powerful and flexible environment for financial analysis and reporting.
+
+
+---
+
+## VII. Example Report Scenarios
+
+To further illustrate the concepts discussed in this playbook and provide practical templates, several example report scenarios have been created. These are fictional examples designed to showcase how an analyst might structure reports for different situations, highlighting key information for escalation to senior management.
+
+You can find these examples in the current directory:
+
+1.  **[Negative News Report Example](./example_report_negative_news.md)**
+    *   **File:** `example_report_negative_news.md`
+    *   **Scenario:** Simulates a report on "Innovatech Dynamics Corp." facing a critical product safety recall. It details the event, potential impacts (financial, reputational, legal), and key information for immediate escalation.
+    *   **Focus:** Rapid response to urgent negative events, impact assessment, and crisis management considerations.
+
+2.  **[PEP Risk Assessment Example](./example_report_pep_assessment.md)**
+    *   **File:** `example_report_pep_assessment.md`
+    *   **Scenario:** Assesses the risks associated with "GlobalTransact Ltd." engaging a Politically Exposed Person (PEP), "Mr. Alistair Finch."
+    *   **Focus:** Identification of PEP-related risks (corruption, sanctions, reputational), summary of (hypothetical) due diligence, and recommendations for mitigation and senior management review.
+
+3.  **[Financial Snapshot & Alert Example](./example_report_financial_snapshot.md)**
+    *   **File:** `example_report_financial_snapshot.md`
+    *   **Scenario:** Provides a snapshot for "NextGen CyberSec Inc. (NCS)" after a significant quarterly earnings miss, covering financial performance, valuation concerns, and stock trading activity.
+    *   **Focus:** Highlighting deviations from financial expectations, analyzing market reactions, and identifying key points for strategic discussion by senior management.
+
+These examples can be used as templates or inspiration when drafting your own analytical reports for similar situations. Remember to replace all fictional details with your actual research findings.
+=======
