@@ -1,5 +1,5 @@
 # Core FastAPI and Server
-fastapi>=0.100.0,<0.110.0
+fastapi>=0.100.0,<0.110.0 
 uvicorn[standard]>=0.22.0,<0.24.0
 
 # Pydantic for data validation and settings management
@@ -35,3 +35,11 @@ pandas>=1.5.0,<2.2.0 # Uncomment if used by AI services or data handling
 
 # Logging (already part of standard library, but can add structlog etc. if desired)
 sentencepiece>=0.1.98,<0.2.0
+
+
+# Testing dependencies
+pytest>=7.0.0,<8.0.0
+pytest-asyncio>=0.18.0,<0.22.0
+respx>=0.20.0,<0.21.0
+httpx>=0.23.0,<0.26.0
+requests-mock>=1.9.0,<2.0.0
