@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Market Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Calm Neutral -->
+    <!-- Application Structure Plan: The SPA is structured as a narrative journey, starting with a high-level "Market Pulse" dashboard, moving to an interactive exploration of the report's central conflict ("The Core Tension"), then categorizing threats in a "Global Risk Radar," providing a forward-looking "Week Ahead" interactive calendar, and concluding with an "Investor Playbook." This structure was chosen to guide the user from general awareness to specific, actionable insights, making complex relationships between data points intuitive through targeted interactions rather than a simple linear text document. -->
+    <!-- Visualization & Content Choices: Key indices are shown as stat cards for quick information. The core soft landing vs. slowdown debate is an interactive chart/text block to let users explore the conflicting data. Risks are organized in tabs for clarity. The weekly calendar is an interactive timeline for intuitive navigation of future events. Bar charts (Chart.js) are used for simple comparisons (market performance, economic data points). All interactions are designed to reveal deeper information on demand, enhancing understanding without overwhelming the user. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 40vh;
+        }
+        .nav-link {
+            transition: color 0.3s ease, border-bottom-color 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #3b82f6;
+            border-bottom-color: #3b82f6;
+        }
+        .tab-button.active {
+            background-color: #3b82f6;
+            color: #ffffff;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-gray-900">Global Market Pulse</h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#pulse" class="nav-link text-gray-600 font-medium pb-1">Pulse</a>
+                <a href="#tension" class="nav-link text-gray-600 font-medium pb-1">Core Tension</a>
+                <a href="#risk" class="nav-link text-gray-600 font-medium pb-1">Risk Radar</a>
+                <a href="#week" class="nav-link text-gray-600 font-medium pb-1">Week Ahead</a>
+                <a href="#playbook" class="nav-link text-gray-600 font-medium pb-1">Playbook</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <section id="pulse" class="text-center mb-16 pt-16">
+            <h2 class="text-4xl font-bold mb-2 text-gray-900">A Market at a Crossroads</h2>
+            <p class="max-w-3xl mx-auto text-gray-600 mb-8">
+                A sense of cautious optimism prevails as investors weigh mixed economic signals. Cooling inflation data fuels "soft landing" hopes, but sluggish consumer spending and central bank uncertainty create a complex, pivotal moment for global markets. This dashboard provides an interactive overview of the key forces at play.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-500 mb-2">Stock Market</h3>
+                    <div class="chart-container h-48 max-h-48">
+                        <canvas id="marketIndicesChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-500 mb-2">Commodities</h3>
+                    <div class="space-y-4 pt-4">
+                        <div class="text-left">
+                            <p class="text-sm text-gray-500">Crude Oil (WTI)</p>
+                            <p class="text-2xl font-bold text-red-600">Volatile</p>
+                            <p class="text-xs text-gray-500">Pulled between supply concerns & geopolitical tension.</p>
+                        </div>
+                         <div class="text-left">
+                            <p class="text-sm text-gray-500">Gold</p>
+                            <p class="text-2xl font-bold text-green-600">Reactive</p>
+                             <p class="text-xs text-gray-500">Weighing inflation data against Fed's cautious stance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-500 mb-2">Cryptocurrency</h3>
+                     <div class="space-y-4 pt-4">
+                        <div class="text-left">
+                            <p class="text-sm text-gray-500">Bitcoin (BTC)</p>
+                            <p class="text-2xl font-bold text-gray-700">Neutral</p>
+                            <p class="text-xs text-gray-500">Hovering below highs, influenced by macro data.</p>
+                        </div>
+                         <div class="text-left">
+                            <p class="text-sm text-gray-500">Ethereum (ETH)</p>
+                            <p class="text-2xl font-bold text-blue-600">Positive</p>
+                             <p class="text-xs text-gray-500">Gaining traction on ETF approval anticipation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-500 mb-2">Prevailing Sentiment</h3>
+                     <div class="space-y-4 pt-8">
+                        <div class="text-center">
+                            <p class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-yellow-500">Cautiously Optimistic</p>
+                            <p class="text-xs text-gray-500 mt-2">Contingent on inflation trajectory and central bank actions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tension" class="mb-16 pt-16">
+             <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">The Core Tension: Soft Landing vs. Slowdown</h2>
+             <p class="max-w-3xl mx-auto text-gray-600 mb-8 text-center">
+                The market's future hinges on one central question: Is cooling inflation a sign of a healthy "soft landing," or is it a symptom of a worrying economic slowdown? Interact with the drivers below to explore both sides of this crucial debate.
+            </p>
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+                <div class="flex justify-center space-x-4 mb-6">
+                    <button id="btn-bull" class="px-6 py-2 rounded-lg bg-blue-500 text-white font-semibold shadow-md hover:bg-blue-600 transition">Soft Landing Hopes</button>
+                    <button id="btn-bear" class="px-6 py-2 rounded-lg bg-gray-200 text-gray-800 font-semibold hover:bg-gray-300 transition">Recession Fears</button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div id="tension-text" class="fade-in">
+                        <h3 id="tension-title" class="text-2xl font-bold mb-3 text-blue-600">The "Soft Landing" Narrative Gains Credence</h3>
+                        <p id="tension-desc" class="text-gray-600">A slew of recent economic data points, particularly a lower-than-expected Consumer Price Index (CPI), has bolstered the belief that the Federal Reserve can orchestrate a "soft landing"—taming inflation without triggering a deep recession. This has been a primary driver of the S&P 500's recent push to new highs, as it fuels hope for eventual interest rate cuts.</p>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="tensionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="risk" class="mb-16 pt-16">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">Global Risk Radar</h2>
+            <p class="max-w-3xl mx-auto text-gray-600 mb-8 text-center">
+               Beyond the central economic debate, a complex web of risks poses a latent threat to market stability. This section categorizes the key geopolitical, sectoral, and contingent risks that investors are monitoring.
+            </p>
+            <div class="bg-white p-2 md:p-4 rounded-xl shadow-lg border border-gray-200">
+                <div class="flex justify-center border-b border-gray-200 mb-4">
+                    <button data-tab="geo" class="tab-button flex-1 py-3 px-2 font-medium text-gray-600 hover:bg-gray-100 transition active">Geopolitical Hotspots</button>
+                    <button data-tab="sector" class="tab-button flex-1 py-3 px-2 font-medium text-gray-600 hover:bg-gray-100 transition">Sector & Policy Risks</button>
+                    <button data-tab="swan" class="tab-button flex-1 py-3 px-2 font-medium text-gray-600 hover:bg-gray-100 transition">"Black Swan" Events</button>
+                </div>
+                <div id="risk-content" class="p-4 min-h-[300px]">
+                    <div id="tab-content-geo" class="tab-content fade-in">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                            <div>
+                                <h4 class="font-bold text-xl mb-2">Middle East Tensions</h4>
+                                <p class="text-sm text-gray-600">Conflict remains a key concern for oil markets. Any direct confrontation could lead to a spike in oil prices, reigniting inflationary pressures globally and posing a significant threat to economic stability.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-2">U.S.-China Relations</h4>
+                                <p class="text-sm text-gray-600">Ongoing trade disputes and strategic competition, particularly in technology sectors like semiconductors and AI, create an uncertain backdrop for multinational corporations and global supply chains.</p>
+                            </div>
+                            <div>
+                                 <h4 class="font-bold text-xl mb-2">Russia-Ukraine Conflict</h4>
+                                <p class="text-sm text-gray-600">The protracted war continues to impact global food and energy supplies, contributing to price volatility and logistical challenges for key commodities.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-content-sector" class="tab-content fade-in hidden">
+                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                            <div>
+                                <h4 class="font-bold text-xl mb-2">The AI Revolution Divide</h4>
+                                <p class="text-sm text-gray-600">The initial hype is maturing. A divergence is emerging between tech giants successfully implementing AI (e.g., Nvidia) and those lagging, creating a "stock picker's market" in the tech sector.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-2">A Hawkish Fed Surprise</h4>
+                                <p class="text-sm text-gray-600">The market expects a dovish tilt from the Fed. If the FOMC pushes back aggressively against rate cut expectations, it could trigger a sharp sell-off in both stocks and bonds.</p>
+                            </div>
+                            <div>
+                                 <h4 class="font-bold text-xl mb-2">Commercial Real Estate</h4>
+                                <p class="text-sm text-gray-600">High interest rates and remote work put immense pressure on the CRE market. A major default could have a domino effect on regional banks and the broader financial system.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-content-swan" class="tab-content fade-in hidden">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
+                            <div>
+                                <h4 class="font-bold text-xl mb-2">Major Cyberattack</h4>
+                                <p class="text-sm text-gray-600">The increasing sophistication of state-sponsored cyberattacks poses a significant threat to critical infrastructure like financial institutions or energy grids, which could have cascading economic consequences.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-2">New Pandemic Variant</h4>
+                                <p class="text-sm text-gray-600">While a tail risk, the emergence of a new, highly transmissible virus (e.g., a new COVID variant or H5N1 jump) could lead to renewed lockdowns and severe economic disruptions, triggering a global recession.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="week" class="mb-16 pt-16">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">Key Events for the Week Ahead</h2>
+             <p class="max-w-3xl mx-auto text-gray-600 mb-8 text-center">
+                The market's direction will be heavily influenced by key economic data releases and central bank commentary. Click on an event below to see its potential impact on markets for the week of June 16-20, 2025.
+            </p>
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+                <div id="week-timeline" class="flex justify-around border-b-2 pb-4 mb-6">
+                </div>
+                <div id="week-event-details" class="fade-in min-h-[250px]">
+                </div>
+            </div>
+        </section>
+
+        <section id="playbook" class="pt-16">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">Actionable Conclusions & Investor Playbook</h2>
+             <p class="max-w-3xl mx-auto text-gray-600 mb-8 text-center">
+                Navigating this complex environment requires different strategies based on time horizon and risk tolerance. This section outlines key insights for both short-term traders and long-term investors.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-blue-300">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-700">For the Tactical Trader</h3>
+                    <ul class="space-y-3 text-gray-600 list-disc list-inside">
+                        <li>The period around the FOMC announcement will be highly volatile. The real directional move is likely to come after Powell's press conference.</li>
+                        <li>Given high expectations for a dovish tilt, the risk is skewed to the downside if the Fed disappoints. Consider strategies that protect against a hawkish surprise.</li>
+                        <li>View any significant market moves before Wednesday with skepticism, as they may be driven by positioning rather than fundamentals.</li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-8 rounded-xl shadow-lg border border-green-300">
+                    <h3 class="text-2xl font-bold mb-4 text-green-700">For the Long-Term Investor</h3>
+                    <ul class="space-y-3 text-gray-600 list-disc list-inside">
+                        <li>The current environment favors high-quality companies with strong balance sheets, pricing power, and durable earnings.</li>
+                        <li>A "stock picker's market" is emerging. Focus on companies with clear paths to profitability, especially in AI infrastructure.</li>
+                        <li>Diversification remains crucial. An allocation to defensive sectors (healthcare, consumer staples) and safe-haven assets (gold) can buffer against geopolitical shocks.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="text-center py-8 mt-12 border-t border-gray-200">
+        <p class="text-gray-500 text-sm">Interactive Market Analysis. Data synthesized for June 2025.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const marketData = {
+                labels: ['S&P 500', 'NASDAQ', 'Dow Jones'],
+                datasets: [{
+                    label: 'Broad Market Performance',
+                    data: [8.3, 10.2, 4.5],
+                    backgroundColor: ['#3b82f6', '#10b981', '#6b7280'],
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            };
+
+            const tensionData = {
+                bull: {
+                    title: 'The "Soft Landing" Narrative Gains Credence',
+                    description: 'A slew of recent economic data points, particularly a lower-than-expected Consumer Price Index (CPI), has bolstered the belief that the Federal Reserve can orchestrate a "soft landing"—taming inflation without triggering a deep recession. This has been a primary driver of the S&P 500\'s recent push to new highs, as it fuels hope for eventual interest rate cuts.',
+                    chartData: {
+                        labels: ['CPI Change (MoM)'],
+                        datasets: [{
+                            label: 'Inflation Data',
+                            data: [0.1],
+                            backgroundColor: '#2563eb',
+                        }]
+                    }
+                },
+                bear: {
+                    title: 'Sluggish Retail Sales Signal Economic Slowdown',
+                    description: 'New data indicates a slowdown in consumer spending. This could be a sign of a cooling economy but also raises concerns about a potential recession if the trend accelerates. This challenges the "soft landing" narrative and suggests cooling inflation may be due to weaker demand.',
+                     chartData: {
+                        labels: ['Retail Sales (Unit Demand)'],
+                        datasets: [{
+                            label: 'Consumer Spending Data',
+                            data: [-1],
+                            backgroundColor: '#ef4444',
+                        }]
+                    }
+                }
+            };
+            
+            const weekAheadEvents = [
+                {
+                    day: "Tuesday",
+                    date: "Jun 17",
+                    title: "U.S. Retail Sales (May)",
+                    importance: "High",
+                    expectation: "A flat month-over-month reading.",
+                    impact: "A crucial indicator of consumer health. A weaker number could raise recession fears and increase pressure on the Fed to cut rates. A strong number could be seen as inflationary."
+                },
+                {
+                    day: "Wednesday",
+                    date: "Jun 18",
+                    title: "FOMC Interest Rate Decision & Powell's Press Conference",
+                    importance: "Very High",
+                    expectation: "Fed to hold rates steady. Focus is on the 'dot plot' and forward guidance.",
+                    impact: "The main event of the week. Any deviation from the market's expectation of a dovish tilt and hints at future rate cuts could trigger significant volatility."
+                },
+                {
+                    day: "Friday",
+                    date: "Jun 20",
+                    title: "Philadelphia Fed Manufacturing Index (June)",
+                    importance: "Medium",
+                    expectation: "Provides a timely read on the health of the manufacturing sector.",
+                    impact: "A weak reading would add to concerns about an economic slowdown, while a strong reading might ease them."
+                }
+            ];
+            
+            new Chart(document.getElementById('marketIndicesChart'), {
+                type: 'bar',
+                data: marketData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.dataset.label}: ${context.raw}% (QTD)`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: { beginAtZero: true, grid: { display: false } },
+                        y: { grid: { display: false } }
+                    }
+                }
+            });
+
+            const tensionChartCtx = document.getElementById('tensionChart').getContext('2d');
+            let tensionChart = new Chart(tensionChartCtx, {
+                type: 'bar',
+                data: tensionData.bull.chartData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { 
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) { return value + '%' }
+                            }
+                        },
+                        x: { grid: { display: false } }
+                    },
+                }
+            });
+
+            const tensionTitle = document.getElementById('tension-title');
+            const tensionDesc = document.getElementById('tension-desc');
+            const btnBull = document.getElementById('btn-bull');
+            const btnBear = document.getElementById('btn-bear');
+
+            function updateTension(type) {
+                const data = tensionData[type];
+                document.getElementById('tension-text').classList.remove('fade-in');
+                void document.getElementById('tension-text').offsetWidth; 
+                document.getElementById('tension-text').classList.add('fade-in');
+
+                tensionTitle.textContent = data.title;
+                tensionDesc.textContent = data.description;
+                tensionTitle.className = `text-2xl font-bold mb-3 ${type === 'bull' ? 'text-blue-600' : 'text-red-600'}`;
+                
+                tensionChart.data = data.chartData;
+                tensionChart.update();
+                
+                if (type === 'bull') {
+                    btnBull.classList.add('bg-blue-500', 'text-white');
+                    btnBull.classList.remove('bg-gray-200', 'text-gray-800');
+                    btnBear.classList.add('bg-gray-200', 'text-gray-800');
+                    btnBear.classList.remove('bg-red-500', 'text-white');
+                } else {
+                    btnBear.classList.add('bg-red-500', 'text-white');
+                    btnBear.classList.remove('bg-gray-200', 'text-gray-800');
+                    btnBull.classList.add('bg-gray-200', 'text-gray-800');
+                    btnBull.classList.remove('bg-blue-500', 'text-white');
+                }
+            }
+
+            btnBull.addEventListener('click', () => updateTension('bull'));
+            btnBear.addEventListener('click', () => updateTension('bear'));
+
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    tabContents.forEach(content => content.classList.add('hidden'));
+                    
+                    const tabId = button.dataset.tab;
+                    const contentToShow = document.getElementById(`tab-content-${tabId}`);
+                    contentToShow.classList.remove('hidden');
+                    contentToShow.classList.remove('fade-in');
+                    void contentToShow.offsetWidth;
+                    contentToShow.classList.add('fade-in');
+                });
+            });
+
+            const timelineContainer = document.getElementById('week-timeline');
+            const eventDetailsContainer = document.getElementById('week-event-details');
+
+            weekAheadEvents.forEach((event, index) => {
+                const eventButton = document.createElement('button');
+                eventButton.className = 'week-day-btn text-center text-gray-500 hover:text-blue-600 transition p-2 rounded-lg';
+                if(index === 0) eventButton.classList.add('active', 'text-blue-600', 'font-bold');
+                eventButton.innerHTML = `<p class="font-semibold">${event.day}</p><p class="text-sm">${event.date}</p>`;
+                eventButton.addEventListener('click', () => {
+                    displayEvent(index);
+                    document.querySelectorAll('.week-day-btn').forEach(btn => btn.classList.remove('active', 'text-blue-600', 'font-bold'));
+                    eventButton.classList.add('active', 'text-blue-600', 'font-bold');
+                });
+                timelineContainer.appendChild(eventButton);
+            });
+
+            function displayEvent(index) {
+                const event = weekAheadEvents[index];
+                eventDetailsContainer.innerHTML = `
+                    <div class="fade-in">
+                        <div class="flex justify-between items-baseline mb-3">
+                             <h3 class="text-2xl font-bold text-gray-800">${event.title}</h3>
+                             <span class="text-sm font-medium px-3 py-1 rounded-full ${event.importance === 'Very High' ? 'bg-red-100 text-red-800' : event.importance === 'High' ? 'bg-yellow-100 text-yellow-800' : 'bg-blue-100 text-blue-800'}">${event.importance} Importance</span>
+                        </div>
+                        <p class="text-gray-600 mb-2"><strong class="font-semibold text-gray-700">Expectation:</strong> ${event.expectation}</p>
+                        <p class="text-gray-600"><strong class="font-semibold text-gray-700">Potential Impact:</strong> ${event.impact}</p>
+                    </div>
+                `;
+            }
+
+            displayEvent(0);
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 100) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+            
+            navLinks.forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>
