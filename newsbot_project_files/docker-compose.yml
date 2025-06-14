@@ -1,0 +1,88 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend # Relative to this docker-compose.yml file
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000" # Map host port 8000 to container port 8000
+    volumes:
+      # Mount backend code for development with hot-reloading (if uvicorn --reload is used)
+      # For production, you'd typically not mount the code this way.
+      - ./backend/app:/app/app
+    environment:
+      # Pass API keys and other env vars from an .env file in the backend directory
+      # The .env file should be in backend/, and config.py loads it.
+      # Alternatively, define them directly here or use a .env file at the root of docker-compose.yml
+      # For example, if you have newsbot_project_files/.env
+      # env_file:
+      #  - ./.env # This .env file would be in the root 'newsbot_project_files'
+      PYTHON_ENV: development
+      # FINNHUB_API_KEY:  # Example of passing from docker-compose env
+      # ALPHA_VANTAGE_API_KEY:
+    # depends_on:
+      # - db # If you had a database service
+    networks:
+      - newsbot_network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80" # Map host port 3000 to Nginx container port 80
+    volumes:
+      # For development, if you want live updates without rebuilding image:
+      # This is more complex with Vite/React as it needs its own dev server.
+      # The Nginx setup is for serving built files.
+      # For Vite dev:
+      # - ./frontend/src:/app/src
+      # - ./frontend/public:/app/public
+      # And change CMD in frontend/Dockerfile to 'npm run dev' or similar
+      # But for a production-like setup with Nginx, no volume mount for src is needed.
+      # The current frontend Dockerfile is for a production build.
+      # If you want a dev setup, the frontend Dockerfile would be different (using node, npm run dev).
+      # This example assumes you build and serve static files.
+      # To reflect code changes, you'd rebuild the frontend image: docker-compose build frontend
+      # Or use a more advanced dev setup not covered by this simple Dockerfile.
+      # - ./frontend/nginx.conf:/etc/nginx/nginx.conf:ro # Mount custom nginx config
+      # The nginx.conf is now copied into the image, so this volume mount is optional
+      # if you don't plan to change nginx.conf frequently during development.
+    depends_on:
+      - backend # Optional: ensures backend starts before frontend (useful if frontend calls API on startup)
+    environment:
+      # Vite needs env vars prefixed with VITE_ passed at build time
+      # To pass them to Nginx at runtime for dynamic config (e.g. API URL) is more complex
+      # Usually, API URL is baked in at build time or fetched from a /config endpoint.
+      # For this setup, VITE_API_BASE_URL is used at build time by Vite.
+      # If you need to change API URL without rebuilding frontend:
+      # 1. Frontend fetches config from backend.
+      # 2. Nginx uses  on a template config file.
+      # VITE_API_BASE_URL: http://backend:8000/api/v1 # Example for container-to-container communication
+      # The above would be used if frontend calls backend via Docker network.
+      # If called from browser, it's localhost:8000 or your public host.
+      # The current apiClient.ts uses import.meta.env.VITE_API_BASE_URL which is build-time.
+      # The .env.example in frontend sets it to localhost:8000.
+      # This means frontend built by Docker will try to access localhost:8000 of the *container*,
+      # which is not the backend. It should be 'http://backend:8000/api/v1'.
+      # This needs to be handled:
+      #  a) During  for frontend, pass ARG VITE_API_BASE_URL.
+      #  b) Or, frontend fetches this config from a static file served by nginx, which is configured at runtime.
+      # For simplicity of MVP, we assume VITE_API_BASE_URL is set correctly during local build or testing.
+      # When running , the frontend will use whatever VITE_API_BASE_URL was at its build time.
+      # To make this dynamic for docker-compose:
+      # You'd modify frontend/Dockerfile to accept an ARG and use it in vite build.
+      # And in docker-compose.yml, under frontend build: args: - VITE_API_BASE_URL=http://backend:8000/api/v1
+      # This is not implemented yet for simplicity.
+      NGINX_PORT: 80
+    networks:
+      - newsbot_network
+
+networks:
+  newsbot_network:
+    driver: bridge
+
+# Optional: Define top-level volumes if needed (e.g., for database persistence)
+# volumes:
+#   postgres_data:
