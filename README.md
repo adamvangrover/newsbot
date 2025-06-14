@@ -1,3 +1,26 @@
+# NewsBot
+
+NewsBot is an AI-powered web application that aggregates, analyzes, and synthesizes news and basic financial data for user-specified companies. It provides a clean, interactive UI to display insights, including sentiment analysis, news categorization, and summaries.
+
+## Project Goal
+
+To develop a Minimum Viable Product (MVP) for "NewsBot."
+
+## Features (MVP)
+
+*   User input for company name or stock ticker.
+*   Data aggregation from Finnhub.io (company profile, news) and Alpha Vantage (stock prices).
+*   AI-powered news analysis:
+    *   Sentiment Analysis
+    *   Basic Keyword-based Categorization
+    *   Summarization
+*   FastAPI backend API.
+*   React frontend with TypeScript.
+
+## Getting Started
+
+(Instructions will be added once the project structure is more complete)
+
 # NewsBot: AI-Powered Company News Analysis MVP
 
 NewsBot is a web-based AI application designed to aggregate, analyze, and synthesize news and basic financial data for user-specified companies. This MVP focuses on providing core analysis features with a clean user interface.
