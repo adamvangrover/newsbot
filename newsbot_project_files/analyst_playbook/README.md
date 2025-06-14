@@ -155,7 +155,6 @@ The `NewsBot` application (the codebase this `analyst_playbook` folder might res
 This playbook, in conjunction with tools like the conceptual NewsBot and the provided LLM prompt library, aims to create a powerful and flexible environment for financial analysis and reporting.
 
 
-
 ---
 
 ## VII. Example Report Scenarios
@@ -180,8 +179,8 @@ You can find these examples in the current directory:
     *   **Focus:** Highlighting deviations from financial expectations, analyzing market reactions, and identifying key points for strategic discussion by senior management.
 
 These examples can be used as templates or inspiration when drafting your own analytical reports for similar situations. Remember to replace all fictional details with your actual research findings.
-
-
+=======
+=======
 
 ---
 
@@ -215,3 +214,6 @@ This playbook is complemented by several key resources located in this directory
 *   **Example Report Scenarios (`example_*.md` files):** Located in this directory, these illustrative reports showcase outputs for scenarios like negative news events, Politically Exposed Person (PEP) assessments, and financial performance snapshots. They are detailed further in **Section VII: Example Report Scenarios** of this README (Note: original section numbering is preserved here; if this 'Core Resources' section is moved earlier by a human, subsequent section numbers in the main body would effectively shift).
 
 The main body of this README (starting with "I. Foundational Research Techniques") provides detailed strategies and best practices applicable to both manual and AI-assisted financial analysis. Refer to these resources to maximize the effectiveness of your research and reporting.
+
+=======
+=======

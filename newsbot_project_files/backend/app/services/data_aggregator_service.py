@@ -3,6 +3,7 @@ from tenacity import retry, stop_after_attempt, wait_exponential, RetryError # E
 from functools import lru_cache
 from typing import Optional, List, Dict, Any
 
+
 from newsbot_project_files.backend.app.core.config import settings
 from newsbot_project_files.backend.app.schemas.company import CompanyProfile, HistoricalStockData, StockDataPoint
 from newsbot_project_files.backend.app.schemas.news import NewsArticle
@@ -41,6 +42,7 @@ class DataAggregatorService:
                 logger.warning(f"No substantive profile data found for ticker: {ticker} from Finnhub. Response: {data}")
                 return None
 
+
             if 'ticker' not in data or not data['ticker']:
                 data['ticker'] = ticker
 
@@ -61,6 +63,7 @@ class DataAggregatorService:
             logger.warning(f"Request error fetching profile for {ticker} (attempt {req_err.retry.attempt_number if hasattr(req_err, 'retry') else 'N/A'}): {req_err}. Will retry if applicable.")
             raise # Reraise to allow tenacity to handle retries
         except Exception as e:
+
             logger.error(f"Unexpected error (e.g., JSON parsing, Pydantic validation) for profile {ticker}: {e}", exc_info=True)
             return None
 
@@ -109,6 +112,7 @@ class DataAggregatorService:
                 except Exception as p_err:
                     logger.error(f"Error parsing article for {ticker} (ID: {article_data.get('id', 'N/A')} Headline: {article_data.get('headline', 'N/A')[:50]}...): {p_err}", exc_info=False)
 
+
             logger.info(f"Successfully fetched and parsed {len(articles)} news articles for {ticker} from Finnhub.")
             return articles
         except requests.exceptions.HTTPError as http_err:
@@ -119,6 +123,7 @@ class DataAggregatorService:
         except requests.exceptions.RequestException as req_err:
             logger.warning(f"Request error fetching news for {ticker} (attempt N/A): {req_err}. Will retry if applicable.") # Tenacity handles attempt numbers internally if reraised
             raise
+
         except Exception as e:
             logger.error(f"Unexpected error (e.g., JSON parsing, Pydantic validation) for news {ticker}: {e}", exc_info=True)
             return []
@@ -141,6 +146,7 @@ class DataAggregatorService:
                 logger.error(f"Alpha Vantage API error for {ticker}: {data['Error Message']}")
                 return None # Specific error from AV, no retry needed.
             if "Information" in data and "Time Series (Daily)" not in data :
+
                 logger.warning(f"Alpha Vantage API info for {ticker} (and no data returned): {data['Information']}")
                 # This could be a rate limit message, which tenacity might help with if it leads to a RequestException on retry.
                 # If it's a permanent issue for this ticker, returning None is correct.
@@ -193,3 +199,4 @@ class DataAggregatorService:
         except Exception as e:
             logger.error(f"Unexpected error (e.g., JSON parsing, Pydantic validation) for stock prices {ticker}: {e}", exc_info=True)
             return None
+
