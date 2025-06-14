@@ -1,0 +1,43 @@
+# Common ignores for all Docker builds
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/site-packages
+**/.pytest_cache
+**/.mypy_cache
+**/.hypothesis
+**/.tox
+**/.coverage
+**/.coverage.*
+**/.cache
+**/.DS_Store
+**/node_modules
+**/.env
+**/.env.*
+!**/.env.example # Include .env.example files
+
+# Docker specific ignores
+Dockerfile # Don't include the Dockerfile itself in the context if it's not needed
+docker-compose.yml
+.dockerignore
+
+# Git specific ignores
+.git
+.gitignore
+
+# Frontend specific build artifacts if not needed in final image (dist is usually copied from a build stage)
+# frontend/dist # This is what Nginx serves, so it SHOULD be included if not using multi-stage properly
+frontend/node_modules/
+frontend/build/ # If CRA is used instead of Vite
+
+# Backend specific
+backend/__pycache__/
+backend/.pytest_cache/
+# Add any other backend specific files/folders to ignore
+# backend/venv/ # If you use local venvs and don't want them in context
+
+# Docs, etc.
+docs/
+# README.md (unless you want it in the image)
+# LICENSE (unless you want it in the image)
