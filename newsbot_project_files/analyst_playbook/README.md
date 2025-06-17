@@ -1,5 +1,17 @@
 # Analyst Playbook: Financial Research, Analysis, and Reporting
 
+---
+
+**New Strategic Overview Available!**
+
+For a high-level strategic guide on news analysis, AI integration, leveraging NewsBot for early warnings, data sources, and systemic best practices, please start with our new:
+
+*   **[Analyst Overview & Strategic Guide](./00_ANALYST_OVERVIEW_AND_STRATEGY.md)**
+
+This main Playbook README provides detailed operational guidance and foundational techniques. The Strategic Overview links back to relevant sections here and in other specialized guides.
+
+---
+
 ## Introduction
 
 Welcome to the Analyst Playbook! This guide is designed to assist financial analysts, researchers, and anyone involved in understanding companies, industries, or market outlooks. It provides a walkthrough of research techniques, information gathering strategies, analysis methodologies, and reporting best practices.
