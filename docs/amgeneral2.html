@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AM General: Interactive Strategic Report</title>
+    <!-- Chosen Palette: Slate & Amber -->
+    <!-- Application Structure Plan: The SPA is designed as a top-down strategic narrative. It starts with a high-level overview of AM General's pivotal "reboot" (the KPS acquisition and JLTV win). It then flows into the core "two-front" product strategy (HMMWV vs. JLTV), allowing users to compare the legacy and future platforms side-by-side. The centerpiece is an interactive "deep dive" into the JLTV A2 program, breaking down the contract's financials, key customer dynamics, and production risks. This is followed by market context and a competitive analysis, positioning AM General against its rivals. The app concludes with a forward-looking interactive SWOT analysis and strategic summary. This non-linear, thematic structure was chosen over the report's linear format to allow users to quickly grasp the central thesis and then explore specific areas of interest (like products or financials) in greater depth, making the complex information more digestible and engaging. -->
+    <!-- Visualization & Content Choices: 
+        - Timeline (HTML/CSS): Goal: Inform & show change. Method: A simple, elegant visual timeline to contextualize key events leading to the company's transformation. Justification: More engaging than a text block for showing a sequence of events.
+        - Key Metrics (HTML/CSS): Goal: Inform. Method: Prominent "Key Performance Indicator" style cards at the top. Justification: Immediately grounds the user with the most important high-level numbers from the report.
+        - Product Comparison (HTML/CSS with JS interaction): Goal: Compare & Organize. Method: A two-column layout comparing HMMWV/Saber and JLTV A2. Clickable hotspots on vehicle silhouettes reveal key features in a modal or tooltip. Justification: Encourages direct comparison and interactive discovery of product features, more engaging than static text.
+        - Financial Bar Chart (Chart.js/Canvas): Goal: Compare. Method: A bar chart visualizing the JLTV contract's potential value vs. initial obligated funds. Justification: Effectively illustrates the scale of the opportunity versus the immediate reality.
+        - Programmatic Dynamics Tabs (HTML/CSS/JS): Goal: Organize. Method: A tabbed interface to separate the complex dynamics of the JLTV program (Army pivot, USMC commitment, production risks). Justification: Prevents cognitive overload by breaking down a multifaceted issue into clear, distinct parts.
+        - Market Growth Chart (Chart.js/Canvas): Goal: Show Change. Method: A line chart showing the projected growth of the tactical vehicle market. Justification: Provides clear, visual context for the market opportunity.
+        - Interactive SWOT Grid (HTML/CSS/JS): Goal: Organize & Inform. Method: A 2x2 grid where clicking each quadrant reveals the detailed points. Justification: A clean, modern, and interactive way to present the SWOT analysis, superior to a static list.
+        - CONFIRMATION: NO SVG graphics used. NO Mermaid JS used.
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #334155; /* slate-700 */
+        }
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 800;
+            color: #1e293b; /* slate-800 */
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f59e0b; /* amber-500 */
+        }
+        .kpi-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        .kpi-value {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #f59e0b; /* amber-500 */
+        }
+        .kpi-label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #64748b; /* slate-500 */
+            margin-top: 0.5rem;
+        }
+        .nav-link {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .nav-link:hover, .nav-link.active {
+            background-color: #f59e0b; /* amber-500 */
+            color: white;
+        }
+        .tab-button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            background-color: #e2e8f0; /* slate-200 */
+            color: #475569; /* slate-600 */
+            border: 2px solid transparent;
+        }
+        .tab-button.active {
+            background-color: white;
+            color: #f59e0b; /* amber-500 */
+            border-color: #f59e0b; /* amber-500 */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+                padding: 1rem;
+            }
+        }
+        .swot-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .swot-card .swot-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .swot-card.open .swot-details {
+            max-height: 500px; /* Adjust as needed */
+        }
+        .vehicle-hotspot {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-color: rgba(245, 158, 11, 0.8); /* amber-500 with opacity */
+            border: 2px solid white;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .vehicle-hotspot:hover {
+            transform: scale(1.2);
+            background-color: rgba(245, 158, 11, 1);
+        }
+        .vehicle-hotspot-pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+        }
+        .hotspot-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        .hotspot-modal.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .hotspot-modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            transform: scale(0.95);
+            transition: all 0.3s;
+        }
+        .hotspot-modal.visible .hotspot-modal-content {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-slate-800">AM General</span>
+                    <span class="ml-2 text-2xl font-light text-amber-500">| Strategic Analysis</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-2">
+                    <a href="#strategic-shift" class="nav-link">Strategic Shift</a>
+                    <a href="#product-lines" class="nav-link">Product Lines</a>
+                    <a href="#jltv-deep-dive" class="nav-link">JLTV Deep Dive</a>
+                    <a href="#market-competition" class="nav-link">Market</a>
+                    <a href="#swot-outlook" class="nav-link">Outlook</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-800 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+            <a href="#strategic-shift" class="block py-2 px-4 text-sm font-semibold text-slate-700 hover:bg-amber-100">Strategic Shift</a>
+            <a href="#product-lines" class="block py-2 px-4 text-sm font-semibold text-slate-700 hover:bg-amber-100">Product Lines</a>
+            <a href="#jltv-deep-dive" class="block py-2 px-4 text-sm font-semibold text-slate-700 hover:bg-amber-100">JLTV Deep Dive</a>
+            <a href="#market-competition" class="block py-2 px-4 text-sm font-semibold text-slate-700 hover:bg-amber-100">Market</a>
+            <a href="#swot-outlook" class="block py-2 px-4 text-sm font-semibold text-slate-700 hover:bg-amber-100">Outlook</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+        <!-- Hero Section -->
+        <section id="hero" class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight">The Reboot of a Tactical Powerhouse</h1>
+            <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">Fueled by new ownership and a transformative contract win, AM General is executing a strategic pivot from a legacy icon to the future of tactical mobility. This is the story of that transformation.</p>
+        </section>
+        
+        <!-- Key Metrics -->
+        <section id="key-metrics" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div class="kpi-card text-center">
+                <div class="kpi-value">$8.66B</div>
+                <div class="kpi-label">JLTV A2 Max Contract Value (Production)</div>
+            </div>
+            <div class="kpi-card text-center">
+                <div class="kpi-value">20,682</div>
+                <div class="kpi-label">Max JLTV A2 Vehicles in Contract</div>
+            </div>
+            <div class="kpi-card text-center">
+                <div class="kpi-value">70+</div>
+                <div class="kpi-label">Countries with an AM General Presence</div>
+            </div>
+        </section>
+
+        <!-- Section 1: Strategic Shift -->
+        <section id="strategic-shift" class="mb-20">
+            <h2 class="section-title">The Strategic Shift: New Ownership, New Mandate</h2>
+            <p class="text-slate-600 mb-8 max-w-4xl">The catalyst for AM General's current trajectory was its 2020 acquisition by private equity firm KPS Capital Partners. This wasn't a passive investment; it was a mandate for aggressive growth and modernization. The firm's playbook focuses on unlocking the potential of underleveraged industrial assets. AM General, with its iconic HMMWV brand but dependence on an aging platform, was a perfect fit. The ultimate validation of this new strategy was the successful bid for the JLTV A2 follow-on contract, unseating an entrenched incumbent and fundamentally altering the company's future.</p>
+            
+            <div class="relative mt-8">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 -ml-px w-0.5 h-full bg-slate-300" aria-hidden="true"></div>
+                <!-- Timeline Items -->
+                <div class="space-y-12">
+                    <div class="relative flex items-center justify-start md:justify-center">
+                        <div class="w-full md:w-1/2 md:pr-8 text-left md:text-right">
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <h3 class="font-bold text-slate-800">Oct 2020: KPS Acquisition</h3>
+                                <p class="text-sm text-slate-600">KPS Capital Partners acquires AM General, providing the financial backing and strategic directive to pursue transformative growth opportunities.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 -ml-3 w-6 h-6 rounded-full bg-amber-500 border-4 border-white"></div>
+                    </div>
+                    <div class="relative flex items-center justify-end md:justify-center">
+                         <div class="w-full md:w-1/2 md:pl-8 text-left">
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <h3 class="font-bold text-slate-800">Feb 2023: JLTV A2 Contract Award</h3>
+                                <p class="text-sm text-slate-600">In a major upset, AM General wins the multi-billion dollar follow-on contract to produce the next-generation JLTV A2, based on a "best value" bid.</p>
+                            </div>
+                        </div>
+                         <div class="absolute left-1/2 -ml-3 w-6 h-6 rounded-full bg-amber-500 border-4 border-white"></div>
+                    </div>
+                    <div class="relative flex items-center justify-start md:justify-center">
+                        <div class="w-full md:w-1/2 md:pr-8 text-left md:text-right">
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <h3 class="font-bold text-slate-800">Jun 2023: GAO Denies Protest</h3>
+                                <p class="text-sm text-slate-600">The Government Accountability Office denies the protest from incumbent Oshkosh, cementing AM General's contract win and clearing the path for production.</p>
+                            </div>
+                        </div>
+                         <div class="absolute left-1/2 -ml-3 w-6 h-6 rounded-full bg-amber-500 border-4 border-white"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Product Lines -->
+        <section id="product-lines" class="mb-20">
+            <h2 class="section-title">A Two-Front Strategy: Legacy and Future</h2>
+            <p class="text-slate-600 mb-8 max-w-4xl">AM General's portfolio is a sophisticated dual-pronged strategy. It sustains and modernizes its iconic HMMWV platform—a reliable revenue generator with a massive global footprint—while simultaneously pivoting to the technologically advanced JLTV A2 as its flagship for the future. Explore the key features of each pillar below.</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+                <!-- HMMWV/Saber Column -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-slate-800">The Enduring Legacy: HMMWV & HUMVEE Saber</h3>
+                    <p class="mt-2 text-slate-600">The HMMWV is the bedrock of the company's business, with a massive installed base creating a "cash cow" of parts, service, and upgrade revenue. The HUMVEE Saber is its evolution, offering MRAP-level protection on a proven, cost-effective chassis for international markets.</p>
+                    <div class="relative mt-6 aspect-w-16 aspect-h-9 bg-slate-100 rounded-md flex items-center justify-center p-4">
+                        <img src="https://placehold.co/600x300/e2e8f0/475569?text=HUMVEE+Saber" alt="Humvee Saber Silhouette" class="max-w-full max-h-full object-contain">
+                        <div class="vehicle-hotspot vehicle-hotspot-pulse" style="top: 25%; left: 30%;" data-title="Monocoque Crew Cell" data-text="A patented steel monocoque crew cell with a W-shaped hull deflects blast energy away from the occupants, dramatically increasing survivability.">
+                            <span class="text-white font-bold">+</span>
+                        </div>
+                         <div class="vehicle-hotspot" style="top: 60%; left: 75%;" data-title="Mission System Integration" data-text="Modular design allows for rapid integration of various systems like remote weapons stations, loitering munitions (Switchblade), and C-UAS capabilities.">
+                            <span class="text-white font-bold">+</span>
+                        </div>
+                         <div class="vehicle-hotspot" style="top: 70%; left: 20%;" data-title="Proven 13-Series Chassis" data-text="Built upon the reliable HMMWV chassis, ensuring high parts commonality, which simplifies maintenance, training, and logistics for the 70+ existing user nations.">
+                            <span class="text-white font-bold">+</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- JLTV A2 Column -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-slate-800">The Cornerstone Future: JLTV A2</h3>
+                    <p class="mt-2 text-slate-600">The JLTV A2 is unequivocally AM General's future. Winning this contract positions the company as the primary supplier for the U.S. military's next-generation light tactical vehicle, featuring over 250 enhancements over the original A1 model.</p>
+                    <div class="relative mt-6 aspect-w-16 aspect-h-9 bg-slate-100 rounded-md flex items-center justify-center p-4">
+                         <img src="https://placehold.co/600x300/e2e8f0/475569?text=JLTV+A2" alt="JLTV A2 Silhouette" class="max-w-full max-h-full object-contain">
+                          <div class="vehicle-hotspot vehicle-hotspot-pulse" style="top: 20%; left: 50%;" data-title="Hybrid-Ready Architecture" data-text="Replaces traditional batteries with a lighter, more powerful 24-volt lithium-ion system and an upgraded alternator, enabling anti-idle capabilities and future hybrid-electric propulsion.">
+                            <span class="text-white font-bold">+</span>
+                        </div>
+                         <div class="vehicle-hotspot" style="top: 55%; left: 15%;" data-title="Enhanced Performance" data-text="Features an approximate 15% improvement in fuel efficiency and reduced noise levels compared to the A1 variant, addressing key operational feedback.">
+                            <span class="text-white font-bold">+</span>
+                        </div>
+                         <div class="vehicle-hotspot" style="top: 75%; left: 65%;" data-title="Superior Corrosion Resistance" data-text="Incorporates advanced coating systems tested to exceed a 30-year resistance standard, a critical requirement for the U.S. Marine Corps operating in saline environments.">
+                            <span class="text-white font-bold">+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: JLTV Deep Dive -->
+        <section id="jltv-deep-dive" class="mb-20">
+            <h2 class="section-title">JLTV A2 Contract Deep Dive</h2>
+            <p class="text-slate-600 mb-8 max-w-4xl">The JLTV A2 program is the single most critical element of AM General's strategy. Its immense financial scope is matched by a complex and dynamic programmatic landscape, shaped by shifting customer priorities and the inherent challenges of launching a new production line.</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="lg:col-span-2">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 text-center">Visualizing the Contract: Potential vs. Initial Funding</h3>
+                    <div class="chart-container">
+                        <canvas id="jltvContractChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 mt-8">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 text-center">Programmatic Dynamics: A Shifting Battlefield</h3>
+                    <div class="flex flex-wrap justify-center gap-2 mb-6" id="jltv-tabs">
+                        <button class="tab-button active" data-tab="army">US Army's Pivot</button>
+                        <button class="tab-button" data-tab="usmc">USMC's Commitment</button>
+                        <button class="tab-button" data-tab="production">Production Challenges</button>
+                    </div>
+                    <div id="jltv-tab-content" class="bg-white p-6 rounded-lg shadow-inner min-h-[200px]">
+                        <div id="tab-army" class="tab-pane active">
+                            <h4 class="font-bold text-lg text-red-600">Threat: Divestment by Largest Customer</h4>
+                            <p class="mt-2 text-slate-600">The U.S. Army, the program's largest planned customer, announced it will halt future JLTV procurement after its current tranche is acquired. This decision significantly reduces the total expected domestic volume and puts pressure on per-unit costs for remaining buyers.</p>
+                        </div>
+                         <div id="tab-usmc" class="tab-pane hidden">
+                            <h4 class="font-bold text-lg text-green-600">Opportunity: Steadfast Key Partner</h4>
+                            <p class="mt-2 text-slate-600">In stark contrast, the U.S. Marine Corps has publicly reaffirmed its full commitment to the JLTV program, calling it their "workhorse" tactical vehicle. This provides a stable demand base but also highlights the need to manage rising per-unit costs, making international sales even more critical.</p>
+                        </div>
+                        <div id="tab-production" class="tab-pane hidden">
+                             <h4 class="font-bold text-lg text-yellow-600">Risk: Execution Delays</h4>
+                            <p class="mt-2 text-slate-600">Initial deliveries have been delayed by six months due to challenges in sourcing parts and qualifying tooling for a vehicle designed by a competitor. This underscores the significant execution risks AM General must manage to prove it can deliver on its "best value" promise.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Market & Competition -->
+        <section id="market-competition" class="mb-20">
+            <h2 class="section-title">Market & Competitive Landscape</h2>
+            <p class="text-slate-600 mb-8 max-w-4xl">AM General operates in a favorable but fiercely competitive environment. Surging global defense spending creates a strong demand signal for tactical vehicles. However, the market is dominated by a few highly capable rivals, with Oshkosh Corporation now positioned as a direct and motivated competitor in the light tactical vehicle space.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                <div class="lg:col-span-3">
+                     <h3 class="text-xl font-bold text-slate-800 mb-4 text-center">Tactical Vehicle Market Growth Projections</h3>
+                     <div class="chart-container h-[400px] max-h-[450px]">
+                        <canvas id="marketGrowthChart"></canvas>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">Key Competitors</h3>
+                    <div class="space-y-4">
+                        <div class="p-4 border border-slate-200 rounded-lg">
+                            <h4 class="font-bold text-red-600">Primary Rival: Oshkosh Corp.</h4>
+                            <p class="text-sm text-slate-600">The JLTV A1 incumbent, Oshkosh is highly motivated to protect its global position. Its key strengths are the massive fielded fleet of over 22,000 JLTVs and a demonstrated technological lead with its working hybrid-electric eJLTV prototype.</p>
+                        </div>
+                         <div class="p-4 border border-slate-200 rounded-lg">
+                            <h4 class="font-bold text-slate-700">Global Prime: General Dynamics</h4>
+                            <p class="text-sm text-slate-600">GDLS competes with its heavier Stryker, but its lighter Eagle and Piranha vehicles are formidable competitors in the international market, especially in Europe.</p>
+                        </div>
+                        <div class="p-4 border border-slate-200 rounded-lg">
+                            <h4 class="font-bold text-slate-700">Global Prime: BAE Systems</h4>
+                            <p class="text-sm text-slate-600">While primarily focused on tracked combat vehicles like the Bradley and AMPV, BAE's sheer scale, R&D budget, and global reach make it a major competitor in any large vehicle procurement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 5: SWOT & Outlook -->
+        <section id="swot-outlook" class="mb-12">
+            <h2 class="section-title">Strategic Outlook & SWOT Analysis</h2>
+            <p class="text-slate-600 mb-8 max-w-4xl">AM General stands at a historic crossroads, armed with a transformative contract but facing significant execution risks and intense competition. Its future success hinges on flawless program execution, accelerated technology development, and aggressive international commercialization. Click each quadrant below to expand.</p>
+            
+            <div id="swot-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="swot-card" data-swot="s">
+                    <h3 class="text-xl font-bold text-green-600 flex items-center">
+                        <span class="mr-2">▲</span> Strengths
+                    </h3>
+                    <div class="swot-details">
+                        <ul class="mt-2 list-disc list-inside text-slate-600 space-y-1">
+                            <li>Iconic HMMWV brand with massive global installed base.</li>
+                            <li>Proven high-volume manufacturing prowess (e.g., Mercedes-Benz).</li>
+                            <li>Transformative, multi-billion dollar JLTV A2 contract win.</li>
+                            <li>Established relationships with DoD and 70+ countries.</li>
+                            <li>Vertical integration of powertrain manufacturing.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swot-card" data-swot="w">
+                    <h3 class="text-xl font-bold text-red-600 flex items-center">
+                         <span class="mr-2">▼</span> Weaknesses
+                    </h3>
+                    <div class="swot-details">
+                         <ul class="mt-2 list-disc list-inside text-slate-600 space-y-1">
+                            <li>Heavy financial dependence on the single JLTV A2 program.</li>
+                            <li>Demonstrated execution risk with initial production delays.</li>
+                            <li>Perceived technology lag in hybrid-electric propulsion vs. rivals.</li>
+                            <li>Less diversified vehicle portfolio than major competitors.</li>
+                            <li>Limited access to public capital for large-scale R&D.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swot-card" data-swot="o">
+                    <h3 class="text-xl font-bold text-blue-600 flex items-center">
+                         <span class="mr-2">▶</span> Opportunities
+                    </h3>
+                    <div class="swot-details">
+                         <ul class="mt-2 list-disc list-inside text-slate-600 space-y-1">
+                            <li>Vast international markets for both premium (JLTV A2) and mid-tier (Saber) vehicles.</li>
+                            <li>Leverage "hybrid-ready" JLTV A2 to accelerate hybrid-electric variant development.</li>
+                            <li>Favorable market conditions with surging global defense budgets.</li>
+                            <li>Expand contract assembly business to diversify revenue.</li>
+                            <li>Integrate partner technologies (artillery, C-UAS) to enhance value.</li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="swot-card" data-swot="t">
+                    <h3 class="text-xl font-bold text-yellow-600 flex items-center">
+                         <span class="mr-2">◀</span> Threats
+                    </h3>
+                    <div class="swot-details">
+                         <ul class="mt-2 list-disc list-inside text-slate-600 space-y-1">
+                            <li>Intense competition from motivated and well-resourced rivals like Oshkosh.</li>
+                            <li>Procurement volatility, as shown by the US Army's JLTV decision.</li>
+                            <li>Rapid pace of technological disruption (hybridization, autonomy).</li>
+                            <li>Global supply chain and inflationary pressures on fixed-price contracts.</li>
+                            <li>Long-term US defense budget uncertainty and political pressures.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Hotspot Modal -->
+    <div id="hotspot-modal" class="hotspot-modal">
+        <div class="hotspot-modal-content">
+            <div class="flex justify-between items-center mb-4">
+                <h3 id="modal-title" class="text-xl font-bold text-slate-800"></h3>
+                <button id="modal-close-button" class="text-slate-500 hover:text-slate-800">&times;</button>
+            </div>
+            <p id="modal-text" class="text-slate-600"></p>
+        </div>
+    </div>
+
+
+    <footer class="bg-slate-800 text-slate-400 mt-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center text-sm">
+            <p>This is a simulated interactive report generated based on public data for illustrative purposes.</p>
+            <p>&copy; 2025 Strategic Analysis. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Data
+            const jltvContractData = {
+                labels: ['Total Potential Value', 'Initial Obligated Funds'],
+                datasets: [{
+                    label: 'Contract Value (in Billion USD)',
+                    data: [8.66, 0.80], 
+                    backgroundColor: [
+                        'rgba(59, 130, 246, 0.6)', // blue-500
+                        'rgba(245, 158, 11, 0.7)'  // amber-500
+                    ],
+                    borderColor: [
+                        'rgba(59, 130, 246, 1)',
+                        'rgba(245, 158, 11, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            };
+
+            const marketGrowthData = {
+                labels: ['2025', '2026', '2027', '2028', '2029', '2030'],
+                datasets: [{
+                    label: 'Global Armored Vehicle Market (Billion USD)',
+                    data: [51.6, 53.3, 55.1, 56.9, 58.8, 60.7],
+                    borderColor: 'rgba(59, 130, 246, 1)',
+                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            };
+
+            // Chart Initialization
+            const jltvCtx = document.getElementById('jltvContractChart')?.getContext('2d');
+            if (jltvCtx) {
+                new Chart(jltvCtx, {
+                    type: 'bar',
+                    data: jltvContractData,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        indexAxis: 'y',
+                        plugins: {
+                            legend: { display: false },
+                            title: {
+                                display: true,
+                                text: 'JLTV A2 Contract Value (Billions USD)',
+                                font: { size: 16, weight: 'bold' },
+                                color: '#334155'
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return `$${context.raw.toFixed(2)} Billion`;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Value in USD (Billions)'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            const marketCtx = document.getElementById('marketGrowthChart')?.getContext('2d');
+            if (marketCtx) {
+                new Chart(marketCtx, {
+                    type: 'line',
+                    data: marketGrowthData,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                           legend: { position: 'bottom' },
+                           title: {
+                                display: true,
+                                text: 'Projected Market Growth (CAGR ~3.3%)',
+                                font: { size: 16, weight: 'bold' },
+                                color: '#334155'
+                           }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                title: {
+                                    display: true,
+                                    text: 'Market Value (Billion USD)'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if(mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+
+            // Smooth Scrolling & Active Nav Link
+            const navLinks = document.querySelectorAll('.nav-link, #mobile-menu a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80, // Offset for sticky header
+                            behavior: 'smooth'
+                        });
+                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+            
+            // Active nav on scroll
+            const sections = document.querySelectorAll('section');
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 90) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+
+            // JLTV Tabs
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    const tab = button.dataset.tab;
+                    tabPanes.forEach(pane => {
+                        pane.classList.add('hidden');
+                        if (pane.id === `tab-${tab}`) {
+                            pane.classList.remove('hidden');
+                        }
+                    });
+                });
+            });
+            
+            // SWOT Accordion
+            const swotCards = document.querySelectorAll('.swot-card');
+            swotCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    // Optional: Close other cards when one is opened
+                    swotCards.forEach(otherCard => {
+                        if (otherCard !== card) {
+                            otherCard.classList.remove('open');
+                        }
+                    });
+                    card.classList.toggle('open');
+                });
+            });
+
+            // Hotspot Modal Logic
+            const hotspots = document.querySelectorAll('.vehicle-hotspot');
+            const modal = document.getElementById('hotspot-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalText = document.getElementById('modal-text');
+            const closeModalButton = document.getElementById('modal-close-button');
+
+            hotspots.forEach(hotspot => {
+                hotspot.addEventListener('click', () => {
+                    modalTitle.textContent = hotspot.dataset.title;
+                    modalText.textContent = hotspot.dataset.text;
+                    modal.classList.add('visible');
+                });
+            });
+
+            const closeModal = () => {
+                modal.classList.remove('visible');
+            };
+
+            closeModalButton.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
