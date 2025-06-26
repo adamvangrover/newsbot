@@ -1,9 +1,12 @@
 from typing import List, Dict, Optional
+from typing import List
+from typing import List
 from newsbot_project_files.backend.app.schemas.news import NewsArticle
 from newsbot_project_files.backend.app.core.logging import get_logger
 from newsbot_project_files.backend.app.processing.sentiment import get_sentiment
-from newsbot_project_files.backend.app.processing.categorization import categorize_news, DEFAULT_CATEGORIES_KEYWORDS
+from newsbot_project_files.backend.app.processing.categorization import categorize_news, DEFAULT_CATEGORIES_KEYWORDS, detect_events
 from newsbot_project_files.backend.app.processing.summarization import summarize_text
+from newsbot_project_files.backend.app.processing.ner import extract_entities
 
 logger = get_logger(__name__)
 
@@ -52,22 +55,30 @@ class AIProcessingService:
                 text_to_summarize = article.summary
                 if not text_to_summarize or len(text_to_summarize.strip().split()) < 20: # If summary is less than 20 words
                     logger.info(f"Original summary for article {article.id} is short. AI summary might not be generated or may use headline.")
-                    # Optionally, could try to summarize article.headline if summary is too short.
-                    # For now, if summary is too short, AI summary might just return the original short summary.
-                    # Or we can choose not to generate one.
-                    article.ai_summary = article.summary # Keep original if too short. Summarize function handles this.
+                    article.ai_summary = article.summary
 
-                # The summarize_text function itself checks for short text.
                 ai_generated_summary = summarize_text(text_to_summarize)
                 if ai_generated_summary and "Error in summarization" not in ai_generated_summary:
                     article.ai_summary = ai_generated_summary
                     logger.debug(f"Article {article.id} AI summary generated (first 50 chars): {article.ai_summary[:50]}...")
                 elif ai_generated_summary and "Error in summarization" in ai_generated_summary:
                     logger.warning(f"AI summarization for article {article.id} encountered an error: {ai_generated_summary}")
-                    article.ai_summary = article.summary # Fallback to original summary
-                else: # summarize_text returned None or original short text
+                    article.ai_summary = article.summary
+                else:
                     logger.warning(f"AI summarization did not produce a new summary for article {article.id}. Original summary: '{article.summary[:50]}...'")
-                    article.ai_summary = article.summary # Fallback or keep as is
+                    article.ai_summary = article.summary
+
+                # 4. Named Entity Recognition (NER)
+                # Use the same text_for_analysis (headline + summary) for NER
+                article.entities = extract_entities(text_for_analysis)
+                if article.entities is None: # Indicates an error in NER processing
+                    logger.error(f"NER processing failed for article {article.id}. Entities will be empty.")
+                    article.entities = [] # Set to empty list on error to maintain type consistency
+                logger.debug(f"Article {article.id} extracted {len(article.entities)} entities.")
+
+                # 5. Event Detection
+                article.detected_events = detect_events(text_for_analysis)
+                logger.debug(f"Article {article.id} detected events: {article.detected_events}")
 
                 processed_articles.append(article)
             except Exception as e:
@@ -76,6 +87,8 @@ class AIProcessingService:
                 article.sentiment_label = article.sentiment_label or "Processing Error"
                 article.analyzed_category = article.analyzed_category or "Processing Error"
                 article.ai_summary = article.ai_summary or "Processing Error"
+                article.entities = article.entities if hasattr(article, 'entities') and article.entities is not None else []
+                article.detected_events = article.detected_events if hasattr(article, 'detected_events') and article.detected_events is not None else []
                 processed_articles.append(article)
 
         logger.info(f"AI Service: Processed {len(processed_articles)} articles.")

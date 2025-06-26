@@ -35,6 +35,7 @@ pandas>=1.5.0,<2.2.0 # Uncomment if used by AI services or data handling
 
 # Logging (already part of standard library, but can add structlog etc. if desired)
 sentencepiece>=0.1.98,<0.2.0
+beautifulsoup4>=4.11.0,<5.0.0 # For web scraping text content
 
 
 # Testing dependencies

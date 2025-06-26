@@ -1,59 +1,59 @@
 import React, { useState } from 'react';
-import Header from './components/Layout/Header';
-import MainContent from './components/Layout/MainContent';
-import CompanySearch from './features/company/CompanySearch';
-import CompanyProfileDisplay from './features/company/CompanyProfileDisplay';
-import StockPriceChart from './features/company/StockPriceChart';
-import NewsList from './features/company/NewsList';
-import { useCompanyData } from './hooks/useCompanyData';
-import Typography from '@mui/material/Typography';
-import CircularProgress from '@mui/material/CircularProgress';
-import Alert from '@mui/material/Alert';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline'; // Handles base styling and theme resets
+import Toolbar from '@mui/material/Toolbar'; // For spacing content below AppBar
+
+import Header from './components/Layout/Header';
+import Sidebar from './components/Layout/Sidebar';
+import MainContent from './components/Layout/MainContent'; // This might need adjustment or removal if pages handle their own containers
+
+// Page Components
+import CompanyAnalysisPage from './features/company/CompanyAnalysisPage';
+import MarketOutlookPage from './features/market/MarketOutlookPage';
+import WebScrapePage from './features/tools/WebScrapePage';
+
+const drawerWidth = 240; // Consistent with Sidebar and Header
 
 function App() {
-  const [currentTicker, setCurrentTicker] = useState<string>('');
-  const [newsDays, setNewsDays] = useState<number>(7); // Default to 7 days of news
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-  // Fetch data using the custom hook
-  const { data: companyData, error, isLoading, isFetching, isError } = useCompanyData(currentTicker, newsDays);
-
-  const handleSearch = (ticker: string) => {
-    setCurrentTicker(ticker);
-    // newsDays could also be part of the search form
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
   };
 
   return (
-    <>
-      <Header />
-      <MainContent>
-        <CompanySearch onSearch={handleSearch} isLoading={isLoading || isFetching} />
+    <Router>
+      <Box sx={{ display: 'flex' }}>
+        <CssBaseline />
+        <Header handleDrawerToggle={handleDrawerToggle} />
+        <Sidebar mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle} />
 
-        {(isLoading || isFetching) && (
-          <Box sx={{ display: 'flex', justifyContent: 'center', my: 3 }}>
-            <CircularProgress />
-          </Box>
-        )}
-
-        {isError && error && (
-          <Alert severity="error" sx={{ my: 2 }}>
-            Error fetching data: {error.message}
-          </Alert>
-        )}
-
-        {!isLoading && !isFetching && !isError && !companyData && currentTicker && (
-           <Typography sx={{my: 2}}>No data found for {currentTicker}. It might be an invalid ticker or an issue with the data provider.</Typography>
-        )}
-
-        {companyData && (
-          <>
-            <CompanyProfileDisplay profile={companyData.profile} />
-            <StockPriceChart stockData={companyData.stock_data} />
-            <NewsList newsData={companyData.news} />
-          </>
-        )}
-      </MainContent>
-    </>
+        {/* Main content area */}
+        <Box
+          component="main"
+          sx={{
+            flexGrow: 1,
+            p: 3,
+            width: { sm: `calc(100% - ${drawerWidth}px)` },
+            overflowX: 'hidden' // Prevent horizontal scroll
+          }}
+        >
+          <Toolbar /> {/* Necessary spacer for content under fixed AppBar */}
+          {/* MainContent might not be needed if each page uses its own Container */}
+          {/* <MainContent> */}
+            <Routes>
+              <Route path="/" element={<CompanyAnalysisPage />} />
+              <Route path="/market" element={<MarketOutlookPage />} />
+              <Route path="/tools" element={<WebScrapePage />} />
+              {/* Add a 404 Not Found route later if desired */}
+              {/* <Route path="*" element={<NotFoundPage />} /> */}
+            </Routes>
+          {/* </MainContent> */}
+        </Box>
+      </Box>
+    </Router>
   );
 }
 

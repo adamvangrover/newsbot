@@ -104,3 +104,63 @@ def categorize_news(text: str, use_zero_shot: bool = False, candidate_labels: Op
 
     logger.info("Using keyword-based categorization.")
     return categorize_news_keyword(text, categories_keywords=DEFAULT_CATEGORIES_KEYWORDS)
+
+# --- Event Detection ---
+DEFAULT_EVENT_PATTERNS = {
+    "Earnings Report": [
+        r'(reports|announces|releases|posts) (quarterly|q\d|annual|fiscal year|fy) (earnings|results|profit|revenue|loss)',
+        r'(earnings|results) (beat|miss|exceed|fall short of) expectations',
+        r'conference call to discuss (quarterly|q\d|annual|fy) results',
+        r'eps (of|at|beats|misses)' # Earnings Per Share
+    ],
+    "Mergers & Acquisitions": [
+        r'(acquires|buys|purchases|takes over) [A-Za-z0-9_.-]+', # Target company name
+        r'[A-Za-z0-9_.-]+ to be acquired by',
+        r'(merger|acquisition|takeover) (deal|agreement|talks|discussions|proposal|offer)',
+        r'(agrees to|completes|finalizes|announces) (acquisition of|merger with)',
+        r'buyout of'
+    ],
+    "Product Launch": [ # Can refine existing category keywords or add more specific event patterns
+        r'(launches|unveils|introduces|releases|announces) (new|upcoming|next-gen|next generation) (product|service|platform|feature|software|hardware)',
+        r'(product|service|platform) (now available|coming soon|beta version|to be released)',
+        r'debuts (its|a) new'
+    ],
+    "Analyst Rating": [
+        r'(analyst|firm|bank) (upgrades|downgrades|initiates|reiterates|maintains) (coverage|rating)',
+        r'(price target|pt) (raised|lowered|set at|cut to)',
+        r'(buy|sell|hold|overweight|underweight|neutral) rating'
+    ],
+    "Executive Change": [ # Similar to category, but more event-focused
+        r'(appoints|names|hires) new (ceo|cfo|cto|coo|president|chairman|director|executive|officer|vp)',
+        r'(ceo|cfo|cto|coo|president|chairman|director) (steps down|resigns|departs|retires|to leave)',
+        r'leadership (change|transition|shakeup)'
+    ]
+}
+
+def detect_events(text: str, event_patterns: Dict[str, List[str]] = None) -> List[str]:
+    if event_patterns is None:
+        event_patterns = DEFAULT_EVENT_PATTERNS
+
+    detected_event_types = []
+    if not text or not isinstance(text, str) or len(text.strip()) == 0:
+        logger.warning("Cannot detect events in empty text.")
+        return detected_event_types
+
+    text_lower = text.lower() # Some regex patterns might be case-insensitive, but good to normalize
+
+    for event_type, patterns in event_patterns.items():
+        for pattern in patterns:
+            # Using re.IGNORECASE for flexibility with capitalization in news
+            if re.search(pattern, text, re.IGNORECASE):
+                if event_type not in detected_event_types: # Add only once
+                    detected_event_types.append(event_type)
+                # Found a match for this event type, can break from inner loop (patterns for this event)
+                # Or continue if multiple patterns for the same event type might indicate stronger signal (not implemented here)
+                break
+
+    if detected_event_types:
+        logger.info(f"Detected events for '{text[:50]}...': {detected_event_types}")
+    else:
+        logger.info(f"No specific events detected for '{text[:50]}...'.")
+
+    return detected_event_types
