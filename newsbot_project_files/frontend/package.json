@@ -10,16 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.10",
+    "@mui/material": "^5.14.10",
+    "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.5.0",
+    "chart.js": "^4.4.0",
     "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
-    "axios": "^1.5.0",                 # For API calls
-    "@mui/material": "^5.14.10",      # Material-UI core
-    "@mui/icons-material": "^5.14.10",# Material-UI icons
-    "@emotion/react": "^11.11.1",     # Emotion CSS-in-JS
-    "@emotion/styled": "^11.11.0",    # Emotion styled components
-    "react-chartjs-2": "^5.2.0",      # Chart.js wrapper for React
-    "chart.js": "^4.4.0",             # Chart.js library
-    "react-query": "^3.39.3"          # Client-side data fetching/caching
+    "react-query": "^3.39.3",
+    "react-router-dom": "^7.6.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

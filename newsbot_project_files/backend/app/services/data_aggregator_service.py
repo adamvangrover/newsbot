@@ -200,3 +200,71 @@ class DataAggregatorService:
             logger.error(f"Unexpected error (e.g., JSON parsing, Pydantic validation) for stock prices {ticker}: {e}", exc_info=True)
             return None
 
+    @retry(wait=wait_exponential(multiplier=1, min=2, max=10), stop=stop_after_attempt(3), reraise=True)
+    @lru_cache(maxsize=32) # Cache general news for a while; smaller cache size than per-ticker
+    async def get_general_market_news(self, category: str = "general", min_id: Optional[int] = None) -> List[NewsArticle]:
+        """
+        Fetches general market news from Finnhub.
+        :param category: News category (e.g., 'general', 'forex', 'crypto', 'merger').
+        :param min_id: (Optional) Use this to get news after a certain ID (for pagination/updates). Finnhub specific.
+        """
+        logger.debug(f"Attempting to fetch general market news for category '{category}' from Finnhub.")
+        if not self.finnhub_api_key or self.finnhub_api_key == "your_finnhub_api_key_here":
+            logger.error(f"Finnhub API key missing. Cannot fetch general market news for category '{category}'.")
+            return []
+
+        params = {"category": category, "token": self.finnhub_api_key}
+        if min_id is not None:
+            params["minId"] = min_id
+
+        try:
+            response = requests.get(f"{self.finnhub_base_url}/news", params=params, timeout=15)
+            response.raise_for_status()
+            news_data_list = response.json()
+
+            if not isinstance(news_data_list, list):
+                logger.warning(f"Finnhub general news response for category '{category}' was not a list: {type(news_data_list)}. Data: {str(news_data_list)[:200]}")
+                return []
+
+            articles: List[NewsArticle] = []
+            for article_data in news_data_list:
+                if not isinstance(article_data, dict):
+                    logger.warning(f"Skipping non-dict item in general news data for category '{category}': {str(article_data)[:100]}")
+                    continue
+                try:
+                    # Adapt ID handling similar to get_company_news
+                    fh_id = article_data.get('id')
+                    article_url = article_data.get('url')
+                    if fh_id is not None and fh_id != 0:
+                        article_data['id'] = str(fh_id)
+                    elif article_url:
+                         article_data['id'] = article_url
+                    else:
+                        logger.warning(f"General news article for category '{category}' has no usable 'id' or 'url'. Headline: {article_data.get('headline', 'N/A')[:50]}... Skipping.")
+                        continue
+
+                    if 'datetime' in article_data and not isinstance(article_data['datetime'], int):
+                        try:
+                            article_data['datetime'] = int(article_data['datetime'])
+                        except (ValueError, TypeError) as ve:
+                            logger.error(f"Could not convert datetime '{article_data.get('datetime')}' to int for general news article {article_data.get('id')}: {ve}")
+                            continue
+
+                    # 'related' field might be empty or different for general news, Pydantic model handles Optional
+                    articles.append(NewsArticle(**article_data))
+                except Exception as p_err: # PydanticValidationError or other
+                    logger.error(f"Error parsing general news article for category '{category}' (ID: {article_data.get('id', 'N/A')} Headline: {article_data.get('headline', 'N/A')[:50]}...): {p_err}", exc_info=False)
+
+            logger.info(f"Successfully fetched and parsed {len(articles)} general news articles for category '{category}' from Finnhub.")
+            return articles
+        except requests.exceptions.HTTPError as http_err:
+            logger.error(f"HTTP error fetching general news for category '{category}': {http_err}. Status: {http_err.response.status_code}. Response: {http_err.response.text[:200]}")
+            if http_err.response.status_code in [401, 403]:
+                logger.error(f"Finnhub API key may be invalid or lacking permissions for general news category '{category}'.")
+            return [] # Do not retry on client HTTP errors generally
+        except requests.exceptions.RequestException as req_err:
+            logger.warning(f"Request error fetching general news for category '{category}': {req_err}. Will retry if applicable.")
+            raise # Reraise to allow tenacity to handle retries
+        except Exception as e:
+            logger.error(f"Unexpected error (e.g., JSON parsing, Pydantic validation) for general news category '{category}': {e}", exc_info=True)
+            return []
