@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Peer Analysis Engine Blueprint</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutral Harmony -->
+    <!-- Application Structure Plan: A single-page application with a sticky navigation header that allows users to jump between key modules. The structure is designed for non-linear exploration: 1. An 'Introduction' to set the stage. 2. An 'Interactive Schema Explorer' to visualize the database structure. 3. A 'Data Flow Diagram' to explain the data acquisition process. 4. A 'Live Demo' to showcase the practical output with an interactive table and chart. This structure was chosen to transform the dense report into an engaging learning tool, allowing users to explore concepts visually and interactively, which is more effective for understanding complex systems than reading static text. -->
+    <!-- Visualization & Content Choices: 1. 'Introduction': Goal: Inform. Method: Styled text blocks. Interaction: None. Justification: Provides initial context. 2. 'Schema Explorer': Goal: Organize/Inform. Method: HTML cards. Interaction: JS-powered expand/collapse on click. Justification: Breaks down the complex schema into manageable, thematic parts to prevent information overload. 3. 'Data Flow Diagram': Goal: Explain Process. Method: HTML/Tailwind divs arranged as a flowchart. Interaction: Hover effects to highlight stages. Justification: Visualizes the complex data pipeline for easier comprehension. 4. 'Live Demo': Goal: Compare/Demonstrate. Method: HTML table + Chart.js bar chart. Interaction: Dropdown selection updates table and chart via JS. Justification: Makes the abstract blueprint tangible by showing the final product in action. Library: Chart.js for its simplicity and dynamic update capabilities. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f7f4;
+            color: #403d39;
+        }
+        .nav-link {
+            transition: color 0.3s, border-color 0.3s;
+        }
+        .nav-link:hover {
+            color: #d97706; 
+            border-bottom-color: #d97706;
+        }
+        .active-section {
+            border-left: 4px solid #d97706;
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.02);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 45vh;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .schema-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e0ddd7;
+        }
+        .schema-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-color: #d97706;
+        }
+        .flow-step {
+            transition: all 0.2s ease-in-out;
+            border: 2px solid #ccc5b9;
+        }
+        .flow-step:hover {
+            background-color: #fffaf0;
+            border-color: #d97706;
+            transform: scale(1.05);
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            color: #a6a29a;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-gray-800">Peer Analysis Engine Blueprint</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#introduction" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 border-b-2 border-transparent">Introduction</a>
+                        <a href="#schema-explorer" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 border-b-2 border-transparent">Schema Explorer</a>
+                        <a href="#data-flow" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 border-b-2 border-transparent">Data Flow</a>
+                        <a href="#live-demo" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 border-b-2 border-transparent">Live Demo</a>
+                        <a href="#advanced-concepts" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 border-b-2 border-transparent">Advanced Concepts</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+        <section id="introduction" class="mb-16 scroll-mt-20">
+            <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Architecting a Modern Analysis Engine</h2>
+                <p class="text-lg text-gray-600 mb-6">This application provides an interactive guide to the architectural framework for building a sophisticated peer analysis engine. The goal is to aggregate, structure, and serve vast amounts of public financial data to power a dynamic comparison interface. Explore the sections below to understand the core components, from data structure and acquisition to the final, user-facing product.</p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="p-4 bg-amber-50 rounded-lg border border-amber-200">
+                        <h3 class="font-semibold text-amber-900">Canonical Identifiers</h3>
+                        <p class="text-sm text-amber-800 mt-1">The system's foundation is the use of the permanent SEC Central Index Key (CIK) as the primary identifier, preventing data errors from changing ticker symbols.</p>
+                    </div>
+                    <div class="p-4 bg-lime-50 rounded-lg border border-lime-200">
+                        <h3 class="font-semibold text-lime-900">Normalized Data Schema</h3>
+                        <p class="text-sm text-lime-800 mt-1">A relational database structure is used to manage complex, multi-dimensional data like financial history and credit ratings, enabling powerful and flexible queries.</p>
+                    </div>
+                    <div class="p-4 bg-sky-50 rounded-lg border border-sky-200">
+                        <h3 class="font-semibold text-sky-900">Hybrid Data Protocol</h3>
+                        <p class="text-sm text-sky-800 mt-1">A pragmatic approach combining direct SEC EDGAR access for source-of-truth data with efficient third-party APIs for real-time market data and pre-calculated ratios.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="schema-explorer" class="mb-16 scroll-mt-20">
+            <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Interactive Unified Data Schema</h2>
+                <p class="text-lg text-gray-600 mb-8">The power of the analysis engine lies in its meticulously structured data model. Instead of a single flat file, the data is organized into related tables, ensuring integrity and query performance. Click on each category below to explore the specific data fields that are collected.</p>
+                <div id="schema-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                </div>
+            </div>
+        </section>
+
+        <section id="data-flow" class="mb-16 scroll-mt-20">
+            <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Data Acquisition & Integration Flow</h2>
+                <p class="text-lg text-gray-600 mb-8">Populating the schema requires a multi-pronged data acquisition strategy. The diagram below illustrates the flow of information from raw sources to the structured, analysis-ready database. Hover over each step to learn more about its role in the process.</p>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 p-4 overflow-x-auto">
+                    <div class="flex flex-col space-y-2">
+                        <div class="flow-step text-center p-4 rounded-lg bg-gray-50 min-w-[180px]">
+                            <h4 class="font-semibold">SEC EDGAR</h4>
+                            <p class="text-xs text-gray-500">Source of Truth</p>
+                        </div>
+                        <div class="flow-step text-center p-4 rounded-lg bg-gray-50 min-w-[180px]">
+                            <h4 class="font-semibold">3rd Party APIs</h4>
+                            <p class="text-xs text-gray-500">Market Data & Ratios</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow font-mono hidden md:block">&rarr;</div>
+                    <div class="flow-arrow font-mono md:hidden">&darr;</div>
+                    <div class="flow-step text-center p-6 rounded-lg bg-gray-50 min-w-[180px]">
+                        <h4 class="font-semibold">Acquisition Engine</h4>
+                        <p class="text-xs text-gray-500">Python & API Calls</p>
+                    </div>
+                    <div class="flow-arrow font-mono hidden md:block">&rarr;</div>
+                    <div class="flow-arrow font-mono md:hidden">&darr;</div>
+                    <div class="flow-step text-center p-6 rounded-lg bg-gray-50 min-w-[180px]">
+                        <h4 class="font-semibold">Parsing & Cleaning</h4>
+                        <p class="text-xs text-gray-500">Validation & Normalization</p>
+                    </div>
+                    <div class="flow-arrow font-mono hidden md:block">&rarr;</div>
+                    <div class="flow-arrow font-mono md:hidden">&darr;</div>
+                    <div class="flow-step text-center p-6 rounded-lg bg-lime-50 border-lime-200 min-w-[180px]">
+                        <h4 class="font-semibold text-lime-900">PostgreSQL DB</h4>
+                        <p class="text-xs text-lime-700">Indexed & Relational</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="live-demo" class="mb-16 scroll-mt-20">
+            <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Live Demo: Peer Comparison</h2>
+                <p class="text-lg text-gray-600 mb-6">This is where the architecture becomes reality. The table below shows a direct peer comparison for companies in the "Technology Hardware, Storage & Peripherals" industry. Use the dropdown to change the focus company and see how the table and chart update dynamically. This simulates the final output of the analysis engine.</p>
+                
+                <div class="mb-6 max-w-sm">
+                    <label for="company-select" class="block text-sm font-medium text-gray-700 mb-1">Select Focus Company:</label>
+                    <select id="company-select" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm rounded-md">
+                        <option value="AAPL">Apple Inc. (AAPL)</option>
+                        <option value="HPQ">HP Inc. (HPQ)</option>
+                        <option value="DELL">Dell Technologies (DELL)</option>
+                        <option value="NTAP">NetApp, Inc. (NTAP)</option>
+                        <option value="STX">Seagate Technology (STX)</option>
+                    </select>
+                </div>
+
+                <div class="overflow-x-auto mb-8">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Company (Ticker)</th>
+                                <th scope="col" class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Market Cap</th>
+                                <th scope="col" class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">P/E (TTM)</th>
+                                <th scope="col" class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Net Margin (%)</th>
+                                <th scope="col" class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Debt/Equity</th>
+                                <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Analyst Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody id="peer-table-body" class="bg-white divide-y divide-gray-200">
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Peer Comparison: P/E Ratio (TTM)</h3>
+                <div class="chart-container">
+                    <canvas id="peer-chart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="advanced-concepts" class="scroll-mt-20">
+            <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Advanced Concepts & Future State</h2>
+                <p class="text-lg text-gray-600 mb-8">A robust platform must evolve. The foundational data provides a baseline, but true analytical edge comes from integrating unique datasets and building proprietary features. The following enhancements represent the strategic roadmap for transforming the engine from a data repository into a decision-support system.</p>
+                <div id="advanced-concepts-container" class="space-y-4">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2025 Financial Analysis Engine Blueprint. A conceptual model.</p>
+        </div>
+    </footer>
+    
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    const schemaData = [
+        {
+            category: 'Market & Classification',
+            color: 'bg-indigo-100',
+            textColor: 'text-indigo-800',
+            fields: ['CIK (Primary Key)', 'CompanyName', 'Ticker', 'Exchange', 'GICS_Sector', 'GICS_Industry', 'GICS_Sub_Industry', 'MarketCap']
+        },
+        {
+            category: 'Financial Performance',
+            color: 'bg-green-100',
+            textColor: 'text-green-800',
+            fields: ['FiscalYear', 'ReportDate', 'TotalRevenue', 'GrossProfit', 'OperatingIncome', 'NetIncome', 'EBITDA', 'EPS_Diluted']
+        },
+        {
+            category: 'Valuation Multiples',
+            color: 'bg-yellow-100',
+            textColor: 'text-yellow-800',
+            fields: ['PE_Ratio_TTM', 'PS_Ratio_TTM', 'PB_Ratio_TTM', 'EV_EBITDA_TTM', 'PEG_Ratio', 'DividendYield']
+        },
+        {
+            category: 'Balance Sheet & Solvency',
+            color: 'bg-red-100',
+            textColor: 'text-red-800',
+            fields: ['ReportDate', 'TotalAssets', 'TotalLiabilities', 'TotalEquity', 'TotalDebt', 'CurrentRatio', 'DebtToEquityRatio']
+        },
+        {
+            category: 'Creditworthiness',
+            color: 'bg-blue-100',
+            textColor: 'text-blue-800',
+            fields: ['Agency (S&P, Moody\'s)', 'DebtType', 'Rating', 'Outlook', 'Date']
+        },
+        {
+            category: 'Operational & Strategic',
+            color: 'bg-purple-100',
+            textColor: 'text-purple-800',
+            fields: ['EmployeeCount', 'RevenuePerEmployee', 'AnalystConsensusRating', 'EarningsCallSentiment']
+        }
+    ];
+
+    const schemaContainer = document.getElementById('schema-container');
+    schemaData.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'schema-card bg-white rounded-lg shadow-sm cursor-pointer';
+        card.innerHTML = `
+            <div class="p-4 border-b border-gray-200">
+                <h3 class="text-lg font-semibold text-gray-800">${item.category}</h3>
+            </div>
+            <div class="details p-4 hidden">
+                <ul class="space-y-2">
+                    ${item.fields.map(field => `<li class="text-sm text-gray-600 flex items-center"><span class="w-2 h-2 mr-3 rounded-full ${item.color}"></span>${field}</li>`).join('')}
+                </ul>
+            </div>
+        `;
+        schemaContainer.appendChild(card);
+        card.addEventListener('click', () => {
+            card.querySelector('.details').classList.toggle('hidden');
+        });
+    });
+
+    const peerData = {
+        'AAPL': { name: 'Apple Inc.', marketCap: '3.16T', pe: 32.91, netMargin: 24.30, debtEquity: 1.62, rating: 'Buy' },
+        'HPQ': { name: 'HP Inc.', marketCap: '35.4B', pe: 8.75, netMargin: 6.20, debtEquity: -10.5, rating: 'Hold' },
+        'DELL': { name: 'Dell Technologies', marketCap: '95.2B', pe: 22.15, netMargin: 2.50, debtEquity: 6.80, rating: 'Buy' },
+        'NTAP': { name: 'NetApp, Inc.', marketCap: '24.8B', pe: 18.50, netMargin: 12.80, debtEquity: 4.35, rating: 'Hold' },
+        'STX': { name: 'Seagate Technology', marketCap: '20.1B', pe: null, netMargin: -8.90, debtEquity: 19.8, rating: 'Hold' }
+    };
+
+    const companySelect = document.getElementById('company-select');
+    const tableBody = document.getElementById('peer-table-body');
+    const ctx = document.getElementById('peer-chart').getContext('2d');
+    let peerChart;
+
+    function formatRating(rating) {
+        let colorClass = 'bg-gray-200 text-gray-800';
+        if (rating === 'Buy') colorClass = 'bg-green-200 text-green-800';
+        if (rating === 'Hold') colorClass = 'bg-yellow-200 text-yellow-800';
+        if (rating === 'Sell') colorClass = 'bg-red-200 text-red-800';
+        return `<span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${colorClass}">${rating}</span>`;
+    }
+
+    function updatePeerComparison(focusTicker) {
+        tableBody.innerHTML = '';
+        Object.entries(peerData).forEach(([ticker, data]) => {
+            const isFocus = ticker === focusTicker;
+            const row = document.createElement('tr');
+            row.className = isFocus ? 'bg-amber-50' : '';
+            row.innerHTML = `
+                <td class="px-6 py-4 whitespace-nowrap text-sm ${isFocus ? 'font-bold' : 'font-medium'} text-gray-900">${data.name} (${ticker})</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">${data.marketCap}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">${data.pe !== null ? data.pe.toFixed(2) : 'N/A'}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm ${data.netMargin < 0 ? 'text-red-500' : 'text-gray-500'} text-right">${data.netMargin.toFixed(2)}%</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">${data.debtEquity.toFixed(2)}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-center">${formatRating(data.rating)}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+        updateChart(focusTicker);
+    }
+    
+    function updateChart(focusTicker) {
+        const labels = Object.keys(peerData);
+        const chartData = labels.map(ticker => peerData[ticker].pe);
+        const backgroundColors = labels.map(ticker => ticker === focusTicker ? 'rgba(217, 119, 6, 0.8)' : 'rgba(163, 163, 163, 0.5)');
+        const borderColors = labels.map(ticker => ticker === focusTicker ? 'rgba(217, 119, 6, 1)' : 'rgba(163, 163, 163, 1)');
+
+        if (peerChart) {
+            peerChart.data.labels = labels;
+            peerChart.data.datasets[0].data = chartData;
+            peerChart.data.datasets[0].backgroundColor = backgroundColors;
+            peerChart.data.datasets[0].borderColor = borderColors;
+            peerChart.update();
+        } else {
+            peerChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'P/E Ratio (TTM)',
+                        data: chartData,
+                        backgroundColor: backgroundColors,
+                        borderColor: borderColors,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += context.parsed.y.toFixed(2);
+                                    } else {
+                                        label += 'N/A';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'P/E Ratio'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    }
+
+    companySelect.addEventListener('change', (e) => {
+        updatePeerComparison(e.target.value);
+    });
+
+    updatePeerComparison('AAPL');
+
+    const advancedConceptsData = [
+        {
+            title: 'Alternative Data Integration',
+            content: 'Enhance predictive power by integrating non-traditional data sources like job postings (revealing strategic hiring), patent filings (indicating innovation pipelines), and real-time news sentiment (gauging market perception beyond quarterly reports).'
+        },
+        {
+            title: 'Custom Scoring & Ranking',
+            content: 'Empower users to build their own "Peer Rank" score by assigning custom weights to metrics across Valuation, Profitability, Growth, and Solvency. This allows for analysis tailored to specific investment philosophies.'
+        },
+        {
+            title: 'Automated Trend & Anomaly Detection',
+            content: 'Move from passive data display to active insight generation. The system can be programmed to automatically flag significant trends (e.g., "Net Margin down for 4 consecutive quarters") or anomalies (e.g., "Inventory Turnover 30% below 5-year average").'
+        },
+        {
+            title: 'Enhanced Industry Benchmarking',
+            content: 'Provide crucial context by calculating and displaying not just company metrics, but also industry averages, medians, and quartiles. This helps users understand if a company\'s performance is strong or weak relative to its true peer group.'
+        }
+    ];
+
+    const advancedConceptsContainer = document.getElementById('advanced-concepts-container');
+    advancedConceptsData.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'border border-gray-200 rounded-lg';
+        div.innerHTML = `
+            <button class="w-full text-left p-4 focus:outline-none">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-semibold text-gray-800">${item.title}</h4>
+                    <span class="text-gray-500 transform transition-transform duration-300">&#9662;</span>
+                </div>
+            </button>
+            <div class="content hidden px-4 pb-4 text-gray-600">
+                <p>${item.content}</p>
+            </div>
+        `;
+        advancedConceptsContainer.appendChild(div);
+
+        div.querySelector('button').addEventListener('click', () => {
+            div.querySelector('.content').classList.toggle('hidden');
+            div.querySelector('span').classList.toggle('rotate-180');
+        });
+    });
+
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => {
+                    link.classList.remove('text-amber-600', 'font-bold');
+                    if (link.getAttribute('href').substring(1) === entry.target.id) {
+                        link.classList.add('text-amber-600', 'font-bold');
+                    }
+                });
+            }
+        });
+    }, { rootMargin: "-50% 0px -50% 0px" });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+});
+</script>
+</body>
+</html>
