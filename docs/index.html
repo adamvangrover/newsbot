@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSL Signal Intelligence Platform Blueprint</title>
+    <!-- Chosen Palette: Slate & Amber -->
+    <!-- Application Structure Plan: A thematic, single-page dashboard. The user navigates between four core pillars of the report: 'Market Fundamentals', 'Signal Intelligence', 'The Engine' (Architecture), and 'Implementation Plan'. This non-linear structure prioritizes user-driven exploration over the report's linear flow. The goal is to allow a user, whether a manager, developer, or analyst, to quickly access the section most relevant to them. Key interactions include a dynamic ecosystem diagram, an interactive chart showing the market impact of news events, a clickable architecture flowchart, and an expandable timeline for the project roadmap. This structure was chosen to make a complex, text-heavy blueprint easily digestible and engaging by breaking it into interactive, visually-linked components. -->
+    <!-- Visualization & Content Choices: 
+        - Market Fundamentals: Goal: Inform/Organize. Method: Interactive cards for BSL features and a clickable HTML/CSS diagram for the market ecosystem. Interaction: Hover/click on participant nodes to reveal roles/needs. Justification: Converts a static table into an explorable relationship map.
+        - Signal Intelligence: Goal: Compare/Quantify. Method: Chart.js Bar Chart. Interaction: User selects an event type from a dropdown, which dynamically updates the chart to show the typical impact on loan spreads (in basis points). Justification: Transforms a static data table into a dynamic, quantitative visualization, making the impact of signals immediately apparent.
+        - The Engine (Architecture): Goal: Organize/Relationships. Method: A large, clickable flowchart diagram built with HTML/CSS Grid and Flexbox. Interaction: Clicking on a component (e.g., "Multi-Agent System") reveals a detailed modal with information on the tech stack (LLMs, frameworks). Justification: Visualizes the complex system flow and technology choices in a way that is much clearer than text alone.
+        - Implementation Plan: Goal: Change (over time). Method: A horizontal stepper/timeline component. Interaction: Clicking on a phase (MVP, Expansion, Scaling) expands a card with that phase's details. Justification: Presents the project roadmap in a standard, easily understood visual format.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            margin: auto;
+            height: 40vh;
+            width: 100%;
+            max-width: 800px;
+            max-height: 400px;
+        }
+        .nav-button.active {
+            background-color: #f59e0b; /* amber-500 */
+            color: #1e293b; /* slate-800 */
+        }
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+        .modal-content {
+            transition: transform 0.25s ease;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div id="app" class="min-h-screen flex flex-col">
+
+        <header class="bg-slate-800 text-white shadow-lg p-4 sticky top-0 z-40">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-xl md:text-2xl font-bold">AI-Driven BSL Intelligence Platform</h1>
+                <div class="hidden md:flex items-center space-x-2">
+                    <span class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></span>
+                    <span>System Blueprint</span>
+                </div>
+            </div>
+        </header>
+
+        <nav class="bg-slate-700 text-white p-2 sticky top-[72px] z-30">
+            <div class="container mx-auto flex justify-center items-center flex-wrap gap-2">
+                <button onclick="app.showSection('market')" class="nav-button px-4 py-2 rounded-md font-semibold bg-slate-600 hover:bg-amber-500 hover:text-slate-800 transition-colors duration-200">Market Fundamentals</button>
+                <button onclick="app.showSection('signals')" class="nav-button px-4 py-2 rounded-md font-semibold bg-slate-600 hover:bg-amber-500 hover:text-slate-800 transition-colors duration-200">Signal Intelligence</button>
+                <button onclick="app.showSection('engine')" class="nav-button px-4 py-2 rounded-md font-semibold bg-slate-600 hover:bg-amber-500 hover:text-slate-800 transition-colors duration-200">The Engine</button>
+                <button onclick="app.showSection('roadmap')" class="nav-button px-4 py-2 rounded-md font-semibold bg-slate-600 hover:bg-amber-500 hover:text-slate-800 transition-colors duration-200">Implementation Plan</button>
+            </div>
+        </nav>
+
+        <main class="flex-grow container mx-auto p-4 md:p-8">
+
+            <section id="market" class="app-section">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">Market Fundamentals</h2>
+                <p class="text-lg text-slate-600 mb-8">This section provides a foundational overview of the Broadly Syndicated Loan (BSL) market. Explore the key characteristics of the asset class and the diverse ecosystem of participants, from borrowers seeking capital to the institutional investors who provide it. Understanding these fundamentals is the first step in building an effective intelligence platform.</p>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md mb-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-slate-800">Anatomy of a Syndicated Loan</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-slate-100 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-lg text-amber-600">Senior Secured</h4>
+                            <p class="text-slate-700">BSLs hold a senior position in the capital structure, backed by borrower assets. This provides a higher recovery rate in case of default, making them attractive to risk-averse investors.</p>
+                        </div>
+                        <div class="bg-slate-100 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-lg text-amber-600">Floating Interest Rates</h4>
+                            <p class="text-slate-700">The interest rate adjusts periodically based on a benchmark like SOFR plus a credit spread. This feature acts as a natural hedge against rising interest rates for lenders.</p>
+                        </div>
+                        <div class="bg-slate-100 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-lg text-amber-600">Covenant-Lite</h4>
+                            <p class="text-slate-700">Over 80% of BSLs lack traditional financial maintenance covenants. This removes a key early warning signal for lenders, increasing the need for alternative data and AI-driven monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4 text-slate-800">The BSL Ecosystem: Click to Explore</h3>
+                    <div class="relative grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center">
+                        <div id="participant-borrowers" class="participant-node p-4 bg-slate-200 rounded-lg cursor-pointer hover:bg-amber-200 transition-colors">
+                            <span class="text-2xl">🏢</span>
+                            <h4 class="font-bold text-lg">Borrowers</h4>
+                            <p class="text-sm">Non-investment grade corporations</p>
+                        </div>
+                        <div id="participant-sellside" class="participant-node p-4 bg-slate-200 rounded-lg cursor-pointer hover:bg-amber-200 transition-colors">
+                             <span class="text-2xl">🏦</span>
+                            <h4 class="font-bold text-lg">Sell-Side</h4>
+                             <p class="text-sm">Lead Arrangers & Agents</p>
+                        </div>
+                        <div id="participant-buyside" class="participant-node p-4 bg-slate-200 rounded-lg cursor-pointer hover:bg-amber-200 transition-colors">
+                             <span class="text-2xl">📈</span>
+                            <h4 class="font-bold text-lg">Buy-Side</h4>
+                             <p class="text-sm">CLOs, Funds, NBFIs</p>
+                        </div>
+                    </div>
+                    <div id="participant-info" class="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-lg min-h-[120px] flex items-center justify-center transition-opacity duration-300 opacity-0">
+                        <p class="text-slate-700 text-center">Click on a participant above to see their role and key information needs.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="signals" class="app-section hidden">
+                 <h2 class="text-3xl font-bold text-slate-900 mb-2">Signal Intelligence</h2>
+                <p class="text-lg text-slate-600 mb-8">An effective intelligence platform must distinguish market-moving signals from noise. This section explores the hierarchy of events that impact the BSL market, from broad macroeconomic shifts to specific company news. Interact with the chart below to see the quantified historical impact of different event types on loan spreads.</p>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4 text-slate-800">Measuring News Impact on Loan Spreads</h3>
+                    <div class="mb-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <label for="event-selector" class="font-semibold">Select Event Type:</label>
+                        <select id="event-selector" class="p-2 border border-slate-300 rounded-md bg-white shadow-sm focus:ring-amber-500 focus:border-amber-500">
+                        </select>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="impactChart"></canvas>
+                    </div>
+                    <div id="event-explanation" class="mt-4 p-4 bg-slate-100 rounded-lg text-slate-700">
+                        <p>Select an event from the dropdown to see its typical impact on loan spreads and an explanation of why it's significant.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="engine" class="app-section hidden">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">The Engine: System Architecture</h2>
+                <p class="text-lg text-slate-600 mb-8">This section provides a blueprint for the end-to-end platform. The system is designed as a "data value refinery," built on a modern, real-time event-driven architecture. Click on the components of the interactive diagram below to explore the technologies, data sources, and AI models that power each stage of the intelligence pipeline.</p>
+                 <div class="bg-white p-6 rounded-xl shadow-md overflow-x-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 items-start min-w-[1000px]">
+                        <!-- Layer 1 -->
+                        <div class="flex flex-col items-center p-4">
+                            <h4 class="font-bold text-lg mb-2 text-center">1. Data Ingestion</h4>
+                            <div class="engine-node" data-modal="ingestion">
+                                <div class="font-mono text-sm">Tier 1 Data</div>
+                                <div class="font-mono text-sm">Tier 2 Data</div>
+                                <div class="font-mono text-sm">Tier 3 Data</div>
+                            </div>
+                        </div>
+                        <!-- Arrow -->
+                        <div class="flex items-center justify-center text-3xl text-slate-400 lg:col-start-auto lg:row-start-auto row-start-2 col-start-1 transform lg:transform-none rotate-90 lg:rotate-0">→</div>
+                        <!-- Layer 2 & 3 -->
+                        <div class="flex flex-col items-center p-4 col-span-1 lg:col-span-2">
+                             <h4 class="font-bold text-lg mb-2 text-center">2. Processing & 3. Analysis</h4>
+                             <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="engine-node" data-modal="processing">Stream Processing (Spark)</div>
+                                <div class="engine-node" data-modal="analysis">Multi-Agent System (AI Core)</div>
+                             </div>
+                        </div>
+                        <!-- Arrow -->
+                        <div class="flex items-center justify-center text-3xl text-slate-400 lg:col-start-auto lg:row-start-auto row-start-4 col-start-1 transform lg:transform-none rotate-90 lg:rotate-0">→</div>
+                        <!-- Layer 4 -->
+                        <div class="flex flex-col items-center p-4 col-start-1 lg:col-start-4 row-start-5 lg:row-start-1">
+                             <h4 class="font-bold text-lg mb-2 text-center">4. Output Layer</h4>
+                             <div class="engine-node" data-modal="output">
+                                <div class="font-mono text-sm">Dashboard & UI</div>
+                                <div class="font-mono text-sm">Real-Time Alerts</div>
+                             </div>
+                        </div>
+                    </div>
+                 </div>
+            </section>
+
+            <section id="roadmap" class="app-section hidden">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">Implementation Plan</h2>
+                <p class="text-lg text-slate-600 mb-8">A complex project requires a disciplined, phased implementation. This roadmap outlines a three-phase journey from a Minimum Viable Product (MVP) to a market-leading predictive platform. This approach mitigates risk and ensures development is aligned with user feedback and demonstrated value at every stage. Click each phase to learn more.</p>
+                <div class="w-full">
+                    <div class="flex flex-col md:flex-row justify-between items-center relative">
+                        <!-- Line -->
+                        <div class="absolute top-5 md:top-1/2 left-5 md:left-0 w-1 md:w-full h-full md:h-1 bg-slate-300 transform -translate-y-0 md:-translate-y-1/2 -translate-x-1/2 md:-translate-x-0 z-0"></div>
+                        
+                        <!-- Phase 1 -->
+                        <div class="phase-container flex md:flex-col items-center w-full md:w-1/3 mb-8 md:mb-0 z-10">
+                           <button class="phase-button flex-shrink-0 bg-white border-4 border-amber-500 rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl text-slate-700" data-phase="1">1</button>
+                           <div class="ml-4 md:ml-0 md:mt-4 text-left md:text-center">
+                               <h3 class="text-xl font-semibold">Phase 1: MVP</h3>
+                               <p class="text-slate-600">Core News & Sentiment</p>
+                           </div>
+                        </div>
+
+                         <!-- Phase 2 -->
+                        <div class="phase-container flex md:flex-col items-center w-full md:w-1/3 mb-8 md:mb-0 z-10">
+                           <button class="phase-button flex-shrink-0 bg-white border-4 border-slate-300 rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl text-slate-700" data-phase="2">2</button>
+                           <div class="ml-4 md:ml-0 md:mt-4 text-left md:text-center">
+                               <h3 class="text-xl font-semibold">Phase 2: Expansion</h3>
+                               <p class="text-slate-600">Alt-Data & Agentic AI</p>
+                           </div>
+                        </div>
+                        
+                         <!-- Phase 3 -->
+                        <div class="phase-container flex md:flex-col items-center w-full md:w-1/3 z-10">
+                           <button class="phase-button flex-shrink-0 bg-white border-4 border-slate-300 rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl text-slate-700" data-phase="3">3</button>
+                           <div class="ml-4 md:ml-0 md:mt-4 text-left md:text-center">
+                               <h3 class="text-xl font-semibold">Phase 3: Scaling</h3>
+                               <p class="text-slate-600">Predictive & Federated AI</p>
+                           </div>
+                        </div>
+                    </div>
+                    <div id="phase-details" class="mt-8 bg-white p-6 rounded-xl shadow-md min-h-[200px]">
+                       <!-- Phase details will be injected here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="engine-modal" class="modal fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 hidden opacity-0">
+        <div class="modal-content bg-white w-full max-w-2xl rounded-xl shadow-2xl p-6 transform scale-95">
+            <div class="flex justify-between items-center border-b border-slate-200 pb-3 mb-4">
+                <h3 id="modal-title" class="text-2xl font-bold text-slate-900"></h3>
+                <button onclick="app.closeModal()" class="text-slate-500 hover:text-slate-800">&times;</button>
+            </div>
+            <div id="modal-body" class="text-slate-700 max-h-[70vh] overflow-y-auto">
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const app = {
+        data: {
+            participants: {
+                borrowers: {
+                    title: 'Borrowers: Non-Investment Grade Corporations',
+                    description: 'Borrowers seek large-scale capital to finance strategic activities like M&A and LBOs. Their key information need is intelligence on lender appetite, market pricing trends, and competitor financing activities to secure the best terms.'
+                },
+                sellside: {
+                    title: 'Sell-Side: Lead Arrangers & Agents',
+                    description: 'Dominated by large investment banks, the sell-side originates, structures, and syndicates loans, earning significant fees. Their primary need is for real-time market sentiment and investor demand signals to ensure a deal can be successfully sold.'
+                },
+                buyside: {
+                    title: 'Buy-Side: CLOs, Funds, & NBFIs',
+                    description: 'The dominant investor class, led by Collateralized Loan Obligations (CLOs). They provide the capital and hold the credit risk. They require deep, ongoing, granular credit risk signals, default indicators, and news on individual borrowers to manage their portfolios.'
+                }
+            },
+            impactEvents: [
+                {
+                    label: 'Credit Rating Downgrade',
+                    value: 40,
+                    explanation: 'A downgrade is a potent, direct signal of deteriorating credit quality. Its impact is highly asymmetric; the market reacts much more strongly to negative news than positive news. This event receives a high priority in the newsbot.'
+                },
+                {
+                    label: 'Systemic Shock (e.g., COVID)',
+                    value: 8,
+                    explanation: 'Unforeseen global events introduce systemic risk and a "flight to quality." Spreads widen based on a lender\'s and borrower\'s perceived exposure to the crisis. This represents the average impact per standard deviation of exposure.'
+                },
+                {
+                    label: 'M&A Announcement',
+                    value: 15,
+                    explanation: 'M&A is a complex signal. While it can increase leverage and risk (widening CDS spreads), a deal financed by a new syndicated loan can also be a positive "certification" of quality. The impact varies based on financing and deal structure.'
+                },
+                 {
+                    label: 'Negative Earnings Surprise',
+                    value: 25,
+                    explanation: 'A company failing to meet earnings expectations or lowering future guidance is a strong leading indicator of financial distress. It directly impacts the perceived ability of the company to service its debt.'
+                },
+                {
+                    label: 'Liability Management Exercise (LME)',
+                    value: 50,
+                    explanation: 'LMEs like distressed debt exchanges are a powerful signal of severe financial distress, often preceding a formal default. They have become a critical event to monitor in the covenant-lite BSL market.'
+                }
+            ],
+            engineModals: {
+                ingestion: {
+                    title: 'Layer 1: Data Ingestion',
+                    content: `
+                        <p class="mb-4">This layer is the entry point for all data, organized into three tiers. The core is a distributed messaging system like <strong>Apache Kafka</strong> to handle high-volume, real-time data streams.</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Tier 1 (High-Fidelity):</strong> Professional feeds from LSEG, S&P Global, and Moody's for pricing, ratings, and deal terms. The most accurate but highest cost data.</li>
+                            <li><strong>Tier 2 (Public Domain):</strong> Feeds from SEC EDGAR for filings (8-K, 10-K) and global news wires (Reuters, Business Wire) for announcements.</li>
+                            <li><strong>Tier 3 (Alternative):</strong> Unstructured data from sources like Similarweb (web traffic), Glassdoor (employee sentiment), and supply chain intelligence providers to find leading indicators.</li>
+                        </ul>
+                    `
+                },
+                processing: {
+                    title: 'Layer 2: Stream Processing',
+                    content: `
+                        <p>This layer consumes raw data streams from Kafka in real-time to perform initial cleaning, transformation, and feature extraction. The ideal technology is <strong>Apache Spark Streaming</strong>.</p>
+                        <p class="mt-4">Its responsibilities include:</p>
+                        <ul class="list-disc list-inside space-y-2 mt-2">
+                            <li><strong>Data Cleaning:</strong> Removing irrelevant content like HTML tags from scraped web articles.</li>
+                            <li><strong>Normalization:</strong> Standardizing data formats for consistency.</li>
+                            <li><strong>Initial Feature Extraction:</strong> Tokenizing text and identifying key entities like company tickers before passing to the AI core.</li>
+                        </ul>
+                    `
+                },
+                analysis: {
+                    title: 'Layer 3: Analysis & Enrichment (AI Core)',
+                    content: `
+                        <p class="mb-4">This is the brain of the platform where intelligence is generated using a <strong>Multi-Agent System</strong>. This system uses a "society of agents," each specialized for a task, orchestrated by frameworks like <strong>AutoGen</strong> and equipped with tools built using <strong>LangChain</strong>.</p>
+                        <h4 class="font-semibold mt-4 mb-2">Key Agent Roles:</h4>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>News & Filing Agent:</strong> Retrieves information from news APIs and SEC EDGAR.</li>
+                            <li><strong>Sentiment Analyst Agent:</strong> Uses a fine-tuned LLM (like FinBERT) to analyze text for sentiment.</li>
+                            <li><strong>Quantitative Analyst Agent:</strong> Interacts with pricing data to measure market impact.</li>
+                            <li><strong>Report Generation Agent:</strong> Synthesizes all outputs into a coherent report for the user.</li>
+                        </ul>
+                        <p class="mt-4">The analyzed, enriched data is stored in a hybrid system: a <strong>Time-Series Database</strong> for pricing and a <strong>NoSQL Document Database</strong> for text and AI-generated analysis.</p>
+                    `
+                },
+                output: {
+                    title: 'Layer 4: Visualization and Alerting',
+                    content: `
+                        <p>The final layer is the user-facing part of the platform, designed to deliver the generated intelligence in a timely and intuitive manner.</p>
+                         <ul class="list-disc list-inside space-y-2 mt-2">
+                            <li><strong>Interactive Dashboard:</strong> A web-based UI, likely built with a framework like <strong>React</strong>, queries the backend databases to present data through interactive charts, visualizations, and reports.</li>
+                            <li><strong>Real-Time Alerting:</strong> The system is configured with rules to trigger instant alerts via email, SMS, or other channels when the analysis layer detects a high-priority signal, ensuring users never miss a market-moving event.</li>
+                        </ul>
+                    `
+                },
+            },
+            roadmapPhases: {
+                '1': {
+                    title: 'Phase 1: Minimum Viable Product (MVP)',
+                    content: `
+                        <p class="mb-4"><strong>Goal:</strong> To quickly validate the core hypothesis that applying NLP to financial news generates valuable intelligence. The focus is on speed to market and gathering user feedback.</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Key Features:</strong> Ingest Tier 2 data (News Wires, SEC 8-Ks), perform basic sentiment classification with a single cost-effective LLM, and display results in a simple dashboard with watchlist alerts.</li>
+                            <li><strong>Tech Stack:</strong> Simple Python scripts, LangChain for the NLP pipeline, and a standard web framework like Flask/Django.</li>
+                            <li><strong>Success Metric:</strong> User validation. Do target users find the sentiment-tagged feed useful and credible?</li>
+                        </ul>
+                    `
+                },
+                '2': {
+                    title: 'Phase 2: Expansion',
+                    content: `
+                        <p class="mb-4"><strong>Goal:</strong> To significantly enhance analytical depth by expanding the data universe and implementing the sophisticated multi-agent architecture.</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Key Features:</strong> Integrate Tier 1 pricing data and Tier 3 alternative data. Deploy the full multi-agent system using AutoGen. Implement an internal event study framework to measure signal impact. Enhance the dashboard with interactive charts.</li>
+                            <li><strong>Tech Stack:</strong> Build out the full real-time pipeline with Apache Kafka and Spark Streaming.</li>
+                            <li><strong>Success Metric:</strong> Demonstrable correlation between the platform's generated signals and actual market movements.</li>
+                        </ul>
+                    `
+                },
+                '3': {
+                    title: 'Phase 3: Scaling for Alpha',
+                    content: `
+                        <p class="mb-4"><strong>Goal:</strong> Transition from a diagnostic tool to a predictive platform, establishing a strong competitive moat.</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Key Features:</strong> Train predictive ML models for default probability. Roll out a <strong>Federated Learning</strong> network for collaborative intelligence without sharing private data. Launch a user-facing backtesting engine for strategy development.</li>
+                             <li><strong>Tech Stack:</strong> Full MLOps pipeline, frameworks for Federated Learning (e.g., TensorFlow Federated), high-performance backtesting engine.</li>
+                            <li><strong>Success Metric:</strong> Demonstrable client ROI and market leadership driven by the network effect of the Federated Learning consortium.</li>
+                        </ul>
+                    `
+                }
+            },
+        },
+        impactChart: null,
+        activeSection: 'market',
+
+        init() {
+            document.addEventListener('DOMContentLoaded', () => {
+                this.setupEventListeners();
+                this.populateEventSelector();
+                this.initImpactChart();
+                this.updateActiveNav();
+                this.showPhaseDetails('1');
+            });
+        },
+
+        showSection(sectionId) {
+            this.activeSection = sectionId;
+            document.querySelectorAll('.app-section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+            this.updateActiveNav();
+        },
+
+        updateActiveNav() {
+            document.querySelectorAll('.nav-button').forEach(button => {
+                button.classList.remove('active');
+            });
+            const activeButton = document.querySelector(`.nav-button[onclick="app.showSection('${this.activeSection}')"]`);
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+        },
+
+        setupEventListeners() {
+            document.querySelectorAll('.participant-node').forEach(node => {
+                node.addEventListener('click', (e) => this.showParticipantInfo(e.currentTarget.id));
+            });
+
+            document.getElementById('event-selector').addEventListener('change', (e) => {
+                const selectedEvent = this.data.impactEvents.find(event => event.label === e.target.value);
+                this.updateImpactChart(selectedEvent);
+            });
+
+             document.querySelectorAll('.engine-node').forEach(node => {
+                node.addEventListener('click', (e) => {
+                    const modalId = e.currentTarget.dataset.modal;
+                    this.openModal(modalId);
+                });
+            });
+
+            document.querySelectorAll('.phase-button').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const phase = e.currentTarget.dataset.phase;
+                    this.showPhaseDetails(phase);
+                });
+            });
+
+            document.querySelector('#engine-modal').addEventListener('click', (e) => {
+                if(e.target.id === 'engine-modal') {
+                    this.closeModal();
+                }
+            });
+        },
+
+        showParticipantInfo(participantId) {
+            const key = participantId.replace('participant-', '');
+            const info = this.data.participants[key];
+            const infoBox = document.getElementById('participant-info');
+            
+            if (info) {
+                infoBox.innerHTML = `<h4 class="font-bold text-lg mb-2 text-slate-800">${info.title}</h4><p class="text-slate-700">${info.description}</p>`;
+                infoBox.classList.remove('opacity-0');
+            }
+        },
+
+        populateEventSelector() {
+            const selector = document.getElementById('event-selector');
+            this.data.impactEvents.forEach(event => {
+                const option = document.createElement('option');
+                option.value = event.label;
+                option.textContent = event.label;
+                selector.appendChild(option);
+            });
+        },
+
+        initImpactChart() {
+            const ctx = document.getElementById('impactChart').getContext('2d');
+            this.impactChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: 'Typical Impact on Spread (bps)',
+                        data: [],
+                        backgroundColor: 'rgba(245, 158, 11, 0.6)', // amber-500
+                        borderColor: 'rgba(245, 158, 11, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Basis Points (bps)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `Impact: ${context.raw} bps`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+            this.updateImpactChart(this.data.impactEvents[0]);
+        },
+        
+        updateImpactChart(eventData) {
+            if (!eventData) return;
+
+            this.impactChart.data.labels = [eventData.label];
+            this.impactChart.data.datasets[0].data = [eventData.value];
+            this.impactChart.update();
+            
+            const explanationBox = document.getElementById('event-explanation');
+            explanationBox.innerHTML = `<p><strong>${eventData.label}:</strong> ${eventData.explanation}</p>`;
+
+            const selector = document.getElementById('event-selector');
+            selector.value = eventData.label;
+        },
+
+        openModal(modalId) {
+            const modalData = this.data.engineModals[modalId];
+            if(!modalData) return;
+
+            document.getElementById('modal-title').innerText = modalData.title;
+            document.getElementById('modal-body').innerHTML = modalData.content;
+            const modal = document.getElementById('engine-modal');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.querySelector('.modal-content').classList.remove('scale-95');
+            }, 10);
+        },
+
+        closeModal() {
+            const modal = document.getElementById('engine-modal');
+            modal.classList.add('opacity-0');
+            modal.querySelector('.modal-content').classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 250);
+        },
+        
+        showPhaseDetails(phase) {
+            document.querySelectorAll('.phase-button').forEach(btn => {
+                btn.classList.remove('border-amber-500');
+                btn.classList.add('border-slate-300');
+            });
+            const activeButton = document.querySelector(`.phase-button[data-phase='${phase}']`);
+            activeButton.classList.remove('border-slate-300');
+            activeButton.classList.add('border-amber-500');
+            
+            const details = this.data.roadmapPhases[phase];
+            const container = document.getElementById('phase-details');
+            if (details) {
+                 container.innerHTML = `<h3 class="text-2xl font-bold text-slate-800 mb-4">${details.title}</h3>${details.content}`;
+            }
+        }
+    };
+
+    app.init();
+    </script>
+</body>
+</html>
