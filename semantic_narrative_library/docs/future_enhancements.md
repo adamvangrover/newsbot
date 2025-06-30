@@ -20,7 +20,45 @@ Implement Federated Learning capabilities to allow users or different instances 
 
 **Status:** Placeholder for future consideration. No active development in the initial version.
 
-## 2. Advanced Reasoning Engine
+## 2. Knowledge Graph Evolution and Continuous Learning
+
+**Concept:**
+Transform the knowledge graph (KG) from a static dataset (loaded at startup) into a dynamic, evolving system that learns and adapts over time. This involves mechanisms for updating the KG with new information, refining existing data based on feedback or new evidence, and potentially adjusting the confidence or parameters of rules and relationships.
+
+**Mechanisms for Evolution:**
+
+*   **Continuous Data Ingestion:** Regularly ingest new data (news, financial reports, market signals, regulatory changes) via the `DataIngestor` service. New entities and relationships would be added to the KG.
+*   **NLP-Driven Updates:** Use the `NLProcessor` to extract entities, relationships, and sentiment from new unstructured data. These extracted elements can then be proposed as additions or modifications to the KG, possibly with a human-in-the-loop validation step.
+*   **User Feedback Loop:**
+    *   Allow users to validate, correct, or annotate information presented by the system (e.g., confirm an identified impact, correct an entity linkage, rate the relevance of a narrative).
+    *   This feedback could be used to:
+        *   Adjust the `strength` or `confidence` of specific `Relationship` instances.
+        *   Update the `impact_potential` of `Driver` entities.
+        *   Refine the `probability` or `magnitude` in impact `Rule` definitions.
+        *   Provide data for fine-tuning underlying models (e.g., sentiment analysis, significance scoring).
+*   **Validated Impact Tracking (Learning from Outcomes):**
+    *   If the system predicts potential impacts (e.g., via `ImpactAnalyzer`), and later, actual outcomes are observed (e.g., a company's stock price *did* fall after a predicted risk materialized), this information can be fed back.
+    *   This "ground truth" can be used to:
+        *   Validate or update the rules in the `RuleTemplate`s that led to the prediction.
+        *   Adjust probabilities and magnitudes associated with specific impact types or driver-entity interactions.
+        *   Serve as training data for machine learning models that might underpin the `SignificanceScorer` or `ImpactAnalyzer`.
+*   **"Post-Training Fine-Tuning Library" / Adaptive Rules:**
+    *   This refers to the idea that the rules (e.g., in `rule_template_example.json`) are not static.
+    *   The system could maintain a library of rules where parameters (probabilities, magnitudes, conditions) are adaptable.
+    *   As new evidence or feedback comes in, these parameters could be fine-tuned, effectively allowing the system's "understanding" of causal relationships to evolve.
+    *   This could involve statistical methods (e.g., Bayesian updating for probabilities) or retraining lightweight models that govern rule application.
+*   **Anomaly Detection and KG Refinement:** Periodically scan the KG for inconsistencies, outdated information, or anomalies that might indicate errors or areas needing updates.
+
+**Technical Considerations for a Learning KG:**
+*   **Versioning:** Versioning the KG or changes to it would be crucial for traceability and rollback.
+*   **Provenance:** Tracking the source and confidence of all data and relationships in the KG.
+*   **Conflict Resolution:** Mechanisms to handle conflicting information from different sources or user feedback.
+*   **Scalability:** A learning KG that grows continuously requires a scalable backend database and efficient update mechanisms.
+*   **Human Oversight:** For critical updates or learning from ambiguous feedback, a human-in-the-loop process is likely necessary to maintain quality and prevent model drift or erroneous "learning."
+
+**Status:** This is a highly advanced area. The current library uses a static, pre-loaded KG. Implementing a truly evolving and learning KG is a significant long-term research and development effort.
+
+## 3. Advanced Reasoning Engine
 
 -   Implement more sophisticated graph traversal algorithms.
 -   Incorporate probabilistic reasoning or Bayesian networks.

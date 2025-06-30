@@ -60,9 +60,86 @@ export interface Industry extends NarrativeEntity {
   sector?: string;
 }
 
+export interface MacroIndicator extends NarrativeEntity {
+  type: 'MacroIndicator'; // Literal type for discrimination
+  region?: string;
+}
+
+export interface NewsItem extends NarrativeEntity {
+  type: 'NewsItem';
+  source_name?: string; // e.g., Reuters, Bloomberg
+  url?: string;
+  publication_date?: string; // ISO date string
+  sentiment_score?: number; // e.g., -1.0 to 1.0
+  key_entities_mentioned_ids?: string[];
+  summary?: string;
+}
+
+export interface PoliticalEvent extends NarrativeEntity {
+  type: 'PoliticalEvent';
+  location?: string;
+  event_date?: string; // ISO date string
+  event_subtype?: string; // e.g., Election, Protest, TradeDealAnnouncement
+  involved_parties?: string[];
+  perceived_impact_area?: string;
+}
+
+export interface FinancialReportItem extends NarrativeEntity {
+  type: 'FinancialReportItem';
+  company_id: string;
+  report_type: "10-K" | "10-Q" | "8-K" | "Annual Report" | "Quarterly Report" | "Other";
+  period_ending_date?: string; // ISO date string
+  filing_date?: string; // ISO date string
+  key_metrics?: Record<string, any>; // e.g., {'Revenue': 100M, 'NetIncome': 10M}
+  link_to_report?: string;
+}
+
+export interface MarketSignal extends NarrativeEntity {
+  type: 'MarketSignal';
+  signal_type: string; // e.g., "PriceSpike", "VolumeSurge"
+  asset_class?: string;
+  security_id?: string; // Link to a Security entity
+  timestamp: string; // ISO date string
+  details?: Record<string, any>;
+}
+
+export interface RegulatoryChange extends NarrativeEntity {
+  type: 'RegulatoryChange';
+  jurisdiction: string;
+  agency?: string;
+  status: "Proposed" | "Enacted" | "Repealed" | "Guidance";
+  summary: string;
+  effective_date?: string; // ISO date string
+  industries_affected_ids?: string[];
+}
+
+export interface Security extends NarrativeEntity {
+  type: 'Security';
+  issuer_id?: string; // ID of the issuing Company or entity
+  security_subtype: string; // E.g., "CommonStock", "CorporateBond"
+  ticker?: string;
+  cusip?: string;
+  isin?: string;
+  exchange?: string;
+}
+
+
+// Union type for all concrete entity types for use in KnowledgeGraphData.entities
+export type AnyConcreteEntity =
+  | Company
+  | Industry
+  | MacroIndicator
+  | NewsItem
+  | PoliticalEvent
+  | FinancialReportItem
+  | MarketSignal
+  | RegulatoryChange
+  | Security;
+  // Add other concrete types here. NarrativeEntity itself is the base.
+
 // This will be the core of our knowledge graph, likely a collection of entities and relationships
 export interface KnowledgeGraphData {
-  entities: NarrativeEntity[];
+  entities: AnyConcreteEntity[]; // Use the union of specific types
   drivers: Driver[];
   relationships: Relationship[];
   semanticLinks?: SemanticLink[];

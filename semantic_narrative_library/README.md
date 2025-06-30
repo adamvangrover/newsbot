@@ -1,6 +1,7 @@
 # Semantic Narrative Library
 
 This library aims to provide a modular and comprehensive system for understanding and generating explainable narratives related to various domains, with an initial focus on financial and business contexts. It links core drivers to observable metrics or trading levels, functioning like a knowledge graph combined with a decision tree.
+The framework is designed to be extensible towards more dynamic analysis, including news impact assessment, scenario modeling, and continuous learning from new data.
 
 ## Core Components:
 

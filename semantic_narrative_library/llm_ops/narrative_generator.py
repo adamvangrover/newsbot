@@ -1,16 +1,22 @@
 import json
 from pathlib import Path
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, List
 
 # Assuming this script is in semantic_narrative_library/llm_ops/
 # and prompts are in semantic_narrative_library/llm_ops/prompts/
 PROMPT_DIR = Path(__file__).parent / "prompts"
 
-class SimulatedNarrativeGenerator:
-    def __init__(self, prompt_template_name: str = "company_narrative_prompt.md"):
-        self.prompt_template = self._load_prompt_template(prompt_template_name)
+DEFAULT_PROMPT_NAME = "company_narrative_prompt.md" # This is now the detailed impact prompt
 
-    def _load_prompt_template(self, template_name: str) -> str:
+class SimulatedNarrativeGenerator:
+    def __init__(self, prompt_template_name: str = DEFAULT_PROMPT_NAME):
+        self.prompt_template = self._load_prompt_template(prompt_template_name)
+        if not self.prompt_template:
+            # Fallback if primary prompt fails to load, to prevent errors later
+            self.prompt_template = "Error: Main prompt failed to load. Data: {{ company_name }}, Trigger: {{ triggering_event_json }}, Impacts: {{ impact_chains_json }}"
+
+
+    def _load_prompt_template(self, template_name: str) -> Optional[str]:
         """Loads a prompt template from the predefined directory."""
         template_file = PROMPT_DIR / template_name
         try:
@@ -19,13 +25,16 @@ class SimulatedNarrativeGenerator:
         except FileNotFoundError:
             print(f"Warning: Prompt template '{template_name}' not found at {template_file}.")
             # Return a default basic template or raise an error
-            return "Summarize the following data for {{company_name}}:\n{{drivers_json}}"
+            return None
         except Exception as e:
             print(f"Warning: Error loading prompt template '{template_name}': {e}")
-            return "Summarize the following data for {{company_name}}:\n{{drivers_json}}"
+            return None
 
     def _fill_prompt(self, template_data: Dict[str, Any]) -> str:
         """Fills the prompt template with provided data."""
+        if not self.prompt_template:
+            return "Error: Prompt template not loaded."
+
         prompt = self.prompt_template
         for key, value in template_data.items():
             placeholder = f"{{{{ {key} }}}}" # Matches {{ key }}
@@ -35,95 +44,120 @@ class SimulatedNarrativeGenerator:
                 prompt = prompt.replace(placeholder, str(value))
         return prompt
 
-    def generate_narrative(self, company_name: str, company_id: str, company_description: str, drivers_info: list) -> str:
+    def generate_detailed_impact_narrative(
+        self,
+        company_name: str,
+        company_id: str,
+        company_description: Optional[str],
+        triggering_event_json: Dict[str, Any], # Should be a dict representation of the event
+        significance_explanation: Optional[str],
+        impact_chains_json: List[Dict[str, Any]]
+    ) -> str:
         """
-        Simulates generating a narrative using an LLM.
-        In a real scenario, this function would make an API call to an LLM service.
+        Simulates generating a detailed impact narrative using an LLM.
         """
         template_data = {
             "company_name": company_name,
             "company_id": company_id,
             "company_description": company_description or "N/A",
-            "drivers_json": drivers_info
+            "triggering_event_json": triggering_event_json,
+            "significance_explanation": significance_explanation or "Not explicitly assessed.",
+            "impact_chains_json": impact_chains_json
         }
 
         filled_prompt = self._fill_prompt(template_data)
 
-        print("--- Filled Prompt (Simulated LLM Input) ---")
+        print("\n--- Filled Detailed Impact Prompt (Simulated LLM Input) ---")
         print(filled_prompt)
-        print("--------------------------------------------")
+        print("----------------------------------------------------------")
 
         # --- SIMULATED LLM CALL ---
-        # Replace this with actual LLM API call (e.g., OpenAI, Anthropic, local model)
-        # For now, using a template-based response.
+        narrative = f"**Simulated Detailed Impact Narrative for {company_name} ({company_id}):**\n\n"
+        narrative += f"An analysis was conducted regarding {company_name} ({company_description or 'no description provided'}) "
+        narrative += f"in response to the event: '{triggering_event_json.get('name', 'Unknown Event')}' (ID: {triggering_event_json.get('id', 'N/A')}).\n"
+        narrative += f"The significance of this event was determined as: {significance_explanation or 'not available'}\n\n"
 
-        positive_drivers = [d for d in drivers_info if "positive" in d.get("relationship_type", "").lower()]
-        negative_drivers = [d for d in drivers_info if "negative" in d.get("relationship_type", "").lower() or "pressure" in d.get("relationship_type", "").lower()]
+        if impact_chains_json:
+            narrative += "The potential impact analysis identified the following chains:\n"
+            for i, chain_item in enumerate(impact_chains_json):
+                narrative += f"- **Order {chain_item.get('order', 'N/A')} Impact:** Type '{chain_item.get('impact_type', 'N/A')}' "
+                narrative += f"on entity/target '{chain_item.get('impacted_entity_id', 'N/A')}'. "
+                if chain_item.get('probability') is not None:
+                    narrative += f"Estimated probability: {chain_item.get('probability')*100:.0f}%. "
+                if chain_item.get('magnitude'):
+                    narrative += f"Potential magnitude: {chain_item.get('magnitude')}. "
+                if chain_item.get('justification_rule_id'):
+                    narrative += f"(Justification: {chain_item.get('justification_rule_id')}). "
+                narrative += "\n"
 
-        narrative = f"**Simulated LLM Narrative for {company_name} ({company_id}):**\n\n"
-        narrative += f"{company_name}, {company_description.lower() if company_description else 'a notable entity in its sector'}, faces a dynamic environment shaped by several key drivers. "
+            narrative += "\nThis cascade suggests a complex interplay of factors. "
+            if any(item.get('probability', 0) > 0.7 for item in impact_chains_json):
+                narrative += "Some effects have a notable likelihood. "
+            if any(item.get('magnitude', '').lower() in ['high', 'severe'] for item in impact_chains_json):
+                narrative += "Certain impacts could be quite significant. "
 
-        if positive_drivers:
-            narrative += "On the positive side, "
-            for i, driver_info in enumerate(positive_drivers):
-                narrative += f"the '{driver_info['driver_name']}' ({driver_info['relationship_type']})"
-                if driver_info.get('impact_potential'):
-                    narrative += f" with {driver_info['impact_potential'].lower()} impact potential"
-                narrative += " is expected to bolster its performance"
-                narrative += ". " if i == len(positive_drivers) - 1 else ", and "
+        else:
+            narrative += "The impact analysis did not identify significant cascading effects based on the current rules and data for this specific event.\n"
 
-        if negative_drivers:
-            narrative += "However, challenges exist. "
-            for i, driver_info in enumerate(negative_drivers):
-                narrative += f"The driver '{driver_info['driver_name']}' ({driver_info['relationship_type']})"
-                if driver_info.get('impact_potential'):
-                    narrative += f", which carries a {driver_info['impact_potential'].lower()} impact potential,"
-                narrative += " could exert downward pressure or introduce risks"
-                narrative += ". " if i == len(negative_drivers) - 1 else ", while "
+        narrative += f"\nOverall, {company_name} should carefully monitor developments related to '{triggering_event_json.get('name', 'the triggering event')}' and consider mitigation strategies for the identified potential impacts."
+        narrative += "\n\n(This is a simulated LLM response based on a template for detailed impact.)"
 
-        if not positive_drivers and not negative_drivers and drivers_info:
-            narrative += "Several factors are at play, including " + ", ".join([f"'{d['driver_name']}'" for d in drivers_info]) + ", which require careful monitoring. "
-        elif not drivers_info:
-             narrative += "There are currently no specific major drivers identified in the provided data, suggesting a stable but potentially uneventful outlook, or a need for more granular data."
-
-        narrative += f"\n\nOverall, the interplay of these factors will be crucial in determining {company_name}'s trajectory. Strategic responses to these influences are paramount."
-        narrative += "\n\n(This is a simulated LLM response based on a template.)"
-
-        print("--- Simulated LLM Output ---")
+        print("\n--- Simulated Detailed Impact LLM Output ---")
         print(narrative)
-        print("-----------------------------")
+        print("-------------------------------------------")
         return narrative
 
-def example_usage():
-    """Example of how to use the SimulatedNarrativeGenerator."""
-    # This would typically come from the SimpleReasoner
+def example_detailed_usage():
+    """Example of how to use the generator for detailed impact narratives."""
+    from ..core_models.python.base_types import Company, NewsItem # For creating sample objects
+    from ..processing.impact_analysis_engine import ImpactAnalyzer # To get sample impact chains
+    from ..processing.significance_engine import SignificanceScorer
     from ..data.load_sample_data import load_knowledge_graph_from_json
-    from ..reasoning_engine.simple_reasoner import SimpleReasoner
 
-    print("LLM Narrative Generation Example:")
+
+    print("LLM Detailed Impact Narrative Generation Example:")
+
+    # Setup
     kg_data = load_knowledge_graph_from_json()
     if not kg_data:
         print("Failed to load KG data for LLM example.")
         return
 
-    reasoner = SimpleReasoner(kg_data)
+    analyzer = ImpactAnalyzer()
+    scorer = SignificanceScorer()
+    generator = SimulatedNarrativeGenerator() # Uses the updated prompt by default
 
-    company_id_to_test = "comp_alpha"
-    company_entity = reasoner.get_entity_by_id(company_id_to_test)
+    # Sample data (in a real workflow, this comes from other components)
+    sample_company = Company(id="comp_xyz", name="XYZ Corp", type="Company", description="A global manufacturing leader.")
+    sample_trigger_event = NewsItem(
+        id="news_xyz_earnings_surprise",
+        name="XYZ Corp Reports Unexpectedly Strong Earnings",
+        type="NewsItem",
+        description="XYZ Corp announced quarterly earnings that surpassed analyst expectations, citing strong demand.",
+        sentiment_score=0.85,
+        key_entities_mentioned_ids=["comp_xyz"]
+    )
 
-    if company_entity and company_entity.type == "Company": # Basic type check
-        company_drivers_info = reasoner.find_direct_drivers_for_company(company_id_to_test)
+    significance_result = scorer.score_event_significance(sample_trigger_event, context_entities=[sample_company])
 
-        generator = SimulatedNarrativeGenerator()
-        generated_text = generator.generate_narrative(
-            company_name=company_entity.name,
-            company_id=company_entity.id,
-            company_description=company_entity.description,
-            drivers_info=company_drivers_info
-        )
-        # The generated_text can then be used or displayed.
-    else:
-        print(f"Could not find company '{company_id_to_test}' or it's not a Company type for LLM example.")
+    # Get sample impact chains (these are simulated within ImpactAnalyzer)
+    impact_chains = analyzer.trace_impacts(
+        initial_event_entity=sample_trigger_event,
+        knowledge_graph=kg_data, # Pass the loaded KG
+        depth_levels=2,
+        ruleset_id="rs_standard_financial_impacts_v1" # Example ruleset
+    )
+
+    # Generate detailed narrative
+    generated_text = generator.generate_detailed_impact_narrative(
+        company_name=sample_company.name,
+        company_id=sample_company.id,
+        company_description=sample_company.description,
+        triggering_event_json=sample_trigger_event.model_dump(), # Pass as dict
+        significance_explanation=significance_result["explanation"],
+        impact_chains_json=impact_chains
+    )
+    # The generated_text can then be used or displayed.
 
 if __name__ == "__main__":
-    example_usage()
+    example_detailed_usage()

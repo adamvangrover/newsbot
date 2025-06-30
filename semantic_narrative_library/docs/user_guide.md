@@ -32,11 +32,14 @@ The Semantic Narrative Library is a system designed to store information about e
 
 The library consists of:
 -   A **Knowledge Graph Core**: Manages data about entities, drivers, and relationships (currently loaded from a sample JSON file).
--   A **Reasoning Engine**: Analyzes the data to find connections and generate insights.
+-   A **Reasoning Engine** (`SimpleReasoner` for basic tasks, with a framework for more advanced processing components like `ImpactAnalyzer`, `ScenarioModeler`, etc.): Analyzes data to find connections, trace impacts, model scenarios, and generate insights.
 -   A **Backend API**: Provides HTTP access to the system's functionalities.
--   A **Command-Line Interface (CLI)**: Allows interaction via terminal commands.
+-   A **Command-Line Interface (CLI)**: Allows interaction via terminal commands, including access to basic and planned advanced analyses.
 -   A **Web Interface**: A simple React-based frontend for exploring data (primarily for demonstration and testing).
--   An **LLM Integration (Simulated)**: For generating more human-like narratives (currently simulated).
+-   An **LLM Integration (Simulated)**: For generating more human-like narratives from basic or advanced analyses.
+-   A **Workflow Engine (Conceptual)**: Designed to orchestrate complex analytical tasks using defined templates and rules.
+
+The library is designed to evolve towards more dynamic analyses such as real-time news impact assessment and predictive scenario modeling.
 
 ## 3. Prerequisites
 
@@ -115,6 +118,18 @@ To use the (simulated) LLM for narrative generation:
 python -m semantic_narrative_library.cli.main_cli explain-company comp_alpha --use-llm
 ```
 This will show the prompt sent to the simulated LLM and its templated response.
+
+### Future CLI Commands (Placeholders)
+The CLI includes placeholder commands for more advanced future functionalities. These commands currently print a description of what they would do but are not yet implemented:
+
+-   **`analyze-news`**:
+    -   Purpose: To analyze a specific news item's impact on a target company.
+    -   Conceptual Usage: `python -m semantic_narrative_library.cli.main_cli analyze-news --news-item-id <NEWS_ID> --target-company-id <COMPANY_ID>`
+-   **`run-scenario`**:
+    -   Purpose: To run a "what-if" scenario based on a scenario definition file.
+    -   Conceptual Usage: `python -m semantic_narrative_library.cli.main_cli run-scenario --scenario-def-path path/to/scenario.json`
+
+You can see help for these with the `--help` flag as well.
 
 ## 6. Using the Web Interface (Frontend Explorer)
 

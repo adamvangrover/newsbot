@@ -46,6 +46,11 @@ Refer to the interactive API documentation (`/docs` or `/redoc`) for a detailed 
 - `/companies/{company_id}/narrative`: Get a generated narrative for a company.
 - `/knowledge_graph/stats`: Get basic statistics about the loaded data.
 
+Placeholder endpoints for future advanced analytical capabilities (currently return 501 Not Implemented):
+- `POST /analyze/news_item_impact`: To analyze a news item's impact on a company.
+- `POST /scenarios/run_what_if`: To run a 'what-if' scenario.
+- `POST /ingest/news_feed`: To ingest news from a feed URL.
+
 ## Dependencies:
 
 -   FastAPI: For building the API.

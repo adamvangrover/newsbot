@@ -59,88 +59,79 @@ class Industry(NarrativeEntity):
     sector: Optional[str] = None
 
 class MacroIndicator(NarrativeEntity):
-    model_config = ConfigDict(frozen=True) # Inherits frozen from NarrativeEntity if not overridden
-    type: Literal["MacroIndicator"] = "MacroIndicator"
+    type: Literal["MacroIndicator"] = "MacroIndicator" # type: ignore # Override NarrativeEntity.type
     region: Optional[str] = Field(default=None, description="Geographical region for the indicator")
     # Add other specific fields for MacroIndicator if needed
 
-# Define a discriminated union for entity types
-# Order matters: specific types first. NarrativeEntity as a fallback if no specific type matches.
-# For NarrativeEntity to be a valid discriminated choice, its 'type' field would also need to be Literal.
-# If NarrativeEntity is purely abstract or a fallback for types not explicitly listed, this setup needs care.
-# Pydantic's error suggests that if NarrativeEntity is in the Union, it expects a Literal 'type' on it.
-# To resolve this, we ensure all explicitly chosen types (Company, Industry, MacroIndicator) have Literal types.
-# If a type string in JSON (e.g. "GenericEvent") doesn't match any of these Literals,
-# it would fall back to NarrativeEntity, BUT NarrativeEntity.type is `str`, not `Literal`.
-# This is the core of the Pydantic error.
+class NewsItem(NarrativeEntity):
+    type: Literal["NewsItem"] = "NewsItem" # type: ignore
+    source_name: Optional[str] = Field(default=None, description="e.g., Reuters, Bloomberg")
+    url: Optional[str] = Field(default=None)
+    publication_date: Optional[datetime] = None
+    sentiment_score: Optional[float] = Field(default=None, ge=-1, le=1)
+    key_entities_mentioned_ids: List[str] = Field(default_factory=list, description="List of IDs of other NarrativeEntities mentioned")
+    summary: Optional[str] = None # Could be LLM generated or from source
 
-# Option 1: Make NarrativeEntity.type also a Literal (e.g. Literal["GenericNarrativeEntity"])
-# This means if it's just a base NarrativeEntity, its type field must be "GenericNarrativeEntity".
-# Option 2: Only include specific subclasses in the Union.
-# Let's try ensuring all *concrete* types in the union have Literal types.
-# If NarrativeEntity itself is a valid choice, its `type` field should be `Literal`.
-# For now, we will make NarrativeEntity's type a Literal as well, to satisfy the discriminator.
-# This means if a type like "NewPhenomenon" appears, it won't parse as NarrativeEntity unless we add that Literal.
+class PoliticalEvent(NarrativeEntity):
+    type: Literal["PoliticalEvent"] = "PoliticalEvent" # type: ignore
+    location: Optional[str] = None
+    event_date: Optional[datetime] = None
+    event_subtype: Optional[str] = Field(default=None, description="e.g., Election, Protest, TradeDealAnnouncement")
+    involved_parties: List[str] = Field(default_factory=list, description="Names or IDs of involved groups/countries/people")
+    perceived_impact_area: Optional[str] = Field(default=None, description="e.g., Geopolitics, SpecificIndustry, HumanRights")
 
-# Re-evaluating: The error is about NarrativeEntity *itself* needing a Literal type if it's a candidate.
-# If NarrativeEntity is just a base and never directly instantiated from the union, it can be excluded from the Union members
-# that are directly chosen by the discriminator.
-# However, our current Union includes it: Union[Company, Industry, NarrativeEntity]
-# This means NarrativeEntity IS a candidate.
+class FinancialReportItem(NarrativeEntity):
+    type: Literal["FinancialReportItem"] = "FinancialReportItem" # type: ignore
+    company_id: str # Link to the company this report is for
+    report_type: Literal["10-K", "10-Q", "8-K", "Annual Report", "Quarterly Report", "Other"]
+    period_ending_date: Optional[datetime] = None
+    filing_date: Optional[datetime] = None
+    key_metrics: Dict[str, Any] = Field(default_factory=dict, description="e.g., {'Revenue': 100M, 'NetIncome': 10M}")
+    link_to_report: Optional[str] = None
 
-# Let's adjust NarrativeEntity.type to be a Literal for specific "generic" cases or remove it from the direct union choices
-# if it's purely abstract. The simplest fix for the error message is to make its 'type' a Literal.
-# We'll assume for now that a "base" NarrativeEntity instance might have a specific type string not covered by subclasses.
-# This is a common point of confusion with Pydantic discriminated unions.
-# The most robust way is often to have a common Literal string on the base if it can be instantiated.
-# Or, ensure the base class is not part of the Union directly if it's abstract.
+class MarketSignal(NarrativeEntity):
+    type: Literal["MarketSignal"] = "MarketSignal" # type: ignore
+    signal_type: str # e.g., "PriceSpike", "VolumeSurge", "AnalystUpgrade", "AnalystDowngrade"
+    asset_class: Optional[str] = Field(default=None, description="e.g., Equity, FixedIncome, Commodity, FX")
+    security_id: Optional[str] = Field(default=None, description="Link to a specific Security entity if applicable")
+    timestamp: datetime
+    details: Dict[str, Any] = Field(default_factory=dict, description="e.g., {'old_price': 100, 'new_price': 110}")
 
-# Let's redefine NarrativeEntity's type field to be a specific Literal if it's a generic instance.
-# For this iteration, I will modify NarrativeEntity to have a Literal type as well.
-# This means if a JSON object has type "NarrativeEntity", it will be parsed as such.
-# And other types like "Company" will be parsed as Company.
+class RegulatoryChange(NarrativeEntity):
+    type: Literal["RegulatoryChange"] = "RegulatoryChange" # type: ignore
+    jurisdiction: str
+    agency: Optional[str] = None
+    status: Literal["Proposed", "Enacted", "Repealed", "Guidance"]
+    summary: str
+    effective_date: Optional[datetime] = None
+    industries_affected_ids: List[str] = Field(default_factory=list)
 
-# Let's go back to the original definition of NarrativeEntity.type as str,
-# and ensure the Union only contains types that have Literal discriminators.
-# If an entity in the JSON has a 'type' not in these Literals, it should fail or be handled by a default.
+class Security(NarrativeEntity): # Name can be Ticker or CUSIP for example
+    type: Literal["Security"] = "Security" # type: ignore
+    issuer_id: Optional[str] = Field(default=None, description="ID of the issuing Company or entity")
+    security_subtype: str # E.g., "CommonStock", "PreferredStock", "CorporateBond", "GovernmentBond"
+    ticker: Optional[str] = None # Stock ticker
+    cusip: Optional[str] = None
+    isin: Optional[str] = None
+    exchange: Optional[str] = Field(default=None, description="e.g., NYSE, NASDAQ")
 
-# The error "Model 'NarrativeEntity' needs field 'type' to be of type `Literal`"
-# is because NarrativeEntity is in the Union: `Union[Company, Industry, NarrativeEntity]`.
-# If NarrativeEntity is meant to be a catch-all for types not Company or Industry,
-# its `type` field must also participate in the Literal-based discrimination.
 
-# Correct approach for Pydantic v2: The discriminator field on the base class of a discriminated union
-# does not need to be `Literal`. It's the derived classes that must have `Literal` types for the discriminator field.
-# The issue might be that `NarrativeEntity` is the *last* item in the Union.
-# Let's put more specific types first.
-
-EntityUnion = Annotated[Union[Company, Industry, MacroIndicator, NarrativeEntity], Field(discriminator='type')]
-# The issue is that NarrativeEntity itself, when chosen, doesn't offer a Literal for its 'type' field.
-# If NarrativeEntity is a fallback, its 'type' field (str) doesn't conform to the expectation
-# that all discriminated types define a Literal for the discriminator.
-
-# To fix this, ensure that any type that can be an outcome of the discrimination
-# has a `Literal` value for its `type` field.
-# If `NarrativeEntity` is to be instantiated for types like "MacroIndicator" (before we made a class for it),
-# then its `type` field needs to be able to hold those values.
-
-# The error means: if `NarrativeEntity` is chosen by the discriminator, what `Literal` value of `type` does it correspond to?
-# Since its `type` is `str`, it doesn't.
-# We must ensure that only classes with `Literal` types for the discriminator field are part of the "choices"
-# or that the base class itself also has a `Literal` type if it's a valid choice.
-
-# Let's add MacroIndicator and ensure the Union is composed of types that correctly define their `type` Literal.
-# The `NarrativeEntity` type `str` is the problem if it's a direct candidate.
-
-# Solution: Modify NarrativeEntity so its `type` is also a Literal, or ensure it's abstract / not directly in the union.
-# If NarrativeEntity is a fallback, it's more complex.
-# For now, let's assume NarrativeEntity instances from JSON would have a specific type not covered by subclasses.
-# The simplest fix to satisfy Pydantic is to give NarrativeEntity.type a Literal too.
-# This implies that a "generic" entity must have one of these literal types.
-
-# Let's define specific types and only include those in the Union.
-# If a type in JSON is not one of these, it will fail parsing, which is often desired.
-ConcreteEntityUnion = Annotated[Union[Company, Industry, MacroIndicator], Field(discriminator='type')]
+# Define a discriminated union for entity types including new ones
+ConcreteEntityUnion = Annotated[
+    Union[
+        Company,
+        Industry,
+        MacroIndicator,
+        NewsItem,
+        PoliticalEvent,
+        FinancialReportItem,
+        MarketSignal,
+        RegulatoryChange,
+        Security
+        # Add future concrete entity types here
+    ],
+    Field(discriminator='type')
+]
 
 
 # This will be the core of our knowledge graph, likely a collection of entities and relationships

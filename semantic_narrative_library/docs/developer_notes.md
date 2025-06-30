@@ -9,15 +9,18 @@ The library is organized into the following main directories under `semantic_nar
 -   **`api/`**: Contains the FastAPI backend application (`main.py`) and its README.
 -   **`cli/`**: Houses the Click-based command-line interface (`main_cli.py`).
 -   **`core_models/`**: Defines the core data structures.
-    -   `python/`: Pydantic models (`base_types.py`) used by the backend, reasoner, and CLI.
-    -   `typescript/`: TypeScript interfaces (`base_types.ts`) for conceptual alignment and potential use by TypeScript clients (like the React frontend).
+    -   `python/`: Pydantic models (`base_types.py`) used by the backend, reasoner, and CLI. Includes base entities and extended types like `NewsItem`, `PoliticalEvent`, etc.
+    -   `typescript/`: TypeScript interfaces (`base_types.ts`) for conceptual alignment and potential use by TypeScript clients (like the React frontend). Includes corresponding extended types.
     -   `java/`: Placeholder Java class definitions (`BaseTypes.java`).
 -   **`data/`**: Includes sample data (`sample_knowledge_graph.json`) and the Python script to load it (`load_sample_data.py`).
 -   **`docs/`**: Project documentation files (like this one).
 -   **`frontend/`**: Contains the React + TypeScript frontend application.
+-   **`knowledge_graph_schema/`**: Contains schema definition examples for the knowledge graph.
 -   **`llm_ops/`**: Scripts and prompts for LLM integration (`narrative_generator.py`, `prompts/`).
--   **`reasoning_engine/`**: The Python-based `SimpleReasoner` (`simple_reasoner.py`).
+-   **`processing/`**: Placeholder Python modules for advanced processing components (`DataIngestor`, `NLProcessor`, `SignificanceScorer`, `ImpactAnalyzer`, `ScenarioModeler`). See `processing/README.md`.
+-   **`reasoning_engine/`**: The Python-based `SimpleReasoner` (`simple_reasoner.py`). This would be complemented or superseded by the advanced processing components for more complex tasks.
 -   **`tests/`**: Pytest unit tests for the Python components.
+-   **`workflows/`**: Conceptual design and examples for a workflow and template engine (`workflow_template_example.json`, `rule_template_example.json`). See `workflows/README.md`.
 -   `Dockerfile`: For containerizing the FastAPI backend.
 -   `requirements.txt`: Python dependencies for the backend, CLI, and related scripts.
 
@@ -25,16 +28,25 @@ The library is organized into the following main directories under `semantic_nar
 
 Located in `semantic_narrative_library/core_models/python/base_types.py`.
 Key Pydantic models include:
--   `NarrativeEntity`: Base class for all entities.
--   `Company`, `Industry`, `MacroIndicator`: Specific entity types inheriting from `NarrativeEntity`, using `Literal` types for the `type` field to support discriminated unions.
+-   `NarrativeEntity`: Base class for all entities. Its `type` field is `str`.
+-   Concrete entity subtypes like `Company`, `Industry`, `MacroIndicator`, `NewsItem`, `PoliticalEvent`, `FinancialReportItem`, `MarketSignal`, `RegulatoryChange`, `Security`. Each of these defines its `type` field as a `Literal` (e.g., `type: Literal["Company"] = "Company"`) to enable Pydantic's discriminated union functionality.
 -   `Driver`: Represents influencing factors.
 -   `Relationship`: Defines connections between entities/drivers.
 -   `SemanticLink`: Connects narrative elements to observable metrics.
--   `KnowledgeGraphData`: Root model for holding lists of entities, drivers, relationships, etc. Uses `Annotated[Union[...], Field(discriminator='type')]` for parsing entities into their specific Pydantic types.
+-   `KnowledgeGraphData`: Root model for holding lists of entities, drivers, relationships, etc. Its `entities` field uses `ConcreteEntityUnion = Annotated[Union[Company, Industry, ...], Field(discriminator='type')]` to ensure Pydantic correctly parses dictionary data into specific entity Pydantic model instances based on the `type` field.
 
-All core Pydantic models are configured with `model_config = ConfigDict(frozen=True)` to make them hashable and immutable after creation, which is beneficial for use in sets or as dictionary keys if needed (though workarounds were used in `SimpleReasoner` for list de-duplication by ID to avoid issues with nested mutable types if `frozen=True` wasn't perfectly effective for all hashing scenarios).
+All core Pydantic models are configured with `model_config = ConfigDict(frozen=True)` to make them hashable and (largely) immutable after creation.
 
-## Main Components Interaction
+## Advanced Framework Design Patterns (Conceptual)
+
+The introduction of the `processing/` and `workflows/` directories points towards a more sophisticated architecture:
+
+-   **Pipeline Processing**: The components in `processing/` (e.g., `DataIngestor`, `NLProcessor`, `ImpactAnalyzer`) are envisioned as stages in a data processing and analysis pipeline.
+-   **Workflow Orchestration**: A (currently conceptual) workflow engine would use templates from `workflows/workflow_template_example.json` to define and execute sequences of operations using the components from `processing/`.
+-   **Rule-Based Analysis**: The `ImpactAnalyzer` and `ScenarioModeler` would leverage rule definitions (like those in `workflows/rule_template_example.json`) to determine cause-and-effect, probabilities, and magnitudes of impacts.
+-   **Extensibility**: This design allows for adding new processing components, workflow types, and rule sets as the library's capabilities grow.
+
+## Main Components Interaction (Updated View)
 
 1.  **Data Loading (`data/load_sample_data.py`)**:
     -   Loads `sample_knowledge_graph.json`.
