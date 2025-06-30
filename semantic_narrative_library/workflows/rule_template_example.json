@@ -1,0 +1,100 @@
+{
+  "ruleset_id": "rs_standard_financial_impacts_v1",
+  "name": "Standard Financial Impact Ruleset",
+  "description": "A set of generic rules for how certain events might impact financial entities.",
+  "version": "1.0",
+  "rules": [
+    {
+      "rule_id": "rule_trade_restriction_impact_on_sector",
+      "description": "Impact of trade restrictions on companies in an affected sector.",
+      "trigger": {
+        "event_type": "PoliticalEvent",
+        "conditions": [
+          {"field": "event_subtype", "operator": "equals", "value": "TradeRestriction"},
+          {"field": "attributes.affected_sectors", "operator": "contains", "value_ref": "target_sector_id"}
+        ]
+      },
+      "impacts": [
+        {
+          "order": 1,
+          "target_entity_type": "Industry",
+          "target_selector_conditions": [
+            {"field": "id", "operator": "equals", "value_ref": "target_sector_id"}
+          ],
+          "impact_type": "IncreasedOperatingDifficulty",
+          "probability": 0.7,
+          "magnitude_qualitative": "Medium to High",
+          "timescale": "Medium-term",
+          "explanation_template": "Trade restrictions related to '{trigger.name}' are likely to increase operating difficulty for the '{target.name}' sector due to potential supply chain disruptions and market access limitations."
+        },
+        {
+          "order": 2,
+          "source_impact_type": "IncreasedOperatingDifficulty",
+          "source_target_type": "Industry",
+          "target_entity_type": "Company",
+          "target_selector_conditions": [
+            {"field": "industry_id", "operator": "equals", "value_ref": "target_sector_id"},
+            {"field": "attributes.international_exposure_rating", "operator": "greater_than_or_equal_to", "value": 0.6}
+          ],
+          "impact_type": "ReducedProfitabilityOutlook",
+          "probability": 0.6,
+          "magnitude_qualitative": "Medium",
+          "timescale": "Medium to Long-term",
+          "explanation_template": "Companies like '{target.name}' with significant international exposure within the '{target_sector_id}' sector may see reduced profitability outlook due to increased operating difficulties stemming from trade restrictions ('{trigger.name}')."
+        }
+      ]
+    },
+    {
+      "rule_id": "rule_interest_rate_hike_growth_stocks",
+      "description": "Impact of interest rate hikes on growth-oriented technology companies.",
+      "trigger": {
+        "event_type": "MacroIndicator",
+        "conditions": [
+          {"field": "name", "operator": "contains", "value": "Interest Rate"},
+          {"field": "attributes.change_direction", "operator": "equals", "value": "Hike"},
+          {"field": "attributes.significance", "operator": "greater_than", "value": 0.5}
+        ]
+      },
+      "impacts": [
+        {
+          "order": 1,
+          "target_entity_type": "Company",
+          "target_selector_conditions": [
+            {"field": "industry_id", "operator": "equals", "value": "ind_tech"}, // Assuming 'ind_tech' is a known ID for tech industry
+            {"field": "attributes.valuation_metric", "operator": "equals", "value": "HighGrowth"}
+          ],
+          "impact_type": "ValuationPressure",
+          "probability": 0.8,
+          "magnitude_qualitative": "Medium",
+          "timescale": "Short to Medium-term",
+          "explanation_template": "Significant interest rate hikes, like '{trigger.name}', typically put valuation pressure on high-growth technology companies such as '{target.name}' due to increased discount rates."
+        }
+      ]
+    },
+    {
+      "rule_id": "rule_positive_news_sentiment_boost",
+      "description": "Highly positive news with strong sentiment can boost short-term outlook.",
+      "trigger": {
+        "event_type": "NewsItem",
+        "conditions": [
+          {"field": "sentiment_score", "operator": "greater_than_or_equal_to", "value": 0.75},
+          {"field": "key_entities_mentioned_ids", "operator": "contains", "value_ref": "target_company_id"}
+        ]
+      },
+      "impacts": [
+        {
+          "order": 1,
+          "target_entity_type": "Company",
+          "target_selector_conditions": [
+            {"field": "id", "operator": "equals", "value_ref": "target_company_id"}
+          ],
+          "impact_type": "PositiveShortTermOutlook",
+          "probability": 0.6,
+          "magnitude_qualitative": "Low to Medium",
+          "timescale": "Short-term",
+          "explanation_template": "Highly positive news ('{trigger.name}') regarding '{target.name}' is likely to provide a short-term boost to its outlook."
+        }
+      ]
+    }
+  ]
+}
