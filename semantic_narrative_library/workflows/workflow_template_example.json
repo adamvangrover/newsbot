@@ -1,0 +1,77 @@
+{
+  "workflow_id": "wf_news_impact_on_company_v1",
+  "name": "News Item Impact Analysis on Company",
+  "description": "Analyzes a news item, identifies its significance, traces its potential impact on a specified company, and generates a narrative.",
+  "version": "1.0",
+  "input_parameters": [
+    {"name": "news_item_id", "type": "string", "description": "ID of the NewsItem entity to analyze."},
+    {"name": "target_company_id", "type": "string", "description": "ID of the Company entity to assess impact on."}
+  ],
+  "steps": [
+    {
+      "step_id": "s1_fetch_news",
+      "name": "Fetch News Item Details",
+      "description": "Retrieves the full NewsItem object from the knowledge graph.",
+      "component": "KnowledgeGraphQuerier", // Assumed component, could be part of reasoner
+      "method": "get_entity_by_id",
+      "inputs": {"entity_id": "${workflow.input_parameters.news_item_id}"},
+      "outputs": {"news_data": "$.result"} // Using JSONPath-like syntax for output mapping
+    },
+    {
+      "step_id": "s2_nlp_process_news",
+      "name": "NLP Processing of News Summary",
+      "description": "Extracts key entities and sentiment if not already present or needs refinement.",
+      "component": "NLProcessor", // From processing/nlp_service.py
+      "method": "enhance_news_item_nlp", // Assumed method
+      "inputs": {"news_item": "${s1_fetch_news.outputs.news_data}"},
+      "parameters": {"force_reprocess": false},
+      "outputs": {"processed_news_item": "$.result"}
+    },
+    {
+      "step_id": "s3_score_significance",
+      "name": "Score News Significance",
+      "description": "Determines the significance of the news item in relation to the target company.",
+      "component": "SignificanceScorer", // From processing/significance_engine.py
+      "method": "score_event_significance",
+      "inputs": {
+        "event_data": "${s2_nlp_process_news.outputs.processed_news_item}",
+        "context": {"target_entity_id": "${workflow.input_parameters.target_company_id}"}
+      },
+      "outputs": {"significance_score": "$.score", "significance_explanation": "$.explanation"}
+    },
+    {
+      "step_id": "s4_impact_analysis",
+      "name": "Analyze Potential Impacts",
+      "description": "Traces first and second-order impacts of the news item on the target company.",
+      "component": "ImpactAnalyzer", // From processing/impact_analysis_engine.py
+      "method": "trace_impacts_from_event", // Assumed method
+      "inputs": {
+        "initial_event": "${s2_nlp_process_news.outputs.processed_news_item}",
+        "target_company_id": "${workflow.input_parameters.target_company_id}",
+        "knowledge_graph_snapshot": "${system.current_kg_data}" // Placeholder for KG access
+      },
+      "parameters": {"depth_levels": 2, "ruleset_id": "rs_standard_financial_impacts_v1"},
+      "outputs": {"impact_chains": "$.result"}
+    },
+    {
+      "step_id": "s5_generate_narrative",
+      "name": "Generate Impact Narrative",
+      "description": "Creates a narrative summarizing the findings.",
+      "component": "NarrativeGenerator", // From llm_ops or a new advanced one
+      "method": "generate_impact_narrative", // Assumed method on an advanced generator
+      "inputs": {
+        "company_id": "${workflow.input_parameters.target_company_id}",
+        "triggering_event": "${s2_nlp_process_news.outputs.processed_news_item}",
+        "significance": "${s3_score_significance.outputs.significance_explanation}",
+        "impact_analysis_results": "${s4_impact_analysis.outputs.impact_chains}"
+      },
+      "parameters": {"prompt_template_name": "detailed_impact_narrative_prompt.md"},
+      "outputs": {"final_narrative": "$.narrative"}
+    }
+  ],
+  "output_data": {
+    "summary_narrative": "${s5_generate_narrative.outputs.final_narrative}",
+    "detailed_impacts": "${s4_impact_analysis.outputs.impact_chains}",
+    "news_significance_score": "${s3_score_significance.outputs.significance_score}"
+  }
+}
