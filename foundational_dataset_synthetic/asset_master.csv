@@ -1,0 +1,11 @@
+Ticker,Company_Name,Primary_Exchange,Sector,Industry
+AAPL,Apple Inc.,NASDAQ,Information Technology,Technology Hardware, Storage & Peripherals
+MSFT,Microsoft Corporation,NASDAQ,Information Technology,Software
+GOOG,Alphabet Inc. Class C,NASDAQ,Communication Services,Interactive Media & Services
+AMZN,Amazon.com Inc.,NASDAQ,Consumer Discretionary,Broadline Retail
+SPY,SPDR S&P 500 ETF Trust,NYSE ARCA,ETF,Index ETF
+TSLA,Tesla Inc.,NASDAQ,Consumer Discretionary,Automobile Manufacturers
+NVDA,NVIDIA Corporation,NASDAQ,Information Technology,Semiconductors
+JPM,JPMorgan Chase & Co.,NYSE,Financials,Diversified Banks
+V,Visa Inc. Class A,NYSE,Information Technology,Data Processing & Outsourced Services
+JNJ,Johnson & Johnson,NYSE,Health Care,Pharmaceuticals

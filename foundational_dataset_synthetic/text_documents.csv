@@ -1,0 +1,13 @@
+Doc_ID,Ticker,Source_Type,Source_Name,Timestamp,Headline,Full_Text_Path
+1,AAPL,News,MockReuters,2022-01-03T10:00:00Z,"Apple Hits $3 Trillion Market Cap Milestone",s3://mock-bucket/news_001.txt
+2,MSFT,News,MockBloomberg,2022-01-04T11:00:00Z,"Microsoft Announces New Azure Cloud Services",s3://mock-bucket/news_002.txt
+3,TSLA,8-K,SEC EDGAR Synthetic,2022-01-05T14:00:00Z,"Tesla Inc. Form 8-K: Vehicle Production & Deliveries",s3://mock-bucket/8k_tsla_001.txt
+4,JPM,News,MockDowJones,2022-01-06T09:30:00Z,"JPMorgan CEO Discusses Economic Outlook",s3://mock-bucket/news_jpm_001.txt
+5,AAPL,Transcript,VendorX Transcripts,2022-01-27T22:00:00Z,"AAPL Q1 2022 Earnings Call Transcript",s3://mock-bucket/transcript_aapl_q12022.txt
+6,,FOMC_Statement,Federal Reserve Synthetic,2022-01-26T19:00:00Z,"FOMC Statement January 2022",s3://mock-bucket/fomc_20220126.txt
+7,GOOG,News,MockReuters,2023-03-01T10:15:00Z,"Google Announces Advances in AI Research",s3://mock-bucket/news_goog_001.txt
+8,AMZN,8-K,SEC EDGAR Synthetic,2023-03-05T18:00:00Z,"Amazon.com Inc. Form 8-K: New Business Segment",s3://mock-bucket/8k_amzn_001.txt
+9,NVDA,Transcript,VendorY Transcripts,2022-02-16T22:00:00Z,"NVDA Q4 2022 Earnings Call Transcript",s3://mock-bucket/transcript_nvda_q42022.txt
+10,,ECB_PressConference,ECB Synthetic,2022-03-10T13:45:00Z,"ECB Monetary Policy Press Conference March 2022",s3://mock-bucket/ecb_20220310.txt
+11,ALL,News,MockAssociatedPress,2024-01-02T08:00:00Z,"Market Outlook for 2024: Analysts Weigh In",s3://mock-bucket/news_marketoutlook_2024.txt
+12,V,News,MockBloomberg,2024-01-10T14:30:00Z,"Visa Reports Strong Growth in Payment Volumes",s3://mock-bucket/news_v_001.txt

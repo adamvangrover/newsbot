@@ -1,0 +1,13 @@
+Annotation_ID,Doc_ID,Sentiment_Score,Uncertainty_Score,Litigiousness_Score,Named_Entities
+1,1,0.65,0.10,0.05,"[\"AAPL\", \"Market Cap\"]"
+2,2,0.50,0.15,0.02,"[\"MSFT\", \"Azure\"]"
+3,3,0.10,0.20,0.10,"[\"TSLA\", \"Production\", \"Deliveries\"]"
+4,4,0.25,0.30,0.15,"[\"JPM\", \"CEO\", \"Economy\"]"
+5,5,0.40,0.25,0.08,"[\"AAPL\", \"Earnings\", \"Revenue\"]"
+6,6,-0.10,0.40,0.20,"[\"FOMC\", \"Interest Rates\", \"Inflation\"]"
+7,7,0.70,0.12,0.03,"[\"GOOG\", \"AI\", \"Research\"]"
+8,8,0.30,0.18,0.06,"[\"AMZN\", \"Business Segment\"]"
+9,9,0.35,0.22,0.09,"[\"NVDA\", \"Earnings\", \"GPU\"]"
+10,10,-0.20,0.35,0.18,"[\"ECB\", \"Monetary Policy\", \"Eurozone\"]"
+11,11,0.15,0.45,0.12,"[\"Market Outlook\", \"Analysts\", \"2024\"]"
+12,12,0.55,0.10,0.04,"[\"V\", \"Payment Volumes\", \"Growth\"]"

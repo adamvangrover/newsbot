@@ -1,0 +1,9 @@
+Event_ID,Release_Timestamp,Indicator_Name,Country,Consensus_Forecast,Actual_Value,Prior_Value,Surprise_Value,Surprise_ZScore
+1,2022-01-07T13:30:00Z,Non-Farm Payrolls,USA,400000,199000,249000,-201000,-1.5
+2,2022-01-12T13:30:00Z,Consumer Price Index (CPI) YoY,USA,7.0,7.0,6.8,0.0,0.0
+3,2022-01-27T13:30:00Z,Gross Domestic Product (GDP) QoQ Annualized,USA,5.5,6.9,2.3,1.4,1.2
+4,2023-03-10T13:30:00Z,Non-Farm Payrolls,USA,205000,311000,504000,106000,0.8
+5,2023-03-14T13:30:00Z,Consumer Price Index (CPI) YoY,USA,6.0,6.0,6.4,0.0,0.1
+6,2023-03-30T13:30:00Z,Gross Domestic Product (GDP) QoQ Annualized,USA,2.7,2.6,2.7,-0.1,-0.2
+7,2024-01-05T13:30:00Z,Non-Farm Payrolls,USA,170000,216000,173000,46000,0.5
+8,2024-01-11T13:30:00Z,Consumer Price Index (CPI) YoY,USA,3.2,3.4,3.1,0.2,0.3
