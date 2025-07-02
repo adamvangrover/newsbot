@@ -1,0 +1,173 @@
+{
+  "entities": [
+    {
+      "id": "ind_tech",
+      "name": "Technology Software",
+      "description": "Companies primarily engaged in the research, design, development, and production of software products.",
+      "type": "Industry",
+      "attributes": { "sector": "Information Technology", "growth_outlook_rating": 4.5 },
+      "tags": ["software", "IT", "growth"]
+    },
+    {
+      "id": "ind_auto",
+      "name": "Automotive Manufacturers",
+      "description": "Companies involved in the design, development, manufacturing, and selling of motor vehicles.",
+      "type": "Industry",
+      "attributes": { "sector": "Consumer Discretionary", "cyclical": true },
+      "tags": ["cars", "manufacturing", "cyclical"]
+    },
+    {
+      "id": "comp_alpha",
+      "name": "AlphaSoft Inc.",
+      "description": "A leading provider of enterprise cloud solutions.",
+      "type": "Company",
+      "attributes": {
+        "tickerSymbol": "ASFT",
+        "headquarters": "San Francisco, CA",
+        "foundedYear": 2005,
+        "employeeCount": 5000
+      },
+      "tags": ["cloud", "enterprise", "saas"]
+    },
+    {
+      "id": "comp_beta",
+      "name": "BetaDrive Motors",
+      "description": "An innovative electric vehicle manufacturer.",
+      "type": "Company",
+      "attributes": {
+        "tickerSymbol": "BDMV",
+        "headquarters": "Austin, TX",
+        "foundedYear": 2015,
+        "evSpecialist": true
+      },
+      "tags": ["electric vehicles", "innovation", "automotive"]
+    },
+    {
+      "id": "macro_interest",
+      "name": "Central Bank Interest Rates",
+      "description": "The benchmark interest rates set by the central bank.",
+      "type": "MacroIndicator",
+      "attributes": { "region": "Global", "current_rate_proxy": 0.0525 },
+      "tags": ["monetary policy", "economic indicator"]
+    }
+  ],
+  "drivers": [
+    {
+      "id": "drv_cloud_adoption",
+      "name": "Cloud Computing Adoption",
+      "description": "The rate at which businesses are adopting cloud-based services and infrastructure.",
+      "impact_potential": "High",
+      "influence_pattern": "Positively impacts efficiency and scalability for adopters; challenges traditional IT.",
+      "related_entity_types": ["Company", "Industry"],
+      "tags": ["digital transformation", "technology trend"]
+    },
+    {
+      "id": "drv_ev_demand",
+      "name": "Electric Vehicle Demand",
+      "description": "Consumer and fleet demand for electric vehicles.",
+      "impact_potential": "High",
+      "influence_pattern": "Boosts EV manufacturers, pressures traditional automakers to adapt.",
+      "related_entity_types": ["Company", "Industry"],
+      "tags": ["sustainability", "consumer trend", "automotive"]
+    },
+    {
+      "id": "drv_supply_chain",
+      "name": "Global Supply Chain Stability",
+      "description": "The reliability and efficiency of global supply chains for components and materials.",
+      "impact_potential": "Medium",
+      "influence_pattern": "Disruptions can increase costs and delay production across many industries.",
+      "related_entity_types": ["Industry", "Company"],
+      "tags": ["logistics", "geopolitics", "manufacturing"]
+    },
+    {
+      "id": "drv_interest_rate_hike",
+      "name": "Interest Rate Hikes",
+      "description": "Increases in benchmark interest rates by central banks.",
+      "impact_potential": "High",
+      "influence_pattern": "Typically cools down economic activity, increases borrowing costs, can reduce investment valuations.",
+      "related_entity_types": ["Company", "Industry", "MacroIndicator"],
+      "tags": ["monetary policy", "inflation control", "economic slowdown"]
+    }
+  ],
+  "relationships": [
+    {
+      "id": "rel_asft_industry",
+      "source_id": "comp_alpha",
+      "target_id": "ind_tech",
+      "type": "belongs_to_industry",
+      "strength": 0.9,
+      "explanation_template": "{source_name} is a key player in the {target_name} industry."
+    },
+    {
+      "id": "rel_bdmv_industry",
+      "source_id": "comp_beta",
+      "target_id": "ind_auto",
+      "type": "belongs_to_industry",
+      "strength": 0.95
+    },
+    {
+      "id": "rel_cloud_asft",
+      "source_id": "drv_cloud_adoption",
+      "target_id": "comp_alpha",
+      "type": "positively_impacts",
+      "strength": 0.85,
+      "explanation_template": "{source_name} significantly benefits {target_name} due to its strong cloud portfolio."
+    },
+    {
+      "id": "rel_ev_bdmv",
+      "source_id": "drv_ev_demand",
+      "target_id": "comp_beta",
+      "type": "positively_impacts",
+      "strength": 0.9,
+      "explanation_template": "Strong {source_name} is a primary growth factor for {target_name}."
+    },
+    {
+      "id": "rel_supply_bdmv",
+      "source_id": "drv_supply_chain",
+      "target_id": "comp_beta",
+      "type": "can_negatively_impact",
+      "strength": 0.6,
+      "explanation_template": "Instability in {source_name} poses a risk to {target_name}'s production targets."
+    },
+    {
+      "id": "rel_interest_indtech",
+      "source_id": "drv_interest_rate_hike",
+      "target_id": "ind_tech",
+      "type": "generally_negatively_impacts",
+      "strength": 0.7,
+      "explanation_template": "{source_name} can dampen valuations and investment in the {target_name} sector."
+    },
+    {
+      "id": "rel_interest_asft_valuation",
+      "source_id": "drv_interest_rate_hike",
+      "target_id": "comp_alpha",
+      "type": "pressures_valuation_of",
+      "strength": 0.65,
+      "attributes": {"mechanism": "discount rate increase"}
+    }
+  ],
+  "semantic_links": [
+    {
+      "id": "slink_asft_price_outlook",
+      "narrative_element_id": "rel_cloud_asft",
+      "metric_observed": "StockPriceOutlook",
+      "observed_value": "Positive",
+      "observation_time": "2023-10-26T10:00:00Z",
+      "source_of_observation": "AnalystConsensusModel_v2",
+      "confidence": 0.75,
+      "explanation": "Given the strong positive impact of cloud adoption on AlphaSoft Inc. (ASFT), the consensus outlook for its stock price is positive, assuming continued trend.",
+      "tags": ["ASFT", "price target", "analyst view"]
+    },
+    {
+      "id": "slink_bdmv_risk_rating",
+      "narrative_element_id": "rel_supply_bdmv",
+      "metric_observed": "OperationalRiskRating",
+      "observed_value": "Elevated",
+      "observation_time": "2023-10-25T14:30:00Z",
+      "source_of_observation": "InternalRiskAssessment",
+      "confidence": 0.8,
+      "explanation": "BetaDrive Motors (BDMV) faces an elevated operational risk rating due to its exposure to potential supply chain disruptions, which could impact production.",
+      "tags": ["BDMV", "risk management", "supply chain"]
+    }
+  ]
+}
