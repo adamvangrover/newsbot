@@ -1,0 +1,182 @@
+[
+  {
+    "event_type_id": 1,
+    "event_name": "Synthesize Value-Added Convergence Indicator",
+    "country_region": "USA",
+    "release_frequency": "Quarterly",
+    "description": "Increase word language scientist four worry.",
+    "source_identifier": "SYNTHESIZE_VALUE-ADDED_CONVERGENCE_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:34.806Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 2,
+    "event_name": "Facilitate Clicks-And-Mortar Schemas Indicator",
+    "country_region": "Germany",
+    "release_frequency": "Quarterly",
+    "description": "Quickly something girl seven white forward least election.",
+    "source_identifier": "FACILITATE_CLICKS-AND-MORTAR_SCHEMAS_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:34.806Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 3,
+    "event_name": "Whiteboard Bleeding-Edge Mindshare Indicator",
+    "country_region": "Eurozone",
+    "release_frequency": "Monthly",
+    "description": "Project whatever one interview.",
+    "source_identifier": "WHITEBOARD_BLEEDING-EDGE_MINDSHARE_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:34.806Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 4,
+    "event_name": "Incentivize Web-Enabled Schemas Indicator",
+    "country_region": "Eurozone",
+    "release_frequency": "Monthly",
+    "description": "Room forget evening share.",
+    "source_identifier": "INCENTIVIZE_WEB-ENABLED_SCHEMAS_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:34.806Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 5,
+    "event_name": "Iterate Integrated Interfaces Indicator",
+    "country_region": "USA",
+    "release_frequency": "Quarterly",
+    "description": "Performance ahead us support here at everyone.",
+    "source_identifier": "ITERATE_INTEGRATED_INTERFACES_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:34.806Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 6,
+    "event_name": "Cultivate Compelling Technologies Indicator",
+    "country_region": "USA",
+    "release_frequency": "Ad-hoc",
+    "description": "Lot sort growth church size speech according.",
+    "source_identifier": "CULTIVATE_COMPELLING_TECHNOLOGIES_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:34.806Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 7,
+    "event_name": "Orchestrate User-Centric Bandwidth Indicator",
+    "country_region": "China",
+    "release_frequency": "Quarterly",
+    "description": "Since whatever politics choose.",
+    "source_identifier": "ORCHESTRATE_USER-CENTRIC_BANDWIDTH_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:34.806Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 8,
+    "event_name": "Target Innovative E-Business Indicator",
+    "country_region": "USA",
+    "release_frequency": "Quarterly",
+    "description": "Sometimes student rest.",
+    "source_identifier": "TARGET_INNOVATIVE_E-BUSINESS_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:34.806Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 9,
+    "event_name": "Repurpose One-To-One Partnerships Indicator",
+    "country_region": "Eurozone",
+    "release_frequency": "Quarterly",
+    "description": "Left impact morning yeah Congress.",
+    "source_identifier": "REPURPOSE_ONE-TO-ONE_PARTNERSHIPS_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:34.806Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 10,
+    "event_name": "Drive Best-Of-Breed Convergence Indicator",
+    "country_region": "China",
+    "release_frequency": "Monthly",
+    "description": "Decision develop result.",
+    "source_identifier": "DRIVE_BEST-OF-BREED_CONVERGENCE_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:34.806Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  }
+]

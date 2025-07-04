@@ -1,0 +1,596 @@
+[
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-02",
+    "open_price": 100.3232,
+    "high_price": 101.2433,
+    "low_price": 99.9693,
+    "close_price": 100.9868,
+    "adjusted_close_price": 100.9868,
+    "volume": 6847847,
+    "vwap": 101.2113,
+    "ingestion_timestamp": "2025-07-02T09:44:01.440819Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441280Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-03",
+    "open_price": 103.5501,
+    "high_price": 103.6278,
+    "low_price": 102.9211,
+    "close_price": 103.4464,
+    "adjusted_close_price": 103.4464,
+    "volume": 9706679,
+    "vwap": 103.1487,
+    "ingestion_timestamp": "2025-07-02T09:44:01.440853Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441286Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-04",
+    "open_price": 106.4624,
+    "high_price": 107.8033,
+    "low_price": 105.4718,
+    "close_price": 106.6011,
+    "adjusted_close_price": 106.6011,
+    "volume": 6774689,
+    "vwap": 107.7192,
+    "ingestion_timestamp": "2025-07-02T09:44:01.440874Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441290Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-05",
+    "open_price": 107.8932,
+    "high_price": 109.485,
+    "low_price": 107.1331,
+    "close_price": 108.1457,
+    "adjusted_close_price": 108.1457,
+    "volume": 5470414,
+    "vwap": 108.4321,
+    "ingestion_timestamp": "2025-07-02T09:44:01.440889Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441293Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-06",
+    "open_price": 108.0471,
+    "high_price": 108.3515,
+    "low_price": 107.0119,
+    "close_price": 108.2946,
+    "adjusted_close_price": 108.2946,
+    "volume": 5225675,
+    "vwap": 107.3182,
+    "ingestion_timestamp": "2025-07-02T09:44:01.440901Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441412Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-09",
+    "open_price": 107.6576,
+    "high_price": 108.7622,
+    "low_price": 106.2085,
+    "close_price": 107.7483,
+    "adjusted_close_price": 107.7483,
+    "volume": 8285805,
+    "vwap": 107.3638,
+    "ingestion_timestamp": "2025-07-02T09:44:01.440916Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441417Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-10",
+    "open_price": 107.1426,
+    "high_price": 107.3674,
+    "low_price": 106.4316,
+    "close_price": 107.0948,
+    "adjusted_close_price": 107.0948,
+    "volume": 9300743,
+    "vwap": 106.557,
+    "ingestion_timestamp": "2025-07-02T09:44:01.440928Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441421Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-11",
+    "open_price": 106.7931,
+    "high_price": 108.349,
+    "low_price": 105.8076,
+    "close_price": 107.8003,
+    "adjusted_close_price": 107.8003,
+    "volume": 6809122,
+    "vwap": 107.0122,
+    "ingestion_timestamp": "2025-07-02T09:44:01.440940Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441425Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-12",
+    "open_price": 105.7335,
+    "high_price": 106.8592,
+    "low_price": 105.6747,
+    "close_price": 106.2877,
+    "adjusted_close_price": 106.2877,
+    "volume": 7201193,
+    "vwap": 106.7909,
+    "ingestion_timestamp": "2025-07-02T09:44:01.440951Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441429Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-13",
+    "open_price": 108.0773,
+    "high_price": 109.497,
+    "low_price": 106.906,
+    "close_price": 107.0406,
+    "adjusted_close_price": 107.0406,
+    "volume": 8104842,
+    "vwap": 109.1479,
+    "ingestion_timestamp": "2025-07-02T09:44:01.440962Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441432Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-16",
+    "open_price": 103.0845,
+    "high_price": 103.6547,
+    "low_price": 102.0892,
+    "close_price": 103.4482,
+    "adjusted_close_price": 103.4482,
+    "volume": 6649136,
+    "vwap": 102.2069,
+    "ingestion_timestamp": "2025-07-02T09:44:01.440975Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441436Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-17",
+    "open_price": 105.1789,
+    "high_price": 106.4041,
+    "low_price": 104.2072,
+    "close_price": 105.5892,
+    "adjusted_close_price": 105.5892,
+    "volume": 5384078,
+    "vwap": 105.5553,
+    "ingestion_timestamp": "2025-07-02T09:44:01.440987Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441439Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-18",
+    "open_price": 108.4861,
+    "high_price": 109.9572,
+    "low_price": 106.972,
+    "close_price": 109.2575,
+    "adjusted_close_price": 109.2575,
+    "volume": 6781354,
+    "vwap": 107.1699,
+    "ingestion_timestamp": "2025-07-02T09:44:01.440998Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441442Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-19",
+    "open_price": 106.3936,
+    "high_price": 106.4415,
+    "low_price": 105.7936,
+    "close_price": 106.0117,
+    "adjusted_close_price": 106.0117,
+    "volume": 1569743,
+    "vwap": 106.3853,
+    "ingestion_timestamp": "2025-07-02T09:44:01.441009Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441446Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-20",
+    "open_price": 102.0441,
+    "high_price": 103.2964,
+    "low_price": 101.6456,
+    "close_price": 103.2742,
+    "adjusted_close_price": 103.2742,
+    "volume": 2369972,
+    "vwap": 101.8798,
+    "ingestion_timestamp": "2025-07-02T09:44:01.441020Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441449Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-23",
+    "open_price": 104.6782,
+    "high_price": 105.9685,
+    "low_price": 104.1796,
+    "close_price": 104.2934,
+    "adjusted_close_price": 104.2934,
+    "volume": 9593086,
+    "vwap": 104.1928,
+    "ingestion_timestamp": "2025-07-02T09:44:01.441033Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441452Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-24",
+    "open_price": 102.4779,
+    "high_price": 103.734,
+    "low_price": 100.9396,
+    "close_price": 101.0534,
+    "adjusted_close_price": 101.0534,
+    "volume": 3820715,
+    "vwap": 102.2818,
+    "ingestion_timestamp": "2025-07-02T09:44:01.441044Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441455Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-25",
+    "open_price": 99.6044,
+    "high_price": 100.1916,
+    "low_price": 99.0959,
+    "close_price": 99.6304,
+    "adjusted_close_price": 99.6304,
+    "volume": 4123289,
+    "vwap": 99.4056,
+    "ingestion_timestamp": "2025-07-02T09:44:01.441055Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441459Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-26",
+    "open_price": 100.1216,
+    "high_price": 101.3407,
+    "low_price": 99.2102,
+    "close_price": 100.5205,
+    "adjusted_close_price": 100.5205,
+    "volume": 5094853,
+    "vwap": 99.8035,
+    "ingestion_timestamp": "2025-07-02T09:44:01.441066Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441462Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-27",
+    "open_price": 101.0122,
+    "high_price": 101.7307,
+    "low_price": 100.9661,
+    "close_price": 101.7133,
+    "adjusted_close_price": 101.7133,
+    "volume": 5296567,
+    "vwap": 101.553,
+    "ingestion_timestamp": "2025-07-02T09:44:01.441077Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441466Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-06-30",
+    "open_price": 101.896,
+    "high_price": 102.0508,
+    "low_price": 100.698,
+    "close_price": 100.964,
+    "adjusted_close_price": 100.964,
+    "volume": 8858649,
+    "vwap": 101.8398,
+    "ingestion_timestamp": "2025-07-02T09:44:01.441090Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441469Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "trade_date": "2025-07-01",
+    "open_price": 101.9364,
+    "high_price": 102.6396,
+    "low_price": 101.6099,
+    "close_price": 101.6709,
+    "adjusted_close_price": 101.6709,
+    "volume": 2145143,
+    "vwap": 101.9136,
+    "ingestion_timestamp": "2025-07-02T09:44:01.441101Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.441472Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 7,
+          "ticker": "INCUSDT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  }
+]

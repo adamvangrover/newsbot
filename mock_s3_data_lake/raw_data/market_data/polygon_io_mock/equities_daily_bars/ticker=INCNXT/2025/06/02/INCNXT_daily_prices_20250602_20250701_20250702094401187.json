@@ -1,0 +1,596 @@
+[
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-02",
+    "open_price": 132.5014,
+    "high_price": 133.1917,
+    "low_price": 132.4973,
+    "close_price": 132.6152,
+    "adjusted_close_price": 132.6152,
+    "volume": 9969546,
+    "vwap": 132.7778,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186501Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186917Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-03",
+    "open_price": 132.9351,
+    "high_price": 134.7109,
+    "low_price": 131.8485,
+    "close_price": 134.3703,
+    "adjusted_close_price": 134.3703,
+    "volume": 7630089,
+    "vwap": 132.672,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186532Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186923Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-04",
+    "open_price": 138.2258,
+    "high_price": 139.1046,
+    "low_price": 137.819,
+    "close_price": 138.6229,
+    "adjusted_close_price": 138.6229,
+    "volume": 6583069,
+    "vwap": 138.8589,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186547Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186927Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-05",
+    "open_price": 138.4057,
+    "high_price": 140.3246,
+    "low_price": 138.2789,
+    "close_price": 138.7877,
+    "adjusted_close_price": 138.7877,
+    "volume": 2863040,
+    "vwap": 140.3047,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186560Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186930Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-06",
+    "open_price": 138.4536,
+    "high_price": 139.9147,
+    "low_price": 137.3137,
+    "close_price": 138.0822,
+    "adjusted_close_price": 138.0822,
+    "volume": 1977550,
+    "vwap": 139.351,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186572Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186933Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-09",
+    "open_price": 138.4759,
+    "high_price": 138.4993,
+    "low_price": 138.2054,
+    "close_price": 138.3975,
+    "adjusted_close_price": 138.3975,
+    "volume": 8312816,
+    "vwap": 138.3879,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186585Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186937Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-10",
+    "open_price": 136.8356,
+    "high_price": 137.5003,
+    "low_price": 135.5981,
+    "close_price": 135.7989,
+    "adjusted_close_price": 135.7989,
+    "volume": 7447022,
+    "vwap": 135.8127,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186597Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186940Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-11",
+    "open_price": 137.3079,
+    "high_price": 137.5307,
+    "low_price": 136.143,
+    "close_price": 137.2103,
+    "adjusted_close_price": 137.2103,
+    "volume": 318732,
+    "vwap": 137.42,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186608Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186944Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-12",
+    "open_price": 136.7668,
+    "high_price": 136.9214,
+    "low_price": 136.7128,
+    "close_price": 136.7706,
+    "adjusted_close_price": 136.7706,
+    "volume": 4983867,
+    "vwap": 136.8887,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186620Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186947Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-13",
+    "open_price": 137.778,
+    "high_price": 139.6319,
+    "low_price": 136.946,
+    "close_price": 137.6309,
+    "adjusted_close_price": 137.6309,
+    "volume": 4585142,
+    "vwap": 137.4995,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186631Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186950Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-16",
+    "open_price": 132.5794,
+    "high_price": 134.5349,
+    "low_price": 132.5492,
+    "close_price": 133.4416,
+    "adjusted_close_price": 133.4416,
+    "volume": 802975,
+    "vwap": 134.013,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186644Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186954Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-17",
+    "open_price": 130.6726,
+    "high_price": 132.006,
+    "low_price": 130.0612,
+    "close_price": 130.4824,
+    "adjusted_close_price": 130.4824,
+    "volume": 350064,
+    "vwap": 130.1292,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186655Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186957Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-18",
+    "open_price": 127.8828,
+    "high_price": 128.0067,
+    "low_price": 127.3867,
+    "close_price": 127.8787,
+    "adjusted_close_price": 127.8787,
+    "volume": 9206059,
+    "vwap": 127.3915,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186667Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186961Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-19",
+    "open_price": 129.7615,
+    "high_price": 131.1821,
+    "low_price": 128.2753,
+    "close_price": 130.2518,
+    "adjusted_close_price": 130.2518,
+    "volume": 8156925,
+    "vwap": 129.5209,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186678Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186964Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-20",
+    "open_price": 127.8991,
+    "high_price": 128.28,
+    "low_price": 126.1913,
+    "close_price": 126.6533,
+    "adjusted_close_price": 126.6533,
+    "volume": 984186,
+    "vwap": 126.5399,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186689Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186967Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-23",
+    "open_price": 128.1646,
+    "high_price": 129.729,
+    "low_price": 128.129,
+    "close_price": 129.0296,
+    "adjusted_close_price": 129.0296,
+    "volume": 7485909,
+    "vwap": 128.336,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186702Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186970Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-24",
+    "open_price": 131.7223,
+    "high_price": 131.9949,
+    "low_price": 130.8418,
+    "close_price": 131.5275,
+    "adjusted_close_price": 131.5275,
+    "volume": 9909356,
+    "vwap": 131.9853,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186713Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186974Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-25",
+    "open_price": 134.4268,
+    "high_price": 135.9102,
+    "low_price": 134.0156,
+    "close_price": 134.0295,
+    "adjusted_close_price": 134.0295,
+    "volume": 5909167,
+    "vwap": 134.4371,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186724Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186977Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-26",
+    "open_price": 130.7781,
+    "high_price": 131.3365,
+    "low_price": 129.0816,
+    "close_price": 131.0599,
+    "adjusted_close_price": 131.0599,
+    "volume": 7699102,
+    "vwap": 129.4483,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186735Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186980Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-27",
+    "open_price": 132.9282,
+    "high_price": 134.0591,
+    "low_price": 132.423,
+    "close_price": 132.8553,
+    "adjusted_close_price": 132.8553,
+    "volume": 3397088,
+    "vwap": 132.8928,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186746Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186983Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-06-30",
+    "open_price": 132.7798,
+    "high_price": 134.6043,
+    "low_price": 132.1064,
+    "close_price": 132.321,
+    "adjusted_close_price": 132.321,
+    "volume": 4564595,
+    "vwap": 134.3713,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186758Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186987Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "trade_date": "2025-07-01",
+    "open_price": 132.3824,
+    "high_price": 132.9439,
+    "low_price": 132.246,
+    "close_price": 132.6998,
+    "adjusted_close_price": 132.6998,
+    "volume": 1705553,
+    "vwap": 132.5405,
+    "ingestion_timestamp": "2025-07-02T09:44:01.186769Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.186990Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 5,
+          "ticker": "INCNXT",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  }
+]

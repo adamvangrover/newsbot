@@ -1,0 +1,182 @@
+[
+  {
+    "event_type_id": 1,
+    "event_name": "Exploit Cross-Media Vortals Indicator",
+    "country_region": "Eurozone",
+    "release_frequency": "Quarterly",
+    "description": "Plant least have north.",
+    "source_identifier": "EXPLOIT_CROSS-MEDIA_VORTALS_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:56.070624Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 2,
+    "event_name": "Facilitate Global E-Tailers Indicator",
+    "country_region": "China",
+    "release_frequency": "Monthly",
+    "description": "Evidence just year cause rule reality.",
+    "source_identifier": "FACILITATE_GLOBAL_E-TAILERS_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:56.070645Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 3,
+    "event_name": "Streamline Magnetic Supply-Chains Indicator",
+    "country_region": "Eurozone",
+    "release_frequency": "Ad-hoc",
+    "description": "Evening boy summer administration price nation.",
+    "source_identifier": "STREAMLINE_MAGNETIC_SUPPLY-CHAINS_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:56.070651Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 4,
+    "event_name": "Strategize Synergistic Markets Indicator",
+    "country_region": "USA",
+    "release_frequency": "Quarterly",
+    "description": "Sport role itself someone television.",
+    "source_identifier": "STRATEGIZE_SYNERGISTIC_MARKETS_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:56.070655Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 5,
+    "event_name": "Utilize Out-Of-The-Box Paradigms Indicator",
+    "country_region": "USA",
+    "release_frequency": "Ad-hoc",
+    "description": "Argue institution specific better name.",
+    "source_identifier": "UTILIZE_OUT-OF-THE-BOX_PARADIGMS_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:56.070659Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 6,
+    "event_name": "Incubate Turn-Key Schemas Indicator",
+    "country_region": "Germany",
+    "release_frequency": "Monthly",
+    "description": "Describe couple conference successful ready recent industry.",
+    "source_identifier": "INCUBATE_TURN-KEY_SCHEMAS_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:56.070662Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 7,
+    "event_name": "Synergize Impactful Niches Indicator",
+    "country_region": "China",
+    "release_frequency": "Quarterly",
+    "description": "Hit help likely himself minute ability campaign really.",
+    "source_identifier": "SYNERGIZE_IMPACTFUL_NICHES_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:56.070666Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 8,
+    "event_name": "Seize Integrated E-Commerce Indicator",
+    "country_region": "Germany",
+    "release_frequency": "Monthly",
+    "description": "Consider as cause miss.",
+    "source_identifier": "SEIZE_INTEGRATED_E-COMMERCE_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:56.070669Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 9,
+    "event_name": "Strategize Viral Technologies Indicator",
+    "country_region": "USA",
+    "release_frequency": "Quarterly",
+    "description": "Pay main tough cover crime.",
+    "source_identifier": "STRATEGIZE_VIRAL_TECHNOLOGIES_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:56.070672Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 10,
+    "event_name": "Matrix E-Business Schemas Indicator",
+    "country_region": "USA",
+    "release_frequency": "Quarterly",
+    "description": "Red fish ask cup record subject which.",
+    "source_identifier": "MATRIX_E-BUSINESS_SCHEMAS_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:56.070676Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  }
+]

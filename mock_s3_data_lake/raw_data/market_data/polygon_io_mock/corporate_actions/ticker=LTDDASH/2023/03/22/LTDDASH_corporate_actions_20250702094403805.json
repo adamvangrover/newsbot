@@ -1,0 +1,80 @@
+[
+  {
+    "action_id": 8469,
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "action_type": "Split",
+    "ex_date": "2023-03-22",
+    "record_date": "2023-03-23",
+    "payable_date": "2023-04-02",
+    "declaration_date": "2023-03-09",
+    "ingestion_timestamp": "2025-07-02T09:44:03.805395Z",
+    "source": "PolygonIO_mock",
+    "value_ratio": 2,
+    "value_currency": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:03.805779Z",
+      "source_api_simulation": "PolygonIO_CorporateActions_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "num_actions": 3
+        }
+      }
+    }
+  },
+  {
+    "action_id": 6608,
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "action_type": "Split",
+    "ex_date": "2021-02-09",
+    "record_date": "2021-02-11",
+    "payable_date": "2021-02-25",
+    "declaration_date": "2021-01-29",
+    "ingestion_timestamp": "2025-07-02T09:44:03.805504Z",
+    "source": "PolygonIO_mock",
+    "value_ratio": 3,
+    "value_currency": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:03.805786Z",
+      "source_api_simulation": "PolygonIO_CorporateActions_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "num_actions": 3
+        }
+      }
+    }
+  },
+  {
+    "action_id": 4380,
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "action_type": "Split",
+    "ex_date": "2021-08-16",
+    "record_date": "2021-08-18",
+    "payable_date": "2021-09-07",
+    "declaration_date": "2021-08-08",
+    "ingestion_timestamp": "2025-07-02T09:44:03.805591Z",
+    "source": "PolygonIO_mock",
+    "value_ratio": 2,
+    "value_currency": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:03.805790Z",
+      "source_api_simulation": "PolygonIO_CorporateActions_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "num_actions": 3
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,2762 @@
+[
+  {
+    "filing_id": 9609,
+    "asset_id": 1,
+    "ticker_symbol": "INCZEC",
+    "cik": "0001023294",
+    "filing_type_id": 5,
+    "form_type": "S-1",
+    "filing_date": "2023-02-13",
+    "period_of_report": null,
+    "accession_number": "0001023294-22-084850",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001023294/S-1/0001023294-22-084850.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001023294/S-1/0001023294-22-084850.json",
+    "ingestion_timestamp": "2025-07-02T09:51:36.085Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:36.085Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCZEC",
+              "company_name": "Serrano Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2002-05-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSDO",
+              "company_name": "Ramos-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2000-06-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "LLCADA",
+              "company_name": "Yates and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "LTDGRC",
+              "company_name": "Durham-Jackson",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-11-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "GROUPBCH",
+              "company_name": "Parks, Lewis and Gilmore",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-03-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "PLCXRP",
+              "company_name": "Glass Ltd",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-15",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LLCIOTA",
+              "company_name": "Mata, Martin and Watkins",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2003-01-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "GROUPTRX",
+              "company_name": "Wilson, Smith and Mcguire",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-18",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Mcknight, Johnson and Smith",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2008-07-14",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "LTDBURST",
+              "company_name": "Simmons and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-02-02",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 5482,
+    "asset_id": 10,
+    "ticker_symbol": "LTDBURST",
+    "cik": "0001008463",
+    "filing_type_id": 2,
+    "form_type": "10-Q",
+    "filing_date": "2023-07-28",
+    "period_of_report": "2023-06-11",
+    "accession_number": "0001008463-21-495300",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001008463/10-Q/0001008463-21-495300.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001008463/10-Q/0001008463-21-495300.json",
+    "ingestion_timestamp": "2025-07-02T09:51:36.085Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:36.085Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCZEC",
+              "company_name": "Serrano Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2002-05-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSDO",
+              "company_name": "Ramos-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2000-06-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "LLCADA",
+              "company_name": "Yates and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "LTDGRC",
+              "company_name": "Durham-Jackson",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-11-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "GROUPBCH",
+              "company_name": "Parks, Lewis and Gilmore",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-03-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "PLCXRP",
+              "company_name": "Glass Ltd",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-15",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LLCIOTA",
+              "company_name": "Mata, Martin and Watkins",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2003-01-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "GROUPTRX",
+              "company_name": "Wilson, Smith and Mcguire",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-18",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Mcknight, Johnson and Smith",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2008-07-14",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "LTDBURST",
+              "company_name": "Simmons and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-02-02",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 7610,
+    "asset_id": 3,
+    "ticker_symbol": "LLCADA",
+    "cik": "0001282413",
+    "filing_type_id": 4,
+    "form_type": "4",
+    "filing_date": "2022-04-21",
+    "period_of_report": null,
+    "accession_number": "0001282413-20-056566",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001282413/4/0001282413-20-056566.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001282413/4/0001282413-20-056566.json",
+    "ingestion_timestamp": "2025-07-02T09:51:36.085Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:36.085Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCZEC",
+              "company_name": "Serrano Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2002-05-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSDO",
+              "company_name": "Ramos-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2000-06-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "LLCADA",
+              "company_name": "Yates and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "LTDGRC",
+              "company_name": "Durham-Jackson",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-11-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "GROUPBCH",
+              "company_name": "Parks, Lewis and Gilmore",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-03-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "PLCXRP",
+              "company_name": "Glass Ltd",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-15",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LLCIOTA",
+              "company_name": "Mata, Martin and Watkins",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2003-01-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "GROUPTRX",
+              "company_name": "Wilson, Smith and Mcguire",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-18",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Mcknight, Johnson and Smith",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2008-07-14",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "LTDBURST",
+              "company_name": "Simmons and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-02-02",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 5499,
+    "asset_id": 7,
+    "ticker_symbol": "LLCIOTA",
+    "cik": "0001833032",
+    "filing_type_id": 4,
+    "form_type": "4",
+    "filing_date": "2022-06-06",
+    "period_of_report": null,
+    "accession_number": "0001833032-23-795104",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001833032/4/0001833032-23-795104.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001833032/4/0001833032-23-795104.json",
+    "ingestion_timestamp": "2025-07-02T09:51:36.085Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:36.085Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCZEC",
+              "company_name": "Serrano Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2002-05-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSDO",
+              "company_name": "Ramos-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2000-06-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "LLCADA",
+              "company_name": "Yates and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "LTDGRC",
+              "company_name": "Durham-Jackson",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-11-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "GROUPBCH",
+              "company_name": "Parks, Lewis and Gilmore",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-03-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "PLCXRP",
+              "company_name": "Glass Ltd",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-15",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LLCIOTA",
+              "company_name": "Mata, Martin and Watkins",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2003-01-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "GROUPTRX",
+              "company_name": "Wilson, Smith and Mcguire",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-18",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Mcknight, Johnson and Smith",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2008-07-14",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "LTDBURST",
+              "company_name": "Simmons and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-02-02",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 322,
+    "asset_id": 6,
+    "ticker_symbol": "PLCXRP",
+    "cik": "0001208036",
+    "filing_type_id": 2,
+    "form_type": "10-Q",
+    "filing_date": "2023-06-26",
+    "period_of_report": "2023-04-04",
+    "accession_number": "0001208036-22-032341",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001208036/10-Q/0001208036-22-032341.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001208036/10-Q/0001208036-22-032341.json",
+    "ingestion_timestamp": "2025-07-02T09:51:36.085Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:36.085Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCZEC",
+              "company_name": "Serrano Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2002-05-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSDO",
+              "company_name": "Ramos-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2000-06-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "LLCADA",
+              "company_name": "Yates and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "LTDGRC",
+              "company_name": "Durham-Jackson",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-11-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "GROUPBCH",
+              "company_name": "Parks, Lewis and Gilmore",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-03-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "PLCXRP",
+              "company_name": "Glass Ltd",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-15",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LLCIOTA",
+              "company_name": "Mata, Martin and Watkins",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2003-01-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "GROUPTRX",
+              "company_name": "Wilson, Smith and Mcguire",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-18",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Mcknight, Johnson and Smith",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2008-07-14",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "LTDBURST",
+              "company_name": "Simmons and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-02-02",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 8094,
+    "asset_id": 9,
+    "ticker_symbol": "AND SONSBC",
+    "cik": "0000649345",
+    "filing_type_id": 4,
+    "form_type": "4",
+    "filing_date": "2022-01-09",
+    "period_of_report": null,
+    "accession_number": "0000649345-20-984469",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0000649345/4/0000649345-20-984469.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0000649345/4/0000649345-20-984469.json",
+    "ingestion_timestamp": "2025-07-02T09:51:36.085Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:36.085Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCZEC",
+              "company_name": "Serrano Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2002-05-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSDO",
+              "company_name": "Ramos-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2000-06-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "LLCADA",
+              "company_name": "Yates and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "LTDGRC",
+              "company_name": "Durham-Jackson",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-11-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "GROUPBCH",
+              "company_name": "Parks, Lewis and Gilmore",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-03-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "PLCXRP",
+              "company_name": "Glass Ltd",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-15",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LLCIOTA",
+              "company_name": "Mata, Martin and Watkins",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2003-01-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "GROUPTRX",
+              "company_name": "Wilson, Smith and Mcguire",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-18",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Mcknight, Johnson and Smith",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2008-07-14",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "LTDBURST",
+              "company_name": "Simmons and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-02-02",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 9744,
+    "asset_id": 2,
+    "ticker_symbol": "AND SONSDO",
+    "cik": "0001918777",
+    "filing_type_id": 4,
+    "form_type": "4",
+    "filing_date": "2022-10-06",
+    "period_of_report": null,
+    "accession_number": "0001918777-23-793392",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001918777/4/0001918777-23-793392.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001918777/4/0001918777-23-793392.json",
+    "ingestion_timestamp": "2025-07-02T09:51:36.085Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:36.085Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCZEC",
+              "company_name": "Serrano Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2002-05-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSDO",
+              "company_name": "Ramos-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2000-06-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "LLCADA",
+              "company_name": "Yates and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "LTDGRC",
+              "company_name": "Durham-Jackson",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-11-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "GROUPBCH",
+              "company_name": "Parks, Lewis and Gilmore",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-03-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "PLCXRP",
+              "company_name": "Glass Ltd",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-15",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LLCIOTA",
+              "company_name": "Mata, Martin and Watkins",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2003-01-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "GROUPTRX",
+              "company_name": "Wilson, Smith and Mcguire",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-18",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Mcknight, Johnson and Smith",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2008-07-14",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "LTDBURST",
+              "company_name": "Simmons and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-02-02",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 1628,
+    "asset_id": 5,
+    "ticker_symbol": "GROUPBCH",
+    "cik": "0001679123",
+    "filing_type_id": 3,
+    "form_type": "8-K",
+    "filing_date": "2023-06-14",
+    "period_of_report": null,
+    "accession_number": "0001679123-22-439333",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001679123/8-K/0001679123-22-439333.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001679123/8-K/0001679123-22-439333.json",
+    "ingestion_timestamp": "2025-07-02T09:51:36.085Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:36.085Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCZEC",
+              "company_name": "Serrano Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2002-05-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSDO",
+              "company_name": "Ramos-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2000-06-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "LLCADA",
+              "company_name": "Yates and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "LTDGRC",
+              "company_name": "Durham-Jackson",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-11-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "GROUPBCH",
+              "company_name": "Parks, Lewis and Gilmore",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-03-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "PLCXRP",
+              "company_name": "Glass Ltd",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-15",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LLCIOTA",
+              "company_name": "Mata, Martin and Watkins",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2003-01-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "GROUPTRX",
+              "company_name": "Wilson, Smith and Mcguire",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-18",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Mcknight, Johnson and Smith",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2008-07-14",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "LTDBURST",
+              "company_name": "Simmons and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-02-02",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 3284,
+    "asset_id": 3,
+    "ticker_symbol": "LLCADA",
+    "cik": "0000767658",
+    "filing_type_id": 1,
+    "form_type": "10-K",
+    "filing_date": "2023-03-27",
+    "period_of_report": "2023-01-30",
+    "accession_number": "0000767658-22-799368",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0000767658/10-K/0000767658-22-799368.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0000767658/10-K/0000767658-22-799368.json",
+    "ingestion_timestamp": "2025-07-02T09:51:36.085Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:36.085Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCZEC",
+              "company_name": "Serrano Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2002-05-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSDO",
+              "company_name": "Ramos-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2000-06-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "LLCADA",
+              "company_name": "Yates and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "LTDGRC",
+              "company_name": "Durham-Jackson",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-11-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "GROUPBCH",
+              "company_name": "Parks, Lewis and Gilmore",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-03-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "PLCXRP",
+              "company_name": "Glass Ltd",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-15",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LLCIOTA",
+              "company_name": "Mata, Martin and Watkins",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2003-01-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "GROUPTRX",
+              "company_name": "Wilson, Smith and Mcguire",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-18",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Mcknight, Johnson and Smith",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2008-07-14",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "LTDBURST",
+              "company_name": "Simmons and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-02-02",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 9684,
+    "asset_id": 5,
+    "ticker_symbol": "GROUPBCH",
+    "cik": "0000719927",
+    "filing_type_id": 5,
+    "form_type": "S-1",
+    "filing_date": "2023-10-31",
+    "period_of_report": null,
+    "accession_number": "0000719927-21-372958",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0000719927/S-1/0000719927-21-372958.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0000719927/S-1/0000719927-21-372958.json",
+    "ingestion_timestamp": "2025-07-02T09:51:36.085Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:36.085Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCZEC",
+              "company_name": "Serrano Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2002-05-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSDO",
+              "company_name": "Ramos-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2000-06-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "LLCADA",
+              "company_name": "Yates and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "LTDGRC",
+              "company_name": "Durham-Jackson",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-11-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "GROUPBCH",
+              "company_name": "Parks, Lewis and Gilmore",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-03-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "PLCXRP",
+              "company_name": "Glass Ltd",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-15",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LLCIOTA",
+              "company_name": "Mata, Martin and Watkins",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2003-01-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "GROUPTRX",
+              "company_name": "Wilson, Smith and Mcguire",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-18",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Mcknight, Johnson and Smith",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2008-07-14",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "LTDBURST",
+              "company_name": "Simmons and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-02-02",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 5028,
+    "asset_id": 7,
+    "ticker_symbol": "LLCIOTA",
+    "cik": "0001089342",
+    "filing_type_id": 4,
+    "form_type": "4",
+    "filing_date": "2022-03-26",
+    "period_of_report": null,
+    "accession_number": "0001089342-23-607568",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001089342/4/0001089342-23-607568.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001089342/4/0001089342-23-607568.json",
+    "ingestion_timestamp": "2025-07-02T09:51:36.085Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:36.085Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCZEC",
+              "company_name": "Serrano Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2002-05-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSDO",
+              "company_name": "Ramos-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2000-06-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "LLCADA",
+              "company_name": "Yates and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "LTDGRC",
+              "company_name": "Durham-Jackson",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-11-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "GROUPBCH",
+              "company_name": "Parks, Lewis and Gilmore",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-03-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "PLCXRP",
+              "company_name": "Glass Ltd",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-15",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LLCIOTA",
+              "company_name": "Mata, Martin and Watkins",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2003-01-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "GROUPTRX",
+              "company_name": "Wilson, Smith and Mcguire",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-18",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Mcknight, Johnson and Smith",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2008-07-14",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "LTDBURST",
+              "company_name": "Simmons and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-02-02",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 562,
+    "asset_id": 6,
+    "ticker_symbol": "PLCXRP",
+    "cik": "0000500416",
+    "filing_type_id": 2,
+    "form_type": "10-Q",
+    "filing_date": "2023-10-29",
+    "period_of_report": "2023-08-02",
+    "accession_number": "0000500416-22-340205",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0000500416/10-Q/0000500416-22-340205.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0000500416/10-Q/0000500416-22-340205.json",
+    "ingestion_timestamp": "2025-07-02T09:51:36.085Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:36.085Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCZEC",
+              "company_name": "Serrano Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2002-05-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSDO",
+              "company_name": "Ramos-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2000-06-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "LLCADA",
+              "company_name": "Yates and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "LTDGRC",
+              "company_name": "Durham-Jackson",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-11-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "GROUPBCH",
+              "company_name": "Parks, Lewis and Gilmore",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-03-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "PLCXRP",
+              "company_name": "Glass Ltd",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-15",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LLCIOTA",
+              "company_name": "Mata, Martin and Watkins",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2003-01-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "GROUPTRX",
+              "company_name": "Wilson, Smith and Mcguire",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-18",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Mcknight, Johnson and Smith",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2008-07-14",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "LTDBURST",
+              "company_name": "Simmons and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-02-02",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 8430,
+    "asset_id": 2,
+    "ticker_symbol": "AND SONSDO",
+    "cik": "0001814854",
+    "filing_type_id": 2,
+    "form_type": "10-Q",
+    "filing_date": "2022-03-26",
+    "period_of_report": "2022-01-01",
+    "accession_number": "0001814854-20-989613",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001814854/10-Q/0001814854-20-989613.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001814854/10-Q/0001814854-20-989613.json",
+    "ingestion_timestamp": "2025-07-02T09:51:36.085Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:36.085Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCZEC",
+              "company_name": "Serrano Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2002-05-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSDO",
+              "company_name": "Ramos-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2000-06-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "LLCADA",
+              "company_name": "Yates and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "LTDGRC",
+              "company_name": "Durham-Jackson",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-11-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "GROUPBCH",
+              "company_name": "Parks, Lewis and Gilmore",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-03-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "PLCXRP",
+              "company_name": "Glass Ltd",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-15",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LLCIOTA",
+              "company_name": "Mata, Martin and Watkins",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2003-01-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "GROUPTRX",
+              "company_name": "Wilson, Smith and Mcguire",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-18",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Mcknight, Johnson and Smith",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2008-07-14",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "LTDBURST",
+              "company_name": "Simmons and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-02-02",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 5741,
+    "asset_id": 8,
+    "ticker_symbol": "GROUPTRX",
+    "cik": "0001118932",
+    "filing_type_id": 5,
+    "form_type": "S-1",
+    "filing_date": "2022-05-18",
+    "period_of_report": null,
+    "accession_number": "0001118932-20-709785",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001118932/S-1/0001118932-20-709785.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001118932/S-1/0001118932-20-709785.json",
+    "ingestion_timestamp": "2025-07-02T09:51:36.085Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:36.085Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCZEC",
+              "company_name": "Serrano Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2002-05-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSDO",
+              "company_name": "Ramos-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2000-06-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "LLCADA",
+              "company_name": "Yates and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "LTDGRC",
+              "company_name": "Durham-Jackson",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-11-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "GROUPBCH",
+              "company_name": "Parks, Lewis and Gilmore",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-03-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "PLCXRP",
+              "company_name": "Glass Ltd",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-15",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LLCIOTA",
+              "company_name": "Mata, Martin and Watkins",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2003-01-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "GROUPTRX",
+              "company_name": "Wilson, Smith and Mcguire",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-18",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Mcknight, Johnson and Smith",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2008-07-14",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "LTDBURST",
+              "company_name": "Simmons and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-02-02",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 3581,
+    "asset_id": 8,
+    "ticker_symbol": "GROUPTRX",
+    "cik": "0001774056",
+    "filing_type_id": 1,
+    "form_type": "10-K",
+    "filing_date": "2022-04-15",
+    "period_of_report": "2022-03-16",
+    "accession_number": "0001774056-22-302546",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001774056/10-K/0001774056-22-302546.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001774056/10-K/0001774056-22-302546.json",
+    "ingestion_timestamp": "2025-07-02T09:51:36.085Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:36.085Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCZEC",
+              "company_name": "Serrano Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2002-05-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSDO",
+              "company_name": "Ramos-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2000-06-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "LLCADA",
+              "company_name": "Yates and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "LTDGRC",
+              "company_name": "Durham-Jackson",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-11-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "GROUPBCH",
+              "company_name": "Parks, Lewis and Gilmore",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-03-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "PLCXRP",
+              "company_name": "Glass Ltd",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-15",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LLCIOTA",
+              "company_name": "Mata, Martin and Watkins",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2003-01-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "GROUPTRX",
+              "company_name": "Wilson, Smith and Mcguire",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2004-01-18",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Mcknight, Johnson and Smith",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2008-07-14",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "LTDBURST",
+              "company_name": "Simmons and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-02-02",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:51:35.872Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  }
+]

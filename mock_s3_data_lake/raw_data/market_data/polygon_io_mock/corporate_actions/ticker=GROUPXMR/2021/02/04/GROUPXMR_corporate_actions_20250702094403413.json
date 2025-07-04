@@ -1,0 +1,28 @@
+[
+  {
+    "action_id": 3903,
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "action_type": "Dividend",
+    "ex_date": "2021-02-04",
+    "record_date": "2021-02-05",
+    "payable_date": "2021-03-05",
+    "declaration_date": "2021-01-17",
+    "ingestion_timestamp": "2025-07-02T09:44:03.412727Z",
+    "source": "PolygonIO_mock",
+    "value_ratio": 0.5671,
+    "value_currency": "USD",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:03.412886Z",
+      "source_api_simulation": "PolygonIO_CorporateActions_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "num_actions": 1
+        }
+      }
+    }
+  }
+]
