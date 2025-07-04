@@ -1,9 +1,39 @@
 Event_ID,Release_Timestamp,Indicator_Name,Country,Consensus_Forecast,Actual_Value,Prior_Value,Surprise_Value,Surprise_ZScore
-1,2022-01-07T13:30:00Z,Non-Farm Payrolls,USA,400000,199000,249000,-201000,-1.5
-2,2022-01-12T13:30:00Z,Consumer Price Index (CPI) YoY,USA,7.0,7.0,6.8,0.0,0.0
-3,2022-01-27T13:30:00Z,Gross Domestic Product (GDP) QoQ Annualized,USA,5.5,6.9,2.3,1.4,1.2
-4,2023-03-10T13:30:00Z,Non-Farm Payrolls,USA,205000,311000,504000,106000,0.8
-5,2023-03-14T13:30:00Z,Consumer Price Index (CPI) YoY,USA,6.0,6.0,6.4,0.0,0.1
-6,2023-03-30T13:30:00Z,Gross Domestic Product (GDP) QoQ Annualized,USA,2.7,2.6,2.7,-0.1,-0.2
-7,2024-01-05T13:30:00Z,Non-Farm Payrolls,USA,170000,216000,173000,46000,0.5
-8,2024-01-11T13:30:00Z,Consumer Price Index (CPI) YoY,USA,3.2,3.4,3.1,0.2,0.3
+1,2019-01-04T13:30:00Z,Non-Farm Payrolls,USA,177000,312000,176000,135000,2.1
+2,2019-01-11T13:30:00Z,Consumer Price Index (CPI) YoY,USA,2.2,2.2,2.2,0.0,0.0
+3,2019-01-30T13:30:00Z,Gross Domestic Product (GDP) QoQ Annualized,USA,2.6,2.2,3.4,-0.4,-0.8
+4,2019-03-12T12:30:00Z,Retail Sales MoM,USA,0.1,0.2,-1.6,0.1,0.3
+5,2019-06-03T14:00:00Z,ISM Manufacturing PMI,USA,53.0,52.1,52.8,-0.9,-1.2
+6,2020-02-25T15:00:00Z,Consumer Confidence,USA,132.0,130.7,130.4,-1.3,-0.5
+7,2020-04-16T12:30:00Z,Initial Jobless Claims,USA,5100000,5245000,6615000,145000,0.2
+8,2020-05-15T12:30:00Z,Housing Starts,USA,927000,891000,1097000,-36000,-0.7
+9,2021-01-08T13:30:00Z,Non-Farm Payrolls,USA,71000,-140000,336000,-211000,-2.5
+10,2021-03-10T13:30:00Z,Consumer Price Index (CPI) YoY,USA,1.7,1.7,1.4,0.0,0.0
+11,2021-07-29T12:30:00Z,Gross Domestic Product (GDP) QoQ Annualized,USA,8.5,6.5,6.3,-2.0,-1.8
+12,2021-10-01T14:00:00Z,ISM Manufacturing PMI,USA,60.5,61.1,59.9,0.6,0.9
+13,2022-01-07T13:30:00Z,Non-Farm Payrolls,USA,400000,199000,249000,-201000,-1.5
+14,2022-01-12T13:30:00Z,Consumer Price Index (CPI) YoY,USA,7.0,7.0,6.8,0.0,0.0
+15,2022-01-27T13:30:00Z,Gross Domestic Product (GDP) QoQ Annualized,USA,5.5,6.9,2.3,1.4,1.2
+16,2022-04-01T12:30:00Z,Retail Sales MoM,USA,0.6,0.5,0.8,-0.1,-0.2
+17,2022-07-01T14:00:00Z,ISM Manufacturing PMI,USA,55.0,53.0,56.1,-2.0,-1.7
+18,2023-02-28T15:00:00Z,Consumer Confidence,USA,108.5,102.9,106.0,-5.6,-1.3
+19,2023-03-10T13:30:00Z,Non-Farm Payrolls,USA,205000,311000,504000,106000,0.8
+20,2023-03-14T13:30:00Z,Consumer Price Index (CPI) YoY,USA,6.0,6.0,6.4,0.0,0.1
+21,2023-03-30T12:30:00Z,Gross Domestic Product (GDP) QoQ Annualized,USA,2.7,2.6,2.7,-0.1,-0.2
+22,2023-06-15T12:30:00Z,Initial Jobless Claims,USA,250000,262000,261000,12000,0.3
+23,2023-09-15T12:30:00Z,Housing Starts,USA,1440000,1283000,1398000,-157000,-1.1
+24,2024-01-05T13:30:00Z,Non-Farm Payrolls,USA,170000,216000,173000,46000,0.5
+25,2024-01-11T13:30:00Z,Consumer Price Index (CPI) YoY,USA,3.2,3.4,3.1,0.2,0.3
+26,2019-01-03T08:55:00Z,German Unemployment Change,DEU,-10000,-23000,-14000,-13000,-0.9 # Example DEU
+27,2020-04-30T09:00:00Z,Eurozone GDP QoQ Prel,EUR,-3.8,-3.6,-0.1,0.2,0.4 # Example EUR
+28,2021-07-15T02:00:00Z,China GDP YoY,CHN,8.0,7.9,18.3,-0.1,-0.1 # Example CHN
+29,2022-10-27T12:15:00Z,ECB Main Refinancing Rate,EUR,2.00,2.00,1.25,0.0,0.0 # Example ECB Rate Decision
+30,2023-03-16T12:45:00Z,ECB Deposit Facility Rate,EUR,3.00,3.00,2.50,0.0,0.0 # Example ECB Rate Decision
+31,2023-05-02T13:45:00Z,Caixin Manufacturing PMI,CHN,50.0,49.5,50.0,-0.5,-0.6 # Example China PMI
+32,2024-01-17T10:00:00Z,Eurozone CPI YoY Final,EUR,2.9,2.9,2.4,0.0,0.0 # Example Eurozone CPI
+33,2019-02-15T13:30:00Z,U.S. Import Price Index MoM,USA, -0.1, -0.5, -1.0, -0.4, -0.7
+34,2020-08-14T12:30:00Z,U.S. Retail Sales Ex Autos MoM,USA, 1.9, 1.9, 8.4, 0.0, 0.0
+35,2021-11-17T13:30:00Z,U.S. Building Permits,USA, 1630000,1650000, 1589000, 20000, 0.5
+36,2022-06-10T12:30:00Z,U.S. University of Michigan Sentiment Index Prel,USA, 58.0, 50.2, 58.4, -7.8, -2.0
+37,2023-10-13T12:30:00Z,U.S. Producer Price Index (PPI) Final Demand YoY,USA, 2.3, 2.2, 2.0, -0.1, -0.2
+38,2024-01-02T14:45:00Z,U.S. S&P Global Manufacturing PMI Final,USA,48.2, 47.9, 49.4, -0.3, -0.4
