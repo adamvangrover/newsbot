@@ -1,0 +1,2762 @@
+[
+  {
+    "filing_id": 5265,
+    "asset_id": 4,
+    "ticker_symbol": "GROUPNMC",
+    "cik": "0001396872",
+    "filing_type_id": 2,
+    "form_type": "10-Q",
+    "filing_date": "2022-09-16",
+    "period_of_report": "2022-08-02",
+    "accession_number": "0001396872-20-419069",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001396872/10-Q/0001396872-20-419069.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001396872/10-Q/0001396872-20-419069.json",
+    "ingestion_timestamp": "2025-07-02T09:50:57.829628Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:57.830357Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCLSK",
+              "company_name": "Henderson-Herring",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-19",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "LTDBC",
+              "company_name": "Austin Group",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "PLCMSC",
+              "company_name": "Stephenson Group",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-08-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "GROUPNMC",
+              "company_name": "Lewis, Walsh and Cochran",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-02-09",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "AND SONSEM",
+              "company_name": "Thompson, Fields and Allen",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCZEC",
+              "company_name": "Anderson-Martin",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-07-13",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "INCLTC",
+              "company_name": "Hardin Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2009-11-27",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "PLCETH",
+              "company_name": "Gentry and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-05-29",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Guerra, Adams and Thompson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-02-05",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSTI",
+              "company_name": "Mitchell-Jones",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-11-09",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421284Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421298Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421302Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421306Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421317Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 1048,
+    "asset_id": 2,
+    "ticker_symbol": "LTDBC",
+    "cik": "0001437123",
+    "filing_type_id": 4,
+    "form_type": "4",
+    "filing_date": "2023-07-10",
+    "period_of_report": null,
+    "accession_number": "0001437123-22-255941",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001437123/4/0001437123-22-255941.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001437123/4/0001437123-22-255941.json",
+    "ingestion_timestamp": "2025-07-02T09:50:57.829684Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:57.830364Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCLSK",
+              "company_name": "Henderson-Herring",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-19",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "LTDBC",
+              "company_name": "Austin Group",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "PLCMSC",
+              "company_name": "Stephenson Group",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-08-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "GROUPNMC",
+              "company_name": "Lewis, Walsh and Cochran",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-02-09",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "AND SONSEM",
+              "company_name": "Thompson, Fields and Allen",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCZEC",
+              "company_name": "Anderson-Martin",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-07-13",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "INCLTC",
+              "company_name": "Hardin Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2009-11-27",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "PLCETH",
+              "company_name": "Gentry and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-05-29",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Guerra, Adams and Thompson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-02-05",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSTI",
+              "company_name": "Mitchell-Jones",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-11-09",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421284Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421298Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421302Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421306Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421317Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 9732,
+    "asset_id": 1,
+    "ticker_symbol": "INCLSK",
+    "cik": "0001853883",
+    "filing_type_id": 1,
+    "form_type": "10-K",
+    "filing_date": "2022-07-03",
+    "period_of_report": "2022-04-15",
+    "accession_number": "0001853883-21-306387",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001853883/10-K/0001853883-21-306387.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001853883/10-K/0001853883-21-306387.json",
+    "ingestion_timestamp": "2025-07-02T09:50:57.829729Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:57.830368Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCLSK",
+              "company_name": "Henderson-Herring",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-19",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "LTDBC",
+              "company_name": "Austin Group",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "PLCMSC",
+              "company_name": "Stephenson Group",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-08-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "GROUPNMC",
+              "company_name": "Lewis, Walsh and Cochran",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-02-09",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "AND SONSEM",
+              "company_name": "Thompson, Fields and Allen",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCZEC",
+              "company_name": "Anderson-Martin",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-07-13",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "INCLTC",
+              "company_name": "Hardin Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2009-11-27",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "PLCETH",
+              "company_name": "Gentry and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-05-29",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Guerra, Adams and Thompson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-02-05",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSTI",
+              "company_name": "Mitchell-Jones",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-11-09",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421284Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421298Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421302Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421306Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421317Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 8541,
+    "asset_id": 6,
+    "ticker_symbol": "LLCZEC",
+    "cik": "0001132861",
+    "filing_type_id": 1,
+    "form_type": "10-K",
+    "filing_date": "2023-09-08",
+    "period_of_report": "2023-07-23",
+    "accession_number": "0001132861-20-065042",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001132861/10-K/0001132861-20-065042.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001132861/10-K/0001132861-20-065042.json",
+    "ingestion_timestamp": "2025-07-02T09:50:57.829769Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:57.830371Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCLSK",
+              "company_name": "Henderson-Herring",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-19",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "LTDBC",
+              "company_name": "Austin Group",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "PLCMSC",
+              "company_name": "Stephenson Group",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-08-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "GROUPNMC",
+              "company_name": "Lewis, Walsh and Cochran",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-02-09",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "AND SONSEM",
+              "company_name": "Thompson, Fields and Allen",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCZEC",
+              "company_name": "Anderson-Martin",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-07-13",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "INCLTC",
+              "company_name": "Hardin Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2009-11-27",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "PLCETH",
+              "company_name": "Gentry and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-05-29",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Guerra, Adams and Thompson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-02-05",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSTI",
+              "company_name": "Mitchell-Jones",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-11-09",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421284Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421298Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421302Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421306Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421317Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 9746,
+    "asset_id": 8,
+    "ticker_symbol": "PLCETH",
+    "cik": "0001491708",
+    "filing_type_id": 3,
+    "form_type": "8-K",
+    "filing_date": "2023-11-18",
+    "period_of_report": null,
+    "accession_number": "0001491708-22-652446",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001491708/8-K/0001491708-22-652446.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001491708/8-K/0001491708-22-652446.json",
+    "ingestion_timestamp": "2025-07-02T09:50:57.829869Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:57.830374Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCLSK",
+              "company_name": "Henderson-Herring",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-19",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "LTDBC",
+              "company_name": "Austin Group",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "PLCMSC",
+              "company_name": "Stephenson Group",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-08-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "GROUPNMC",
+              "company_name": "Lewis, Walsh and Cochran",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-02-09",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "AND SONSEM",
+              "company_name": "Thompson, Fields and Allen",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCZEC",
+              "company_name": "Anderson-Martin",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-07-13",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "INCLTC",
+              "company_name": "Hardin Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2009-11-27",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "PLCETH",
+              "company_name": "Gentry and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-05-29",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Guerra, Adams and Thompson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-02-05",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSTI",
+              "company_name": "Mitchell-Jones",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-11-09",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421284Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421298Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421302Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421306Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421317Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 8779,
+    "asset_id": 4,
+    "ticker_symbol": "GROUPNMC",
+    "cik": "0000907786",
+    "filing_type_id": 5,
+    "form_type": "S-1",
+    "filing_date": "2022-11-25",
+    "period_of_report": null,
+    "accession_number": "0000907786-23-918073",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0000907786/S-1/0000907786-23-918073.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0000907786/S-1/0000907786-23-918073.json",
+    "ingestion_timestamp": "2025-07-02T09:50:57.829905Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:57.830378Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCLSK",
+              "company_name": "Henderson-Herring",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-19",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "LTDBC",
+              "company_name": "Austin Group",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "PLCMSC",
+              "company_name": "Stephenson Group",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-08-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "GROUPNMC",
+              "company_name": "Lewis, Walsh and Cochran",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-02-09",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "AND SONSEM",
+              "company_name": "Thompson, Fields and Allen",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCZEC",
+              "company_name": "Anderson-Martin",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-07-13",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "INCLTC",
+              "company_name": "Hardin Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2009-11-27",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "PLCETH",
+              "company_name": "Gentry and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-05-29",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Guerra, Adams and Thompson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-02-05",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSTI",
+              "company_name": "Mitchell-Jones",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-11-09",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421284Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421298Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421302Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421306Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421317Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 3065,
+    "asset_id": 9,
+    "ticker_symbol": "LLCBCH",
+    "cik": "0001965528",
+    "filing_type_id": 4,
+    "form_type": "4",
+    "filing_date": "2022-01-02",
+    "period_of_report": null,
+    "accession_number": "0001965528-23-309776",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001965528/4/0001965528-23-309776.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001965528/4/0001965528-23-309776.json",
+    "ingestion_timestamp": "2025-07-02T09:50:57.829940Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:57.830381Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCLSK",
+              "company_name": "Henderson-Herring",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-19",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "LTDBC",
+              "company_name": "Austin Group",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "PLCMSC",
+              "company_name": "Stephenson Group",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-08-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "GROUPNMC",
+              "company_name": "Lewis, Walsh and Cochran",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-02-09",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "AND SONSEM",
+              "company_name": "Thompson, Fields and Allen",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCZEC",
+              "company_name": "Anderson-Martin",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-07-13",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "INCLTC",
+              "company_name": "Hardin Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2009-11-27",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "PLCETH",
+              "company_name": "Gentry and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-05-29",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Guerra, Adams and Thompson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-02-05",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSTI",
+              "company_name": "Mitchell-Jones",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-11-09",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421284Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421298Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421302Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421306Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421317Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 9189,
+    "asset_id": 6,
+    "ticker_symbol": "LLCZEC",
+    "cik": "0001114022",
+    "filing_type_id": 3,
+    "form_type": "8-K",
+    "filing_date": "2023-01-12",
+    "period_of_report": null,
+    "accession_number": "0001114022-21-872701",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001114022/8-K/0001114022-21-872701.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001114022/8-K/0001114022-21-872701.json",
+    "ingestion_timestamp": "2025-07-02T09:50:57.829971Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:57.830384Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCLSK",
+              "company_name": "Henderson-Herring",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-19",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "LTDBC",
+              "company_name": "Austin Group",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "PLCMSC",
+              "company_name": "Stephenson Group",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-08-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "GROUPNMC",
+              "company_name": "Lewis, Walsh and Cochran",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-02-09",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "AND SONSEM",
+              "company_name": "Thompson, Fields and Allen",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCZEC",
+              "company_name": "Anderson-Martin",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-07-13",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "INCLTC",
+              "company_name": "Hardin Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2009-11-27",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "PLCETH",
+              "company_name": "Gentry and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-05-29",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Guerra, Adams and Thompson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-02-05",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSTI",
+              "company_name": "Mitchell-Jones",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-11-09",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421284Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421298Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421302Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421306Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421317Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 9552,
+    "asset_id": 6,
+    "ticker_symbol": "LLCZEC",
+    "cik": "0001668766",
+    "filing_type_id": 1,
+    "form_type": "10-K",
+    "filing_date": "2022-11-28",
+    "period_of_report": "2022-10-21",
+    "accession_number": "0001668766-20-031665",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001668766/10-K/0001668766-20-031665.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001668766/10-K/0001668766-20-031665.json",
+    "ingestion_timestamp": "2025-07-02T09:50:57.830005Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:57.830388Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCLSK",
+              "company_name": "Henderson-Herring",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-19",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "LTDBC",
+              "company_name": "Austin Group",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "PLCMSC",
+              "company_name": "Stephenson Group",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-08-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "GROUPNMC",
+              "company_name": "Lewis, Walsh and Cochran",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-02-09",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "AND SONSEM",
+              "company_name": "Thompson, Fields and Allen",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCZEC",
+              "company_name": "Anderson-Martin",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-07-13",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "INCLTC",
+              "company_name": "Hardin Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2009-11-27",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "PLCETH",
+              "company_name": "Gentry and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-05-29",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Guerra, Adams and Thompson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-02-05",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSTI",
+              "company_name": "Mitchell-Jones",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-11-09",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421284Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421298Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421302Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421306Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421317Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 7292,
+    "asset_id": 3,
+    "ticker_symbol": "PLCMSC",
+    "cik": "0000499317",
+    "filing_type_id": 2,
+    "form_type": "10-Q",
+    "filing_date": "2022-05-06",
+    "period_of_report": "2022-04-05",
+    "accession_number": "0000499317-23-617435",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0000499317/10-Q/0000499317-23-617435.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0000499317/10-Q/0000499317-23-617435.json",
+    "ingestion_timestamp": "2025-07-02T09:50:57.830039Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:57.830391Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCLSK",
+              "company_name": "Henderson-Herring",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-19",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "LTDBC",
+              "company_name": "Austin Group",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "PLCMSC",
+              "company_name": "Stephenson Group",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-08-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "GROUPNMC",
+              "company_name": "Lewis, Walsh and Cochran",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-02-09",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "AND SONSEM",
+              "company_name": "Thompson, Fields and Allen",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCZEC",
+              "company_name": "Anderson-Martin",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-07-13",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "INCLTC",
+              "company_name": "Hardin Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2009-11-27",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "PLCETH",
+              "company_name": "Gentry and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-05-29",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Guerra, Adams and Thompson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-02-05",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSTI",
+              "company_name": "Mitchell-Jones",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-11-09",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421284Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421298Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421302Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421306Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421317Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 5202,
+    "asset_id": 5,
+    "ticker_symbol": "AND SONSEM",
+    "cik": "0001758961",
+    "filing_type_id": 3,
+    "form_type": "8-K",
+    "filing_date": "2023-10-08",
+    "period_of_report": null,
+    "accession_number": "0001758961-22-392433",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001758961/8-K/0001758961-22-392433.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001758961/8-K/0001758961-22-392433.json",
+    "ingestion_timestamp": "2025-07-02T09:50:57.830076Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:57.830394Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCLSK",
+              "company_name": "Henderson-Herring",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-19",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "LTDBC",
+              "company_name": "Austin Group",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "PLCMSC",
+              "company_name": "Stephenson Group",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-08-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "GROUPNMC",
+              "company_name": "Lewis, Walsh and Cochran",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-02-09",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "AND SONSEM",
+              "company_name": "Thompson, Fields and Allen",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCZEC",
+              "company_name": "Anderson-Martin",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-07-13",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "INCLTC",
+              "company_name": "Hardin Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2009-11-27",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "PLCETH",
+              "company_name": "Gentry and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-05-29",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Guerra, Adams and Thompson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-02-05",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSTI",
+              "company_name": "Mitchell-Jones",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-11-09",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421284Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421298Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421302Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421306Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421317Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 1007,
+    "asset_id": 2,
+    "ticker_symbol": "LTDBC",
+    "cik": "0000102708",
+    "filing_type_id": 4,
+    "form_type": "4",
+    "filing_date": "2023-08-12",
+    "period_of_report": null,
+    "accession_number": "0000102708-23-311445",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0000102708/4/0000102708-23-311445.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0000102708/4/0000102708-23-311445.json",
+    "ingestion_timestamp": "2025-07-02T09:50:57.830107Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:57.830397Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCLSK",
+              "company_name": "Henderson-Herring",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-19",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "LTDBC",
+              "company_name": "Austin Group",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "PLCMSC",
+              "company_name": "Stephenson Group",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-08-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "GROUPNMC",
+              "company_name": "Lewis, Walsh and Cochran",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-02-09",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "AND SONSEM",
+              "company_name": "Thompson, Fields and Allen",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCZEC",
+              "company_name": "Anderson-Martin",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-07-13",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "INCLTC",
+              "company_name": "Hardin Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2009-11-27",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "PLCETH",
+              "company_name": "Gentry and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-05-29",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Guerra, Adams and Thompson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-02-05",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSTI",
+              "company_name": "Mitchell-Jones",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-11-09",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421284Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421298Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421302Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421306Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421317Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 9648,
+    "asset_id": 8,
+    "ticker_symbol": "PLCETH",
+    "cik": "0001090172",
+    "filing_type_id": 1,
+    "form_type": "10-K",
+    "filing_date": "2023-11-02",
+    "period_of_report": "2023-08-08",
+    "accession_number": "0001090172-22-478518",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001090172/10-K/0001090172-22-478518.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001090172/10-K/0001090172-22-478518.json",
+    "ingestion_timestamp": "2025-07-02T09:50:57.830139Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:57.830401Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCLSK",
+              "company_name": "Henderson-Herring",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-19",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "LTDBC",
+              "company_name": "Austin Group",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "PLCMSC",
+              "company_name": "Stephenson Group",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-08-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "GROUPNMC",
+              "company_name": "Lewis, Walsh and Cochran",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-02-09",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "AND SONSEM",
+              "company_name": "Thompson, Fields and Allen",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCZEC",
+              "company_name": "Anderson-Martin",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-07-13",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "INCLTC",
+              "company_name": "Hardin Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2009-11-27",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "PLCETH",
+              "company_name": "Gentry and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-05-29",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Guerra, Adams and Thompson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-02-05",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSTI",
+              "company_name": "Mitchell-Jones",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-11-09",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421284Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421298Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421302Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421306Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421317Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 7481,
+    "asset_id": 4,
+    "ticker_symbol": "GROUPNMC",
+    "cik": "0000771631",
+    "filing_type_id": 2,
+    "form_type": "10-Q",
+    "filing_date": "2022-03-01",
+    "period_of_report": "2021-12-10",
+    "accession_number": "0000771631-23-516375",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0000771631/10-Q/0000771631-23-516375.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0000771631/10-Q/0000771631-23-516375.json",
+    "ingestion_timestamp": "2025-07-02T09:50:57.830171Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:57.830404Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCLSK",
+              "company_name": "Henderson-Herring",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-19",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "LTDBC",
+              "company_name": "Austin Group",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "PLCMSC",
+              "company_name": "Stephenson Group",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-08-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "GROUPNMC",
+              "company_name": "Lewis, Walsh and Cochran",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-02-09",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "AND SONSEM",
+              "company_name": "Thompson, Fields and Allen",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCZEC",
+              "company_name": "Anderson-Martin",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-07-13",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "INCLTC",
+              "company_name": "Hardin Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2009-11-27",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "PLCETH",
+              "company_name": "Gentry and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-05-29",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Guerra, Adams and Thompson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-02-05",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSTI",
+              "company_name": "Mitchell-Jones",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-11-09",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421284Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421298Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421302Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421306Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421317Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 2609,
+    "asset_id": 1,
+    "ticker_symbol": "INCLSK",
+    "cik": "0001049698",
+    "filing_type_id": 4,
+    "form_type": "4",
+    "filing_date": "2023-05-12",
+    "period_of_report": null,
+    "accession_number": "0001049698-21-412459",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001049698/4/0001049698-21-412459.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001049698/4/0001049698-21-412459.json",
+    "ingestion_timestamp": "2025-07-02T09:50:57.830201Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:57.830408Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "INCLSK",
+              "company_name": "Henderson-Herring",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-11-19",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "LTDBC",
+              "company_name": "Austin Group",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-24",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "PLCMSC",
+              "company_name": "Stephenson Group",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-08-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "GROUPNMC",
+              "company_name": "Lewis, Walsh and Cochran",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-02-09",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "AND SONSEM",
+              "company_name": "Thompson, Fields and Allen",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2008-03-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCZEC",
+              "company_name": "Anderson-Martin",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-07-13",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "INCLTC",
+              "company_name": "Hardin Inc",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2009-11-27",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "PLCETH",
+              "company_name": "Gentry and Sons",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-05-29",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Guerra, Adams and Thompson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2006-02-05",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSTI",
+              "company_name": "Mitchell-Jones",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2007-11-09",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421284Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421298Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421302Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421306Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:57.421317Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  }
+]

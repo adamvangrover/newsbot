@@ -1,0 +1,202 @@
+[
+  {
+    "constituent_id": 7688,
+    "universe_name": "S&P 500 Mock",
+    "ticker_symbol": "AND SONSTI",
+    "asset_id": 17,
+    "start_date": "2013-02-24",
+    "end_date": null,
+    "ingestion_timestamp": "2025-07-02T09:43:59.988377Z",
+    "source": "EODHD_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.988990Z",
+      "source_api_simulation": "EODHD_SP500Constituents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_const": 10
+        }
+      }
+    }
+  },
+  {
+    "constituent_id": 507,
+    "universe_name": "S&P 500 Mock",
+    "ticker_symbol": "INCUSDT",
+    "asset_id": 7,
+    "start_date": "2013-03-21",
+    "end_date": null,
+    "ingestion_timestamp": "2025-07-02T09:43:59.988450Z",
+    "source": "EODHD_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.989000Z",
+      "source_api_simulation": "EODHD_SP500Constituents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_const": 10
+        }
+      }
+    }
+  },
+  {
+    "constituent_id": 9974,
+    "universe_name": "S&P 500 Mock",
+    "ticker_symbol": "AND SONSTR",
+    "asset_id": 10,
+    "start_date": "2013-09-23",
+    "end_date": null,
+    "ingestion_timestamp": "2025-07-02T09:43:59.988499Z",
+    "source": "EODHD_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.989006Z",
+      "source_api_simulation": "EODHD_SP500Constituents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_const": 10
+        }
+      }
+    }
+  },
+  {
+    "constituent_id": 2486,
+    "universe_name": "S&P 500 Mock",
+    "ticker_symbol": "LTDBCN",
+    "asset_id": 11,
+    "start_date": "2014-09-10",
+    "end_date": null,
+    "ingestion_timestamp": "2025-07-02T09:43:59.988543Z",
+    "source": "EODHD_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.989012Z",
+      "source_api_simulation": "EODHD_SP500Constituents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_const": 10
+        }
+      }
+    }
+  },
+  {
+    "constituent_id": 4223,
+    "universe_name": "S&P 500 Mock",
+    "ticker_symbol": "AND SONSGR",
+    "asset_id": 3,
+    "start_date": "2011-07-29",
+    "end_date": null,
+    "ingestion_timestamp": "2025-07-02T09:43:59.988584Z",
+    "source": "EODHD_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.989017Z",
+      "source_api_simulation": "EODHD_SP500Constituents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_const": 10
+        }
+      }
+    }
+  },
+  {
+    "constituent_id": 6996,
+    "universe_name": "S&P 500 Mock",
+    "ticker_symbol": "INCNXT",
+    "asset_id": 5,
+    "start_date": "2011-12-31",
+    "end_date": null,
+    "ingestion_timestamp": "2025-07-02T09:43:59.988622Z",
+    "source": "EODHD_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.989023Z",
+      "source_api_simulation": "EODHD_SP500Constituents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_const": 10
+        }
+      }
+    }
+  },
+  {
+    "constituent_id": 3081,
+    "universe_name": "S&P 500 Mock",
+    "ticker_symbol": "PLCPPC",
+    "asset_id": 12,
+    "start_date": "2013-02-01",
+    "end_date": "2021-12-15",
+    "ingestion_timestamp": "2025-07-02T09:43:59.988667Z",
+    "source": "EODHD_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.989028Z",
+      "source_api_simulation": "EODHD_SP500Constituents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_const": 10
+        }
+      }
+    }
+  },
+  {
+    "constituent_id": 8440,
+    "universe_name": "S&P 500 Mock",
+    "ticker_symbol": "LLCBCH",
+    "asset_id": 9,
+    "start_date": "2012-05-28",
+    "end_date": null,
+    "ingestion_timestamp": "2025-07-02T09:43:59.988705Z",
+    "source": "EODHD_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.989034Z",
+      "source_api_simulation": "EODHD_SP500Constituents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_const": 10
+        }
+      }
+    }
+  },
+  {
+    "constituent_id": 9358,
+    "universe_name": "S&P 500 Mock",
+    "ticker_symbol": "LTDNEM",
+    "asset_id": 19,
+    "start_date": "2017-08-19",
+    "end_date": "2021-07-08",
+    "ingestion_timestamp": "2025-07-02T09:43:59.988748Z",
+    "source": "EODHD_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.989039Z",
+      "source_api_simulation": "EODHD_SP500Constituents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_const": 10
+        }
+      }
+    }
+  },
+  {
+    "constituent_id": 7281,
+    "universe_name": "S&P 500 Mock",
+    "ticker_symbol": "LTDADA",
+    "asset_id": 13,
+    "start_date": "2013-09-04",
+    "end_date": null,
+    "ingestion_timestamp": "2025-07-02T09:43:59.988783Z",
+    "source": "EODHD_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.989045Z",
+      "source_api_simulation": "EODHD_SP500Constituents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_const": 10
+        }
+      }
+    }
+  }
+]

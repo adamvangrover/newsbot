@@ -1,0 +1,342 @@
+[
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "company_name": "Barnett PLC",
+    "asset_class": "Equity",
+    "exchange": "NASDAQ",
+    "first_seen_date": "2006-12-21",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.733996Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 2,
+    "ticker_symbol": "LLCIOTA",
+    "company_name": "Garcia, Williams and Elliott",
+    "asset_class": "Equity",
+    "exchange": "NYSE",
+    "first_seen_date": "2003-05-09",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734017Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 3,
+    "ticker_symbol": "AND SONSGR",
+    "company_name": "Benjamin Ltd",
+    "asset_class": "Equity",
+    "exchange": "NYSE",
+    "first_seen_date": "2004-12-03",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734023Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "company_name": "Long, Gray and Garcia",
+    "asset_class": "Equity",
+    "exchange": "NASDAQ",
+    "first_seen_date": "2005-05-15",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734027Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 5,
+    "ticker_symbol": "INCNXT",
+    "company_name": "Carr Group",
+    "asset_class": "Equity",
+    "exchange": "NYSE",
+    "first_seen_date": "2003-10-09",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734031Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 6,
+    "ticker_symbol": "PLCBCN",
+    "company_name": "Brown, Johnson and Long",
+    "asset_class": "Equity",
+    "exchange": "NASDAQ",
+    "first_seen_date": "2005-09-06",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734035Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 7,
+    "ticker_symbol": "INCUSDT",
+    "company_name": "Fisher Inc",
+    "asset_class": "Equity",
+    "exchange": "NYSE",
+    "first_seen_date": "2001-05-15",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734039Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 8,
+    "ticker_symbol": "PLCZCL",
+    "company_name": "Rivas and Sons",
+    "asset_class": "Equity",
+    "exchange": "NASDAQ",
+    "first_seen_date": "2009-06-06",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734043Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 9,
+    "ticker_symbol": "LLCBCH",
+    "company_name": "Riley Group",
+    "asset_class": "Equity",
+    "exchange": "NASDAQ",
+    "first_seen_date": "2001-10-07",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734046Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 10,
+    "ticker_symbol": "AND SONSTR",
+    "company_name": "Burns, Andrade and Moore",
+    "asset_class": "Equity",
+    "exchange": "NYSE",
+    "first_seen_date": "2009-08-19",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734050Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 11,
+    "ticker_symbol": "LTDBCN",
+    "company_name": "Gillespie, Jensen and Clark",
+    "asset_class": "Equity",
+    "exchange": "NASDAQ",
+    "first_seen_date": "2001-12-31",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734053Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 12,
+    "ticker_symbol": "PLCPPC",
+    "company_name": "Baker-Kemp",
+    "asset_class": "Equity",
+    "exchange": "NYSE",
+    "first_seen_date": "2009-09-02",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734057Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 13,
+    "ticker_symbol": "LTDADA",
+    "company_name": "Thomas and Sons",
+    "asset_class": "Equity",
+    "exchange": "NASDAQ",
+    "first_seen_date": "2006-04-16",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734061Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 14,
+    "ticker_symbol": "INCTRX",
+    "company_name": "Hicks, Solis and Smith",
+    "asset_class": "Equity",
+    "exchange": "NASDAQ",
+    "first_seen_date": "2003-03-05",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734064Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 15,
+    "ticker_symbol": "GROUPBTC",
+    "company_name": "Williams Group",
+    "asset_class": "Equity",
+    "exchange": "NASDAQ",
+    "first_seen_date": "2005-12-31",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734068Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 16,
+    "ticker_symbol": "LLCNEO",
+    "company_name": "Anthony Inc",
+    "asset_class": "Equity",
+    "exchange": "NASDAQ",
+    "first_seen_date": "2008-10-09",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734071Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 17,
+    "ticker_symbol": "AND SONSTI",
+    "company_name": "Orozco-Dickson",
+    "asset_class": "Equity",
+    "exchange": "NASDAQ",
+    "first_seen_date": "2003-09-17",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734075Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 18,
+    "ticker_symbol": "AND SONSBU",
+    "company_name": "Gutierrez LLC",
+    "asset_class": "Equity",
+    "exchange": "NASDAQ",
+    "first_seen_date": "2003-01-08",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734102Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 19,
+    "ticker_symbol": "LTDNEM",
+    "company_name": "Hernandez-Stevens",
+    "asset_class": "Equity",
+    "exchange": "NASDAQ",
+    "first_seen_date": "2001-02-15",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734106Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "asset_id": 20,
+    "ticker_symbol": "LLCBTC",
+    "company_name": "King, Brooks and White",
+    "asset_class": "Equity",
+    "exchange": "NASDAQ",
+    "first_seen_date": "2003-04-18",
+    "last_seen_date": null,
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:43:59.734110Z",
+      "source_api_simulation": "AssetMaster_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  }
+]

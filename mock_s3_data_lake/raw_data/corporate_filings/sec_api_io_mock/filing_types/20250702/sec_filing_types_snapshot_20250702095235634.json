@@ -1,0 +1,67 @@
+[
+  {
+    "filing_type_id": 1,
+    "form_type": "10-K",
+    "description": "SEC Form 10-K",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:35.633Z",
+      "source_api_simulation": "SECApi_FilingTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "filing_type_id": 2,
+    "form_type": "10-Q",
+    "description": "SEC Form 10-Q",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:35.634Z",
+      "source_api_simulation": "SECApi_FilingTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "filing_type_id": 3,
+    "form_type": "8-K",
+    "description": "SEC Form 8-K",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:35.634Z",
+      "source_api_simulation": "SECApi_FilingTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "filing_type_id": 4,
+    "form_type": "4",
+    "description": "SEC Form 4",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:35.634Z",
+      "source_api_simulation": "SECApi_FilingTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "filing_type_id": 5,
+    "form_type": "S-1",
+    "description": "SEC Form S-1",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:35.634Z",
+      "source_api_simulation": "SECApi_FilingTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  }
+]

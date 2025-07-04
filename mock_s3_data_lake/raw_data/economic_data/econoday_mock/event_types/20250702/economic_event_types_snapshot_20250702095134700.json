@@ -1,0 +1,182 @@
+[
+  {
+    "event_type_id": 1,
+    "event_name": "Envisioneer Extensible E-Business Indicator",
+    "country_region": "USA",
+    "release_frequency": "Quarterly",
+    "description": "Itself cultural section positive state more.",
+    "source_identifier": "ENVISIONEER_EXTENSIBLE_E-BUSINESS_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:34.700Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 2,
+    "event_name": "Syndicate Turn-Key Paradigms Indicator",
+    "country_region": "Germany",
+    "release_frequency": "Monthly",
+    "description": "Open yet old something important growth.",
+    "source_identifier": "SYNDICATE_TURN-KEY_PARADIGMS_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:34.700Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 3,
+    "event_name": "Enable B2B Paradigms Indicator",
+    "country_region": "USA",
+    "release_frequency": "Ad-hoc",
+    "description": "Couple side start yourself then suggest to.",
+    "source_identifier": "ENABLE_B2B_PARADIGMS_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:34.700Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 4,
+    "event_name": "Generate Customized Eyeballs Indicator",
+    "country_region": "USA",
+    "release_frequency": "Monthly",
+    "description": "Wrong remember health guess western final.",
+    "source_identifier": "GENERATE_CUSTOMIZED_EYEBALLS_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:34.700Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 5,
+    "event_name": "Repurpose Scalable Communities Indicator",
+    "country_region": "Germany",
+    "release_frequency": "Monthly",
+    "description": "Air because majority.",
+    "source_identifier": "REPURPOSE_SCALABLE_COMMUNITIES_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:34.700Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 6,
+    "event_name": "Synergize Clicks-And-Mortar E-Services Indicator",
+    "country_region": "China",
+    "release_frequency": "Ad-hoc",
+    "description": "These anything according responsibility employee pay.",
+    "source_identifier": "SYNERGIZE_CLICKS-AND-MORTAR_E-SERVICES_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:34.700Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 7,
+    "event_name": "Exploit Web-Enabled Synergies Indicator",
+    "country_region": "Eurozone",
+    "release_frequency": "Ad-hoc",
+    "description": "Must seem young subject.",
+    "source_identifier": "EXPLOIT_WEB-ENABLED_SYNERGIES_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:34.700Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 8,
+    "event_name": "Optimize Distributed Technologies Indicator",
+    "country_region": "Germany",
+    "release_frequency": "Quarterly",
+    "description": "Service where article play.",
+    "source_identifier": "OPTIMIZE_DISTRIBUTED_TECHNOLOGIES_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:34.700Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 9,
+    "event_name": "Cultivate Ubiquitous Bandwidth Indicator",
+    "country_region": "USA",
+    "release_frequency": "Quarterly",
+    "description": "Program sport me star production off.",
+    "source_identifier": "CULTIVATE_UBIQUITOUS_BANDWIDTH_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:34.700Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  },
+  {
+    "event_type_id": 10,
+    "event_name": "Streamline Frictionless E-Commerce Indicator",
+    "country_region": "Germany",
+    "release_frequency": "Monthly",
+    "description": "Least large fall issue future garden feel.",
+    "source_identifier": "STREAMLINE_FRICTIONLESS_E-COMMERCE_INDICATOR_MOCKID",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:51:34.700Z",
+      "source_api_simulation": "Econoday_EventTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "num_types": 10
+        }
+      }
+    }
+  }
+]

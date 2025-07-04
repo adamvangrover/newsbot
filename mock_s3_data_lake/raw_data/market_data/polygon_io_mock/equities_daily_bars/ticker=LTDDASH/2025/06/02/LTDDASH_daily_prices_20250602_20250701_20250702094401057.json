@@ -1,0 +1,596 @@
+[
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-02",
+    "open_price": 79.0726,
+    "high_price": 79.5225,
+    "low_price": 78.671,
+    "close_price": 78.7675,
+    "adjusted_close_price": 78.7675,
+    "volume": 4916409,
+    "vwap": 79.5186,
+    "ingestion_timestamp": "2025-07-02T09:44:01.056998Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057572Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-03",
+    "open_price": 79.3328,
+    "high_price": 79.856,
+    "low_price": 78.9539,
+    "close_price": 79.6056,
+    "adjusted_close_price": 79.6056,
+    "volume": 7329029,
+    "vwap": 79.7585,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057030Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057581Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-04",
+    "open_price": 79.8356,
+    "high_price": 80.8141,
+    "low_price": 79.575,
+    "close_price": 80.7811,
+    "adjusted_close_price": 80.7811,
+    "volume": 9490351,
+    "vwap": 80.4087,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057046Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057585Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-05",
+    "open_price": 83.837,
+    "high_price": 84.8692,
+    "low_price": 82.6652,
+    "close_price": 83.3765,
+    "adjusted_close_price": 83.3765,
+    "volume": 4017380,
+    "vwap": 82.8815,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057059Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057588Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-06",
+    "open_price": 85.0181,
+    "high_price": 85.9855,
+    "low_price": 84.7949,
+    "close_price": 85.2984,
+    "adjusted_close_price": 85.2984,
+    "volume": 4980626,
+    "vwap": 85.0093,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057071Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057592Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-09",
+    "open_price": 87.7625,
+    "high_price": 88.9192,
+    "low_price": 87.1775,
+    "close_price": 88.3562,
+    "adjusted_close_price": 88.3562,
+    "volume": 4926172,
+    "vwap": 88.5644,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057086Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057595Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-10",
+    "open_price": 89.834,
+    "high_price": 90.7158,
+    "low_price": 89.0347,
+    "close_price": 90.4179,
+    "adjusted_close_price": 90.4179,
+    "volume": 9429676,
+    "vwap": 90.1463,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057098Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057599Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-11",
+    "open_price": 91.0588,
+    "high_price": 91.1837,
+    "low_price": 90.584,
+    "close_price": 90.7296,
+    "adjusted_close_price": 90.7296,
+    "volume": 9868219,
+    "vwap": 90.9847,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057110Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057602Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-12",
+    "open_price": 92.6215,
+    "high_price": 93.31,
+    "low_price": 91.4182,
+    "close_price": 91.6684,
+    "adjusted_close_price": 91.6684,
+    "volume": 8412335,
+    "vwap": 92.1704,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057121Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057605Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-13",
+    "open_price": 94.3322,
+    "high_price": 95.3691,
+    "low_price": 93.1688,
+    "close_price": 95.1096,
+    "adjusted_close_price": 95.1096,
+    "volume": 3383410,
+    "vwap": 93.3668,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057132Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057609Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-16",
+    "open_price": 92.6854,
+    "high_price": 92.9822,
+    "low_price": 91.8551,
+    "close_price": 92.9341,
+    "adjusted_close_price": 92.9341,
+    "volume": 1222562,
+    "vwap": 92.7249,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057144Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057612Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-17",
+    "open_price": 92.1244,
+    "high_price": 93.2612,
+    "low_price": 91.4295,
+    "close_price": 92.2102,
+    "adjusted_close_price": 92.2102,
+    "volume": 2086691,
+    "vwap": 91.5005,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057155Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057616Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-18",
+    "open_price": 92.1875,
+    "high_price": 93.0165,
+    "low_price": 91.9248,
+    "close_price": 92.962,
+    "adjusted_close_price": 92.962,
+    "volume": 6212027,
+    "vwap": 92.5589,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057167Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057619Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-19",
+    "open_price": 90.9557,
+    "high_price": 92.0192,
+    "low_price": 90.578,
+    "close_price": 91.9349,
+    "adjusted_close_price": 91.9349,
+    "volume": 3660876,
+    "vwap": 90.6898,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057178Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057622Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-20",
+    "open_price": 90.9917,
+    "high_price": 91.9822,
+    "low_price": 89.9163,
+    "close_price": 90.7269,
+    "adjusted_close_price": 90.7269,
+    "volume": 7605805,
+    "vwap": 90.8093,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057188Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057626Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-23",
+    "open_price": 91.9187,
+    "high_price": 92.0113,
+    "low_price": 91.367,
+    "close_price": 91.4265,
+    "adjusted_close_price": 91.4265,
+    "volume": 2768460,
+    "vwap": 91.5508,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057204Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057629Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-24",
+    "open_price": 93.182,
+    "high_price": 93.6745,
+    "low_price": 92.3585,
+    "close_price": 92.9314,
+    "adjusted_close_price": 92.9314,
+    "volume": 7770653,
+    "vwap": 92.6811,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057221Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057632Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-25",
+    "open_price": 93.9004,
+    "high_price": 94.4676,
+    "low_price": 93.1865,
+    "close_price": 93.5064,
+    "adjusted_close_price": 93.5064,
+    "volume": 9419250,
+    "vwap": 93.6087,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057234Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057636Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-26",
+    "open_price": 92.4217,
+    "high_price": 92.862,
+    "low_price": 91.1813,
+    "close_price": 91.4906,
+    "adjusted_close_price": 91.4906,
+    "volume": 6868280,
+    "vwap": 91.682,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057245Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057639Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-27",
+    "open_price": 90.6145,
+    "high_price": 91.5924,
+    "low_price": 89.7959,
+    "close_price": 91.2133,
+    "adjusted_close_price": 91.2133,
+    "volume": 6942703,
+    "vwap": 91.4594,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057256Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057642Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-06-30",
+    "open_price": 90.2728,
+    "high_price": 90.6813,
+    "low_price": 89.7148,
+    "close_price": 89.891,
+    "adjusted_close_price": 89.891,
+    "volume": 1454467,
+    "vwap": 89.8122,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057269Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057645Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 4,
+    "ticker_symbol": "LTDDASH",
+    "trade_date": "2025-07-01",
+    "open_price": 90.5971,
+    "high_price": 91.1482,
+    "low_price": 90.4417,
+    "close_price": 90.9154,
+    "adjusted_close_price": 90.9154,
+    "volume": 1423979,
+    "vwap": 91.1268,
+    "ingestion_timestamp": "2025-07-02T09:44:01.057280Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:01.057648Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 4,
+          "ticker": "LTDDASH",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "news_source_id": 1,
+    "source_name": "MockNN Network",
+    "website": "https://www.mocknnnetwork.mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:58.141765Z",
+      "source_api_simulation": "NewsAPI_Sources_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "news_source_id": 2,
+    "source_name": "Financial Fables Times",
+    "website": "https://www.financialfablestimes.mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:58.141779Z",
+      "source_api_simulation": "NewsAPI_Sources_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "news_source_id": 3,
+    "source_name": "Economic Echoes Today",
+    "website": "https://www.economicechoestoday.mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:58.141783Z",
+      "source_api_simulation": "NewsAPI_Sources_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "news_source_id": 4,
+    "source_name": "Market Myths Media",
+    "website": "https://www.marketmythsmedia.mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:58.141787Z",
+      "source_api_simulation": "NewsAPI_Sources_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  }
+]

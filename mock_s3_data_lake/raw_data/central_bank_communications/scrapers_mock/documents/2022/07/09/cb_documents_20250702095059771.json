@@ -1,0 +1,1302 @@
+[
+  {
+    "document_id": 3749,
+    "doc_type_id": 8,
+    "doc_type_name": "Governing Council Speech",
+    "issuing_body": "ECB",
+    "publish_timestamp_utc": "2022-07-09T02:29:55+00:00",
+    "title": "Governing Council Speech: Envisioneer Interactive Vortals",
+    "speaker_author": "Caleb Smith",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/central_bank_communications/ecb_scraper_mock/2022/07/09/f9a2025c-1183-4eaa-9a2f-610c572adf0c.txt",
+    "document_url": "https://www.ecb.mock/releases/f9a2025c-1183-4eaa-9a2f-610c572adf0c",
+    "text_sample": "Visit seem green rock American outside. Hope point choice or keep sure impact.\nLeg discussion action draw. Heart enjoy early spring. Tree nearly spring evidence animal.",
+    "ingestion_timestamp": "2025-07-02T09:50:59.768067Z",
+    "source": "ECBScraper_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:59.770812Z",
+      "source_api_simulation": "CBScraper_Documents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "doc_types": [
+            {
+              "doc_type_id": 1,
+              "doc_type_name": "FOMC Statement",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321678Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 2,
+              "doc_type_name": "FOMC Minutes",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321692Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 3,
+              "doc_type_name": "Chair Speech",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321696Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 4,
+              "doc_type_name": "Beige Book",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321700Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 5,
+              "doc_type_name": "Monetary Policy Decision",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321703Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 6,
+              "doc_type_name": "Press Conference Statement",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321707Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 7,
+              "doc_type_name": "Account of Monetary Policy Meeting",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321710Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 8,
+              "doc_type_name": "Governing Council Speech",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321713Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_docs": 10
+        }
+      }
+    }
+  },
+  {
+    "document_id": 1391,
+    "doc_type_id": 8,
+    "doc_type_name": "Governing Council Speech",
+    "issuing_body": "ECB",
+    "publish_timestamp_utc": "2023-08-29T14:11:51+00:00",
+    "title": "Governing Council Speech: Re-Intermediate Virtual Web-Readiness",
+    "speaker_author": "Tanya Lee",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/central_bank_communications/ecb_scraper_mock/2023/08/29/55ed76f5-aa9e-46b9-9625-7b52743cbae6.txt",
+    "document_url": "https://www.ecb.mock/releases/55ed76f5-aa9e-46b9-9625-7b52743cbae6",
+    "text_sample": "Brother finally base training radio ask. Action sometimes heavy actually perform.\nArrive end imagine among maybe. South machine father deep pull government laugh.",
+    "ingestion_timestamp": "2025-07-02T09:50:59.768736Z",
+    "source": "ECBScraper_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:59.770818Z",
+      "source_api_simulation": "CBScraper_Documents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "doc_types": [
+            {
+              "doc_type_id": 1,
+              "doc_type_name": "FOMC Statement",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321678Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 2,
+              "doc_type_name": "FOMC Minutes",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321692Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 3,
+              "doc_type_name": "Chair Speech",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321696Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 4,
+              "doc_type_name": "Beige Book",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321700Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 5,
+              "doc_type_name": "Monetary Policy Decision",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321703Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 6,
+              "doc_type_name": "Press Conference Statement",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321707Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 7,
+              "doc_type_name": "Account of Monetary Policy Meeting",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321710Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 8,
+              "doc_type_name": "Governing Council Speech",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321713Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_docs": 10
+        }
+      }
+    }
+  },
+  {
+    "document_id": 3031,
+    "doc_type_id": 5,
+    "doc_type_name": "Monetary Policy Decision",
+    "issuing_body": "ECB",
+    "publish_timestamp_utc": "2023-12-04T09:11:33+00:00",
+    "title": "Monetary Policy Decision: Harness End-To-End Infrastructures",
+    "speaker_author": null,
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/central_bank_communications/ecb_scraper_mock/2023/12/04/8fcae2cf-3793-4490-900e-08a7736c99dd.txt",
+    "document_url": "https://www.ecb.mock/releases/8fcae2cf-3793-4490-900e-08a7736c99dd",
+    "text_sample": "Also student middle product group. Past during usually term fast debate friend.\nOther between financial open mouth agree. Player player pay may there whose parent. However evidence within single consider hit even almost.",
+    "ingestion_timestamp": "2025-07-02T09:50:59.768945Z",
+    "source": "ECBScraper_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:59.770822Z",
+      "source_api_simulation": "CBScraper_Documents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "doc_types": [
+            {
+              "doc_type_id": 1,
+              "doc_type_name": "FOMC Statement",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321678Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 2,
+              "doc_type_name": "FOMC Minutes",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321692Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 3,
+              "doc_type_name": "Chair Speech",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321696Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 4,
+              "doc_type_name": "Beige Book",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321700Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 5,
+              "doc_type_name": "Monetary Policy Decision",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321703Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 6,
+              "doc_type_name": "Press Conference Statement",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321707Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 7,
+              "doc_type_name": "Account of Monetary Policy Meeting",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321710Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 8,
+              "doc_type_name": "Governing Council Speech",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321713Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_docs": 10
+        }
+      }
+    }
+  },
+  {
+    "document_id": 2537,
+    "doc_type_id": 6,
+    "doc_type_name": "Press Conference Statement",
+    "issuing_body": "ECB",
+    "publish_timestamp_utc": "2023-12-02T23:13:11+00:00",
+    "title": "Press Conference Statement: Matrix Clicks-And-Mortar Functionalities",
+    "speaker_author": null,
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/central_bank_communications/ecb_scraper_mock/2023/12/02/207af9bf-5c29-48f2-a452-1efb86d74e6c.txt",
+    "document_url": "https://www.ecb.mock/releases/207af9bf-5c29-48f2-a452-1efb86d74e6c",
+    "text_sample": "Over animal everybody successful might. With difference trial avoid. Growth not situation character.\nSeem under sign half career. Stand agent few seven nor image player.",
+    "ingestion_timestamp": "2025-07-02T09:50:59.769115Z",
+    "source": "ECBScraper_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:59.770825Z",
+      "source_api_simulation": "CBScraper_Documents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "doc_types": [
+            {
+              "doc_type_id": 1,
+              "doc_type_name": "FOMC Statement",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321678Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 2,
+              "doc_type_name": "FOMC Minutes",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321692Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 3,
+              "doc_type_name": "Chair Speech",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321696Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 4,
+              "doc_type_name": "Beige Book",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321700Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 5,
+              "doc_type_name": "Monetary Policy Decision",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321703Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 6,
+              "doc_type_name": "Press Conference Statement",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321707Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 7,
+              "doc_type_name": "Account of Monetary Policy Meeting",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321710Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 8,
+              "doc_type_name": "Governing Council Speech",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321713Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_docs": 10
+        }
+      }
+    }
+  },
+  {
+    "document_id": 2454,
+    "doc_type_id": 3,
+    "doc_type_name": "Chair Speech",
+    "issuing_body": "Federal Reserve",
+    "publish_timestamp_utc": "2022-11-25T11:09:25+00:00",
+    "title": "Chair Speech: Iterate Virtual Platforms",
+    "speaker_author": "Kayla Curtis",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/central_bank_communications/federal reserve_scraper_mock/2022/11/25/3c43b9d6-4be3-4fc1-b840-0ef2263e3e9e.txt",
+    "document_url": "https://www.federal reserve.mock/releases/3c43b9d6-4be3-4fc1-b840-0ef2263e3e9e",
+    "text_sample": "Maybe defense vote fund station author partner.\nThought city movie accept. Woman from ground quality month perform. Son by win business right money.",
+    "ingestion_timestamp": "2025-07-02T09:50:59.769536Z",
+    "source": "FederalReserveScraper_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:59.770829Z",
+      "source_api_simulation": "CBScraper_Documents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "doc_types": [
+            {
+              "doc_type_id": 1,
+              "doc_type_name": "FOMC Statement",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321678Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 2,
+              "doc_type_name": "FOMC Minutes",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321692Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 3,
+              "doc_type_name": "Chair Speech",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321696Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 4,
+              "doc_type_name": "Beige Book",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321700Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 5,
+              "doc_type_name": "Monetary Policy Decision",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321703Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 6,
+              "doc_type_name": "Press Conference Statement",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321707Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 7,
+              "doc_type_name": "Account of Monetary Policy Meeting",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321710Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 8,
+              "doc_type_name": "Governing Council Speech",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321713Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_docs": 10
+        }
+      }
+    }
+  },
+  {
+    "document_id": 7374,
+    "doc_type_id": 8,
+    "doc_type_name": "Governing Council Speech",
+    "issuing_body": "ECB",
+    "publish_timestamp_utc": "2023-11-05T07:51:41+00:00",
+    "title": "Governing Council Speech: Synthesize Transparent Mindshare",
+    "speaker_author": "Geoffrey Garcia",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/central_bank_communications/ecb_scraper_mock/2023/11/05/bc191588-dc3f-4831-9d89-2d0f5d96a757.txt",
+    "document_url": "https://www.ecb.mock/releases/bc191588-dc3f-4831-9d89-2d0f5d96a757",
+    "text_sample": "Recent reality trouble reduce. President form best heart on reality. Generation world mouth measure live first. Choose water usually similar middle.\nSo view collection happen.",
+    "ingestion_timestamp": "2025-07-02T09:50:59.769930Z",
+    "source": "ECBScraper_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:59.770832Z",
+      "source_api_simulation": "CBScraper_Documents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "doc_types": [
+            {
+              "doc_type_id": 1,
+              "doc_type_name": "FOMC Statement",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321678Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 2,
+              "doc_type_name": "FOMC Minutes",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321692Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 3,
+              "doc_type_name": "Chair Speech",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321696Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 4,
+              "doc_type_name": "Beige Book",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321700Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 5,
+              "doc_type_name": "Monetary Policy Decision",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321703Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 6,
+              "doc_type_name": "Press Conference Statement",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321707Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 7,
+              "doc_type_name": "Account of Monetary Policy Meeting",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321710Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 8,
+              "doc_type_name": "Governing Council Speech",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321713Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_docs": 10
+        }
+      }
+    }
+  },
+  {
+    "document_id": 5360,
+    "doc_type_id": 7,
+    "doc_type_name": "Account of Monetary Policy Meeting",
+    "issuing_body": "ECB",
+    "publish_timestamp_utc": "2022-10-04T01:23:01+00:00",
+    "title": "Account of Monetary Policy Meeting: Aggregate Virtual Systems",
+    "speaker_author": null,
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/central_bank_communications/ecb_scraper_mock/2022/10/04/8df6b07b-1b43-4c95-972e-7e6498fc9369.txt",
+    "document_url": "https://www.ecb.mock/releases/8df6b07b-1b43-4c95-972e-7e6498fc9369",
+    "text_sample": "Bag thousand former rock together choose reflect. Speech agreement yes perform security. Believe large gun in enter cup nothing who.\nDifferent clearly unit out. Maybe all drop account. Style available person lose.",
+    "ingestion_timestamp": "2025-07-02T09:50:59.770130Z",
+    "source": "ECBScraper_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:59.770835Z",
+      "source_api_simulation": "CBScraper_Documents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "doc_types": [
+            {
+              "doc_type_id": 1,
+              "doc_type_name": "FOMC Statement",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321678Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 2,
+              "doc_type_name": "FOMC Minutes",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321692Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 3,
+              "doc_type_name": "Chair Speech",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321696Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 4,
+              "doc_type_name": "Beige Book",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321700Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 5,
+              "doc_type_name": "Monetary Policy Decision",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321703Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 6,
+              "doc_type_name": "Press Conference Statement",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321707Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 7,
+              "doc_type_name": "Account of Monetary Policy Meeting",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321710Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 8,
+              "doc_type_name": "Governing Council Speech",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321713Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_docs": 10
+        }
+      }
+    }
+  },
+  {
+    "document_id": 3155,
+    "doc_type_id": 1,
+    "doc_type_name": "FOMC Statement",
+    "issuing_body": "Federal Reserve",
+    "publish_timestamp_utc": "2022-08-16T19:12:17+00:00",
+    "title": "FOMC Statement: Repurpose Sticky Solutions",
+    "speaker_author": null,
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/central_bank_communications/federal reserve_scraper_mock/2022/08/16/9903c684-7669-4c0e-b31c-cf149ea7a9e3.txt",
+    "document_url": "https://www.federal reserve.mock/releases/9903c684-7669-4c0e-b31c-cf149ea7a9e3",
+    "text_sample": "Almost among too face. Notice factor page affect.\nHigh number despite cost order personal stand. Study themselves serve member floor red along.",
+    "ingestion_timestamp": "2025-07-02T09:50:59.770280Z",
+    "source": "FederalReserveScraper_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:59.770838Z",
+      "source_api_simulation": "CBScraper_Documents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "doc_types": [
+            {
+              "doc_type_id": 1,
+              "doc_type_name": "FOMC Statement",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321678Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 2,
+              "doc_type_name": "FOMC Minutes",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321692Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 3,
+              "doc_type_name": "Chair Speech",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321696Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 4,
+              "doc_type_name": "Beige Book",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321700Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 5,
+              "doc_type_name": "Monetary Policy Decision",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321703Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 6,
+              "doc_type_name": "Press Conference Statement",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321707Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 7,
+              "doc_type_name": "Account of Monetary Policy Meeting",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321710Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 8,
+              "doc_type_name": "Governing Council Speech",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321713Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_docs": 10
+        }
+      }
+    }
+  },
+  {
+    "document_id": 9102,
+    "doc_type_id": 7,
+    "doc_type_name": "Account of Monetary Policy Meeting",
+    "issuing_body": "ECB",
+    "publish_timestamp_utc": "2023-03-30T12:15:23+00:00",
+    "title": "Account of Monetary Policy Meeting: Drive Front-End Action-Items",
+    "speaker_author": null,
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/central_bank_communications/ecb_scraper_mock/2023/03/30/3aedb492-4b01-4ee2-ae26-ac3b24993b4c.txt",
+    "document_url": "https://www.ecb.mock/releases/3aedb492-4b01-4ee2-ae26-ac3b24993b4c",
+    "text_sample": "Example day language resource laugh. Rule president effect. Investment best director real.\nEmployee join sing. Difficult stuff expect our contain serious leave. Trade student down treat team choose leg.",
+    "ingestion_timestamp": "2025-07-02T09:50:59.770499Z",
+    "source": "ECBScraper_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:59.770842Z",
+      "source_api_simulation": "CBScraper_Documents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "doc_types": [
+            {
+              "doc_type_id": 1,
+              "doc_type_name": "FOMC Statement",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321678Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 2,
+              "doc_type_name": "FOMC Minutes",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321692Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 3,
+              "doc_type_name": "Chair Speech",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321696Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 4,
+              "doc_type_name": "Beige Book",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321700Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 5,
+              "doc_type_name": "Monetary Policy Decision",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321703Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 6,
+              "doc_type_name": "Press Conference Statement",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321707Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 7,
+              "doc_type_name": "Account of Monetary Policy Meeting",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321710Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 8,
+              "doc_type_name": "Governing Council Speech",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321713Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_docs": 10
+        }
+      }
+    }
+  },
+  {
+    "document_id": 6866,
+    "doc_type_id": 1,
+    "doc_type_name": "FOMC Statement",
+    "issuing_body": "Federal Reserve",
+    "publish_timestamp_utc": "2022-11-13T16:42:30+00:00",
+    "title": "FOMC Statement: Aggregate Transparent Architectures",
+    "speaker_author": null,
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/central_bank_communications/federal reserve_scraper_mock/2022/11/13/f160eafd-e920-4324-9c12-6931f3a4df11.txt",
+    "document_url": "https://www.federal reserve.mock/releases/f160eafd-e920-4324-9c12-6931f3a4df11",
+    "text_sample": "Play community population now able. Other nature painting development discussion. Suddenly marriage person human.\nCell race we give scientist. Debate catch else national black head. Finally teach show front.",
+    "ingestion_timestamp": "2025-07-02T09:50:59.770693Z",
+    "source": "FederalReserveScraper_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:50:59.770845Z",
+      "source_api_simulation": "CBScraper_Documents_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "doc_types": [
+            {
+              "doc_type_id": 1,
+              "doc_type_name": "FOMC Statement",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321678Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 2,
+              "doc_type_name": "FOMC Minutes",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321692Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 3,
+              "doc_type_name": "Chair Speech",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321696Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 4,
+              "doc_type_name": "Beige Book",
+              "issuing_body": "Federal Reserve",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321700Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 5,
+              "doc_type_name": "Monetary Policy Decision",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321703Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 6,
+              "doc_type_name": "Press Conference Statement",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321707Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 7,
+              "doc_type_name": "Account of Monetary Policy Meeting",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321710Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "doc_type_id": 8,
+              "doc_type_name": "Governing Council Speech",
+              "issuing_body": "ECB",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:50:59.321713Z",
+                "source_api_simulation": "CBScraper_DocTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_docs": 10
+        }
+      }
+    }
+  }
+]
