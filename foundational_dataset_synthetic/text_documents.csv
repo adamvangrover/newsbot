@@ -1,24 +1,24 @@
 Doc_ID,Ticker,Source_Type,Source_Name,Timestamp,Headline,Full_Text_Path
-1,AAPL,News,MockReuters,2019-01-03T10:00:00Z,"Apple Cuts Revenue Guidance Amid China Slowdown",s3://mock-bucket/news_001.txt
-2,MSFT,News,MockBloomberg,2019-01-31T11:00:00Z,"Microsoft Beats Earnings Expectations on Cloud Strength",s3://mock-bucket/news_002.txt
-3,TSLA,8-K,SEC EDGAR Synthetic,2019-01-18T14:00:00Z,"Tesla Inc. Form 8-K: Announces Job Cuts to Control Costs",s3://mock-bucket/8k_tsla_001.txt
-4,JPM,News,MockDowJones,2019-01-15T09:30:00Z,"JPMorgan CEO Warns of Potential Economic Headwinds",s3://mock-bucket/news_jpm_001.txt
-5,AAPL,Transcript,VendorX Transcripts,2019-01-29T22:00:00Z,"AAPL Q1 2019 Earnings Call Transcript - Discusses Guidance Cut",s3://mock-bucket/transcript_aapl_q12019.txt
-6,,FOMC_Statement,Federal Reserve Synthetic,2019-01-30T19:00:00Z,"FOMC Statement January 2019 - Fed Signals Patience on Rates",s3://mock-bucket/fomc_20190130.txt
-7,GOOG,News,MockWSJ,2019-02-05T10:15:00Z,"Alphabet Shares Rise After Strong Q4 Earnings Report",s3://mock-bucket/news_goog_001.txt
-8,AMZN,10-K,SEC EDGAR Synthetic,2019-02-01T18:00:00Z,"Amazon.com Inc. Form 10-K: Annual Report 2018",s3://mock-bucket/10k_amzn_2018.txt
-9,NVDA,Transcript,VendorY Transcripts,2019-02-14T22:00:00Z,"NVDA Q4 2019 Earnings Call Transcript - Addresses Gaming Slowdown",s3://mock-bucket/transcript_nvda_q42019.txt
-10,,ECB_PressConference,ECB Synthetic,2019-03-07T13:45:00Z,"ECB Press Conference March 2019 - New Stimulus Measures Announced",s3://mock-bucket/ecb_20190307.txt
-11,ALL,News,MockAssociatedPress,2019-01-02T08:00:00Z,"Markets Brace for Volatile 2019 After Tumultuous End to Year",s3://mock-bucket/news_marketoutlook_2019.txt
-12,V,News,MockFinancialTimes,2019-01-31T14:30:00Z,"Visa Reports Strong Growth in Cross-Border Volume",s3://mock-bucket/news_v_001.txt
-13,XOM,News,MockReuters,2019-02-01T13:00:00Z,"ExxonMobil Misses Profit Expectations on Lower Oil Prices",s3://mock-bucket/news_xom_001.txt
-14,JNJ,8-K,SEC EDGAR Synthetic,2019-02-15T09:00:00Z,"Johnson & Johnson Form 8-K: Update on Talc Litigation",s3://mock-bucket/8k_jnj_talc_001.txt
-15,MSFT,News,MockBloomberg,2020-04-30T10:00:00Z,"Microsoft Cloud Revenue Soars Amid Pandemic Demand",s3://mock-bucket/news_msft_002.txt
-16,TSLA,10-Q,SEC EDGAR Synthetic,2020-05-10T18:00:00Z,"Tesla Inc. Form 10-Q: Quarterly Report Q1 2020",s3://mock-bucket/10q_tsla_q12020.txt
-17,,FOMC_Minutes,Federal Reserve Synthetic,2020-03-18T18:00:00Z,"FOMC Minutes March 2020 - Details on Emergency Rate Cuts",s3://mock-bucket/fomc_minutes_202003.txt
-18,AMZN,News,MockWSJ,2020-07-31T09:00:00Z,"Amazon Profits Surge as Pandemic Drives Online Shopping",s3://mock-bucket/news_amzn_002.txt
-19,PFE,News,MockReuters,2020-11-09T11:30:00Z,"Pfizer Announces COVID-19 Vaccine is Over 90% Effective",s3://mock-bucket/news_pfe_vaccine_001.txt
-20,LLY,8-K,SEC EDGAR Synthetic,2020-10-26T12:00:00Z,"Eli Lilly Form 8-K: COVID-19 Antibody Trial Paused",s3://mock-bucket/8k_lly_covidtrial_001.txt
+1,MSFT,News,MockTechCrunch,2018-01-25T22:00:00Z,"Microsoft Q2 2018 Earnings: Azure Growth Continues to Impress",s3://mock-bucket/news_msft_2018q2earn.txt
+2,MSFT,Transcript,VendorScript Inc,2018-01-25T22:30:00Z,"MSFT Q2 2018 Earnings Call Transcript",s3://mock-bucket/transcript_msft_2018q2.txt
+3,MSFT,8-K,SEC EDGAR Synthetic,2018-01-25T21:00:00Z,"Form 8-K: Microsoft Corp. Reports Q2 2018 Results",s3://mock-bucket/8k_msft_2018q2.txt
+4,AAPL,News,MockAppleInsider,2018-02-01T22:00:00Z,"Apple Q1 2018: Record Revenue Driven by iPhone X",s3://mock-bucket/news_aapl_2018q1earn.txt
+5,AAPL,Transcript,VendorScript Inc,2018-02-01T22:30:00Z,"AAPL Q1 2018 Earnings Call Transcript",s3://mock-bucket/transcript_aapl_2018q1.txt
+6,AAPL,8-K,SEC EDGAR Synthetic,2018-02-01T21:00:00Z,"Form 8-K: Apple Inc. Reports Q1 2018 Results",s3://mock-bucket/8k_aapl_2018q1.txt
+7,NVDA,News,MockAnandTech,2018-02-15T22:00:00Z,"NVIDIA Q4 FY18 Earnings: Datacenter and Crypto Drive Growth",s3://mock-bucket/news_nvda_2018q4earn.txt
+8,NVDA,Transcript,VendorScript Inc,2018-02-15T22:30:00Z,"NVDA Q4 FY18 Earnings Call Transcript",s3://mock-bucket/transcript_nvda_2018q4.txt
+9,NVDA,8-K,SEC EDGAR Synthetic,2018-02-15T21:00:00Z,"Form 8-K: NVIDIA Corporation Reports Q4 FY18 Results",s3://mock-bucket/8k_nvda_2018q4.txt
+10,,FOMC_Statement,Federal Reserve Synthetic,2018-01-31T19:00:00Z,"FOMC Statement January 2018",s3://mock-bucket/fomc_stmt_20180131.txt
+11,,FOMC_Statement,Federal Reserve Synthetic,2018-03-21T18:00:00Z,"FOMC Statement March 2018 & Projections",s3://mock-bucket/fomc_stmt_20180321.txt
+12,,FOMC_Minutes,Federal Reserve Synthetic,2018-02-21T19:00:00Z,"FOMC Minutes of January 30-31 2018 Meeting",s3://mock-bucket/fomc_mins_20180131.txt
+13,,ECB_PressConference,ECB Synthetic,2018-01-25T13:45:00Z,"ECB Monetary Policy Press Conference January 2018",s3://mock-bucket/ecb_pc_20180125.txt
+14,MSFT,News,MockReuters,2022-01-18T12:30:00Z,"Microsoft Shakes Up Gaming Industry With $68.7 Billion Activision Deal",s3://mock-bucket/news_msft_atvi_deal.txt
+15,ATVI,News,MockBloomberg,2022-01-18T12:35:00Z,"Activision Blizzard Stock Soars on Microsoft Acquisition News",s3://mock-bucket/news_atvi_msft_deal.txt
+16,USA,News,MockAP,2020-03-11T20:00:00Z,"WHO Declares COVID-19 a Pandemic",s3://mock-bucket/news_covid_pandemic.txt
+17,,Fed_Speech,Federal Reserve Synthetic,2020-03-15T21:30:00Z,"Powell Announces Emergency Rate Cut to Zero Amid Coronavirus Crisis",s3://mock-bucket/speech_powell_covidcut_20200315.txt
+18,JPM,News,MockWSJ,2023-05-01T10:30:00Z,"JPMorgan Chase to Acquire Most of First Republic Bank Assets",s3://mock-bucket/news_jpm_frc_acq.txt
+19,FRC,News,MockNYT,2023-05-01T10:35:00Z,"First Republic Bank Seized by Regulators, Sold to JPMorgan Chase",s3://mock-bucket/news_frc_jpm_seized.txt
+20,SIVB,News,MockTheGuardian,2023-03-10T15:00:00Z,"Silicon Valley Bank Collapses in Biggest Bank Failure Since 2008",s3://mock-bucket/news_sivb_collapse.txt
 21,AAPL,News,MockFinancialTimes,2021-01-28T08:00:00Z,"Apple Reports Record Revenue on Strong iPhone 12 Sales",s3://mock-bucket/news_aapl_q12021.txt
 22,NVDA,News,MockDowJones,2021-02-25T10:00:00Z,"Nvidia Beats Estimates, Cites Strong Demand for Gaming and Data Center Chips",s3://mock-bucket/news_nvda_q42021.txt
 23,DIS,News,MockBloomberg,2021-05-13T21:00:00Z,"Disney+ Subscriber Growth Slows, Stock Dips",s3://mock-bucket/news_dis_subscribers_001.txt
