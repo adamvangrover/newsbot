@@ -1,0 +1,127 @@
+## Mock S3 Data Lake Structure
+
+This outlines a potential directory structure for an S3 data lake to store raw and processed data for the news-driven market prediction dataset.
+
+```
+s3://your-bucket-name/
+├── raw_data/
+│   ├── market_data/
+│   │   ├── polygon_io/ | eodhd / algoseek / etc. (source_name)
+│   │   │   ├── equities/
+│   │   │   │   ├── daily_bars/
+│   │   │   │   │   ├── YYYYMMDD/ (partition by ingestion date or event date)
+│   │   │   │   │   │   └── ticker=AAPL/ (partition by ticker if many files)
+│   │   │   │   │   │       └── AAPL_20230101_20231231.json | .csv.gz (raw API responses)
+│   │   │   │   ├── intraday_bars_1min/
+│   │   │   │   │   ├── YYYYMMDD/
+│   │   │   │   │   │   └── ticker=AAPL/
+│   │   │   │   │   │       └── AAPL_20231026_1min.json
+│   │   │   │   ├── corporate_actions/
+│   │   │   │   │   └── YYYYMMDD/
+│   │   │   │   │       └── all_tickers_actions_20231026.json
+│   │   │   ├── options/
+│   │   │   │   └── ...
+│   │   │   └── forex/
+│   │   │       └── ...
+│   │   ├── eodhd_constituents/ (or other constituent source)
+│   │   │   └── sp500_constituents_YYYYMMDD_snapshot.json
+│   │
+│   ├── economic_data/
+│   │   └── econoday_mock/
+│   │       ├── events_calendar/
+│   │       │   └── YYYYMMDD/
+│   │       │       └── calendar_20231026.json
+│   │       └── event_releases/
+│   │           └── YYYYMMDD/
+│   │               └── nonfarm_payrolls_20231005.json
+│   │
+│   ├── corporate_filings/
+│   │   └── sec_api_io_mock/
+│   │       ├── filings_metadata_index/ (daily index of filings)
+│   │       │   └── YYYYMMDD/
+│   │       │       └── filings_index_20231026.json
+│   │       ├── raw_text/ (full text of filings)
+│   │       │   └── CIK/form_type/accession_number.txt
+│   │       │       └── 0000320193/10-K/0000320193-23-000106.txt
+│   │       └── structured_json/ (parsed filings)
+│   │           └── CIK/form_type/accession_number.json
+│   │               └── 0000320193/10-K/0000320193-23-000106.json
+│   │
+│   ├── news_data/
+│   │   ├── polygon_benzinga_mock/ | other_news_api /
+│   │   │   └── YYYY/MM/DD/ (partition by publish date)
+│   │   │       └── article_guid_or_hash.json (containing headline, body, metadata)
+│   │
+│   ├── central_bank_communications/
+│   │   ├── federal_reserve_scraper_mock/
+│   │   │   └── YYYY/MM/DD/
+│   │   │       └── fomc_minutes_20231026.txt | .json (with metadata)
+│   │   └── ecb_scraper_mock/
+│   │       └── YYYY/MM/DD/
+│   │           └── press_conference_20231026.txt | .json
+│   │
+│   ├── social_media_data/
+│   │   └── twitter_x_mock/
+│   │       ├── academic_datasets/
+│   │       │   └── dataset_name_part_N.jsonl.gz
+│   │       └── live_api_stream/
+│   │           └── YYYY/MM/DD/HH/ (partition by collection time)
+│   │               └── tweets_batch_xxxxxxxx.jsonl.gz
+│   │
+│   └── alternative_data/
+│       └── gdelt_mock/
+│           └── YYYYMMDD/
+│               └── events_20231026.csv.gz | .json
+│
+├── processed_data/ (typically columnar like Parquet)
+│   ├── market_data/
+│   │   ├── equity_daily_prices/
+│   │   │   └── asset_id_partitioned/ (or just one large dataset)
+│   │   │       └── trade_date=YYYY-MM-DD/ (Hive-style partitioning)
+│   │   │           └── data.parquet
+│   │   └── derived_market_features/
+│   │       └── feature_date=YYYY-MM-DD/
+│   │           └── data.parquet
+│   │
+│   ├── economic_data/
+│   │   └── economic_surprise_features/
+│   │       └── release_date=YYYY-MM-DD/
+│   │           └── data.parquet
+│   │
+│   ├── nlp_features/
+│   │   ├── news_article_features/
+│   │   │   └── model_name=finbert_sentiment/publish_date=YYYY-MM-DD/
+│   │   │       └── data.parquet
+│   │   └── sec_filing_features/
+│   │       └── model_name=finbert_litigiousness/filing_date=YYYY-MM-DD/
+│   │           └── data.parquet
+│   │
+│   ├── geopolitical_events_processed/
+│   │   └── event_date=YYYY-MM-DD/
+│   │       └── data.parquet
+│   │
+│   ├── social_media_features/
+│   │   └── platform=twitter_x/publish_date=YYYY-MM-DD/
+│   │       └── data.parquet
+│   │
+│   └── final_assembled_dataset/ (target dataset for modeling)
+│       └── YYYYMMDD_snapshot/ (version or snapshot date)
+│           └── master_dataset.parquet
+│
+└── temp_data/ (for intermediate processing steps, can be cleaned regularly)
+    └── ...
+
+└── logs/ (application and ETL job logs)
+    └── data_ingestion/
+    │   └── YYYY/MM/DD/
+    │       └── ingestion_job_xxxxx.log
+    └── feature_engineering/
+        └── YYYY/MM/DD/
+            └── feature_job_yyyyy.log
+
+Notes:
+- Partitioning strategy (e.g., by date, by asset_id) is crucial for performance and cost management in S3/Athena/Spark.
+- File formats: Raw data can be JSON, CSV, TXT. Processed data should ideally be Parquet or ORC for analytical workloads.
+- Compression (e.g., Gzip, Snappy) should be used for Parquet/ORC and large text/JSON files.
+- This is a high-level structure; specific prefixes and partitioning might be refined based on query patterns.
+```

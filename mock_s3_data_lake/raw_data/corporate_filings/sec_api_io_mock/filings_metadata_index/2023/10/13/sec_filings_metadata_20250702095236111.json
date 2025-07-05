@@ -1,0 +1,2762 @@
+[
+  {
+    "filing_id": 5254,
+    "asset_id": 9,
+    "ticker_symbol": "GROUPNEM",
+    "cik": "0000675080",
+    "filing_type_id": 4,
+    "form_type": "4",
+    "filing_date": "2023-10-13",
+    "period_of_report": null,
+    "accession_number": "0000675080-21-008976",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0000675080/4/0000675080-21-008976.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0000675080/4/0000675080-21-008976.json",
+    "ingestion_timestamp": "2025-07-02T09:52:36.110Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:36.111Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "LTDIOTA",
+              "company_name": "Jennings, Collins and Mcknight",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-05-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSWA",
+              "company_name": "White-Dean",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-07-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "GROUPNEO",
+              "company_name": "Williams-Patterson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-08-03",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "INCXMR",
+              "company_name": "Allen-Walter",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-03-17",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "PLCEMC",
+              "company_name": "Dean LLC",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-02-26",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Perez, Hendricks and Howe",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-07-10",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LTDXDN",
+              "company_name": "Curtis Inc",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2004-11-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "INCSTC",
+              "company_name": "Miller-Mccoy",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2001-09-08",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "GROUPNEM",
+              "company_name": "Johnson-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2000-03-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Marshall-Fox",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-10-24",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.887Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 5707,
+    "asset_id": 1,
+    "ticker_symbol": "LTDIOTA",
+    "cik": "0001408887",
+    "filing_type_id": 1,
+    "form_type": "10-K",
+    "filing_date": "2023-07-17",
+    "period_of_report": "2023-06-02",
+    "accession_number": "0001408887-21-251742",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001408887/10-K/0001408887-21-251742.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001408887/10-K/0001408887-21-251742.json",
+    "ingestion_timestamp": "2025-07-02T09:52:36.110Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:36.111Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "LTDIOTA",
+              "company_name": "Jennings, Collins and Mcknight",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-05-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSWA",
+              "company_name": "White-Dean",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-07-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "GROUPNEO",
+              "company_name": "Williams-Patterson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-08-03",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "INCXMR",
+              "company_name": "Allen-Walter",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-03-17",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "PLCEMC",
+              "company_name": "Dean LLC",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-02-26",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Perez, Hendricks and Howe",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-07-10",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LTDXDN",
+              "company_name": "Curtis Inc",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2004-11-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "INCSTC",
+              "company_name": "Miller-Mccoy",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2001-09-08",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "GROUPNEM",
+              "company_name": "Johnson-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2000-03-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Marshall-Fox",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-10-24",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.887Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 9142,
+    "asset_id": 1,
+    "ticker_symbol": "LTDIOTA",
+    "cik": "0001178038",
+    "filing_type_id": 2,
+    "form_type": "10-Q",
+    "filing_date": "2023-08-13",
+    "period_of_report": "2023-06-10",
+    "accession_number": "0001178038-21-443204",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001178038/10-Q/0001178038-21-443204.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001178038/10-Q/0001178038-21-443204.json",
+    "ingestion_timestamp": "2025-07-02T09:52:36.110Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:36.111Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "LTDIOTA",
+              "company_name": "Jennings, Collins and Mcknight",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-05-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSWA",
+              "company_name": "White-Dean",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-07-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "GROUPNEO",
+              "company_name": "Williams-Patterson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-08-03",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "INCXMR",
+              "company_name": "Allen-Walter",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-03-17",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "PLCEMC",
+              "company_name": "Dean LLC",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-02-26",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Perez, Hendricks and Howe",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-07-10",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LTDXDN",
+              "company_name": "Curtis Inc",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2004-11-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "INCSTC",
+              "company_name": "Miller-Mccoy",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2001-09-08",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "GROUPNEM",
+              "company_name": "Johnson-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2000-03-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Marshall-Fox",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-10-24",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.887Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 8978,
+    "asset_id": 6,
+    "ticker_symbol": "LLCBCH",
+    "cik": "0000970226",
+    "filing_type_id": 5,
+    "form_type": "S-1",
+    "filing_date": "2023-07-07",
+    "period_of_report": null,
+    "accession_number": "0000970226-22-717636",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0000970226/S-1/0000970226-22-717636.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0000970226/S-1/0000970226-22-717636.json",
+    "ingestion_timestamp": "2025-07-02T09:52:36.110Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:36.111Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "LTDIOTA",
+              "company_name": "Jennings, Collins and Mcknight",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-05-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSWA",
+              "company_name": "White-Dean",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-07-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "GROUPNEO",
+              "company_name": "Williams-Patterson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-08-03",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "INCXMR",
+              "company_name": "Allen-Walter",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-03-17",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "PLCEMC",
+              "company_name": "Dean LLC",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-02-26",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Perez, Hendricks and Howe",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-07-10",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LTDXDN",
+              "company_name": "Curtis Inc",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2004-11-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "INCSTC",
+              "company_name": "Miller-Mccoy",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2001-09-08",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "GROUPNEM",
+              "company_name": "Johnson-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2000-03-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Marshall-Fox",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-10-24",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.887Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 4976,
+    "asset_id": 9,
+    "ticker_symbol": "GROUPNEM",
+    "cik": "0000359342",
+    "filing_type_id": 5,
+    "form_type": "S-1",
+    "filing_date": "2022-01-14",
+    "period_of_report": null,
+    "accession_number": "0000359342-22-143618",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0000359342/S-1/0000359342-22-143618.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0000359342/S-1/0000359342-22-143618.json",
+    "ingestion_timestamp": "2025-07-02T09:52:36.110Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:36.111Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "LTDIOTA",
+              "company_name": "Jennings, Collins and Mcknight",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-05-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSWA",
+              "company_name": "White-Dean",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-07-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "GROUPNEO",
+              "company_name": "Williams-Patterson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-08-03",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "INCXMR",
+              "company_name": "Allen-Walter",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-03-17",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "PLCEMC",
+              "company_name": "Dean LLC",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-02-26",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Perez, Hendricks and Howe",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-07-10",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LTDXDN",
+              "company_name": "Curtis Inc",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2004-11-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "INCSTC",
+              "company_name": "Miller-Mccoy",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2001-09-08",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "GROUPNEM",
+              "company_name": "Johnson-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2000-03-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Marshall-Fox",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-10-24",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.887Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 3867,
+    "asset_id": 2,
+    "ticker_symbol": "AND SONSWA",
+    "cik": "0000951558",
+    "filing_type_id": 5,
+    "form_type": "S-1",
+    "filing_date": "2022-04-30",
+    "period_of_report": null,
+    "accession_number": "0000951558-21-262510",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0000951558/S-1/0000951558-21-262510.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0000951558/S-1/0000951558-21-262510.json",
+    "ingestion_timestamp": "2025-07-02T09:52:36.110Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:36.111Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "LTDIOTA",
+              "company_name": "Jennings, Collins and Mcknight",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-05-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSWA",
+              "company_name": "White-Dean",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-07-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "GROUPNEO",
+              "company_name": "Williams-Patterson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-08-03",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "INCXMR",
+              "company_name": "Allen-Walter",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-03-17",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "PLCEMC",
+              "company_name": "Dean LLC",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-02-26",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Perez, Hendricks and Howe",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-07-10",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LTDXDN",
+              "company_name": "Curtis Inc",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2004-11-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "INCSTC",
+              "company_name": "Miller-Mccoy",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2001-09-08",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "GROUPNEM",
+              "company_name": "Johnson-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2000-03-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Marshall-Fox",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-10-24",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.887Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 877,
+    "asset_id": 7,
+    "ticker_symbol": "LTDXDN",
+    "cik": "0000841179",
+    "filing_type_id": 1,
+    "form_type": "10-K",
+    "filing_date": "2023-04-12",
+    "period_of_report": "2023-02-21",
+    "accession_number": "0000841179-21-481421",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0000841179/10-K/0000841179-21-481421.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0000841179/10-K/0000841179-21-481421.json",
+    "ingestion_timestamp": "2025-07-02T09:52:36.110Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:36.111Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "LTDIOTA",
+              "company_name": "Jennings, Collins and Mcknight",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-05-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSWA",
+              "company_name": "White-Dean",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-07-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "GROUPNEO",
+              "company_name": "Williams-Patterson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-08-03",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "INCXMR",
+              "company_name": "Allen-Walter",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-03-17",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "PLCEMC",
+              "company_name": "Dean LLC",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-02-26",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Perez, Hendricks and Howe",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-07-10",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LTDXDN",
+              "company_name": "Curtis Inc",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2004-11-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "INCSTC",
+              "company_name": "Miller-Mccoy",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2001-09-08",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "GROUPNEM",
+              "company_name": "Johnson-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2000-03-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Marshall-Fox",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-10-24",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.887Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 6439,
+    "asset_id": 9,
+    "ticker_symbol": "GROUPNEM",
+    "cik": "0000525335",
+    "filing_type_id": 5,
+    "form_type": "S-1",
+    "filing_date": "2022-04-25",
+    "period_of_report": null,
+    "accession_number": "0000525335-21-525559",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0000525335/S-1/0000525335-21-525559.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0000525335/S-1/0000525335-21-525559.json",
+    "ingestion_timestamp": "2025-07-02T09:52:36.110Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:36.111Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "LTDIOTA",
+              "company_name": "Jennings, Collins and Mcknight",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-05-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSWA",
+              "company_name": "White-Dean",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-07-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "GROUPNEO",
+              "company_name": "Williams-Patterson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-08-03",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "INCXMR",
+              "company_name": "Allen-Walter",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-03-17",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "PLCEMC",
+              "company_name": "Dean LLC",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-02-26",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Perez, Hendricks and Howe",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-07-10",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LTDXDN",
+              "company_name": "Curtis Inc",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2004-11-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "INCSTC",
+              "company_name": "Miller-Mccoy",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2001-09-08",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "GROUPNEM",
+              "company_name": "Johnson-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2000-03-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Marshall-Fox",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-10-24",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.887Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 960,
+    "asset_id": 4,
+    "ticker_symbol": "INCXMR",
+    "cik": "0001187348",
+    "filing_type_id": 2,
+    "form_type": "10-Q",
+    "filing_date": "2023-07-22",
+    "period_of_report": "2023-04-25",
+    "accession_number": "0001187348-21-129090",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001187348/10-Q/0001187348-21-129090.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001187348/10-Q/0001187348-21-129090.json",
+    "ingestion_timestamp": "2025-07-02T09:52:36.110Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:36.111Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "LTDIOTA",
+              "company_name": "Jennings, Collins and Mcknight",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-05-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSWA",
+              "company_name": "White-Dean",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-07-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "GROUPNEO",
+              "company_name": "Williams-Patterson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-08-03",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "INCXMR",
+              "company_name": "Allen-Walter",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-03-17",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "PLCEMC",
+              "company_name": "Dean LLC",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-02-26",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Perez, Hendricks and Howe",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-07-10",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LTDXDN",
+              "company_name": "Curtis Inc",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2004-11-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "INCSTC",
+              "company_name": "Miller-Mccoy",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2001-09-08",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "GROUPNEM",
+              "company_name": "Johnson-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2000-03-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Marshall-Fox",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-10-24",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.887Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 8145,
+    "asset_id": 6,
+    "ticker_symbol": "LLCBCH",
+    "cik": "0000719993",
+    "filing_type_id": 2,
+    "form_type": "10-Q",
+    "filing_date": "2022-07-28",
+    "period_of_report": "2022-05-19",
+    "accession_number": "0000719993-23-056294",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0000719993/10-Q/0000719993-23-056294.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0000719993/10-Q/0000719993-23-056294.json",
+    "ingestion_timestamp": "2025-07-02T09:52:36.110Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:36.111Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "LTDIOTA",
+              "company_name": "Jennings, Collins and Mcknight",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-05-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSWA",
+              "company_name": "White-Dean",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-07-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "GROUPNEO",
+              "company_name": "Williams-Patterson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-08-03",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "INCXMR",
+              "company_name": "Allen-Walter",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-03-17",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "PLCEMC",
+              "company_name": "Dean LLC",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-02-26",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Perez, Hendricks and Howe",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-07-10",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LTDXDN",
+              "company_name": "Curtis Inc",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2004-11-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "INCSTC",
+              "company_name": "Miller-Mccoy",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2001-09-08",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "GROUPNEM",
+              "company_name": "Johnson-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2000-03-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Marshall-Fox",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-10-24",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.887Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 2283,
+    "asset_id": 10,
+    "ticker_symbol": "AND SONSBC",
+    "cik": "0000449879",
+    "filing_type_id": 3,
+    "form_type": "8-K",
+    "filing_date": "2023-10-14",
+    "period_of_report": null,
+    "accession_number": "0000449879-23-003654",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0000449879/8-K/0000449879-23-003654.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0000449879/8-K/0000449879-23-003654.json",
+    "ingestion_timestamp": "2025-07-02T09:52:36.110Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:36.111Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "LTDIOTA",
+              "company_name": "Jennings, Collins and Mcknight",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-05-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSWA",
+              "company_name": "White-Dean",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-07-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "GROUPNEO",
+              "company_name": "Williams-Patterson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-08-03",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "INCXMR",
+              "company_name": "Allen-Walter",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-03-17",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "PLCEMC",
+              "company_name": "Dean LLC",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-02-26",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Perez, Hendricks and Howe",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-07-10",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LTDXDN",
+              "company_name": "Curtis Inc",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2004-11-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "INCSTC",
+              "company_name": "Miller-Mccoy",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2001-09-08",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "GROUPNEM",
+              "company_name": "Johnson-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2000-03-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Marshall-Fox",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-10-24",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.887Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 3465,
+    "asset_id": 2,
+    "ticker_symbol": "AND SONSWA",
+    "cik": "0000631977",
+    "filing_type_id": 1,
+    "form_type": "10-K",
+    "filing_date": "2023-09-01",
+    "period_of_report": "2023-06-05",
+    "accession_number": "0000631977-21-967832",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0000631977/10-K/0000631977-21-967832.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0000631977/10-K/0000631977-21-967832.json",
+    "ingestion_timestamp": "2025-07-02T09:52:36.110Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:36.111Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "LTDIOTA",
+              "company_name": "Jennings, Collins and Mcknight",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-05-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSWA",
+              "company_name": "White-Dean",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-07-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "GROUPNEO",
+              "company_name": "Williams-Patterson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-08-03",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "INCXMR",
+              "company_name": "Allen-Walter",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-03-17",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "PLCEMC",
+              "company_name": "Dean LLC",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-02-26",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Perez, Hendricks and Howe",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-07-10",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LTDXDN",
+              "company_name": "Curtis Inc",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2004-11-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "INCSTC",
+              "company_name": "Miller-Mccoy",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2001-09-08",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "GROUPNEM",
+              "company_name": "Johnson-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2000-03-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Marshall-Fox",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-10-24",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.887Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 5602,
+    "asset_id": 2,
+    "ticker_symbol": "AND SONSWA",
+    "cik": "0001794724",
+    "filing_type_id": 1,
+    "form_type": "10-K",
+    "filing_date": "2022-05-17",
+    "period_of_report": "2022-04-16",
+    "accession_number": "0001794724-23-850562",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001794724/10-K/0001794724-23-850562.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001794724/10-K/0001794724-23-850562.json",
+    "ingestion_timestamp": "2025-07-02T09:52:36.110Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:36.111Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "LTDIOTA",
+              "company_name": "Jennings, Collins and Mcknight",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-05-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSWA",
+              "company_name": "White-Dean",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-07-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "GROUPNEO",
+              "company_name": "Williams-Patterson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-08-03",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "INCXMR",
+              "company_name": "Allen-Walter",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-03-17",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "PLCEMC",
+              "company_name": "Dean LLC",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-02-26",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Perez, Hendricks and Howe",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-07-10",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LTDXDN",
+              "company_name": "Curtis Inc",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2004-11-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "INCSTC",
+              "company_name": "Miller-Mccoy",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2001-09-08",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "GROUPNEM",
+              "company_name": "Johnson-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2000-03-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Marshall-Fox",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-10-24",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.887Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 3363,
+    "asset_id": 3,
+    "ticker_symbol": "GROUPNEO",
+    "cik": "0001075741",
+    "filing_type_id": 3,
+    "form_type": "8-K",
+    "filing_date": "2023-11-02",
+    "period_of_report": null,
+    "accession_number": "0001075741-23-524923",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001075741/8-K/0001075741-23-524923.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001075741/8-K/0001075741-23-524923.json",
+    "ingestion_timestamp": "2025-07-02T09:52:36.110Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:36.111Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "LTDIOTA",
+              "company_name": "Jennings, Collins and Mcknight",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-05-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSWA",
+              "company_name": "White-Dean",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-07-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "GROUPNEO",
+              "company_name": "Williams-Patterson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-08-03",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "INCXMR",
+              "company_name": "Allen-Walter",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-03-17",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "PLCEMC",
+              "company_name": "Dean LLC",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-02-26",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Perez, Hendricks and Howe",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-07-10",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LTDXDN",
+              "company_name": "Curtis Inc",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2004-11-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "INCSTC",
+              "company_name": "Miller-Mccoy",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2001-09-08",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "GROUPNEM",
+              "company_name": "Johnson-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2000-03-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Marshall-Fox",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-10-24",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.887Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  },
+  {
+    "filing_id": 8486,
+    "asset_id": 2,
+    "ticker_symbol": "AND SONSWA",
+    "cik": "0001904375",
+    "filing_type_id": 2,
+    "form_type": "10-Q",
+    "filing_date": "2023-06-26",
+    "period_of_report": "2023-05-19",
+    "accession_number": "0001904375-23-061168",
+    "raw_text_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/raw_text/0001904375/10-Q/0001904375-23-061168.txt",
+    "structured_json_s3_path": "s3://mock-bucket/raw_data/corporate_filings/sec_api_io_mock/structured_json/0001904375/10-Q/0001904375-23-061168.json",
+    "ingestion_timestamp": "2025-07-02T09:52:36.110Z",
+    "source": "SECApi_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:36.111Z",
+      "source_api_simulation": "SECApi_FilingsMeta_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "assets": [
+            {
+              "asset_id": 1,
+              "ticker_symbol": "LTDIOTA",
+              "company_name": "Jennings, Collins and Mcknight",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-05-07",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 2,
+              "ticker_symbol": "AND SONSWA",
+              "company_name": "White-Dean",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2009-07-23",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 3,
+              "ticker_symbol": "GROUPNEO",
+              "company_name": "Williams-Patterson",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2005-08-03",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 4,
+              "ticker_symbol": "INCXMR",
+              "company_name": "Allen-Walter",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-03-17",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 5,
+              "ticker_symbol": "PLCEMC",
+              "company_name": "Dean LLC",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-02-26",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 6,
+              "ticker_symbol": "LLCBCH",
+              "company_name": "Perez, Hendricks and Howe",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2003-07-10",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 7,
+              "ticker_symbol": "LTDXDN",
+              "company_name": "Curtis Inc",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2004-11-16",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 8,
+              "ticker_symbol": "INCSTC",
+              "company_name": "Miller-Mccoy",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2001-09-08",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 9,
+              "ticker_symbol": "GROUPNEM",
+              "company_name": "Johnson-Kelley",
+              "asset_class": "Equity",
+              "exchange": "NASDAQ",
+              "first_seen_date": "2000-03-31",
+              "last_seen_date": null
+            },
+            {
+              "asset_id": 10,
+              "ticker_symbol": "AND SONSBC",
+              "company_name": "Marshall-Fox",
+              "asset_class": "Equity",
+              "exchange": "NYSE",
+              "first_seen_date": "2006-10-24",
+              "last_seen_date": null
+            }
+          ],
+          "filing_types": [
+            {
+              "filing_type_id": 1,
+              "form_type": "10-K",
+              "description": "SEC Form 10-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.887Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 2,
+              "form_type": "10-Q",
+              "description": "SEC Form 10-Q",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 3,
+              "form_type": "8-K",
+              "description": "SEC Form 8-K",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 4,
+              "form_type": "4",
+              "description": "SEC Form 4",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            },
+            {
+              "filing_type_id": 5,
+              "form_type": "S-1",
+              "description": "SEC Form S-1",
+              "_ingestion_details": {
+                "ingested_at_utc": "2025-07-02T09:52:35.888Z",
+                "source_api_simulation": "SECApi_FilingTypes_Mock",
+                "original_params": {
+                  "args": [],
+                  "kwargs": {}
+                }
+              }
+            }
+          ],
+          "num_filings": 15
+        }
+      }
+    }
+  }
+]

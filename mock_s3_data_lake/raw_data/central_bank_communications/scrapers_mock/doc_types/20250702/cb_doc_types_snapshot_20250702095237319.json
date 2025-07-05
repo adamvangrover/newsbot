@@ -1,0 +1,106 @@
+[
+  {
+    "doc_type_id": 1,
+    "doc_type_name": "FOMC Statement",
+    "issuing_body": "Federal Reserve",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:37.319Z",
+      "source_api_simulation": "CBScraper_DocTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "doc_type_id": 2,
+    "doc_type_name": "FOMC Minutes",
+    "issuing_body": "Federal Reserve",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:37.319Z",
+      "source_api_simulation": "CBScraper_DocTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "doc_type_id": 3,
+    "doc_type_name": "Chair Speech",
+    "issuing_body": "Federal Reserve",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:37.319Z",
+      "source_api_simulation": "CBScraper_DocTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "doc_type_id": 4,
+    "doc_type_name": "Beige Book",
+    "issuing_body": "Federal Reserve",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:37.319Z",
+      "source_api_simulation": "CBScraper_DocTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "doc_type_id": 5,
+    "doc_type_name": "Monetary Policy Decision",
+    "issuing_body": "ECB",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:37.319Z",
+      "source_api_simulation": "CBScraper_DocTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "doc_type_id": 6,
+    "doc_type_name": "Press Conference Statement",
+    "issuing_body": "ECB",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:37.319Z",
+      "source_api_simulation": "CBScraper_DocTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "doc_type_id": 7,
+    "doc_type_name": "Account of Monetary Policy Meeting",
+    "issuing_body": "ECB",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:37.319Z",
+      "source_api_simulation": "CBScraper_DocTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  },
+  {
+    "doc_type_id": 8,
+    "doc_type_name": "Governing Council Speech",
+    "issuing_body": "ECB",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:52:37.319Z",
+      "source_api_simulation": "CBScraper_DocTypes_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {}
+      }
+    }
+  }
+]

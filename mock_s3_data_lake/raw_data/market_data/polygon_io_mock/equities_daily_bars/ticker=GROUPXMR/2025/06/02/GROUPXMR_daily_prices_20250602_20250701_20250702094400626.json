@@ -1,0 +1,596 @@
+[
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-02",
+    "open_price": 400.1765,
+    "high_price": 401.6755,
+    "low_price": 394.8102,
+    "close_price": 398.3432,
+    "adjusted_close_price": 398.3432,
+    "volume": 4087309,
+    "vwap": 400.233,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625266Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.625971Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-03",
+    "open_price": 403.1376,
+    "high_price": 408.2535,
+    "low_price": 397.2737,
+    "close_price": 407.9532,
+    "adjusted_close_price": 407.9532,
+    "volume": 1964962,
+    "vwap": 404.3662,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625502Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.625977Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-04",
+    "open_price": 398.9259,
+    "high_price": 399.9117,
+    "low_price": 395.8125,
+    "close_price": 399.8013,
+    "adjusted_close_price": 399.8013,
+    "volume": 1587571,
+    "vwap": 397.943,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625523Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.625981Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-05",
+    "open_price": 394.2646,
+    "high_price": 399.84,
+    "low_price": 392.158,
+    "close_price": 399.2849,
+    "adjusted_close_price": 399.2849,
+    "volume": 6490110,
+    "vwap": 395.752,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625536Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.625984Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-06",
+    "open_price": 385.176,
+    "high_price": 390.8847,
+    "low_price": 381.2697,
+    "close_price": 390.5067,
+    "adjusted_close_price": 390.5067,
+    "volume": 2900538,
+    "vwap": 387.7751,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625548Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.625988Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-09",
+    "open_price": 373.9148,
+    "high_price": 377.4582,
+    "low_price": 368.9559,
+    "close_price": 369.199,
+    "adjusted_close_price": 369.199,
+    "volume": 580740,
+    "vwap": 369.8601,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625562Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.625991Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-10",
+    "open_price": 356.9333,
+    "high_price": 357.1374,
+    "low_price": 355.1921,
+    "close_price": 355.7395,
+    "adjusted_close_price": 355.7395,
+    "volume": 777355,
+    "vwap": 356.9988,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625573Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.625995Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-11",
+    "open_price": 345.4152,
+    "high_price": 346.2179,
+    "low_price": 340.4697,
+    "close_price": 342.0066,
+    "adjusted_close_price": 342.0066,
+    "volume": 9769381,
+    "vwap": 342.5405,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625584Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.625998Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-12",
+    "open_price": 340.603,
+    "high_price": 343.2158,
+    "low_price": 340.5055,
+    "close_price": 341.2969,
+    "adjusted_close_price": 341.2969,
+    "volume": 4809554,
+    "vwap": 341.2117,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625595Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.626007Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-13",
+    "open_price": 330.4168,
+    "high_price": 333.3255,
+    "low_price": 328.1935,
+    "close_price": 328.3233,
+    "adjusted_close_price": 328.3233,
+    "volume": 3470995,
+    "vwap": 330.2018,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625606Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.626010Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-16",
+    "open_price": 334.7279,
+    "high_price": 338.8798,
+    "low_price": 333.9342,
+    "close_price": 338.0387,
+    "adjusted_close_price": 338.0387,
+    "volume": 2557431,
+    "vwap": 337.1287,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625619Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.626013Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-17",
+    "open_price": 334.2299,
+    "high_price": 337.6309,
+    "low_price": 332.3821,
+    "close_price": 334.3602,
+    "adjusted_close_price": 334.3602,
+    "volume": 6017787,
+    "vwap": 334.0703,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625630Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.626017Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-18",
+    "open_price": 337.792,
+    "high_price": 342.5173,
+    "low_price": 336.4037,
+    "close_price": 339.6503,
+    "adjusted_close_price": 339.6503,
+    "volume": 8794184,
+    "vwap": 340.5993,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625641Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.626020Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-19",
+    "open_price": 345.8545,
+    "high_price": 350.2661,
+    "low_price": 345.8429,
+    "close_price": 346.2543,
+    "adjusted_close_price": 346.2543,
+    "volume": 1245270,
+    "vwap": 346.6703,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625652Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.626023Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-20",
+    "open_price": 347.6442,
+    "high_price": 350.2578,
+    "low_price": 342.4874,
+    "close_price": 343.1945,
+    "adjusted_close_price": 343.1945,
+    "volume": 2719853,
+    "vwap": 350.159,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625663Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.626026Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-23",
+    "open_price": 351.0815,
+    "high_price": 355.7322,
+    "low_price": 347.7521,
+    "close_price": 350.8492,
+    "adjusted_close_price": 350.8492,
+    "volume": 9253053,
+    "vwap": 348.9223,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625683Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.626030Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-24",
+    "open_price": 344.2142,
+    "high_price": 346.9018,
+    "low_price": 343.4871,
+    "close_price": 344.7051,
+    "adjusted_close_price": 344.7051,
+    "volume": 2622674,
+    "vwap": 343.9491,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625703Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.626033Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-25",
+    "open_price": 349.3048,
+    "high_price": 349.5648,
+    "low_price": 348.4342,
+    "close_price": 348.9235,
+    "adjusted_close_price": 348.9235,
+    "volume": 7098168,
+    "vwap": 349.2496,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625728Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.626036Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-26",
+    "open_price": 349.2176,
+    "high_price": 350.1042,
+    "low_price": 345.8729,
+    "close_price": 346.3569,
+    "adjusted_close_price": 346.3569,
+    "volume": 2215653,
+    "vwap": 346.2292,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625780Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.626039Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-27",
+    "open_price": 343.6952,
+    "high_price": 344.6801,
+    "low_price": 342.316,
+    "close_price": 344.2431,
+    "adjusted_close_price": 344.2431,
+    "volume": 883380,
+    "vwap": 342.9327,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625797Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.626042Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-06-30",
+    "open_price": 347.4173,
+    "high_price": 351.2324,
+    "low_price": 346.4712,
+    "close_price": 350.5887,
+    "adjusted_close_price": 350.5887,
+    "volume": 4327589,
+    "vwap": 350.1231,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625810Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.626046Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  },
+  {
+    "asset_id": 1,
+    "ticker_symbol": "GROUPXMR",
+    "trade_date": "2025-07-01",
+    "open_price": 358.0328,
+    "high_price": 358.4136,
+    "low_price": 354.7536,
+    "close_price": 355.2857,
+    "adjusted_close_price": 355.2857,
+    "volume": 1303712,
+    "vwap": 356.4289,
+    "ingestion_timestamp": "2025-07-02T09:44:00.625822Z",
+    "source": "PolygonIO_mock",
+    "_ingestion_details": {
+      "ingested_at_utc": "2025-07-02T09:44:00.626049Z",
+      "source_api_simulation": "PolygonIO_DailyPrices_Mock",
+      "original_params": {
+        "args": [],
+        "kwargs": {
+          "asset_id": 1,
+          "ticker": "GROUPXMR",
+          "start_date_str": "2025-06-02",
+          "end_date_str": "2025-07-01"
+        }
+      }
+    }
+  }
+]

@@ -19,3 +19,58 @@ Doc_ID,Ticker,Source_Type,Source_Name,Timestamp,Headline,Full_Text_Path
 18,JPM,News,MockWSJ,2023-05-01T10:30:00Z,"JPMorgan Chase to Acquire Most of First Republic Bank Assets",s3://mock-bucket/news_jpm_frc_acq.txt
 19,FRC,News,MockNYT,2023-05-01T10:35:00Z,"First Republic Bank Seized by Regulators, Sold to JPMorgan Chase",s3://mock-bucket/news_frc_jpm_seized.txt
 20,SIVB,News,MockTheGuardian,2023-03-10T15:00:00Z,"Silicon Valley Bank Collapses in Biggest Bank Failure Since 2008",s3://mock-bucket/news_sivb_collapse.txt
+21,AAPL,News,MockFinancialTimes,2021-01-28T08:00:00Z,"Apple Reports Record Revenue on Strong iPhone 12 Sales",s3://mock-bucket/news_aapl_q12021.txt
+22,NVDA,News,MockDowJones,2021-02-25T10:00:00Z,"Nvidia Beats Estimates, Cites Strong Demand for Gaming and Data Center Chips",s3://mock-bucket/news_nvda_q42021.txt
+23,DIS,News,MockBloomberg,2021-05-13T21:00:00Z,"Disney+ Subscriber Growth Slows, Stock Dips",s3://mock-bucket/news_dis_subscribers_001.txt
+24,COST,10-K,SEC EDGAR Synthetic,2021-10-13T17:00:00Z,"Costco Wholesale Corporation Form 10-K: Annual Report 2021",s3://mock-bucket/10k_cost_2021.txt
+25,,ECB_PressConference,ECB Synthetic,2021-09-09T12:45:00Z,"ECB Slows Pace of Pandemic Asset Purchases",s3://mock-bucket/ecb_20210909.txt
+26,USA,News,MockAssociatedPress,2022-01-12T14:00:00Z,"US Inflation Hits 40-Year High, CPI at 7.0%",s3://mock-bucket/news_us_cpi_20220112.txt
+27,MSFT,8-K,SEC EDGAR Synthetic,2022-01-18T12:00:00Z,"Microsoft Form 8-K: Announces Acquisition of Activision Blizzard",s3://mock-bucket/8k_msft_activision_001.txt
+28,GOOG,News,MockWSJ,2022-02-02T08:30:00Z,"Google Parent Alphabet Announces Stock Split, Strong Earnings",s3://mock-bucket/news_goog_split_001.txt
+29,XOM,News,MockReuters,2022-02-01T13:15:00Z,"ExxonMobil Posts Highest Profit Since 2014 on Soaring Oil Prices",s3://mock-bucket/news_xom_q42021.txt
+30,TSLA,News,MockDowJones,2022-04-20T21:30:00Z,"Tesla Beats Profit Expectations Despite Supply Chain Woes",s3://mock-bucket/news_tsla_q12022.txt
+31,,FOMC_Statement,Federal Reserve Synthetic,2022-05-04T18:00:00Z,"FOMC Statement May 2022 - Fed Raises Rates by 50 Basis Points",s3://mock-bucket/fomc_20220504.txt
+32,ADBE,News,MockBloomberg,2022-09-15T12:00:00Z,"Adobe to Acquire Figma for $20 Billion",s3://mock-bucket/news_adbe_figma_001.txt
+33,CRM,Transcript,VendorX Transcripts,2022-11-30T22:00:00Z,"Salesforce Q3 2023 Earnings Call - Co-CEO Steps Down",s3://mock-bucket/transcript_crm_q32023.txt
+34,BAC,News,MockFinancialTimes,2023-01-13T12:30:00Z,"Bank of America Profit Rises on Higher Interest Rates",s3://mock-bucket/news_bac_q42022.txt
+35,PFE,10-Q,SEC EDGAR Synthetic,2023-05-02T17:00:00Z,"Pfizer Inc. Form 10-Q: Quarterly Report Q1 2023",s3://mock-bucket/10q_pfe_q12023.txt
+36,USA,News,MockReuters,2023-03-10T14:00:00Z,"US Jobs Report Shows Strong Growth, Unemployment Rate Ticks Up",s3://mock-bucket/news_us_nfp_20230310.txt
+37,NVDA,News,MockWSJ,2023-05-24T21:00:00Z,"Nvidia Shares Surge on AI Chip Demand, Blowout Forecast",s3://mock-bucket/news_nvda_ai_001.txt
+38,LLY,News,MockDowJones,2023-08-08T11:00:00Z,"Eli Lilly Shares Soar on Positive Weight-Loss Drug Data",s3://mock-bucket/news_lly_weightloss_001.txt
+39,JPM,8-K,SEC EDGAR Synthetic,2023-05-01T10:00:00Z,"JPMorgan Chase Form 8-K: Acquires First Republic Bank",s3://mock-bucket/8k_jpm_firstrepublic_001.txt
+40,,ECB_PressConference,ECB Synthetic,2023-07-27T12:45:00Z,"ECB Raises Interest Rates Again, Signals Potential Pause",s3://mock-bucket/ecb_20230727.txt
+41,AAPL,News,MockBloomberg,2023-09-12T17:00:00Z,"Apple Unveils iPhone 15 Lineup with USB-C",s3://mock-bucket/news_aapl_iphone15_001.txt
+42,WMT,Transcript,VendorY Transcripts,2023-11-16T13:00:00Z,"Walmart Q3 2024 Earnings Call - Cautions on Consumer Spending",s3://mock-bucket/transcript_wmt_q32024.txt
+43,ALL,News,MockAssociatedPress,2024-01-03T09:00:00Z,"Analysts Predict Modest Market Gains in 2024 Amid Economic Uncertainty",s3://mock-bucket/news_marketoutlook_2024.txt
+44,MSFT,News,MockReuters,2024-01-15T11:00:00Z,"Microsoft Pushes Further into AI with New Copilot Features",s3://mock-bucket/news_msft_copilot_001.txt
+45,TSLA,10-K,SEC EDGAR Synthetic,2024-01-29T18:00:00Z,"Tesla Inc. Form 10-K: Annual Report 2023",s3://mock-bucket/10k_tsla_2023.txt
+46,,FOMC_Minutes,Federal Reserve Synthetic,2024-01-03T19:00:00Z,"FOMC Minutes December 2023 - Officials See Rates Lower in 2024",s3://mock-bucket/fomc_minutes_202312.txt
+47,GOOG,News,MockWSJ,2024-01-30T21:30:00Z,"Alphabet Ad Revenue Growth Slows, Cloud Disappoints",s3://mock-bucket/news_goog_q42023.txt
+48,AMZN,News,MockDowJones,2024-02-01T21:30:00Z,"Amazon Beats Holiday Quarter Estimates, AWS Accelerates",s3://mock-bucket/news_amzn_q42023.txt
+49,NVDA,News,MockFinancialTimes,2024-02-21T21:15:00Z,"Nvidia Continues Explosive Growth with Another Record Quarter",s3://mock-bucket/news_nvda_q42024.txt
+50,USA,News,MockBloomberg,2024-01-11T13:45:00Z,"US January CPI Comes in Hotter Than Expected at 3.4%",s3://mock-bucket/news_us_cpi_20240111.txt
+51,JPM,News,MockReuters,2024-01-12T12:15:00Z,"JPMorgan Chase Posts Record Annual Profit",s3://mock-bucket/news_jpm_q42023_record.txt
+52,V,Transcript,VendorX Transcripts,2024-01-25T22:00:00Z,"Visa Q1 2024 Earnings Call - Strong Travel Spending Boosts Results",s3://mock-bucket/transcript_v_q12024.txt
+53,JNJ,News,MockAssociatedPress,2024-01-23T12:00:00Z,"Johnson & Johnson Beats Estimates on Strong MedTech Sales",s3://mock-bucket/news_jnj_q42023.txt
+54,XOM,10-Q,SEC EDGAR Synthetic,2023-10-27T17:00:00Z,"Exxon Mobil Corp. Form 10-Q: Quarterly Report Q3 2023",s3://mock-bucket/10q_xom_q32023.txt
+55,UNH,News,MockFinancialTimes,2023-10-13T11:30:00Z,"UnitedHealth Group Raises Forecast After Strong Q3",s3://mock-bucket/news_unh_q32023.txt
+56,PG,Transcript,VendorY Transcripts,2023-10-18T13:00:00Z,"Procter & Gamble Q1 2024 Earnings Call - Price Hikes Drive Growth",s3://mock-bucket/transcript_pg_q12024.txt
+57,HD,News,MockDowJones,2023-11-14T12:00:00Z,"Home Depot Sales Decline as DIY Demand Cools",s3://mock-bucket/news_hd_q32023.txt
+58,MA,8-K,SEC EDGAR Synthetic,2023-10-26T12:30:00Z,"Mastercard Incorporated Form 8-K: Management Update",s3://mock-bucket/8k_ma_mgmt_001.txt
+59,BAC,News,MockWSJ,2023-10-17T11:45:00Z,"Bank of America NII Boosts Q3 Profit",s3://mock-bucket/news_bac_q32023.txt
+60,PFE,News,MockReuters,2023-10-31T11:50:00Z,"Pfizer Cuts Full-Year Forecast on Lower COVID Product Sales",s3://mock-bucket/news_pfe_q32023_cut.txt
+61,KO,News,MockBloomberg,2023-10-24T11:00:00Z,"Coca-Cola Raises Revenue Outlook on Resilient Demand",s3://mock-bucket/news_ko_q32023.txt
+62,PEP,10-Q,SEC EDGAR Synthetic,2023-10-10T17:00:00Z,"PepsiCo Inc. Form 10-Q: Quarterly Report Q3 2023",s3://mock-bucket/10q_pep_q32023.txt
+63,MRK,News,MockFinancialTimes,2023-10-26T11:40:00Z,"Merck Beats Estimates on Strong Keytruda Sales",s3://mock-bucket/news_mrk_q32023.txt
+64,LLY,News,MockDowJones,2023-11-02T11:55:00Z,"Eli Lilly Expects Mounjaro Approval for Weight Loss This Year",s3://mock-bucket/news_lly_mounjaro_001.txt
+65,AVGO,News,MockReuters,2023-12-07T21:00:00Z,"Broadcom Completes VMware Acquisition, Issues Strong Forecast",s3://mock-bucket/news_avgo_vmware_001.txt
+66,COST,Transcript,VendorX Transcripts,2023-12-14T22:00:00Z,"Costco Q1 2024 Earnings Call - Membership Growth Remains Strong",s3://mock-bucket/transcript_cost_q12024.txt
+67,CVX,8-K,SEC EDGAR Synthetic,2023-10-23T10:00:00Z,"Chevron Form 8-K: Announces Acquisition of Hess Corporation",s3://mock-bucket/8k_cvx_hess_001.txt
+68,ADBE,News,MockWSJ,2023-12-13T21:00:00Z,"Adobe Beats Q4 Estimates, Provides Solid Outlook",s3://mock-bucket/news_adbe_q42023.txt
+69,CRM,News,MockBloomberg,2023-11-29T21:00:00Z,"Salesforce Stock Jumps on Strong Earnings and Upbeat Guidance",s3://mock-bucket/news_crm_q32024.txt
+70,MCD,News,MockFinancialTimes,2023-10-30T11:00:00Z,"McDonald's Sales Beat Estimates on Higher Prices, Traffic",s3://mock-bucket/news_mcd_q32023.txt
+71,NEE,News,MockDowJones,2023-10-24T12:00:00Z,"NextEra Energy Reaffirms Growth Outlook Despite Higher Rates",s3://mock-bucket/news_nee_q32023.txt
+72,LIN,Transcript,VendorY Transcripts,2023-10-26T13:00:00Z,"Linde Q3 2023 Earnings Call - Strong Performance in Americas",s3://mock-bucket/transcript_lin_q32023.txt
+73,DIS,News,MockReuters,2023-11-08T21:00:00Z,"Disney Beats Estimates, Announces Further Cost Cuts",s3://mock-bucket/news_dis_q42023.txt
+74,WMT,News,MockWSJ,2024-02-20T12:00:00Z,"Walmart Beats Q4 Estimates, Announces Vizio Acquisition",s3://mock-bucket/news_wmt_q42024_vizio.txt
+75,USA,News,MockAssociatedPress,2023-07-12T13:30:00Z,"US CPI Inflation Cools to 3.0% in June, Lowest Since March 2021",s3://mock-bucket/news_us_cpi_202306.txt
