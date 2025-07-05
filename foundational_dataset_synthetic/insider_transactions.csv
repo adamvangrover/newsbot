@@ -1,0 +1,71 @@
+Transaction_ID,Ticker,Transaction_Date,Insider_Name,Relationship,Transaction_Type,Shares_Traded,Price_Per_Share,Total_Value
+1,AAPL,2020-01-07,"James Miller","Director",Sell,15409,62.41,961649.69
+2,AAPL,2020-01-26,"James Miller","Director",Sell,18302,69.47,1271399.94
+3,AAPL,2022-06-07,"David Garcia","EVP Operations",Sell,1160,140.12,162539.20
+4,AAPL,2021-03-12,"James Miller","10% Owner",Buy,4073,119.07,484961.51
+5,AAPL,2022-04-06,"David Garcia","SVP Sales",Sell,19023,160.22,3048005.06
+6,AAPL,2022-01-12,"David Garcia","SVP Sales",Sell,1547,160.58,248416.06
+7,AAPL,2023-05-15,"James Miller","Director",Sell,1068,171.31,182979.08
+8,MSFT,2022-07-18,"Laura Williams","10% Owner",Sell,47183,261.55,12339735.65
+9,MSFT,2020-10-27,"Laura Williams","Chief People Officer",Sell,7380,198.30,1463454.00
+10,MSFT,2022-08-20,"Laura Williams","Director",Sell,2055,282.24,579903.20
+11,MSFT,2021-01-19,"Christopher Rodriguez","Director",Buy,2039,231.00,470999.00
+12,MSFT,2022-07-28,"Christopher Rodriguez","EVP Operations",Sell,38455,264.63,10171954.65
+13,MSFT,2020-10-20,"Laura Williams","EVP Operations",Sell,18024,194.69,3509004.56
+14,MSFT,2020-07-24,"Christopher Rodriguez","SVP Sales",Buy,3051,185.62,566326.62
+15,MSFT,2022-07-11,"Laura Williams","Director",Sell,10198,278.07,2835909.86
+16,NVDA,2020-08-09,"Jennifer Davis","10% Owner",Sell,30709,74.83,2297816.47
+17,NVDA,2020-05-05,"Robert Johnson","SVP Sales",Sell,6526,64.52,421033.52
+18,NVDA,2021-07-03,"Jennifer Davis","Chief People Officer",Sell,3152,186.68,588265.36
+19,NVDA,2020-07-03,"Jennifer Davis","SVP Sales",Sell,16418,75.77,1243997.86
+20,NVDA,2023-06-23,"Robert Johnson","SVP Sales",Buy,3495,435.47,1522017.65
+21,NVDA,2021-06-05,"Robert Johnson","EVP Operations",Sell,6076,194.91,1184288.16
+22,NVDA,2023-08-03,"Jennifer Davis","President COO",Sell,45434,447.75,20343970.50
+23,META,2023-04-10,"David Davis","SVP Sales",Buy,2303,288.39,664106.17
+24,META,2022-09-03,"David Davis","SVP Sales",Sell,14131,158.51,2239934.81
+25,META,2021-03-11,"David Davis","SVP Sales",Sell,1699,298.13,506522.87
+26,META,2022-02-28,"Emily Jones","10% Owner",Sell,29255,154.61,4523150.05
+27,META,2020-01-24,"Emily Jones","Director",Sell,41036,220.57,9053415.32
+28,META,2021-06-26,"Emily Jones","President COO",Sell,27457,303.40,8330459.80
+29,META,2023-01-19,"Emily Jones","EVP Operations",Buy,3192,298.26,952005.12
+30,META,2021-08-16,"Emily Jones","Director",Sell,18902,326.84,6177408.68
+31,META,2023-02-12,"Emily Jones","Director",Sell,14189,310.11,4399980.79
+32,AMGN,2021-10-05,"David Rodriguez","Director",Buy,3620,223.29,808310.80
+33,AMGN,2020-11-15,"David Rodriguez","Director",Sell,3348,241.69,809148.12
+34,AMGN,2023-03-26,"David Rodriguez","Director",Sell,40862,263.70,10775087.40
+35,AMGN,2023-09-02,"David Rodriguez","Chief People Officer",Sell,10028,259.90,2606277.20
+36,AMGN,2023-09-19,"James Johnson","Director",Buy,3406,271.60,925069.60
+37,UPS,2022-06-27,"Michael Johnson","SVP Sales",Sell,18937,217.18,4112549.86
+38,UPS,2021-07-20,"Robert Davis","SVP Sales",Sell,15618,192.51,3006615.18
+39,UPS,2021-07-19,"Michael Johnson","President COO",Buy,11074,192.69,2133953.06
+40,UPS,2023-09-17,"Robert Davis","General Counsel",Sell,1101,165.66,182391.66
+41,UPS,2020-05-18,"Robert Davis","Director",Sell,2746,101.61,279030.06
+42,UPS,2022-01-18,"Michael Johnson","Director",Buy,4039,205.37,829500.43
+43,IBM,2022-03-13,"Sarah Smith","Director",Sell,11628,137.98,1604431.44
+44,IBM,2020-05-01,"Sarah Smith","10% Owner",Sell,18682,120.91,2258481.02
+45,IBM,2022-05-09,"Sarah Smith","Director",Buy,1921,138.92,266865.32
+46,IBM,2023-03-24,"Sarah Smith","Director",Sell,16942,131.99,2236174.58
+47,IBM,2021-07-20,"James Miller","Director",Buy,2580,124.90,322242.00
+48,IBM,2022-07-12,"James Miller","President COO",Sell,47035,144.08,6776714.80
+49,IBM,2023-03-23,"James Miller","10% Owner",Sell,18899,131.19,2479369.81
+50,GOOGL,2020-11-18,"Jennifer Brown","EVP Operations",Sell,17020,64.40,1096088.00
+51,GOOGL,2023-08-23,"Jennifer Brown","SVP Sales",Sell,4379,134.70,589841.30
+52,GOOGL,2022-02-19,"Laura Davis","Director",Buy,3723,115.66,430508.58
+53,GOOGL,2021-08-05,"Jennifer Brown","Director",Sell,12130,103.95,1260913.50
+54,GOOGL,2022-06-27,"Laura Davis","Director",Sell,19495,117.78,2296127.10
+55,GOOGL,2020-01-18,"Jennifer Brown","EVP Operations",Sell,36470,69.75,2543782.50
+56,GOOGL,2020-05-26,"Laura Davis","General Counsel",Sell,7857,67.44,530000.88
+57,TSLA,2020-11-16,"Robert Garcia","Chief People Officer",Sell,3657,29.52,107954.64
+58,TSLA,2022-08-04,"Robert Garcia","EVP Operations",Sell,11031,326.64,3603016.44
+59,TSLA,2022-03-28,"Robert Garcia","Director",Sell,1867,315.18,588438.06
+60,TSLA,2022-10-20,"Robert Garcia","Director",Buy,1520,289.92,440678.40
+61,TSLA,2023-08-22,"Robert Garcia","SVP Sales",Sell,15252,201.22,3069077.04
+62,JPM,2021-02-22,"Jessica Martinez","Director",Sell,4136,156.10,645629.60
+63,JPM,2022-05-01,"Michael Williams","10% Owner",Sell,2452,130.98,321169.96
+64,JPM,2022-11-16,"Michael Williams","Director",Sell,19292,134.63,2597239.96
+65,JPM,2023-03-06,"Jessica Martinez","CFO",Sell,2024,140.12,283588.48
+66,JPM,2020-09-02,"Jessica Martinez","Director",Buy,2300,97.12,223376.00
+67,JPM,2020-11-05,"Jessica Martinez","Director",Buy,2317,105.21,243774.57
+68,JPM,2020-09-18,"Michael Williams","SVP Sales",Sell,17886,99.88,1786407.68
+69,JPM,2021-05-27,"Michael Williams","CFO",Buy,3119,163.59,509997.21
+70,JPM,2022-10-04,"Jessica Martinez","Director",Sell,11512,122.13,1405940.16
