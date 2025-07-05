@@ -1,0 +1,380 @@
+Event_ID,Release_Timestamp,Indicator_Name,Country,Consensus_Forecast,Actual_Value,Prior_Value,Surprise_Value,Surprise_ZScore
+# --- 2018 ---
+1,2018-01-05T13:30:00Z,Non-Farm Payrolls,USA,190000,148000,252000,-42000,-0.6
+2,2018-01-12T13:30:00Z,Consumer Price Index (CPI) YoY,USA,2.1,2.1,2.2,0.0,0.0
+3,2018-01-17T14:15:00Z,Industrial Production MoM,USA,0.4,0.9,0.4,0.5,1.2
+4,2018-01-26T13:30:00Z,Gross Domestic Product (GDP) QoQ Annualized Adv,USA,3.0,2.6,3.2,-0.4,-0.7
+5,2018-02-01T15:00:00Z,ISM Manufacturing PMI,USA,58.7,59.1,59.3,0.4,0.5
+6,2018-02-14T13:30:00Z,Retail Sales MoM,USA,0.2,-0.3,0.0,-0.5,-1.0
+7,2018-03-09T13:30:00Z,Non-Farm Payrolls,USA,205000,313000,326000,108000,1.5
+8,2018-03-13T12:30:00Z,Consumer Price Index (CPI) YoY,USA,2.2,2.2,2.1,0.0,0.1
+9,2018-03-28T12:30:00Z,Gross Domestic Product (GDP) QoQ Annualized Final,USA,2.7,2.9,2.5,0.2,0.4
+10,2018-01-25T12:45:00Z,ECB Main Refinancing Rate,EUR,0.00,0.00,0.00,0.0,0.0
+11,2018-01-04T08:55:00Z,German Unemployment Change,DEU,-15000,-29000,-18000,-14000,-1.1
+12,2018-02-15T02:00:00Z,China Industrial Production YoY,CHN,6.1,7.2,6.2,1.1,1.5
+13,2018-03-08T07:00:00Z,UK Official Bank Rate,GBR,0.50,0.50,0.50,0.0,0.0
+14,2018-04-06T13:30:00Z,Non-Farm Payrolls,USA,185000,103000,168000,-82000,-1.2
+15,2018-04-11T12:30:00Z,Producer Price Index (PPI) Final Demand YoY,USA,2.9,3.0,2.8,0.1,0.2
+# ... (Continue populating for 2018, aiming for ~40-50 diverse events for the year)
+# --- 2019 ---
+50,2019-01-04T13:30:00Z,Non-Farm Payrolls,USA,177000,312000,176000,135000,2.1
+51,2019-01-11T13:30:00Z,Consumer Price Index (CPI) YoY,USA,2.2,2.2,2.2,0.0,0.0
+52,2019-01-30T13:30:00Z,Gross Domestic Product (GDP) QoQ Annualized Adv,USA,2.6,2.2,3.4,-0.4,-0.8
+53,2019-03-12T12:30:00Z,Retail Sales MoM,USA,0.1,0.2,-1.6,0.1,0.3
+54,2019-06-03T14:00:00Z,ISM Manufacturing PMI,USA,53.0,52.1,52.8,-0.9,-1.2
+55,2019-01-24T12:45:00Z,ECB Main Refinancing Rate,EUR,0.00,0.00,0.00,0.0,0.0
+56,2019-02-05T09:30:00Z,Caixin Services PMI,CHN,53.6,53.6,53.9,0.0,0.0
+57,2019-03-07T12:00:00Z,Bank of England Bank Rate,GBR,0.75,0.75,0.75,0.0,0.0
+58,2019-04-10T12:30:00Z,FOMC Meeting Minutes,USA,,,,,,
+59,2019-05-15T12:30:00Z,Building Permits,USA,1290000,1296000,1288000,6000,0.2
+# ... (Continue populating for 2019)
+# --- 2020 ---
+100,2020-01-10T13:30:00Z,Non-Farm Payrolls,USA,160000,145000,256000,-15000,-0.2
+101,2020-02-25T15:00:00Z,Consumer Confidence,USA,132.0,130.7,130.4,-1.3,-0.5
+102,2020-03-15T21:00:00Z,FOMC Rate Decision (Unscheduled),USA,0.25,0.25,1.25,0.0,0.0 # Emergency Cut
+103,2020-04-16T12:30:00Z,Initial Jobless Claims,USA,5100000,5245000,6615000,145000,0.2 # Peak COVID claims
+104,2020-05-15T12:30:00Z,Housing Starts,USA,927000,891000,1097000,-36000,-0.7
+105,2020-03-12T12:45:00Z,ECB Main Refinancing Rate,EUR,0.00,0.00,0.00,0.0,0.0
+106,2020-04-30T09:00:00Z,Eurozone GDP QoQ Prel,EUR,-3.8,-3.6,-0.1,0.2,0.4
+107,2020-01-17T02:00:00Z,China GDP YoY,CHN,6.0,6.0,6.0,0.0,0.0
+108,2020-03-19T11:00:00Z,Bank of Japan Monetary Policy Statement,JPN,,,,,,
+109,2020-06-16T12:30:00Z,Retail Sales MoM,USA,8.0,17.7,-14.7,9.7,3.5 # Rebound
+# ... (Continue populating for 2020)
+# --- 2021 ---
+150,2021-01-08T13:30:00Z,Non-Farm Payrolls,USA,71000,-140000,336000,-211000,-2.5
+151,2021-03-10T13:30:00Z,Consumer Price Index (CPI) YoY,USA,1.7,1.7,1.4,0.0,0.0
+152,2021-07-29T12:30:00Z,Gross Domestic Product (GDP) QoQ Annualized Adv,USA,8.5,6.5,6.3,-2.0,-1.8
+153,2021-10-01T14:00:00Z,ISM Manufacturing PMI,USA,60.5,61.1,59.9,0.6,0.9
+154,2021-09-09T11:45:00Z,ECB Main Refinancing Rate,EUR,0.00,0.00,0.00,0.0,0.0
+155,2021-07-15T02:00:00Z,China GDP YoY,CHN,8.0,7.9,18.3,-0.1,-0.1
+156,2021-06-17T07:00:00Z,UK Retail Sales MoM,GBR,1.5,-1.4,9.2,-2.9,-1.5
+157,2021-11-03T18:00:00Z,FOMC Rate Decision,USA,0.25,0.25,0.25,0.0,0.0 # Tapering announced
+158,2021-12-16T12:30:00Z,Philly Fed Manufacturing Index,USA,30.0,15.4,39.0,-14.6,-1.8
+# ... (Continue populating for 2021)
+# --- 2022 ---
+200,2022-01-07T13:30:00Z,Non-Farm Payrolls,USA,400000,199000,588000,-201000,-1.5 # Revised prior
+201,2022-01-12T13:30:00Z,Consumer Price Index (CPI) YoY,USA,7.0,7.0,6.8,0.0,0.0
+202,2022-01-27T13:30:00Z,Gross Domestic Product (GDP) QoQ Annualized Adv,USA,5.5,6.9,2.3,1.4,1.2
+203,2022-04-01T12:30:00Z,Retail Sales MoM,USA,0.6,0.5,0.8,-0.1,-0.2
+204,2022-07-01T14:00:00Z,ISM Manufacturing PMI,USA,55.0,53.0,56.1,-2.0,-1.7
+205,2022-03-16T18:00:00Z,FOMC Rate Decision,USA,0.50,0.50,0.25,0.0,0.0 # First rate hike
+206,2022-10-27T12:15:00Z,ECB Main Refinancing Rate,EUR,2.00,2.00,1.25,0.0,0.0
+207,2022-02-24T08:00:00Z,German Ifo Business Climate,DEU,96.5,98.9,96.0,2.4,1.0 # Pre-Ukraine war
+208,2022-06-15T12:30:00Z,U.S. University of Michigan Sentiment Index Prel,USA, 58.0, 50.2, 58.4, -7.8, -2.0
+# ... (Continue populating for 2022)
+# --- 2023 ---
+250,2023-01-06T13:30:00Z,Non-Farm Payrolls,USA,200000,223000,256000,23000,0.3
+251,2023-02-28T15:00:00Z,Consumer Confidence,USA,108.5,102.9,106.0,-5.6,-1.3
+252,2023-03-14T12:30:00Z,Consumer Price Index (CPI) YoY,USA,6.0,6.0,6.4,0.0,0.1
+253,2023-03-30T12:30:00Z,Gross Domestic Product (GDP) QoQ Annualized Final,USA,2.7,2.6,3.2,-0.1,-0.2 # Revised prior
+254,2023-06-15T12:30:00Z,Initial Jobless Claims,USA,250000,262000,261000,12000,0.3
+255,2023-09-15T12:30:00Z,Housing Starts,USA,1440000,1283000,1398000,-157000,-1.1
+256,2023-03-16T12:45:00Z,ECB Deposit Facility Rate,EUR,3.00,3.00,2.50,0.0,0.0
+257,2023-05-02T13:45:00Z,Caixin Manufacturing PMI,CHN,50.0,49.5,50.0,-0.5,-0.6
+258,2023-10-13T12:30:00Z,U.S. Producer Price Index (PPI) Final Demand YoY,USA, 2.3, 2.2, 2.0, -0.1, -0.2
+# ... (Continue populating for 2023)
+# --- 2024 ---
+300,2024-01-05T13:30:00Z,Non-Farm Payrolls,USA,170000,216000,173000,46000,0.5
+301,2024-01-11T13:30:00Z,Consumer Price Index (CPI) YoY,USA,3.2,3.4,3.1,0.2,0.3
+302,2024-01-02T14:45:00Z,U.S. S&P Global Manufacturing PMI Final,USA,48.2, 47.9, 49.4, -0.3, -0.4
+303,2024-01-17T10:00:00Z,Eurozone CPI YoY Final,EUR,2.9,2.9,2.4,0.0,0.0
+304,2024-01-31T19:00:00Z,FOMC Rate Decision,USA,5.50,5.50,5.50,0.0,0.0
+305,2024-02-01T12:00:00Z,Bank of England Bank Rate,GBR,5.25,5.25,5.25,0.0,0.0
+306,2024-02-13T13:30:00Z,Consumer Price Index (CPI) MoM,USA,0.2,0.3,0.2,0.1,0.4
+307,2024-02-15T13:30:00Z,Retail Sales MoM,USA,0.1,-0.8,0.4,-0.9,-2.0
+308,2024-02-29T13:30:00Z,Personal Consumption Expenditures (PCE) Price Index MoM,USA,0.3,0.3,0.1,0.0,0.0
+# ... (Continue populating for 2024, aiming for ~40-50 diverse events for the year)
+# Total target several hundred. This is a representative start.
+# Adding some more historical examples to get closer to target count.
+309,2018-05-10T12:30:00Z,Jobless Claims 4-Week Avg,USA,220000,215000,225000,-5000,-0.3
+310,2018-06-13T18:00:00Z,FOMC Economic Projections,USA,,,,,,
+311,2018-07-12T12:30:00Z,Core CPI MoM,USA,0.2,0.2,0.2,0.0,0.0
+312,2018-08-01T14:00:00Z,ADP Nonfarm Employment Change,USA,185000,219000,170000,34000,0.8
+313,2018-09-26T18:00:00Z,FOMC Rate Decision,USA,2.25,2.25,2.00,0.0,0.0
+314,2018-10-11T00:30:00Z,Australia Employment Change,AUS,15000,5600,-4000,10600,1.2
+315,2018-11-14T09:30:00Z,UK CPI YoY,GBR,2.5,2.4,2.4,-0.1,-0.2
+316,2018-12-19T19:00:00Z,FOMC Rate Decision,USA,2.50,2.50,2.25,0.0,0.0
+317,2019-02-27T13:30:00Z,US Trade Balance,USA,-57.5,-59.8,-57.3,-2.3,-0.5
+318,2019-04-03T14:00:00Z,ISM Non-Manufacturing PMI,USA,58.0,56.1,59.7,-1.9,-1.5
+319,2019-07-31T18:00:00Z,FOMC Rate Decision,USA,2.25,2.25,2.50,0.0,0.0 # Rate cut
+320,2019-08-13T08:30:00Z,ZEW Economic Sentiment,DEU,-20.1,-44.1,-24.5,-24.0,-2.1
+321,2019-09-12T11:45:00Z,ECB Deposit Facility Rate,EUR,-0.40,-0.50,-0.40,-0.10,-1.0 # Rate cut
+322,2019-10-30T18:00:00Z,FOMC Rate Decision,USA,2.00,1.75,2.00,-0.25,-1.0 # Rate cut
+323,2020-01-24T08:55:00Z,German Manufacturing PMI Flash,DEU,44.5,45.2,43.7,0.7,0.5
+324,2020-06-05T12:30:00Z,Canada Net Change in Employment,CAN,-500000,289600,-1993800,789600,2.2 # Surprise rebound
+325,2020-09-16T18:00:00Z,FOMC Rate Decision,USA,0.25,0.25,0.25,0.0,0.0
+326,2021-02-17T13:30:00Z,US Retail Sales Control Group,USA,1.1,-3.5,8.7,-4.6,-2.0
+327,2021-04-28T18:00:00Z,FOMC Rate Decision,USA,0.25,0.25,0.25,0.0,0.0
+328,2021-05-12T12:00:00Z,Bank of England Inflation Report Hearings,GBR,,,,,,
+329,2022-02-03T11:00:00Z,Bank of England Official Bank Rate Votes,GBR,9-0-0,5-4-0,9-0-0,,, # Votes for hike
+330,2022-05-05T11:00:00Z,Bank of England Monetary Policy Summary,GBR,,,,,,
+331,2022-08-10T12:30:00Z,US CPI Ex Food and Energy YoY,USA,6.1,5.9,5.9,-0.2,-0.4 # Inflation peak signs?
+332,2023-01-18T02:00:00Z,Bank of Japan Monetary Policy Statement,JPN,,,,,, # Yield Curve Control
+333,2023-03-10T13:30:00Z,Canada Unemployment Rate,CAN,5.1,5.0,5.0,-0.1,-0.3
+334,2023-07-26T18:00:00Z,FOMC Rate Decision,USA,5.50,5.50,5.25,0.0,0.0 # Last hike of cycle?
+335,2023-11-14T13:30:00Z,US CPI NSA Index,USA,307.5,307.652,307.671,-0.019,-0.1
+336,2024-01-12T00:30:00Z,Australia Retail Sales MoM,AUS,0.0,2.0,1.6,2.0,1.8
+337,2024-01-25T13:15:00Z,ECB Press Conference,EUR,,,,,,
+338,2024-02-01T15:00:00Z,US ISM Services PMI,USA,52.0,53.4,50.5,1.4,1.0
+339,2018-06-01T12:30:00Z,Canada GDP MoM,CAN,0.2,0.1,0.3,-0.1,-0.2
+340,2019-12-06T13:30:00Z,US Average Hourly Earnings MoM,USA,0.3,0.2,0.3,-0.1,-0.3
+341,2020-10-02T12:30:00Z,Canada Ivey PMI SA,CAN,65.0,54.3,67.8,-10.7,-1.2
+342,2021-08-11T00:30:00Z,Australia Wage Price Index QoQ,AUS,0.5,0.4,0.6,-0.1,-0.2
+343,2022-11-10T13:30:00Z,US CPI YoY,USA,7.9,7.7,8.2,-0.2,-0.5 # Cooling inflation
+344,2023-04-05T00:30:00Z,Reserve Bank of Australia Rate Statement,AUS,,,,,,
+345,2023-06-22T08:00:00Z,SNB Monetary Policy Assessment,CHE,,,,,,
+346,2023-12-13T19:00:00Z,FOMC Summary of Economic Projections,USA,,,,,,
+347,2024-02-28T00:30:00Z,Australia CPI YoY,AUS,3.5,3.4,4.3,-0.1,-0.2
+348,2018-09-07T12:30:00Z,US Change in Nonfarm Payrolls,USA,191000,201000,147000,10000,0.2 # Using different name for NFP
+349,2020-03-18T12:30:00Z,Canada CPI MoM,CAN,0.3,0.4,0.1,0.1,0.2
+350,2021-06-16T08:30:00Z,Sweden CPIF YoY,SWE,1.9,1.7,2.1,-0.2,-0.3
+351,2022-07-21T11:45:00Z,ECB Marginal Lending Facility Rate,EUR,0.25,0.75,0.25,0.5,2.0 # Significant hike
+352,2023-02-14T09:30:00Z,UK Claimant Count Change,GBR,12.0,12.9,-3.2,0.9,0.2
+353,2023-08-01T14:00:00Z,US JOLTS Job Openings,USA,9600,9582,9616,-18,-0.1
+354,2024-01-19T07:00:00Z,UK Retail Sales MoM,GBR,-0.5,-3.2,1.4,-2.7,-1.8 # Sharp fall
+355,2018-11-01T14:00:00Z,US Construction Spending MoM,USA,0.0,-0.1,0.1,-0.1,-0.3
+356,2019-05-03T12:30:00Z,US ISM Non-Manufacturing Employment,USA,55.5,53.7,55.2,-1.8,-0.9
+357,2020-08-07T12:30:00Z,Canada Unemployment Rate,CAN,11.0,10.9,12.3,-0.1,-0.2
+358,2021-10-13T18:00:00Z,FOMC Meeting Minutes,USA,,,,,,
+359,2022-04-13T06:00:00Z,China Trade Balance USD,CHN,51.2,47.38,116.01,-3.82,-0.3
+360,2023-05-16T09:00:00Z,Eurozone ZEW Economic Sentiment,EUR,-10.2,-9.4,6.4,0.8,0.2
+361,2024-02-01T12:45:00Z,ECB Press Conference,EUR,,,,,,
+362,2018-12-07T15:00:00Z,Canada Ivey PMI,CAN,57.0,57.2,56.8,0.2,0.1
+363,2019-06-12T12:30:00Z,US Core CPI YoY,USA,2.1,2.0,2.1,-0.1,-0.2
+364,2020-11-05T12:00:00Z,Bank of England Asset Purchase Facility Votes,GBR,9-0-0,9-0-0,9-0-0,,,
+365,2021-03-17T12:30:00Z,Canada Housing Starts,CAN,245.0,272.2,253.3,27.2,1.5
+366,2022-05-17T09:00:00Z,Eurozone GDP Flash YoY,EUR,5.0,5.1,5.0,0.1,0.1
+367,2023-08-16T06:00:00Z,UK CPI MoM,GBR,0.0,-0.4,0.1,-0.4,-1.2
+368,2024-02-16T13:30:00Z,US Export Prices MoM,USA,0.1,0.8,-0.7,0.7,1.5
+369,2018-02-01T13:30:00Z,US Unit Labor Costs QoQ Revised,USA,2.1,2.5,1.3,0.4,0.5
+370,2019-07-01T07:55:00Z,German Manufacturing PMI Final,DEU,45.4,45.0,44.3,0.7,0.6
+371,2020-12-01T14:00:00Z,Canada Markit Manufacturing PMI,CAN,55.5,55.8,55.5,0.3,0.1
+372,2021-05-04T00:30:00Z,RBA Cash Rate Target,AUS,0.10,0.10,0.10,0.0,0.0
+373,2022-10-07T12:30:00Z,US Average Weekly Hours All Employees,USA,34.5,34.5,34.5,0.0,0.0
+374,2023-01-04T01:45:00Z,China Caixin Composite PMI,CHN,48.0,48.3,47.0,0.3,0.2
+375,2023-12-01T15:00:00Z,US ISM Prices Paid,USA,47.5,49.9,45.1,2.4,0.8
+376,2024-02-22T08:30:00Z,HCOB Eurozone Manufacturing PMI Flash,EUR,46.8,46.1,46.6,-0.7,-0.5
+377,2018-07-27T12:30:00Z,US Durable Goods Orders MoM Prel,USA,0.5,-1.0,0.8,-1.5,-1.2
+378,2019-09-05T12:15:00Z,US ADP Employment Change,USA,150000,195000,142000,45000,1.1
+379,2020-02-07T13:30:00Z,Canada Labour Force Participation Rate,CAN,65.5,65.5,65.5,0.0,0.0
+380,2021-11-10T00:30:00Z,Australia NAB Business Confidence,AUS,10,21,11,11,1.0
+381,2022-03-03T15:00:00Z,US Factory Orders MoM,USA,0.7,1.4,0.7,0.7,0.9
+382,2023-06-01T13:30:00Z,US Challenger Job Cuts YoY,USA,,416.5,287.9,,
+383,2024-01-16T10:00:00Z,German ZEW Economic Sentiment,DEU,12.0,15.2,12.8,3.2,0.8
+384,2018-10-05T12:30:00Z,US Unemployment Rate,USA,3.8,3.7,3.8,-0.1,-0.3
+385,2019-04-17T00:30:00Z,Australia Westpac Leading Index MoM,AUS,-0.1,-0.08,-0.17,0.02,0.1
+386,2020-05-28T12:30:00Z,US Durable Goods Ex Transportation MoM Prel,USA,-17.2,-7.4,-0.4,9.8,1.5
+387,2021-08-03T14:00:00Z,US IBD/TIPP Economic Optimism,USA,54.0,53.6,56.4,-0.4,-0.2
+388,2022-12-02T13:30:00Z,US Labor Force Participation Rate,USA,62.2,62.1,62.2,-0.1,-0.2
+389,2023-09-06T13:30:00Z,Canada Trade Balance,CAN,-1.1,0.98,-0.42,2.08,1.5
+390,2024-02-27T15:00:00Z,US CB Consumer Confidence,USA,109.0,106.7,110.9,-2.3,-0.8
+391,2018-03-22T11:30:00Z,UK Retail Sales Inc Auto Fuel MoM,GBR,0.4,0.8,0.1,0.4,0.7
+392,2019-08-05T13:45:00Z,US Markit Services PMI Final,USA,52.2,53.0,52.9,0.8,0.3
+393,2020-01-08T15:00:00Z,US Consumer Credit Change,USA,15.00,22.33,11.07,7.33,1.1
+394,2021-06-03T12:30:00Z,US Unit Labor Costs QoQ Final,USA,0.9,1.7,-2.2,0.8,0.6
+395,2022-10-26T14:00:00Z,Bank of Canada Rate Statement,CAN,,,,,,
+396,2023-04-14T12:30:00Z,US Import Price Index YoY,USA,-3.0,-4.6,2.8,-1.6,-1.0
+397,2023-11-01T12:15:00Z,US ADP National Employment Report,USA,150,113,89,24,0.6
+398,2024-01-09T11:00:00Z,US NFIB Small Business Optimism,USA,91.0,91.9,90.6,0.9,0.3
+399,2018-05-01T14:00:00Z,Canada RBC Manufacturing PMI,CAN,55.5,55.5,55.7,0.0,0.0
+400,2019-11-26T15:00:00Z,US Richmond Fed Manufacturing Index,USA,-3,-1,-8,2,0.5
+401,2020-07-15T12:30:00Z,US Export Price Index MoM,USA,0.6,0.8,-0.1,0.2,0.5
+402,2021-02-05T13:30:00Z,US Nonfarm Productivity QoQ Prel,USA,-2.5,-4.2,5.1,-1.7,-0.9
+403,2022-08-04T11:00:00Z,Bank of England Governor Bailey Speaks,GBR,,,,,,
+404,2023-10-03T14:00:00Z,US JOLTS Job Quits Rate,USA,2.5,2.3,2.3,-0.2,-0.5
+405,2024-02-14T07:00:00Z,UK CPIH YoY,GBR,4.2,4.2,4.2,0.0,0.0
+406,2018-08-28T14:00:00Z,US S&P/Case-Shiller Home Price YoY,USA,6.3,6.0,6.4,-0.3,-0.4
+407,2019-02-11T15:00:00Z,US Monthly Budget Statement,USA,-10.0,-9.0,-13.5,1.0,0.3
+408,2020-04-07T14:00:00Z,Canada Ivey PMI NSA,CAN,50.1,26.0,54.1,-24.1,-3.5 # COVID impact
+409,2021-12-15T19:30:00Z,FOMC Press Conference,USA,,,,,,
+410,2022-03-10T00:30:00Z,Australia RBA Bulletin,AUS,,,,,,
+411,2023-05-10T12:30:00Z,US Mortgage Applications,USA,,-2.0,6.3,,
+412,2024-01-23T09:00:00Z,Eurozone Consumer Confidence Flash,EUR,-15.2,-15.1,-15.0,-0.1,-0.1
+413,2018-04-02T13:45:00Z,US Markit Manufacturing PMI Final,USA,55.7,55.6,55.7,-0.1,-0.1
+414,2019-10-01T13:30:00Z,Canada GDP YoY,CAN,1.5,1.3,1.6,-0.2,-0.3
+415,2020-06-10T18:00:00Z,FOMC Economic Projections,USA,,,,,,
+416,2021-07-06T14:00:00Z,US ISM Services Employment Index,USA,55.0,59.0,55.3,4.0,1.2
+417,2022-11-02T18:30:00Z,FOMC Press Conference,USA,,,,,,
+418,2023-02-07T00:30:00Z,Australia Trade Balance AUD,AUS,11.50,10.96,12.24,-0.54,-0.2
+419,2023-12-22T13:30:00Z,Canada Retail Sales MoM,CAN,0.0,0.0,-0.1,0.0,0.1
+420,2024-02-05T14:45:00Z,US S&P Global Services PMI Final,USA,52.9,52.5,51.4,0.4,0.3
+421,2018-01-03T19:00:00Z,FOMC Meeting Minutes,USA,,,,,,
+422,2019-03-21T13:30:00Z,US Current Account Balance,USA,-120.0,-130.4,-112.4,-10.4,-0.8
+423,2020-05-08T12:30:00Z,Canada Net Change in Employment Full Time,CAN,,-1000.3,-987.4,,
+424,2021-04-07T18:00:00Z,FOMC Meeting Minutes,USA,,,,,,
+425,2022-09-08T12:10:00Z,Fed Chair Powell Speaks,USA,,,,,,
+426,2023-11-29T13:30:00Z,US GDP Price Index QoQ 2nd Est,USA,3.5,3.6,3.5,0.1,0.1
+427,2024-01-26T07:00:00Z,German GfK Consumer Climate,DEU,-27.0,-25.1,-25.4,1.9,0.5
+428,2018-06-27T12:30:00Z,US Wholesale Inventories MoM Adv,USA,0.2,0.5,-0.1,0.3,0.6
+429,2019-01-16T09:30:00Z,UK Producer Price Index Input MoM NSA,GBR,-0.8,-1.1,-2.3,0.3,0.4
+430,2020-08-05T13:45:00Z,US Markit Composite PMI Final,USA,50.0,50.3,47.9,0.3,0.2
+431,2021-10-08T12:30:00Z,US Wholesale Trade Sales MoM,USA,0.8,1.1,0.6,0.3,0.2
+432,2022-02-15T10:00:00Z,Eurozone ZEW Economic Sentiment,EUR,48.0,48.6,49.4,0.6,0.1
+433,2023-04-27T00:30:00Z,Australia Import Price Index QoQ,AUS,-1.0,-0.7,1.1,0.3,0.2
+434,2023-07-07T12:30:00Z,US Nonfarm Private Payrolls,USA,200,149,253,-51,-0.8
+435,2024-02-23T09:00:00Z,German GDP YoY NSA Final,DEU,-0.4,-0.4,-0.5,0.0,0.1
+436,2018-11-29T13:30:00Z,US Personal Income MoM,USA,0.4,0.0,0.5,-0.4,-0.8
+437,2019-05-24T12:30:00Z,US Durable Goods Orders Ex Defense MoM Prel,USA,-0.5,-1.0,-0.3,-0.5,-0.3
+438,2020-10-28T00:30:00Z,Australia CPI QoQ,AUS,1.5,1.6,0.7,0.1,0.1
+439,2021-01-28T13:30:00Z,US New Home Sales MoM,USA,0.800,0.842,0.829,0.042,0.5
+440,2022-04-26T14:00:00Z,US New Home Sales Number,USA,750,763,791,13,0.2
+441,2023-08-23T13:45:00Z,US S&P Global Manufacturing PMI Flash,USA,49.0,47.0,49.0,-2.0,-1.5
+442,2024-01-03T15:00:00Z,US ISM Manufacturing Employment Index,USA,46.0,48.1,45.8,2.1,0.8
+443,2018-07-03T14:00:00Z,US Factory Orders Ex Transp MoM,USA,0.3,0.5,0.2,0.2,0.3
+444,2019-12-23T13:30:00Z,US Chicago Fed National Activity Index,USA,0.00,0.56,-0.76,0.56,1.2
+445,2020-09-01T00:30:00Z,Australia RBA Rate Decision,AUS,0.25,0.25,0.25,0.0,0.0
+446,2021-03-01T08:50:00Z,French Manufacturing PMI Final,FRA,55.0,56.1,54.9,1.1,0.8
+447,2022-06-01T13:00:00Z,Bank of Canada Rate Decision,CAN,1.25,1.50,1.00,0.25,1.0
+448,2023-10-24T07:30:00Z,French Services PMI Flash,FRA,46.1,45.2,44.4,-0.9,-0.6
+449,2024-02-07T13:30:00Z,US Trade Balance Goods,USA,-90.0,-89.5,-90.3,0.5,0.2
+450,2018-02-27T15:00:00Z,US Richmond Fed Manufacturing Shipments,USA,20,18,22,-2,-0.3
+451,2019-07-25T11:45:00Z,ECB Minimum Bid Rate,EUR,0.00,0.00,0.00,0.0,0.0
+452,2020-11-17T13:30:00Z,US Retail Sales Ex Gas and Autos MoM,USA,0.6,0.0,0.9,-0.6,-1.0
+453,2021-05-26T14:00:00Z,RBNZ Official Cash Rate,NZL,0.25,0.25,0.25,0.0,0.0
+454,2022-08-17T06:00:00Z,UK Core CPI YoY,GBR,5.9,6.2,5.8,0.3,0.6
+455,2023-01-26T13:30:00Z,US Durable Goods Orders MoM Adv,USA,-0.5,5.6,-1.7,6.1,2.5
+456,2023-04-04T14:00:00Z,US JOLTS Job Openings Rate,USA,6.0,5.8,6.1,-0.2,-0.4
+457,2024-02-29T13:30:00Z,US Initial Jobless Claims 4-Wk Avg,USA,210,215,208,5,0.1
+458,2018-09-21T07:30:00Z,French Composite PMI Flash,FRA,54.5,54.0,54.9,-0.5,-0.3
+459,2019-04-09T09:00:00Z,NFIB Business Optimism Index,USA,101.5,101.8,101.7,0.3,0.1
+460,2020-06-23T07:30:00Z,German Composite PMI Flash,DEU,44.6,47.0,32.4,2.4,1.2
+461,2021-12-03T15:00:00Z,US ISM Services New Orders Index,USA,65.0,69.7,69.7,4.7,1.5
+462,2022-05-11T12:30:00Z,US EIA Crude Oil Stocks Change,USA,-1.200,8.487,-0.797,9.687,2.5
+463,2023-07-13T12:30:00Z,US PPI Ex Food and Energy MoM,USA,0.2,0.1,0.0,0.1,0.3
+464,2024-01-18T15:00:00Z,US Existing Home Sales MoM,USA,-0.9,-1.0,-6.2,-0.1,-0.1
+465,2018-10-25T11:45:00Z,ECB Interest On Reqd Reserves,EUR,0.00,0.00,0.00,0.0,0.0
+466,2019-02-01T15:00:00Z,US UMich Inflation Expectations Final,USA,2.6,2.5,2.7,-0.1,-0.2
+467,2020-04-22T11:00:00Z,Canada BoC Rate Statement,CAN,,,,,,
+468,2021-08-18T18:00:00Z,FOMC Meeting Minutes,USA,,,,,,
+469,2022-01-13T00:30:00Z,Australia Trade Balance Goods AUD,AUS,9.80,8.36,9.42,-1.44,-0.5
+470,2023-03-22T18:00:00Z,FOMC Rate Decision,USA,5.00,5.00,4.75,0.0,0.0
+471,2023-06-14T18:30:00Z,FOMC Press Conference,USA,,,,,,
+472,2024-02-26T15:00:00Z,US New Home Sales Number,USA,660,661,651,1,0.0
+473,2018-12-14T08:30:00Z,German Services PMI Flash,DEU,53.5,52.5,53.3,-1.0,-0.7
+474,2019-06-07T12:30:00Z,US Change in Private Payrolls,USA,180,77,239,-103,-1.5
+475,2020-09-02T18:00:00Z,Fed Beige Book,USA,,,,,,
+476,2021-04-15T13:30:00Z,US Philadelphia Fed CAPEX Index,USA,35.0,36.2,37.6,1.2,0.2
+477,2022-07-08T12:30:00Z,Canada Full Time Employment Change,CAN,20.0,-5.0,135.4,-25.0,-1.2
+478,2023-10-12T12:30:00Z,US CPI Index SA,USA,307.2,307.476,306.269,0.207,0.3
+479,2024-01-04T13:15:00Z,US ADP Employment Change,USA,125,164,101,39,1.0
+480,2018-01-18T15:00:00Z,US EIA Natural Gas Storage Change,USA,-290,-320,-206,-30,-0.5
+481,2019-05-10T12:30:00Z,US Import Price Index Ex Oil MoM,USA,0.0,0.1,0.2,0.1,0.2
+482,2020-08-12T12:30:00Z,US Core CPI Index SA,USA,266.5,266.589,265.083,0.506,0.8
+483,2021-11-04T11:00:00Z,Bank of England Asset Purchase Target,GBR,895,895,895,0,0
+484,2022-04-01T12:30:00Z,Canada Markit Manufacturing PMI,CAN,56.0,58.9,56.6,2.9,1.0
+485,2023-07-05T18:00:00Z,FOMC Meeting Minutes,USA,,,,,,
+486,2023-09-20T18:30:00Z,FOMC Press Conference,USA,,,,,,
+487,2024-02-21T12:00:00Z,US MBA Mortgage Applications Index,USA,,-10.6,2.3,,
+488,2018-03-07T13:15:00Z,US ADP National Employment Report,USA,200,235,244,35,0.8
+489,2019-12-11T19:00:00Z,FOMC Rate Decision,USA,1.75,1.75,1.75,0.0,0.0
+490,2020-02-21T08:30:00Z,German Composite PMI Flash,DEU,50.5,51.1,51.2,0.6,0.1
+491,2021-06-09T14:00:00Z,Bank of Canada Rate Statement,CAN,,,,,,
+492,2022-11-30T13:30:00Z,US GDP Price Index QoQ 2nd Est,USA,4.2,4.3,4.2,0.1,0.1
+493,2023-05-25T12:30:00Z,US Durable Goods Ex Defense MoM Adv,USA,-0.7,1.0,-3.5,1.7,1.2
+494,2023-08-10T00:30:00Z,Australia Consumer Inflation Expectation,AUS,5.1,4.9,5.2,-0.2,-0.3
+495,2024-01-24T14:45:00Z,US S&P Global Composite PMI Flash,USA,51.0,52.3,50.9,1.3,0.8
+496,2018-05-23T18:00:00Z,FOMC Meeting Minutes,USA,,,,,,
+497,2019-10-04T12:30:00Z,Canada Ivey PMI NSA,CAN,60.0,48.7,60.6,-11.3,-2.5
+498,2020-07-08T14:00:00Z,US JOLTS Job Openings Number,USA,5000,5889,4996,889,1.5
+499,2021-02-10T13:30:00Z,US CPI Ex Food and Energy MoM,USA,0.2,0.0,0.1,-0.2,-0.5
+500,2022-05-04T18:30:00Z,FOMC Press Conference,USA,,,,,,
+501,2023-08-01T13:45:00Z,US S&P Global Manufacturing PMI Final,USA,49.0,49.0,46.3,0.0,0.0
+502,2023-11-08T15:30:00Z,US EIA Crude Oil Stocks Change,USA,-1.500,3.596,-1.368,5.096,1.5
+503,2024-02-02T13:30:00Z,US Average Hourly Earnings YoY,USA,4.3,4.5,4.3,0.2,0.4
+504,2018-04-18T18:00:00Z,Fed Beige Book,USA,,,,,,
+505,2019-08-22T13:45:00Z,US Markit Manufacturing PMI Flash,USA,50.5,50.0,50.4,-0.5,-0.3
+506,2020-01-15T13:30:00Z,US PPI Final Demand MoM,USA,0.2,0.1,0.0,0.1,0.2
+507,2021-07-27T14:00:00Z,US CB Consumer Confidence,USA,123.9,129.1,128.9,5.2,1.0
+508,2022-10-13T12:30:00Z,US Continuing Jobless Claims,USA,1370,1385,1368,15,0.1
+509,2023-02-01T19:30:00Z,FOMC Press Conference,USA,,,,,,
+510,2023-05-01T14:00:00Z,US ISM Manufacturing Prices Paid,USA,49.0,53.2,49.2,4.2,1.0
+511,2024-01-10T15:30:00Z,US EIA Natural Gas Stocks Change,USA,-100,-110,-140,-10,-0.2
+512,2018-06-14T12:45:00Z,ECB Press Conference,EUR,,,,,,
+513,2019-01-08T13:15:00Z,Canada Housing Starts MoM,CAN,200.0,213.1,205.9,13.1,0.8
+514,2020-03-04T14:00:00Z,Bank of Canada Rate Decision,CAN,1.75,1.25,1.75,-0.50,-2.0 # Rate Cut
+515,2021-09-08T14:00:00Z,Bank of Canada Rate Statement,CAN,,,,,,
+516,2022-02-09T12:00:00Z,US MBA 30-Year Mortgage Rate,USA,,4.100,3.829,,
+517,2023-04-12T18:00:00Z,FOMC Meeting Minutes,USA,,,,,,
+518,2023-07-12T14:00:00Z,Bank of Canada Rate Decision,CAN,4.75,5.00,4.75,0.25,1.0
+519,2024-02-13T07:00:00Z,UK Average Earnings Ex Bonus 3Mo YoY,GBR,6.0,6.2,6.7,0.2,0.3
+520,2018-08-15T12:30:00Z,US Retail Sales Advance MoM,USA,0.1,0.7,0.2,0.6,1.2
+521,2019-03-27T12:30:00Z,US Trade Balance Goods,USA,-74.0,-73.1,-75.9,0.9,0.3
+522,2020-05-13T12:30:00Z,US PPI Final Demand Ex Food and Energy MoM,USA,-0.2,-0.3,-0.2,-0.1,-0.2
+523,2021-11-24T13:30:00Z,US Durable Goods Orders Ex Transp MoM Adv,USA,0.5,0.3,1.3,-0.2,-0.4
+524,2022-04-12T12:30:00Z,US CPI Index NSA,USA,287.7,287.504,287.708,-0.204,-0.2
+525,2023-07-28T12:30:00Z,US Employment Cost Index QoQ,USA,1.1,1.0,1.2,-0.1,-0.2
+526,2023-10-06T12:30:00Z,Canada Average Hourly Wages YoY,CAN,5.2,5.0,5.2,-0.2,-0.1
+527,2024-01-25T13:30:00Z,US GDP Annualized QoQ Adv,USA,2.0,3.3,4.9,1.3,1.5
+528,2018-10-10T12:30:00Z,US PPI MoM Final Demand,USA,0.2,0.2,0.0,0.0,0.0
+529,2019-04-26T12:30:00Z,US GDP Annualized QoQ Adv,USA,2.3,3.2,2.2,0.9,1.2
+530,2020-07-30T12:30:00Z,US GDP Annualized QoQ Adv,USA,-34.7,-32.9,5.0,1.8,0.5 # COVID trough
+531,2021-01-07T15:00:00Z,US ISM Services PMI,USA,56.0,57.7,55.9,1.7,0.8
+532,2022-07-28T12:30:00Z,US GDP Annualized QoQ Adv,USA,0.4,-0.9,1.6,-1.3,-1.8 # Recession fears
+533,2023-01-12T13:30:00Z,US Real Earnings MoM,USA,-0.1,-0.2,0.5,-0.1,-0.2
+534,2023-04-28T12:30:00Z,US Employment Cost Index Wages QoQ,USA,1.2,1.2,1.2,0.0,0.0
+535,2024-02-15T14:15:00Z,US Industrial Production YoY,USA,-0.2,-0.03,-0.01,0.17,0.3
+536,2018-12-03T15:00:00Z,US ISM Manufacturing New Orders Index,USA,57.5,62.1,57.4,4.6,1.2
+537,2019-06-20T14:00:00Z,US Philadelphia Fed Manufacturing Index,USA,11.0,0.3,16.6,-10.7,-2.5
+538,2020-09-10T11:45:00Z,ECB Asset Purchase Target,EUR,1350,1350,1350,0,0 # PEPP
+539,2021-03-05T13:30:00Z,US Nonfarm Payrolls Private,USA,150,595,22,-55,1.5 # Rebound
+540,2022-06-16T07:30:00Z,SNB Interest Rate Decision,CHE,-0.75,-0.25,-0.75,0.50,2.0 # Surprise hike
+541,2023-08-25T14:00:00Z,Fed Chair Powell Speaks at Jackson Hole,USA,,,,,,
+542,2023-11-15T13:30:00Z,US PPI Final Demand YoY,USA,1.2,0.9,2.2,-0.3,-0.8
+543,2024-01-17T13:30:00Z,US Retail Sales Control Group,USA,0.2,0.8,0.4,0.6,1.0
+544,2018-07-17T13:15:00Z,US Capacity Utilization,USA,78.2,78.0,77.7,-0.2,-0.1
+545,2019-02-28T13:30:00Z,US GDP Price Index QoQ 2nd Est,USA,1.7,1.7,1.8,0.0,-0.1
+546,2020-04-01T12:15:00Z,US ADP National Employment Report,USA,-150,-27,-149,122,1.5 # First COVID job losses
+547,2021-12-16T12:45:00Z,ECB Press Conference,EUR,,,,,, # Hawkish tilt
+548,2022-03-17T12:00:00Z,Bank of England Monetary Policy Report,GBR,,,,,,
+549,2023-06-29T12:30:00Z,US GDP Annualized QoQ Final,USA,1.4,2.0,1.3,0.6,0.8
+550,2023-09-01T12:30:00Z,US Labor Market Conditions Index,USA,,,2.1,,
+551,2024-02-29T14:45:00Z,US Chicago PMI,USA,48.1,44.0,46.0,-4.1,-1.0
+552,2018-09-13T11:45:00Z,ECB Rate Decision (Minimum Bid Rate),EUR,0.00,0.00,0.00,0.0,0.0
+553,2019-03-01T15:00:00Z,US UMich Consumer Sentiment Final,USA,95.7,93.8,95.5,-1.9,-0.7
+554,2020-05-01T14:00:00Z,US ISM Manufacturing PMI,USA,36.0,41.5,49.1,5.5,1.0 # COVID low
+555,2021-08-27T14:00:00Z,Fed Chair Powell Speaks at Jackson Hole,USA,,,,,, # Transitory inflation speech
+556,2022-01-26T19:00:00Z,FOMC Rate Decision,USA,0.25,0.25,0.25,0.0,0.0 # Signals imminent hike
+557,2023-03-15T00:30:00Z,RBNZ Official Cash Rate,NZL,4.75,5.25,4.75,0.50,2.0 # Surprise hike
+558,2023-06-08T11:45:00Z,ECB Main Refinancing Operations Announcement,EUR,,,,,,
+559,2024-01-12T13:30:00Z,US Import Price Index MoM,USA,-0.5,0.0,-0.7,0.5,0.8
+560,2018-11-08T19:00:00Z,FOMC Rate Decision,USA,2.25,2.25,2.25,0.0,0.0
+561,2019-05-01T18:00:00Z,FOMC Rate Decision,USA,2.50,2.50,2.50,0.0,0.0
+562,2020-07-29T18:00:00Z,FOMC Rate Decision,USA,0.25,0.25,0.25,0.0,0.0
+563,2021-02-12T15:00:00Z,US UMich Consumer Expectations Prel,USA,73.0,72.5,74.0,-0.5,-0.2
+564,2022-06-02T12:15:00Z,US ADP Employment Change,USA,300,128,202,-172,-2.5 # Miss
+565,2023-09-07T00:30:00Z,Australia RBA Gov Lowe Speaks,AUS,,,,,,
+566,2023-12-08T13:30:00Z,US U6 Unemployment Rate,USA,7.1,7.0,7.2,-0.1,-0.2
+567,2024-02-01T13:30:00Z,US Challenger Job Cuts Number,USA,,82307,34817,,
+568,2018-01-11T09:00:00Z,Eurozone Industrial Production MoM,EUR,0.8,0.4,1.0,-0.4,-0.5
+569,2019-07-18T00:30:00Z,Australia NAB Quarterly Business Confidence,AUS,2,7,0,5,1.2
+570,2020-10-06T12:30:00Z,US Trade Balance,USA,-66.5,-67.1,-63.4,-0.6,-0.1
+571,2021-04-29T12:30:00Z,US GDP Sales QoQ Adv,USA,8.0,10.7,2.8,2.7,1.0
+572,2022-08-02T14:00:00Z,US JOLTS Job Openings Number,USA,10700,11254,11303,554,0.5
+573,2023-01-25T15:00:00Z,Bank of Canada Press Conference,CAN,,,,,,
+574,2023-04-13T12:30:00Z,US PPI Ex Food, Energy and Trade MoM,USA,0.2,0.0,0.1,-0.2,-0.5
+575,2024-02-28T13:30:00Z,US GDP Price Index QoQ 2nd Est,USA,1.5,1.5,3.3,0.0,0.0
+576,2018-03-29T12:30:00Z,US Personal Spending MoM,USA,0.3,0.4,0.2,0.1,0.2
+577,2019-08-14T12:30:00Z,US Retail Sales Ex Autos and Gas MoM,USA,0.4,0.9,0.7,0.5,0.8
+578,2020-01-30T12:30:00Z,US GDP Annualized QoQ Adv,USA,2.1,2.1,2.1,0.0,0.0
+579,2021-06-24T12:30:00Z,US Durable Goods Orders Ex Defense MoM Adv,USA,0.8,0.5,0.8,-0.3,-0.4
+580,2022-11-09T15:30:00Z,US EIA Natural Gas Storage Change,USA,-20,-15,15,-35,-1.0
+581,2023-03-09T12:45:00Z,ECB Marginal Lending Facility,EUR,3.25,3.25,2.75,0.0,0.0
+582,2023-06-07T00:30:00Z,Australia GDP QoQ,AUS,0.3,0.2,0.6,-0.1,-0.2
+583,2024-01-11T00:00:00Z,China CPI YoY,CHN,-0.4,-0.3,-0.5,0.1,0.2
+584,2018-05-16T12:30:00Z,US Housing Starts Number,USA,1310,1287,1336,-23,-0.3
+585,2019-11-07T12:00:00Z,Bank of England Inflation Report,GBR,,,,,,
+586,2020-07-02T12:30:00Z,US Factory Orders MoM,USA,5.5,8.0,-13.5,2.5,1.2
+587,2021-02-01T14:00:00Z,US Construction Spending MoM,USA,0.8,1.7,0.8,0.9,1.1
+588,2022-05-24T07:30:00Z,French Manufacturing PMI Flash,FRA,55.0,54.5,55.7,-0.5,-0.3
+589,2023-08-31T12:30:00Z,US Personal Spending MoM,USA,0.6,0.8,0.6,0.2,0.3
+590,2023-11-07T13:30:00Z,Canada Trade Balance,CAN,-2.0,1.1,-2.2,3.1,1.8
+591,2024-02-13T13:30:00Z,US CPI SA Index,USA,309.5,309.685,308.417,0.268,0.4
+592,2018-07-26T11:45:00Z,ECB Rate Decision (Deposit Facility Rate),EUR,-0.40,-0.40,-0.40,0.0,0.0
+593,2019-01-30T13:15:00Z,US ADP National Employment Report,USA,180,213,263,33,0.8
+594,2020-03-11T12:30:00Z,US Core CPI YoY,USA,2.3,2.4,2.3,0.1,0.2
+595,2021-09-22T18:00:00Z,FOMC Rate Decision,USA,0.25,0.25,0.25,0.0,0.0
+596,2022-02-16T13:30:00Z,US Retail Sales Advance MoM,USA,1.8,3.8,-2.5,2.0,1.5
+597,2023-05-17T14:00:00Z,Bank of Canada Financial System Review,CAN,,,,,,
+598,2023-08-03T11:00:00Z,Bank of England Monetary Policy Summary,GBR,,,,,,
+599,2024-01-08T10:00:00Z,Eurozone Retail Sales MoM,EUR,-0.4,-1.1,0.1,-0.7,-1.0
+600,2018-10-31T12:15:00Z,US ADP Employment Change,USA,185,227,218,42,1.0
