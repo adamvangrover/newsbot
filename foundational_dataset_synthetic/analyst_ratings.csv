@@ -249,6 +249,127 @@ Rating_ID,Ticker,Timestamp,Analyst_Name,Brokerage_Name,Previous_Rating,New_Ratin
 248,WM,2023-07-27T10:00:00Z,"Noah Kaye",Oppenheimer,Perform,Outperform,170,185
 249,RSG,2023-07-28T09:00:00Z,"Michael Feniger",Bank of America,Buy,Buy,150,160
 250,SPY,N/A,N/A,,,,,,N/A # Placeholder for ETF if needed, already in asset_master
-# Total now 250 records, covering 35 companies with deep history for 10.
+
+251,PG,2022-08-02T11:03:00Z,"Julia Focus","Horizon Advisors LLC",Sell,Hold,132,146
+252,UPS,2022-10-09T10:53:00Z,"Laura Delta","Northstar Investments",,Buy,,180
+253,PG,2022-03-01T16:06:00Z,"George Sector","ValuePath Group",Hold,Buy,146,165
+254,COST,2023-01-27T10:29:00Z,"Laura Delta","Avalon Research",Buy,Strong Buy,550,682
+255,CRM,2022-09-14T14:52:00Z,"George Sector","Keystone Brokerage",Buy,Strong Buy,229,278
+256,SBUX,2022-07-08T10:52:00Z,"Ken Benchmark","Horizon Advisors LLC",,Buy,,118
+257,COST,2023-08-12T10:00:00Z,"Ivan Capital","Evergreen Capital",Hold,Buy,552,622
+258,LLY,2022-07-13T15:09:00Z,"Charles Alpha","Avalon Research",,Buy,,708
+259,ORCL,2023-10-03T16:42:00Z,"Charles Alpha","Pinnacle Wealth Management",Hold,Hold,117,120
+260,HD,2022-07-03T16:39:00Z,"Mike Sage","ValuePath Group",Hold,Sell,321,278
+261,AMGN,2024-02-15T10:56:00Z,"Ken Benchmark","Keystone Brokerage",Buy,Buy,260,270
+262,PG,2023-04-02T10:46:00Z,"Ivan Capital","Northstar Investments",Buy,Buy,151,160
+263,PYPL,2023-06-19T10:47:00Z,"Julia Focus","Apex Financial Group",,Buy,,70
+264,JPM,2023-07-11T11:54:00Z,"Hannah Trend","Starlight Capital",Buy,Strong Buy,152,188
+265,CRM,2022-02-08T11:48:00Z,"Edward Value","Horizon Advisors LLC",Buy,Buy,231,242
+266,AMZN,2023-02-12T16:25:00Z,"Charles Alpha","Pinnacle Wealth Management",,Buy,,150
+267,ORCL,2022-11-08T10:26:00Z,"Oscar Gauge","Meridian Equities",Hold,Sell,114,100
+268,PFE,2022-03-12T10:08:00Z,"Laura Delta","Horizon Advisors LLC",Hold,Buy,34,38
+269,MCD,2023-07-15T10:29:00Z,"Alex Smart","Northstar Investments",,Hold,,293
+270,JNJ,2023-07-14T13:12:00Z,"George Sector","Keystone Brokerage",Hold,Hold,165,163
+271,IBM,2022-02-27T10:49:00Z,"Julia Focus","Evergreen Capital",Hold,Buy,130,149
+272,GOOGL,2023-01-20T13:31:00Z,"Ken Benchmark","Keystone Brokerage",,Buy,,148
+273,AMGN,2023-02-16T15:57:00Z,"Laura Delta","AlphaSeeker Research",Hold,Buy,244,270
+274,COST,2023-10-03T10:37:00Z,"Edward Value","Starlight Capital",Buy,Strong Buy,561,696
+275,MSFT,2023-09-02T12:30:00Z,"Mike Sage","Momentum Traders Inc.",Buy,Strong Buy,330,406
+276,PYPL,2023-12-01T15:00:00Z,"Ken Benchmark","Northstar Investments",Buy,Hold,63,59
+277,XOM,2023-10-04T12:00:00Z,"Julia Focus","Summit Peak Securities",Buy,Buy,112,124
+278,UPS,2023-03-02T15:52:00Z,"Charles Alpha","Apex Financial Group",Strong Buy,Buy,189,177
+279,ORCL,2022-07-26T11:42:00Z,"Laura Delta","Horizon Advisors LLC",Hold,Hold,117,119
+280,AMZN,2023-07-13T13:41:00Z,"Julia Focus","Pinnacle Wealth Management",,Buy,,150
+281,PYPL,2022-09-21T10:43:00Z,"Alex Smart","Horizon Advisors LLC",,Hold,,61
+282,HD,2023-01-20T13:22:00Z,"Fiona Quant","BlueChip Analysts",,Buy,,374
+283,PFE,2023-08-17T10:47:00Z,"Laura Delta","Summit Peak Securities",Sell,Hold,29,33
+284,AMGN,2023-05-18T10:00:00Z,"Laura Delta","Horizon Advisors LLC",,Buy,,280
+285,JNJ,2022-07-09T12:03:00Z,"Hannah Trend","BlueChip Analysts",,Buy,,186
+286,NKE,2022-11-27T14:57:00Z,"George Sector","Meridian Equities",Buy,Strong Buy,110,137
+287,IBM,2023-08-18T12:43:00Z,"Hannah Trend","Pinnacle Wealth Management",Buy,Buy,143,150
+288,AMZN,2023-11-18T11:45:00Z,"Laura Delta","ValuePath Group",Hold,Buy,131,150
+289,SBUX,2024-03-20T16:37:00Z,"Ivan Capital","Starlight Capital",Buy,Buy,102,110
+290,LLY,2023-07-09T13:46:00Z,"Laura Delta","Keystone Brokerage",Strong Buy,Buy,676,630
+291,MSFT,2023-04-22T11:34:00Z,"Alex Smart","ValuePath Group",,Buy,,371
+292,ORCL,2023-10-18T12:58:00Z,"Fiona Quant","Horizon Advisors LLC",Buy,Hold,126,118
+293,ORCL,2023-01-07T10:59:00Z,"Diana Metric","Evergreen Capital",Hold,Buy,117,133
+294,AMGN,2023-03-01T12:04:00Z,"Bethany Insight","ValuePath Group",Buy,Strong Buy,255,316
+295,ORCL,2022-02-18T16:11:00Z,"Bethany Insight","Summit Peak Securities",Buy,Buy,121,127
+296,ORCL,2024-03-04T10:24:00Z,"Ken Benchmark","BlueChip Analysts",,Buy,,134
+297,PG,2022-01-02T14:00:00Z,"Hannah Trend","Apex Financial Group",Buy,Strong Buy,152,188
+298,CAT,2022-07-10T10:46:00Z,"Alex Smart","Northstar Investments",Buy,Buy,280,305
+299,NKE,2022-10-15T14:21:00Z,"Oscar Gauge","Pinnacle Wealth Management",Buy,Buy,114,121
+300,CAT,2023-03-08T12:53:00Z,"Laura Delta","Summit Peak Securities",Buy,Buy,286,291
+301,SBUX,2023-07-13T11:30:00Z,"Laura Delta","Meridian Equities",Buy,Buy,102,114
+302,JPM,2023-08-28T10:41:00Z,"Charles Alpha","AlphaSeeker Research",Buy,Buy,151,158
+303,GOOGL,2023-06-01T14:54:00Z,"Julia Focus","Summit Peak Securities",Buy,Strong Buy,130,160
+304,DIS,2023-03-18T15:03:00Z,"Edward Value","Horizon Advisors LLC",Hold,Sell,93,79
+305,SBUX,2023-01-01T10:21:00Z,"Edward Value","Summit Peak Securities",,Buy,,114
+306,CRM,2023-09-12T09:56:00Z,"Laura Delta","Apex Financial Group",Buy,Buy,220,233
+307,AMZN,2022-05-04T14:15:00Z,"Charles Alpha","AlphaSeeker Research",Hold,Sell,131,112
+308,IBM,2023-02-22T10:24:00Z,"Hannah Trend","ValuePath Group",Sell,Hold,120,134
+309,ORCL,2022-07-28T09:52:00Z,"Hannah Trend","BlueChip Analysts",,Buy,,133
+310,ORCL,2023-03-27T11:14:00Z,"Julia Focus","Evergreen Capital",Buy,Strong Buy,120,148
+311,JPM,2022-01-10T13:13:00Z,"George Sector","Evergreen Capital",,Hold,,152
+312,JNJ,2023-09-26T15:09:00Z,"Charles Alpha","Keystone Brokerage",Hold,Hold,162,163
+313,CRM,2023-09-14T15:50:00Z,"Oscar Gauge","Meridian Equities",Buy,Buy,224,238
+314,ORCL,2022-04-24T12:02:00Z,"George Sector","Meridian Equities",Buy,Buy,121,131
+315,ADBE,2022-07-19T13:23:00Z,"Fiona Quant","Northstar Investments",Buy,Strong Buy,500,620
+316,NVDA,2023-03-20T12:54:00Z,"Edward Value","Avalon Research",Hold,Buy,446,509
+317,AMZN,2022-02-14T10:08:00Z,"Nina Beta","Starlight Capital",Hold,Hold,132,131
+318,SBUX,2023-05-28T10:22:00Z,"Ken Benchmark","BlueChip Analysts",Hold,Hold,100,100
+319,NKE,2023-12-06T11:56:00Z,"Charles Alpha","Avalon Research",Buy,Strong Buy,112,139
+320,UPS,2022-03-01T16:48:00Z,"Mike Sage","Apex Financial Group",Buy,Buy,162,175
+321,JPM,2022-01-08T10:44:00Z,"Hannah Trend","BlueChip Analysts",Buy,Buy,152,162
+322,ORCL,2022-03-20T11:45:00Z,"Ivan Capital","Keystone Brokerage",,Hold,,123
+323,PFE,2023-06-08T16:47:00Z,"Edward Value","Summit Peak Securities",Strong Buy,Buy,43,39
+324,AMGN,2022-04-01T09:18:00Z,"George Sector","Summit Peak Securities",Buy,Buy,250,260
+325,IBM,2023-07-13T10:23:00Z,"Alex Smart","Horizon Advisors LLC",,Buy,,156
+326,ADBE,2022-02-09T10:44:00Z,"Hannah Trend","Pinnacle Wealth Management",Buy,Buy,500,540
+327,JPM,2022-06-20T16:31:00Z,"Oscar Gauge","Summit Peak Securities",Buy,Buy,150,159
+328,NKE,2023-06-01T09:20:00Z,"Hannah Trend","Northstar Investments",,Buy,,128
+329,PFE,2023-03-13T16:31:00Z,"Julia Focus","Northstar Investments",Buy,Strong Buy,36,45
+330,ADBE,2023-03-19T11:31:00Z,"Laura Delta","Apex Financial Group",,Buy,,575
+331,XOM,2022-03-09T13:31:00Z,"George Sector","Horizon Advisors LLC",,Hold,,111
+332,LLY,2022-03-06T15:41:00Z,"Bethany Insight","AlphaSeeker Research",Buy,Buy,580,609
+333,CRM,2023-07-01T12:06:00Z,"Oscar Gauge","Pinnacle Wealth Management",,Hold,,222
+334,JPM,2023-11-08T10:41:00Z,"Laura Delta","Evergreen Capital",Buy,Buy,151,160
+335,COST,2022-07-25T10:15:00Z,"Nina Beta","Northstar Investments",Hold,Sell,552,497
+336,PFE,2023-05-19T13:14:00Z,"Ivan Capital","ValuePath Group",,Hold,,34
+337,MSFT,2022-01-27T14:35:00Z,"Nina Beta","Keystone Brokerage",,Buy,,366
+338,XOM,2023-02-12T10:26:00Z,"Oscar Gauge","Starlight Capital",Buy,Strong Buy,110,136
+339,PYPL,2022-01-02T15:20:00Z,"Oscar Gauge","ValuePath Group",Buy,Strong Buy,61,77
+340,AMGN,2022-05-23T13:35:00Z,"Nina Beta","Meridian Equities",Buy,Strong Buy,250,305
+341,MSFT,2023-02-16T14:01:00Z,"Ivan Capital","Avalon Research",,Buy,,376
+342,COST,2022-05-09T10:11:00Z,"Nina Beta","Momentum Traders Inc.",Buy,Buy,550,578
+343,UPS,2023-08-21T09:10:00Z,"George Sector","ValuePath Group",Buy,Buy,162,173
+344,ORCL,2022-05-26T10:20:00Z,"Laura Delta","Starlight Capital",Buy,Strong Buy,120,148
+345,MSFT,2022-03-12T10:01:00Z,"Bethany Insight","Starlight Capital",Buy,Strong Buy,330,403
+346,PG,2023-10-28T12:13:00Z,"Nina Beta","Apex Financial Group",,Buy,,168
+347,IBM,2022-09-08T15:36:00Z,"Mike Sage","Summit Peak Securities",Buy,Buy,140,149
+348,IBM,2022-07-02T10:13:00Z,"Edward Value","Keystone Brokerage",Hold,Hold,139,140
+349,AMZN,2022-07-18T11:15:00Z,"Mike Sage","Apex Financial Group",Buy,Buy,130,140
+350,AAPL,2022-08-11T16:03:00Z,"Ken Benchmark","BlueChip Analysts",,Hold,,181
+351,SBUX,2022-05-09T10:23:00Z,"Bethany Insight","Keystone Brokerage",Hold,Buy,98,110
+352,ORCL,2023-04-01T12:54:00Z,"Laura Delta","Northstar Investments",Hold,Hold,120,120
+353,IBM,2022-01-26T11:17:00Z,"Ken Benchmark","Pinnacle Wealth Management",,Buy,,158
+354,NKE,2022-01-16T09:00:00Z,"Ken Benchmark","Northstar Investments",Hold,Hold,112,113
+355,LLY,2023-03-14T11:16:00Z,"Ivan Capital","Summit Peak Securities",Buy,Buy,580,621
+356,COST,2022-04-20T16:30:00Z,"Edward Value","AlphaSeeker Research",Buy,Buy,550,578
+357,MSFT,2022-07-10T14:02:00Z,"Laura Delta","Horizon Advisors LLC",Hold,Buy,330,360
+358,JPM,2022-08-09T11:17:00Z,"Ivan Capital","Meridian Equities",Buy,Buy,150,159
+359,JPM,2022-11-17T13:10:00Z,"Laura Delta","Keystone Brokerage",Hold,Buy,150,168
+360,CRM,2023-09-01T11:32:00Z,"Alex Smart","Apex Financial Group",,Hold,,220
+361,HD,2023-07-11T09:30:00Z,"Mike Sage","Starlight Capital",Hold,Buy,320,355
+362,DIS,2023-05-07T11:23:00Z,"Nina Beta","Apex Financial Group",Buy,Strong Buy,91,113
+363,HD,2022-04-13T15:16:00Z,"Hannah Trend","AlphaSeeker Research",Hold,Buy,320,358
+364,ORCL,2023-03-08T14:51:00Z,"Alex Smart","ValuePath Group",Buy,Buy,120,127
+365,PYPL,2022-03-10T10:52:00Z,"Diana Metric","Apex Financial Group",Buy,Strong Buy,60,75
+366,LLY,2023-02-04T15:29:00Z,"Alex Smart","Evergreen Capital",Strong Buy,Buy,644,596
+367,JPM,2023-09-21T09:17:00Z,"Julia Focus","AlphaSeeker Research",Buy,Strong Buy,150,180
+368,HD,2023-05-26T14:13:00Z,"George Sector","Starlight Capital",Buy,Buy,320,339
+369,SBUX,2023-09-04T09:01:00Z,"Fiona Quant","Apex Financial Group",Buy,Strong Buy,100,123
+370,MSFT,2023-04-04T11:57:00Z,"Hannah Trend","Pinnacle Wealth Management",Buy,Buy,330,343
+# Total now 370 records.
 
 [end of foundational_dataset_synthetic/analyst_ratings.csv]

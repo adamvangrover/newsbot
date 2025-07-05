@@ -74,3 +74,64 @@ Doc_ID,Ticker,Source_Type,Source_Name,Timestamp,Headline,Full_Text_Path
 73,DIS,News,MockReuters,2023-11-08T21:00:00Z,"Disney Beats Estimates, Announces Further Cost Cuts",s3://mock-bucket/news_dis_q42023.txt
 74,WMT,News,MockWSJ,2024-02-20T12:00:00Z,"Walmart Beats Q4 Estimates, Announces Vizio Acquisition",s3://mock-bucket/news_wmt_q42024_vizio.txt
 75,USA,News,MockAssociatedPress,2023-07-12T13:30:00Z,"US CPI Inflation Cools to 3.0% in June, Lowest Since March 2021",s3://mock-bucket/news_us_cpi_202306.txt
+
+76,NVDA,News,MockSource,2023-01-15T11:05:00Z,"NVDA Shares Surge After Q4 2022 Results",s3://mock-bucket/news_nvda_2022q4earn_76.txt
+77,NVDA,Transcript,VendorMock,2023-01-15T12:05:00Z,"Summary of NVIDIA (NVDA) Q4 2022 Call Transcript",s3://mock-bucket/tr_nvda_2022q4call_77.txt
+78,META,News,MockSource,2023-01-26T12:51:00Z,"Meta Platforms (META) Reports Strong Q4 2022 Earnings",s3://mock-bucket/news_meta_2022q4earn_78.txt
+79,META,Transcript,VendorMock,2023-01-26T13:51:00Z,"Summary of Meta Platforms (META) Q4 2022 Call Transcript",s3://mock-bucket/tr_meta_2022q4call_79.txt
+80,AMGN,News,MockSource,2023-02-02T10:31:00Z,"Amgen (AMGN) Reports Strong Q4 2022 Earnings",s3://mock-bucket/news_amgn_2022q4earn_80.txt
+81,AMGN,Transcript,VendorMock,2023-02-02T11:31:00Z,"Summary of Amgen (AMGN) Q4 2022 Call Transcript",s3://mock-bucket/tr_amgn_2022q4call_81.txt
+82,UPS,News,MockSource,2023-01-09T16:03:00Z,"UPS (UPS) Reports Strong Q4 2022 Earnings",s3://mock-bucket/news_ups_2022q4earn_82.txt
+83,UPS,Transcript,VendorMock,2023-01-09T17:03:00Z,"Summary of UPS (UPS) Q4 2022 Call Transcript",s3://mock-bucket/tr_ups_2022q4call_83.txt
+84,IBM,News,MockSource,2023-01-05T10:36:00Z,"IBM Shares Surge After Q4 2022 Results",s3://mock-bucket/news_ibm_2022q4earn_84.txt
+85,IBM,Transcript,VendorMock,2023-01-05T11:36:00Z,"Summary of IBM (IBM) Q4 2022 Call Transcript",s3://mock-bucket/tr_ibm_2022q4call_85.txt
+86,NFLX,8-K,SEC EDGAR Mock,2022-07-09T15:07:00Z,"NFLX 8-K: 1.01 - Material Agreement",s3://m/8k_nflx_101_2022_86.txt
+87,GE,8-K,SEC EDGAR Mock,2022-10-25T11:56:00Z,"GE 8-K: 8.01 - Other Events",s3://m/8k_ge_801_2022_87.txt
+88,ORCL,8-K,SEC EDGAR Mock,2022-09-01T15:33:00Z,"ORCL 8-K: 2.01 - Asset Transaction",s3://m/8k_orcl_201_2022_88.txt
+89,XOM,8-K,SEC EDGAR Mock,2022-05-27T14:49:00Z,"XOM 8-K: 7.01 - Reg FD Disclosure",s3://m/8k_xom_701_2022_89.txt
+90,COST,8-K,SEC EDGAR Mock,2021-02-12T10:26:00Z,"COST 8-K: 1.01 - Material Agreement",s3://m/8k_cost_101_2021_90.txt
+91,AMZN,8-K,SEC EDGAR Mock,2021-07-14T12:33:00Z,"AMZN 8-K: 8.01 - Other Events",s3://m/8k_amzn_801_2021_91.txt
+92,MRK,8-K,SEC EDGAR Mock,2023-07-27T09:06:00Z,"MRK 8-K: 1.01 - Material Agreement",s3://m/8k_mrk_101_2023_92.txt
+93,JPM,8-K,SEC EDGAR Mock,2020-01-04T11:03:00Z,"JPM 8-K: 7.01 - Reg FD Disclosure",s3://m/8k_jpm_701_2020_93.txt
+94,LLY,8-K,SEC EDGAR Mock,2022-03-22T16:23:00Z,"LLY 8-K: 8.01 - Other Events",s3://m/8k_lly_801_2022_94.txt
+95,BAC,8-K,SEC EDGAR Mock,2023-06-06T10:09:00Z,"BAC 8-K: 2.01 - Asset Transaction",s3://m/8k_bac_201_2023_95.txt
+96,WMT,8-K,SEC EDGAR Mock,2022-05-10T12:37:00Z,"WMT 8-K: 7.01 - Reg FD Disclosure",s3://m/8k_wmt_701_2022_96.txt
+97,PFE,8-K,SEC EDGAR Mock,2022-09-17T16:52:00Z,"PFE 8-K: 1.01 - Material Agreement",s3://m/8k_pfe_101_2022_97.txt
+98,HD,8-K,SEC EDGAR Mock,2022-06-05T12:06:00Z,"HD 8-K: 8.01 - Other Events",s3://m/8k_hd_801_2022_98.txt
+99,DIS,8-K,SEC EDGAR Mock,2023-10-19T10:56:00Z,"DIS 8-K: 1.01 - Material Agreement",s3://m/8k_dis_101_2023_99.txt
+100,MCD,8-K,SEC EDGAR Mock,2021-07-03T16:11:00Z,"MCD 8-K: 7.01 - Reg FD Disclosure",s3://m/8k_mcd_701_2021_100.txt
+101,BA,8-K,SEC EDGAR Mock,2023-07-21T13:49:00Z,"BA 8-K: 8.01 - Other Events",s3://m/8k_ba_801_2023_101.txt
+102,TXN,8-K,SEC EDGAR Mock,2020-09-18T16:58:00Z,"TXN 8-K: 2.01 - Asset Transaction",s3://m/8k_txn_201_2020_102.txt
+103,KO,8-K,SEC EDGAR Mock,2021-09-22T10:46:00Z,"KO 8-K: 1.01 - Material Agreement",s3://m/8k_ko_101_2021_103.txt
+104,AMGN,8-K,SEC EDGAR Mock,2023-09-17T11:46:00Z,"AMGN 8-K: 2.01 - Asset Transaction",s3://m/8k_amgn_201_2023_104.txt
+105,CRM,8-K,SEC EDGAR Mock,2022-01-24T13:11:00Z,"CRM 8-K: 7.01 - Reg FD Disclosure",s3://m/8k_crm_701_2022_105.txt
+106,,MockNews,MockNews,2021-05-15T10:00:00Z,"US-China Tensions Rise",s3://m/news_gpe_20210515_106.txt
+107,SPY,MockPress,MockPress,2022-04-06T13:00:00Z,"EU Green Deal Impact",s3://m/news_gpe_20220406_107.txt
+108,USO,MockNews,MockNews,2020-04-03T17:00:00Z,"Oil Market Volatility",s3://m/news_gpe_20200403_108.txt
+109,,MockPress,MockPress,2021-09-05T14:00:00Z,"Fed Policy Shift",s3://m/news_gpe_20210905_109.txt
+110,GBPUSD=X,MockNews,MockNews,2021-11-24T11:00:00Z,"UK Political Update",s3://m/news_gpe_20211124_110.txt
+111,EURUSD=X,MockPress,MockPress,2020-07-07T18:00:00Z,"Ukraine Conflict Update",s3://m/news_gpe_20200707_111.txt
+112,SMH,MockNews,MockNews,2021-03-06T13:00:00Z,"China Chip Strategy",s3://m/news_gpe_20210306_112.txt
+113,GLD,MockPress,MockPress,2020-09-16T15:00:00Z,"Global Debt Concerns",s3://m/news_gpe_20200916_113.txt
+114,,MockNews,MockNews,2022-02-06T15:00:00Z,"US Infra Bill Details",s3://m/news_gpe_20220206_114.txt
+115,DAX,MockPress,MockPress,2022-01-09T11:00:00Z,"German Election Fallout",s3://m/news_gpe_20220109_115.txt
+116,XLE,MockNews,MockNews,2020-01-04T09:00:00Z,"OPEC+ Decision",s3://m/news_gpe_20200104_116.txt
+117,XLF,MockPress,MockPress,2021-05-25T13:00:00Z,"Major Cyberattack",s3://m/news_gpe_20210525_117.txt
+118,EEM,MockNews,MockNews,2023-03-02T11:00:00Z,"New LatAm Trade Bloc",s3://m/news_gpe_20230302_118.txt
+119,EZA,MockPress,MockPress,2022-01-06T15:00:00Z,"Africa Infrastructure Plan",s3://m/news_gpe_20220106_119.txt
+120,AIQ,MockNews,MockNews,2022-06-03T11:00:00Z,"G7 AI Regulation",s3://m/news_gpe_20220603_120.txt
+121,ICLN,MockPress,MockPress,2021-03-25T16:00:00Z,"Climate Summit Outcome",s3://m/news_gpe_20210325_121.txt
+122,EWJ,MockNews,MockNews,2020-05-21T17:00:00Z,"Japan Defense Spending",s3://m/news_gpe_20200521_122.txt
+123,ZIM,MockPress,MockPress,2021-08-20T11:00:00Z,"Red Sea Shipping Crisis",s3://m/news_gpe_20210820_123.txt
+124,QQQ,MockNews,MockNews,2022-02-03T15:00:00Z,"EU Tech Regulation",s3://m/news_gpe_20220203_124.txt
+125,WEAT,MockPress,MockPress,2020-12-02T10:00:00Z,"Asia Water Scarcity",s3://m/news_gpe_20201202_125.txt
+126,,Fed Synth,Fed Synth,2022-07-02T11:00:00Z,"Fed Policy Path",s3://m/speech_fed_20220702_126.txt
+127,,ECB Synth,ECB Synth,2022-10-05T12:00:00Z,"ECB Inflation Strategy",s3://m/speech_ecb_20221005_127.txt
+128,,BoE Synth,BoE Synth,2022-07-16T14:00:00Z,"BoE UK Outlook",s3://m/speech_boe_20220716_128.txt
+129,,Fed Synth,Fed Synth,2021-02-26T14:00:00Z,"Fed Stability Risks",s3://m/speech_fed_20210226_129.txt
+130,,ECB Synth,ECB Synth,2023-07-12T13:00:00Z,"ECB Digital Euro",s3://m/speech_ecb_20230712_130.txt
+131,,Fed Synth,Fed Synth,2022-06-20T11:00:00Z,"Fed Jackson Hole Keynote",s3://m/speech_fed_20220620_131.txt
+132,,ECB Synth,ECB Synth,2022-03-20T11:00:00Z,"ECB Forum Opening",s3://m/speech_ecb_20220320_132.txt
+133,,BoJ Synth,BoJ Synth,2021-11-09T11:00:00Z,"BoJ YCC Update",s3://m/speech_boj_20211109_133.txt
+134,,Fed Synth,Fed Synth,2023-02-10T12:00:00Z,"Fed Climate Risk Speech",s3://m/speech_fed_20230210_134.txt
+135,,ECB Synth,ECB Synth,2021-01-13T13:00:00Z,"ECB NBFI Risks",s3://m/speech_ecb_20210113_135.txt
