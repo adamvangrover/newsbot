@@ -25,6 +25,9 @@ This project is an MVP (Minimum Viable Product) built with a production-aware mi
     *   The system scrapes the main textual content from the URL.
     *   Performs AI analysis (sentiment, summary, NER, event detection) on the scraped text.
     *   Displays the analysis along with a snippet of the scraped text.
+*   **Portfolio Management:**
+    *   Allows users to create and manage portfolios of companies.
+    *   View aggregated news and analysis for all companies in a portfolio.
 *   **Dockerized:** Both backend and frontend are containerized for easy setup and deployment.
 
 ## Tech Stack

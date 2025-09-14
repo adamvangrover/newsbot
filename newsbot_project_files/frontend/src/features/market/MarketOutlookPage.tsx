@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useMarketData } from '../../hooks/useMarketData';
 import MarketInfoDisplay from './MarketInfoDisplay';
+import TopicDisplay from '../../components/TopicDisplay';
 import MarketNewsList from './MarketNewsList';
 import Typography from '@mui/material/Typography';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -69,6 +70,7 @@ const MarketOutlookPage: React.FC = () => {
       {marketData && marketData.processed_articles && marketData.processed_articles.length > 0 && (
         <>
           <MarketInfoDisplay marketData={marketData} />
+          <TopicDisplay topicsData={marketData.topics} />
           <MarketNewsList
             articles={marketData.processed_articles}
             listTitle={`Recent Articles for ${marketData.market_news_category} (${marketData.processed_articles.length})`}

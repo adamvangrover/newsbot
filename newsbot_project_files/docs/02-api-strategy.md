@@ -107,6 +107,36 @@ For the MVP, the API endpoints are unauthenticated. In a production scenario, au
     }
     ```
 
+### 4.3. Portfolio Management
+
+*   **Endpoint:**
+*   **Description:** Provides full CRUD (Create, Read, Update, Delete) functionality for user portfolios.
+*   **Authentication:** These endpoints will require user authentication (not yet implemented in MVP). A hardcoded `user_id` of 1 is used for now.
+
+*   **`POST /`**: Create a new portfolio.
+    *   **Request Body:** A JSON object with `name` (string, required) and `description` (string, optional).
+    *   **Successful Response (201 Created):** The newly created portfolio object.
+
+*   **`GET /`**: Get all portfolios for the current user.
+    *   **Successful Response (200 OK):** A list of portfolio objects.
+
+*   **`GET /{portfolio_id}`**: Get a single portfolio by its ID.
+    *   **Successful Response (200 OK):** The requested portfolio object.
+
+*   **`PUT /{portfolio_id}`**: Update a portfolio's details (name, description).
+    *   **Request Body:** A JSON object with `name` and/or `description`.
+    *   **Successful Response (200 OK):** The updated portfolio object.
+
+*   **`DELETE /{portfolio_id}`**: Delete a portfolio.
+    *   **Successful Response (204 No Content):** An empty response.
+
+*   **`POST /{portfolio_id}/assets`**: Add an asset to a portfolio.
+    *   **Request Body:** A JSON object with `asset_id` (integer, required).
+    *   **Successful Response (200 OK):** The updated portfolio object.
+
+*   **`DELETE /{portfolio_id}/assets/{asset_id}`**: Remove an asset from a portfolio.
+    *   **Successful Response (200 OK):** The updated portfolio object.
+
 ## 5. Data Models (Pydantic Schemas)
 
 The API uses Pydantic models for request and response validation and serialization. Key schemas are defined in:

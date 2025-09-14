@@ -52,6 +52,17 @@ Models are loaded lazily on their first use to optimize application startup time
     *   The current implementation uses default length parameters or simple heuristics. Fine-tuning  and  parameters for the summarizer can improve results.
     *   Input text is truncated if it exceeds the model's maximum input length.
 
+### 2.4. Topic Modeling
+
+*   **Purpose:** To identify the main topics or themes from a collection of news articles.
+*   **Module:** `topic_modeling_service.py`
+*   **Model Used:** `MaartenGr/BERTopic_Wikipedia`
+    *   **Description:** A pre-trained BERTopic model. BERTopic is a topic modeling technique that uses Transformers and c-TF-IDF to create dense clusters allowing for easily interpretable topics. This model is trained on Wikipedia and is a good general-purpose model.
+    *   **Output:** A list of the most frequent topics, each with a name and a count.
+*   **Considerations:**
+    *   Topic modeling is performed on a batch of articles, not on individual articles.
+    *   The `get_main_topics` function is used to get the top N topics from a collection of documents.
+
 ## 3. Model Management and Performance
 
 *   **Lazy Loading:** Hugging Face models are downloaded from the Hub and loaded into memory only when the corresponding AI function is called for the first time. This speeds up initial API startup.
@@ -67,7 +78,6 @@ Models are loaded lazily on their first use to optimize application startup time
 ## 4. Future AI Enhancements
 
 *   **Named Entity Recognition (NER):** Identify organizations, people, locations, products mentioned in the news.
-*   **Topic Modeling:** Discover underlying topics in a collection of news articles.
 *   **Question Answering:** Allow users to ask questions about the news content.
 *   **Fine-tuning Models:** Fine-tune models on domain-specific data (e.g., financial news) for better accuracy.
 *   **Knowledge Graph Integration:** Link extracted entities and information to build a knowledge graph.

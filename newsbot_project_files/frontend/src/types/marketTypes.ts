@@ -50,7 +50,7 @@ export interface MarketOutlookResponseData {
     timestamp: string; // ISO datetime string
     market_news_category: string;
     market_sentiment?: MarketSentimentData | null;
-    key_themes: string[];
+    topics?: { top_topics: any[] } | null;
     highlighted_events: string[];
     processed_articles: NewsArticleData[];
 }

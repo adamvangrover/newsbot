@@ -282,4 +282,27 @@ CREATE TABLE social_media_posts (
 -- If using intraday bars:
 -- SELECT create_hypertable('equity_intraday_bars', 'bar_timestamp');
 
+
+-- #############################################################################
+-- Phase 5: User-Specific Data (Portfolios)
+-- #############################################################################
+
+CREATE TABLE portfolios (
+    portfolio_id SERIAL PRIMARY KEY,
+    user_id INT NOT NULL, -- In a real system, this would be a foreign key to a users table
+    portfolio_name VARCHAR(255) NOT NULL,
+    description TEXT,
+    created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE (user_id, portfolio_name) -- A user cannot have two portfolios with the same name
+);
+
+CREATE TABLE portfolio_assets (
+    portfolio_asset_id SERIAL PRIMARY KEY,
+    portfolio_id INT NOT NULL REFERENCES portfolios(portfolio_id) ON DELETE CASCADE,
+    asset_id INT NOT NULL REFERENCES assets(asset_id) ON DELETE CASCADE,
+    added_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE (portfolio_id, asset_id) -- An asset can only be in a portfolio once
+);
+
 COMMIT;

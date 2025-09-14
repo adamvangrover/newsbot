@@ -71,4 +71,27 @@ The system is designed as a classic two-tier application:
 *   **API-Driven:** The frontend relies entirely on the backend API for data and functionality.
 *   **Configuration Management:** API keys and other sensitive settings are managed via environment variables (loaded from  files for local development).
 
+## 6. Portfolio Management Feature (New)
+
+The architecture is extended to support portfolio management with the following additions:
+
+*   **Database:** A new set of tables (`portfolios`, `portfolio_assets`) are added to the database to store user-defined portfolios.
+*   **Backend:**
+    *   A new API endpoint (`/api/v1/portfolios`) is added to manage portfolios (CRUD operations).
+    *   A new service is introduced to handle portfolio-related business logic.
+*   **Frontend:**
+    *   A new "Portfolio Management" page is added to the UI for creating and managing portfolios.
+    *   The "Company Analysis" page is updated to allow users to select a portfolio and view aggregated analysis.
+
+### Data Flow (Example: Portfolio Analysis Request)
+
+1.  User selects a portfolio from the dropdown on the "Company & Portfolio Analysis" page.
+2.  Frontend makes a GET request to a new endpoint like `/api/v1/portfolio-analysis/{portfolio_id}` on the Backend.
+3.  Backend API endpoint receives the request.
+4.  The backend service fetches the list of companies in the portfolio from the database.
+5.  For each company in the portfolio, the `DataAggregatorService` fetches news and other relevant data.
+6.  The aggregated news from all companies is passed to the `AIProcessingService` for analysis (sentiment, topics, etc.).
+7.  The Backend API combines all fetched and processed data into a structured JSON response.
+8.  Frontend receives the JSON response and updates the UI to display the aggregated information for the portfolio.
+
 This architecture provides a solid foundation for the MVP and allows for future expansion and refinement.

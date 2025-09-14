@@ -26,13 +26,13 @@ class CompanyAnalysisResponse(BaseModel):
     profile: Optional[CompanyProfile] = None
     news: Optional[CompanyNews] = None
     stock_data: Optional[HistoricalStockData] = None
-    # You could add more fields here like overall sentiment, key themes, etc.
+    topics: Optional[Dict[str, Any]] = None
 
 @router.get(
     "/company-analysis/{ticker_symbol}",
     response_model=CompanyAnalysisResponse,
     summary="Get comprehensive analysis for a company",
-    description="Fetches company profile, news, basic stock data, and AI-powered insights."
+    description="Fetches company profile, news, basic stock data, and AI-powered insights including topic modeling."
 )
 async def get_company_analysis(
     ticker_symbol: str,
@@ -42,20 +42,13 @@ async def get_company_analysis(
 ):
     logger.info(f"Starting company analysis for ticker: {ticker_symbol}, news days: {news_days_ago}")
 
-    # Validate ticker symbol (basic validation)
-    if not ticker_symbol or not ticker_symbol.isalnum(): # Basic check, can be improved
+    if not ticker_symbol or not ticker_symbol.isalnum():
         logger.error(f"Invalid ticker symbol format: {ticker_symbol}")
         raise HTTPException(status_code=400, detail="Invalid ticker symbol format. Use alphanumeric characters.")
 
     try:
-        # 1. Fetch Company Profile
         profile = await data_aggregator.get_company_profile(ticker_symbol)
-        if not profile:
-            logger.warning(f"No profile found for ticker: {ticker_symbol}. Analysis may be limited.")
-            # Depending on strictness, you might raise HTTPException here or proceed
-            # raise HTTPException(status_code=404, detail=f"Company profile not found for ticker: {ticker_symbol}")
 
-        # 2. Fetch Company News
         end_date = datetime.now()
         start_date = end_date - timedelta(days=news_days_ago)
         news_articles_raw = await data_aggregator.get_company_news(
@@ -64,8 +57,11 @@ async def get_company_analysis(
             end_date.strftime("%Y-%m-%d")
         )
 
-        # 3. Process News with AI
-        processed_news_articles = await ai_processor.process_news_articles(news_articles_raw)
+        # 3. Process News with AI (now returns a dict)
+        ai_results = await ai_processor.process_news_articles(news_articles_raw)
+        processed_news_articles = ai_results.get("articles", [])
+        main_topics = ai_results.get("topics")
+
         company_news = CompanyNews(ticker=ticker_symbol, articles=processed_news_articles)
 
         # 4. Fetch Historical Stock Prices
@@ -76,7 +72,8 @@ async def get_company_analysis(
             ticker=ticker_symbol,
             profile=profile,
             news=company_news,
-            stock_data=stock_data
+            stock_data=stock_data,
+            topics=main_topics
         )
 
     except HTTPException as http_exc:

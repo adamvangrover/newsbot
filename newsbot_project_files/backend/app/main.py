@@ -4,8 +4,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from newsbot_project_files.backend.app.core.config import settings
 from newsbot_project_files.backend.app.api.v1.endpoints import company as company_v1
 from newsbot_project_files.backend.app.api.v1.endpoints import market as market_v1
-from newsbot_project_files.backend.app.api.v1.endpoints import tools as tools_v1 # Import the new tools router
+from newsbot_project_files.backend.app.api.v1.endpoints import tools as tools_v1
+from newsbot_project_files.backend.app.api.v1.endpoints import portfolio as portfolio_v1
 from newsbot_project_files.backend.app.core.logging import get_logger
+from newsbot_project_files.backend.app.core.database import Base, engine
 
 logger = get_logger(__name__)
 
@@ -34,12 +36,13 @@ app.add_middleware(
 # Include API routers
 app.include_router(company_v1.router, prefix=settings.API_V1_STR, tags=["Company Analysis"])
 app.include_router(market_v1.router, prefix=f"{settings.API_V1_STR}/market", tags=["Market Outlook"])
-app.include_router(tools_v1.router, prefix=f"{settings.API_V1_STR}/tools", tags=["Utility Tools"]) # Add tools router
+app.include_router(tools_v1.router, prefix=f"{settings.API_V1_STR}/tools", tags=["Utility Tools"])
+app.include_router(portfolio_v1.router, prefix=f"{settings.API_V1_STR}/portfolios", tags=["Portfolios"])
 
 @app.on_event("startup")
 async def startup_event():
     logger.info("NewsBot API starting up...")
-    # You can add other startup logic here, like connecting to a database
+    Base.metadata.create_all(bind=engine)
 
 @app.on_event("shutdown")
 async def shutdown_event():
