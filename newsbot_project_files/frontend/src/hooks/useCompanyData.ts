@@ -59,6 +59,7 @@ interface CompanyAnalysisResponse {
     profile?: CompanyProfileData | null;
     news?: CompanyNewsData | null;
     stock_data?: HistoricalStockData | null;
+    topics?: { top_topics: any[] } | null;
 }
 
 const fetchCompanyAnalysis = async (ticker: string, newsDaysAgo: number = 7): Promise<CompanyAnalysisResponse> => {

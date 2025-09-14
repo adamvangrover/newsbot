@@ -82,12 +82,13 @@ async def scrape_and_analyze_url(
             url=request.url
         )
 
-        processed_ai_results = await ai_processor.process_news_articles([pseudo_article_for_ai])
+        ai_results = await ai_processor.process_news_articles([pseudo_article_for_ai])
+        processed_articles = ai_results.get("articles", [])
 
         ai_features = None
-        if processed_ai_results and len(processed_ai_results) > 0:
+        if processed_articles:
             # Extract AI analysis from the (single) processed pseudo-article
-            pa = processed_ai_results[0]
+            pa = processed_articles[0]
             ai_features = AIScrapedContentFeatures(
                 sentiment_label=pa.sentiment_label,
                 sentiment_score=pa.sentiment_score,

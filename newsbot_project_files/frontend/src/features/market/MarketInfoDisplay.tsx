@@ -15,7 +15,7 @@ interface MarketInfoDisplayProps {
 }
 
 const MarketInfoDisplay: React.FC<MarketInfoDisplayProps> = ({ marketData }) => {
-    const { market_sentiment, key_themes, highlighted_events, market_news_category, timestamp } = marketData;
+    const { market_sentiment, highlighted_events, market_news_category, timestamp } = marketData;
 
     const renderSentiment = (sentiment: MarketSentimentData | null | undefined) => {
         if (!sentiment) return <Typography>Sentiment data unavailable.</Typography>;
@@ -54,16 +54,6 @@ const MarketInfoDisplay: React.FC<MarketInfoDisplayProps> = ({ marketData }) => 
             <Grid container spacing={3}>
                 <Grid item xs={12} md={6}>
                     {renderSentiment(market_sentiment)}
-                </Grid>
-                <Grid item xs={12} md={6}>
-                    <Typography variant="h6" gutterBottom>Key Themes</Typography>
-                    {key_themes && key_themes.length > 0 ? (
-                        key_themes.map((theme, index) => (
-                            <Chip key={index} label={theme} sx={{ mr: 1, mb: 1 }} />
-                        ))
-                    ) : (
-                        <Typography>No specific themes identified.</Typography>
-                    )}
                 </Grid>
                 <Grid item xs={12}>
                     <Typography variant="h6" gutterBottom>Highlighted Events/News</Typography>

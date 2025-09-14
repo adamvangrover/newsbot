@@ -11,7 +11,7 @@ import Toolbar from '@mui/material/Toolbar'; // To offset content below AppBar
 import BusinessIcon from '@mui/icons-material/Business'; // Company Analysis
 import LanguageIcon from '@mui/icons-material/Language'; // Market Outlook
 import TravelExploreIcon from '@mui/icons-material/TravelExplore'; // Web Scrape/Tools
-import HomeIcon from '@mui/icons-material/Home'; // For a potential dashboard/home
+import AssessmentIcon from '@mui/icons-material/Assessment'; // For Portfolios
 
 const drawerWidth = 240;
 
@@ -24,6 +24,7 @@ interface SidebarItem {
 const sidebarItems: SidebarItem[] = [
   { text: 'Company Analysis', path: '/', icon: <BusinessIcon /> },
   { text: 'Market Outlook', path: '/market', icon: <LanguageIcon /> },
+  { text: 'Portfolios', path: '/portfolios', icon: <AssessmentIcon /> },
   { text: 'Web Scraper', path: '/tools', icon: <TravelExploreIcon /> },
 ];
 

@@ -1,15 +1,29 @@
 import pytest
-import asyncio
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from newsbot_project_files.backend.app.core.database import Base, get_db
+from newsbot_project_files.backend.app.main import app
+from fastapi.testclient import TestClient
 
-"""
-This conftest.py is used for shared fixtures across tests.
-pytest-asyncio handles event loop management for async tests automatically.
+SQLALCHEMY_DATABASE_URL = "sqlite:///:memory:"
 
-Example shared fixture (can be uncommented and adapted):
-# @pytest.fixture(scope='session')
-# def event_loop():
-#     """Create an instance of the default event loop for the session."""
-#     loop = asyncio.get_event_loop_policy().new_event_loop()
-#     yield loop
-#     loop.close()
-"""
+engine = create_engine(
+    SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
+)
+TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+Base.metadata.create_all(bind=engine)
+
+def override_get_db():
+    try:
+        db = TestingSessionLocal()
+        yield db
+    finally:
+        db.close()
+
+app.dependency_overrides[get_db] = override_get_db
+
+@pytest.fixture(scope="module")
+def client():
+    with TestClient(app) as c:
+        yield c

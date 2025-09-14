@@ -13,6 +13,7 @@ import MainContent from './components/Layout/MainContent'; // This might need ad
 import CompanyAnalysisPage from './features/company/CompanyAnalysisPage';
 import MarketOutlookPage from './features/market/MarketOutlookPage';
 import WebScrapePage from './features/tools/WebScrapePage';
+import PortfolioPage from './features/portfolio/PortfolioPage'; // Import the new page
 
 const drawerWidth = 240; // Consistent with Sidebar and Header
 
@@ -47,6 +48,7 @@ function App() {
               <Route path="/" element={<CompanyAnalysisPage />} />
               <Route path="/market" element={<MarketOutlookPage />} />
               <Route path="/tools" element={<WebScrapePage />} />
+              <Route path="/portfolios" element={<PortfolioPage />} />
               {/* Add a 404 Not Found route later if desired */}
               {/* <Route path="*" element={<NotFoundPage />} /> */}
             </Routes>
