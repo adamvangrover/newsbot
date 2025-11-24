@@ -39,8 +39,22 @@ class DataAggregatorService:
     @functools.lru_cache(maxsize=32)
     def get_company_profile(self, ticker: str) -> Optional[CompanyProfileFinnhub]:
         if not self.finnhub_api_key or self.finnhub_api_key == "YOUR_FINNHUB_KEY_HERE":
-            logger.error(f"Finnhub API key not configured for get_company_profile({ticker}).")
-            return None
+            logger.warning(f"Finnhub API key not configured. Returning MOCK profile for {ticker}.")
+            # Return Mock Data
+            return CompanyProfileFinnhub(
+                country="US",
+                currency="USD",
+                exchange="NASDAQ",
+                ipo=datetime.date(1980, 12, 12),
+                marketCapitalization=3000000.0,
+                name=f"{ticker} Inc.",
+                phone="123-456-7890",
+                shareOutstanding=16000.0,
+                ticker=ticker,
+                weburl="https://www.apple.com",
+                logo="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+                finnhubIndustry="Technology"
+            )
         endpoint = f"{self.FINNHUB_BASE_URL}/stock/profile2"
         params = {"symbol": ticker, "token": self.finnhub_api_key}
         try:
@@ -62,8 +76,43 @@ class DataAggregatorService:
     @functools.lru_cache(maxsize=64)
     def get_company_news(self, ticker: str, start_date: str, end_date: str) -> List[NewsArticleFinnhub]:
         if not self.finnhub_api_key or self.finnhub_api_key == "YOUR_FINNHUB_KEY_HERE":
-            logger.error(f"Finnhub API key not configured for get_company_news({ticker}).")
-            return []
+            logger.warning(f"Finnhub API key not configured. Returning MOCK news for {ticker}.")
+            # Return Mock Data
+            return [
+                NewsArticleFinnhub(
+                    category="technology",
+                    datetime=int(datetime.datetime.now().timestamp()),
+                    headline=f"{ticker} announces new product line",
+                    id=12345,
+                    image="https://via.placeholder.com/150",
+                    related=ticker,
+                    source="TechCrunch",
+                    summary=f"In a recent event, {ticker} unveiled its latest innovation, promising to revolutionize the industry.",
+                    url="https://techcrunch.com"
+                ),
+                NewsArticleFinnhub(
+                    category="business",
+                    datetime=int((datetime.datetime.now() - datetime.timedelta(days=1)).timestamp()),
+                    headline=f"Analysts upgrade {ticker} stock",
+                    id=12346,
+                    image="https://via.placeholder.com/150",
+                    related=ticker,
+                    source="Bloomberg",
+                    summary=f"Market analysts have revised their outlook for {ticker}, citing strong quarterly earnings.",
+                    url="https://bloomberg.com"
+                ),
+                NewsArticleFinnhub(
+                    category="business",
+                    datetime=int((datetime.datetime.now() - datetime.timedelta(days=2)).timestamp()),
+                    headline=f"{ticker} expands partnership",
+                    id=12347,
+                    image="https://via.placeholder.com/150",
+                    related=ticker,
+                    source="Reuters",
+                    summary=f"{ticker} has signed a strategic partnership with a major logistics provider.",
+                    url="https://reuters.com"
+                )
+            ]
         endpoint = f"{self.FINNHUB_BASE_URL}/company-news"
         params = {"symbol": ticker, "from": start_date, "to": end_date, "token": self.finnhub_api_key}
         try:
@@ -86,8 +135,23 @@ class DataAggregatorService:
     @functools.lru_cache(maxsize=32)
     def get_stock_prices(self, ticker: str, days: int = 30) -> Optional[StockDataAlphaVantage]:
         if not self.alpha_vantage_api_key or self.alpha_vantage_api_key == "YOUR_ALPHA_VANTAGE_KEY_HERE":
-            logger.error(f"Alpha Vantage API key not configured for get_stock_prices({ticker}).")
-            return None
+            logger.warning(f"Alpha Vantage API key not configured. Returning MOCK stock prices for {ticker}.")
+            # Return Mock Data
+            prices = []
+            today = datetime.date.today()
+            for i in range(days):
+                date = today - datetime.timedelta(days=i)
+                # Generate some random walk data
+                base_price = 150.0 + (i * 0.5)
+                prices.append(StockDataPointAlphaVantage(
+                    date=date,
+                    open=base_price,
+                    high=base_price + 2.0,
+                    low=base_price - 1.0,
+                    close=base_price + 0.5,
+                    volume=1000000 + (i * 1000)
+                ))
+            return StockDataAlphaVantage(ticker=ticker, prices=prices)
             
         endpoint = f"{self.ALPHA_VANTAGE_BASE_URL}" # Using the constant defined in class
         params = {
