@@ -5,3 +5,10 @@ requests
 pydantic-settings
 transformers
 torch
+nltk
+pycoingecko
+scikit-learn
+feedparser
+semantic-kernel
+pytest
+httpx
