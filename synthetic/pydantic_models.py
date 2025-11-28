@@ -39,6 +39,11 @@ class EquityDailyPrice(BaseModel):
     ingestion_timestamp: datetime
     source: Optional[str] = None
 
+class NewsSource(BaseModel):
+    news_source_id: int
+    source_name: str
+    website: Optional[str] = None
+
 class NewsArticleMetadata(BaseModel):
     article_id: int
     news_source_id: Optional[int] = None
@@ -51,6 +56,11 @@ class NewsArticleMetadata(BaseModel):
     source_api: Optional[str] = None
     # derived/helper fields
     sentiment_score: float = 0.0
+
+class SECFilingType(BaseModel):
+    filing_type_id: int
+    form_type: str
+    description: Optional[str] = None
 
 class SECFilingMetadata(BaseModel):
     filing_id: int
@@ -65,6 +75,14 @@ class SECFilingMetadata(BaseModel):
     structured_json_s3_path: Optional[str] = None
     ingestion_timestamp: datetime
     source: Optional[str] = None
+
+class EconomicEventType(BaseModel):
+    event_type_id: int
+    event_name: str
+    country_region: Optional[str] = None
+    release_frequency: Optional[str] = None
+    description: Optional[str] = None
+    source_identifier: Optional[str] = None
 
 class EconomicEvent(BaseModel):
     event_id: int
