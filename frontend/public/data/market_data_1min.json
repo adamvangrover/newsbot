@@ -1,0 +1,4475 @@
+[
+  {
+    "Timestamp": "2018-03-21T13:30:00Z",
+    "Ticker": "AAPL",
+    "Open": 43.75,
+    "High": 43.8,
+    "Low": 43.7,
+    "Close": 43.78,
+    "Volume": 150000
+  },
+  {
+    "Timestamp": "2018-03-21T13:31:00Z",
+    "Ticker": "AAPL",
+    "Open": 43.78,
+    "High": 43.82,
+    "Low": 43.76,
+    "Close": 43.81,
+    "Volume": 120000
+  },
+  {
+    "Timestamp": "2018-03-21T13:59:00Z",
+    "Ticker": "AAPL",
+    "Open": 43.9,
+    "High": 43.95,
+    "Low": 43.88,
+    "Close": 43.92,
+    "Volume": 130000
+  },
+  {
+    "Timestamp": "2018-03-21T16:00:00Z",
+    "Ticker": "AAPL",
+    "Open": 43.85,
+    "High": 43.88,
+    "Low": 43.8,
+    "Close": 43.82,
+    "Volume": 100000
+  },
+  {
+    "Timestamp": "2018-03-21T16:29:00Z",
+    "Ticker": "AAPL",
+    "Open": 43.7,
+    "High": 43.75,
+    "Low": 43.68,
+    "Close": 43.72,
+    "Volume": 110000
+  },
+  {
+    "Timestamp": "2018-03-21T19:30:00Z",
+    "Ticker": "AAPL",
+    "Open": 43.95,
+    "High": 44,
+    "Low": 43.93,
+    "Close": 43.98,
+    "Volume": 200000
+  },
+  {
+    "Timestamp": "2018-03-21T19:59:00Z",
+    "Ticker": "AAPL",
+    "Open": 44.1,
+    "High": 44.15,
+    "Low": 44.08,
+    "Close": 44.12,
+    "Volume": 250000
+  },
+  {
+    "Timestamp": "2018-03-21T13:30:00Z",
+    "Ticker": "MSFT",
+    "Open": 92.5,
+    "High": 92.6,
+    "Low": 92.45,
+    "Close": 92.55,
+    "Volume": 100000
+  },
+  {
+    "Timestamp": "2018-03-21T13:31:00Z",
+    "Ticker": "MSFT",
+    "Open": 92.55,
+    "High": 92.65,
+    "Low": 92.5,
+    "Close": 92.62,
+    "Volume": 90000
+  },
+  {
+    "Timestamp": "2018-04-30T13:30:00Z",
+    "Ticker": "AAPL",
+    "Open": 41.7,
+    "High": 41.8,
+    "Low": 41.65,
+    "Close": 41.75,
+    "Volume": 160000
+  },
+  {
+    "Timestamp": "2018-03-21T13:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2700,
+    "High": 2701,
+    "Low": 2699,
+    "Close": 2700.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-21T16:00:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2705,
+    "High": 2706,
+    "Low": 2704,
+    "Close": 2705.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-21T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2715,
+    "High": 2716,
+    "Low": 2714,
+    "Close": 2715.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-21T13:30:00Z",
+    "Ticker": "CL=F",
+    "Open": 63.5,
+    "High": 63.55,
+    "Low": 63.45,
+    "Close": 63.52,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-21T19:59:00Z",
+    "Ticker": "CL=F",
+    "Open": 64,
+    "High": 64.05,
+    "Low": 63.95,
+    "Close": 64.02,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-21T13:30:00Z",
+    "Ticker": "EURUSD=X",
+    "Open": 1.2345,
+    "High": 1.235,
+    "Low": 1.234,
+    "Close": 1.2348,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-21T19:59:00Z",
+    "Ticker": "EURUSD=X",
+    "Open": 1.23,
+    "High": 1.2305,
+    "Low": 1.2295,
+    "Close": 1.2302,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "AAPL",
+    "Open": 44,
+    "High": 44.05,
+    "Low": 43.95,
+    "Close": 44.02,
+    "Volume": 150000
+  },
+  {
+    "Timestamp": "2018-04-23T13:30:00Z",
+    "Ticker": "AAPL",
+    "Open": 41.5,
+    "High": 41.55,
+    "Low": 41.45,
+    "Close": 41.52,
+    "Volume": 170000
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "MSFT",
+    "Open": 93,
+    "High": 93.05,
+    "Low": 92.95,
+    "Close": 93.02,
+    "Volume": 120000
+  },
+  {
+    "Timestamp": "2018-04-23T13:30:00Z",
+    "Ticker": "MSFT",
+    "Open": 95,
+    "High": 95.05,
+    "Low": 94.95,
+    "Close": 95.02,
+    "Volume": 130000
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "AMZN",
+    "Open": 1550,
+    "High": 1551,
+    "Low": 1549,
+    "Close": 1550.5,
+    "Volume": 80000
+  },
+  {
+    "Timestamp": "2018-04-23T13:30:00Z",
+    "Ticker": "AMZN",
+    "Open": 1500,
+    "High": 1501,
+    "Low": 1499,
+    "Close": 1500.5,
+    "Volume": 90000
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "GOOGL",
+    "Open": 1100,
+    "High": 1101,
+    "Low": 1099,
+    "Close": 1100.5,
+    "Volume": 70000
+  },
+  {
+    "Timestamp": "2018-04-23T13:30:00Z",
+    "Ticker": "GOOGL",
+    "Open": 1050,
+    "High": 1051,
+    "Low": 1049,
+    "Close": 1050.5,
+    "Volume": 75000
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "TSLA",
+    "Open": 65,
+    "High": 65.05,
+    "Low": 64.95,
+    "Close": 65.02,
+    "Volume": 200000
+  },
+  {
+    "Timestamp": "2018-04-23T13:30:00Z",
+    "Ticker": "TSLA",
+    "Open": 58,
+    "High": 58.05,
+    "Low": 57.95,
+    "Close": 58.02,
+    "Volume": 220000
+  },
+  {
+    "Timestamp": "2018-03-19T13:31:00Z",
+    "Ticker": "AAPL",
+    "Open": 44.02,
+    "High": 44.08,
+    "Low": 44,
+    "Close": 44.06,
+    "Volume": 140000
+  },
+  {
+    "Timestamp": "2018-03-19T13:59:00Z",
+    "Ticker": "AAPL",
+    "Open": 44.2,
+    "High": 44.25,
+    "Low": 44.18,
+    "Close": 44.22,
+    "Volume": 160000
+  },
+  {
+    "Timestamp": "2018-03-19T16:00:00Z",
+    "Ticker": "AAPL",
+    "Open": 44.15,
+    "High": 44.18,
+    "Low": 44.1,
+    "Close": 44.12,
+    "Volume": 100000
+  },
+  {
+    "Timestamp": "2018-03-19T16:29:00Z",
+    "Ticker": "AAPL",
+    "Open": 44,
+    "High": 44.05,
+    "Low": 43.98,
+    "Close": 44.02,
+    "Volume": 110000
+  },
+  {
+    "Timestamp": "2018-03-19T19:30:00Z",
+    "Ticker": "AAPL",
+    "Open": 44.25,
+    "High": 44.3,
+    "Low": 44.23,
+    "Close": 44.28,
+    "Volume": 200000
+  },
+  {
+    "Timestamp": "2018-03-19T19:59:00Z",
+    "Ticker": "AAPL",
+    "Open": 44.4,
+    "High": 44.45,
+    "Low": 44.38,
+    "Close": 44.42,
+    "Volume": 250000
+  },
+  {
+    "Timestamp": "2018-03-19T13:31:00Z",
+    "Ticker": "MSFT",
+    "Open": 93.02,
+    "High": 93.08,
+    "Low": 93,
+    "Close": 93.06,
+    "Volume": 110000
+  },
+  {
+    "Timestamp": "2018-03-19T13:59:00Z",
+    "Ticker": "MSFT",
+    "Open": 93.2,
+    "High": 93.25,
+    "Low": 93.18,
+    "Close": 93.22,
+    "Volume": 130000
+  },
+  {
+    "Timestamp": "2018-03-19T16:00:00Z",
+    "Ticker": "MSFT",
+    "Open": 93.15,
+    "High": 93.18,
+    "Low": 93.1,
+    "Close": 93.12,
+    "Volume": 90000
+  },
+  {
+    "Timestamp": "2018-03-19T16:29:00Z",
+    "Ticker": "MSFT",
+    "Open": 93,
+    "High": 93.05,
+    "Low": 92.98,
+    "Close": 93.02,
+    "Volume": 100000
+  },
+  {
+    "Timestamp": "2018-03-19T19:30:00Z",
+    "Ticker": "MSFT",
+    "Open": 93.25,
+    "High": 93.3,
+    "Low": 93.23,
+    "Close": 93.28,
+    "Volume": 140000
+  },
+  {
+    "Timestamp": "2018-03-19T19:59:00Z",
+    "Ticker": "MSFT",
+    "Open": 93.4,
+    "High": 93.45,
+    "Low": 93.38,
+    "Close": 93.42,
+    "Volume": 160000
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2750,
+    "High": 2751,
+    "Low": 2749,
+    "Close": 2750.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T16:00:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2755,
+    "High": 2756,
+    "Low": 2754,
+    "Close": 2755.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2745,
+    "High": 2746,
+    "Low": 2744,
+    "Close": 2745.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "CL=F",
+    "Open": 62.2,
+    "High": 62.25,
+    "Low": 62.15,
+    "Close": 62.22,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T19:59:00Z",
+    "Ticker": "CL=F",
+    "Open": 62.5,
+    "High": 62.55,
+    "Low": 62.45,
+    "Close": 62.52,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "EURUSD=X",
+    "Open": 1.228,
+    "High": 1.2285,
+    "Low": 1.2275,
+    "Close": 1.2282,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T19:59:00Z",
+    "Ticker": "EURUSD=X",
+    "Open": 1.225,
+    "High": 1.2255,
+    "Low": 1.2245,
+    "Close": 1.2252,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "ZN=F",
+    "Open": 121.5,
+    "High": 121.55,
+    "Low": 121.45,
+    "Close": 121.52,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T19:59:00Z",
+    "Ticker": "ZN=F",
+    "Open": 121.2,
+    "High": 121.25,
+    "Low": 121.15,
+    "Close": 121.22,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2019-03-18T13:30:00Z",
+    "Ticker": "AAPL",
+    "Open": 46.5,
+    "High": 46.55,
+    "Low": 46.45,
+    "Close": 46.52,
+    "Volume": 140000
+  },
+  {
+    "Timestamp": "2019-03-18T13:31:00Z",
+    "Ticker": "AAPL",
+    "Open": 46.52,
+    "High": 46.58,
+    "Low": 46.5,
+    "Close": 46.56,
+    "Volume": 130000
+  },
+  {
+    "Timestamp": "2019-03-18T13:59:00Z",
+    "Ticker": "AAPL",
+    "Open": 46.8,
+    "High": 46.85,
+    "Low": 46.78,
+    "Close": 46.82,
+    "Volume": 150000
+  },
+  {
+    "Timestamp": "2019-03-18T16:00:00Z",
+    "Ticker": "AAPL",
+    "Open": 46.7,
+    "High": 46.75,
+    "Low": 46.65,
+    "Close": 46.68,
+    "Volume": 100000
+  },
+  {
+    "Timestamp": "2019-03-18T16:29:00Z",
+    "Ticker": "AAPL",
+    "Open": 46.6,
+    "High": 46.65,
+    "Low": 46.58,
+    "Close": 46.62,
+    "Volume": 110000
+  },
+  {
+    "Timestamp": "2019-03-18T19:30:00Z",
+    "Ticker": "AAPL",
+    "Open": 46.9,
+    "High": 46.95,
+    "Low": 46.88,
+    "Close": 46.92,
+    "Volume": 190000
+  },
+  {
+    "Timestamp": "2019-03-18T19:59:00Z",
+    "Ticker": "AAPL",
+    "Open": 47,
+    "High": 47.05,
+    "Low": 46.98,
+    "Close": 47.02,
+    "Volume": 240000
+  },
+  {
+    "Timestamp": "2019-10-21T13:30:00Z",
+    "Ticker": "AAPL",
+    "Open": 60,
+    "High": 60.05,
+    "Low": 59.95,
+    "Close": 60.02,
+    "Volume": 180000
+  },
+  {
+    "Timestamp": "2019-03-18T13:30:00Z",
+    "Ticker": "MSFT",
+    "Open": 115,
+    "High": 115.05,
+    "Low": 114.95,
+    "Close": 115.02,
+    "Volume": 100000
+  },
+  {
+    "Timestamp": "2019-10-21T13:30:00Z",
+    "Ticker": "MSFT",
+    "Open": 136,
+    "High": 136.05,
+    "Low": 135.95,
+    "Close": 136.02,
+    "Volume": 110000
+  },
+  {
+    "Timestamp": "2019-03-18T13:30:00Z",
+    "Ticker": "AMZN",
+    "Open": 1750,
+    "High": 1751,
+    "Low": 1749,
+    "Close": 1750.5,
+    "Volume": 70000
+  },
+  {
+    "Timestamp": "2019-10-21T13:30:00Z",
+    "Ticker": "AMZN",
+    "Open": 1780,
+    "High": 1781,
+    "Low": 1779,
+    "Close": 1780.5,
+    "Volume": 80000
+  },
+  {
+    "Timestamp": "2019-03-18T13:30:00Z",
+    "Ticker": "GOOGL",
+    "Open": 1180,
+    "High": 1181,
+    "Low": 1179,
+    "Close": 1180.5,
+    "Volume": 60000
+  },
+  {
+    "Timestamp": "2019-10-21T13:30:00Z",
+    "Ticker": "GOOGL",
+    "Open": 1240,
+    "High": 1241,
+    "Low": 1239,
+    "Close": 1240.5,
+    "Volume": 65000
+  },
+  {
+    "Timestamp": "2019-03-18T13:30:00Z",
+    "Ticker": "TSLA",
+    "Open": 55,
+    "High": 55.05,
+    "Low": 54.95,
+    "Close": 55.02,
+    "Volume": 210000
+  },
+  {
+    "Timestamp": "2019-10-21T13:30:00Z",
+    "Ticker": "TSLA",
+    "Open": 51,
+    "High": 51.05,
+    "Low": 50.95,
+    "Close": 51.02,
+    "Volume": 230000
+  },
+  {
+    "Timestamp": "2019-03-18T13:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2820,
+    "High": 2821,
+    "Low": 2819,
+    "Close": 2820.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2019-03-18T16:00:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2825,
+    "High": 2826,
+    "Low": 2824,
+    "Close": 2825.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2019-03-18T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2830,
+    "High": 2831,
+    "Low": 2829,
+    "Close": 2830.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2019-03-18T13:30:00Z",
+    "Ticker": "CL=F",
+    "Open": 58.5,
+    "High": 58.55,
+    "Low": 58.45,
+    "Close": 58.52,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2019-03-18T19:59:00Z",
+    "Ticker": "CL=F",
+    "Open": 59,
+    "High": 59.05,
+    "Low": 58.95,
+    "Close": 59.02,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2019-03-18T13:30:00Z",
+    "Ticker": "EURUSD=X",
+    "Open": 1.132,
+    "High": 1.1325,
+    "Low": 1.1315,
+    "Close": 1.1322,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2019-03-18T19:59:00Z",
+    "Ticker": "EURUSD=X",
+    "Open": 1.134,
+    "High": 1.1345,
+    "Low": 1.1335,
+    "Close": 1.1342,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2019-03-18T13:30:00Z",
+    "Ticker": "ZN=F",
+    "Open": 122.1,
+    "High": 122.15,
+    "Low": 122.05,
+    "Close": 122.12,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2019-03-18T19:59:00Z",
+    "Ticker": "ZN=F",
+    "Open": 122.3,
+    "High": 122.35,
+    "Low": 122.25,
+    "Close": 122.32,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2020-03-16T13:30:00Z",
+    "Ticker": "AAPL",
+    "Open": 60.5,
+    "High": 60.55,
+    "Low": 59.5,
+    "Close": 60,
+    "Volume": "350000 # High volatility"
+  },
+  {
+    "Timestamp": "2020-03-16T13:31:00Z",
+    "Ticker": "AAPL",
+    "Open": 60,
+    "High": 60.1,
+    "Low": 59,
+    "Close": 59.05,
+    "Volume": 330000
+  },
+  {
+    "Timestamp": "2020-07-20T13:30:00Z",
+    "Ticker": "AAPL",
+    "Open": 95,
+    "High": 95.05,
+    "Low": 94.95,
+    "Close": 95.02,
+    "Volume": 160000
+  },
+  {
+    "Timestamp": "2020-03-16T13:30:00Z",
+    "Ticker": "MSFT",
+    "Open": 140,
+    "High": 140.05,
+    "Low": 138,
+    "Close": 138.5,
+    "Volume": 280000
+  },
+  {
+    "Timestamp": "2020-07-20T13:30:00Z",
+    "Ticker": "MSFT",
+    "Open": 205,
+    "High": 205.05,
+    "Low": 204.95,
+    "Close": 205.02,
+    "Volume": 150000
+  },
+  {
+    "Timestamp": "2020-03-16T13:30:00Z",
+    "Ticker": "AMZN",
+    "Open": 1700,
+    "High": 1701,
+    "Low": 1680,
+    "Close": 1685.5,
+    "Volume": 170000
+  },
+  {
+    "Timestamp": "2020-07-20T13:30:00Z",
+    "Ticker": "AMZN",
+    "Open": 3100,
+    "High": 3101,
+    "Low": 3099,
+    "Close": 3100.5,
+    "Volume": 120000
+  },
+  {
+    "Timestamp": "2020-03-16T13:30:00Z",
+    "Ticker": "GOOGL",
+    "Open": 1080,
+    "High": 1081,
+    "Low": 1060,
+    "Close": 1065.5,
+    "Volume": 100000
+  },
+  {
+    "Timestamp": "2020-07-20T13:30:00Z",
+    "Ticker": "GOOGL",
+    "Open": 1520,
+    "High": 1521,
+    "Low": 1519,
+    "Close": 1520.5,
+    "Volume": 90000
+  },
+  {
+    "Timestamp": "2020-03-16T13:30:00Z",
+    "Ticker": "TSLA",
+    "Open": 80,
+    "High": 80.05,
+    "Low": 75,
+    "Close": 76.02,
+    "Volume": 400000
+  },
+  {
+    "Timestamp": "2020-07-20T13:30:00Z",
+    "Ticker": "TSLA",
+    "Open": 300,
+    "High": 300.05,
+    "Low": 299.95,
+    "Close": 300.02,
+    "Volume": 350000
+  },
+  {
+    "Timestamp": "2020-03-16T13:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2400,
+    "High": 2401,
+    "Low": 2350,
+    "Close": 2380.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2020-03-16T16:00:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2390,
+    "High": 2391,
+    "Low": 2340,
+    "Close": 2370.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2020-03-16T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2385,
+    "High": 2386,
+    "Low": 2335,
+    "Close": 2365.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2020-03-16T13:30:00Z",
+    "Ticker": "CL=F",
+    "Open": 30.5,
+    "High": 30.55,
+    "Low": 29.5,
+    "Close": 30.02,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2020-03-16T19:59:00Z",
+    "Ticker": "CL=F",
+    "Open": 28,
+    "High": 28.05,
+    "Low": 27,
+    "Close": 27.52,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2020-03-16T13:30:00Z",
+    "Ticker": "EURUSD=X",
+    "Open": 1.115,
+    "High": 1.1155,
+    "Low": 1.105,
+    "Close": 1.1102,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2020-03-16T19:59:00Z",
+    "Ticker": "EURUSD=X",
+    "Open": 1.1,
+    "High": 1.1005,
+    "Low": 1.09,
+    "Close": 1.0952,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2020-03-16T13:30:00Z",
+    "Ticker": "ZN=F",
+    "Open": 138.1,
+    "High": 138.15,
+    "Low": 138.05,
+    "Close": 138.12,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2020-03-16T19:59:00Z",
+    "Ticker": "ZN=F",
+    "Open": 139.3,
+    "High": 139.35,
+    "Low": 139.25,
+    "Close": 139.32,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2021-01-25T14:30:00Z",
+    "Ticker": "AAPL",
+    "Open": 143,
+    "High": 143.1,
+    "Low": 142.9,
+    "Close": 143.05,
+    "Volume": 150000
+  },
+  {
+    "Timestamp": "2021-09-20T13:30:00Z",
+    "Ticker": "AAPL",
+    "Open": 145,
+    "High": 145.1,
+    "Low": 144.9,
+    "Close": 145.05,
+    "Volume": 140000
+  },
+  {
+    "Timestamp": "2021-01-25T14:30:00Z",
+    "Ticker": "MSFT",
+    "Open": 228,
+    "High": 228.1,
+    "Low": 227.9,
+    "Close": 228.05,
+    "Volume": 110000
+  },
+  {
+    "Timestamp": "2021-09-20T13:30:00Z",
+    "Ticker": "MSFT",
+    "Open": 298,
+    "High": 298.1,
+    "Low": 297.9,
+    "Close": 298.05,
+    "Volume": 100000
+  },
+  {
+    "Timestamp": "2021-01-25T14:30:00Z",
+    "Ticker": "AMZN",
+    "Open": 3300,
+    "High": 3301,
+    "Low": 3299,
+    "Close": 3300.5,
+    "Volume": 80000
+  },
+  {
+    "Timestamp": "2021-09-20T13:30:00Z",
+    "Ticker": "AMZN",
+    "Open": 3400,
+    "High": 3401,
+    "Low": 3399,
+    "Close": 3400.5,
+    "Volume": 70000
+  },
+  {
+    "Timestamp": "2021-01-25T14:30:00Z",
+    "Ticker": "GOOGL",
+    "Open": 1880,
+    "High": 1881,
+    "Low": 1879,
+    "Close": 1880.5,
+    "Volume": 70000
+  },
+  {
+    "Timestamp": "2021-09-20T13:30:00Z",
+    "Ticker": "GOOGL",
+    "Open": 2800,
+    "High": 2801,
+    "Low": 2799,
+    "Close": 2800.5,
+    "Volume": 60000
+  },
+  {
+    "Timestamp": "2021-01-25T14:30:00Z",
+    "Ticker": "TSLA",
+    "Open": 850,
+    "High": 851,
+    "Low": 849,
+    "Close": 850.5,
+    "Volume": 250000
+  },
+  {
+    "Timestamp": "2021-09-20T13:30:00Z",
+    "Ticker": "TSLA",
+    "Open": 750,
+    "High": 751,
+    "Low": 749,
+    "Close": 750.5,
+    "Volume": 230000
+  },
+  {
+    "Timestamp": "2021-09-20T13:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 4400,
+    "High": 4401,
+    "Low": 4399,
+    "Close": 4400.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2021-09-20T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 4350,
+    "High": 4351,
+    "Low": 4349,
+    "Close": 4350.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2021-09-20T13:30:00Z",
+    "Ticker": "CL=F",
+    "Open": 70.5,
+    "High": 70.55,
+    "Low": 70.45,
+    "Close": 70.52,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2021-09-20T19:59:00Z",
+    "Ticker": "CL=F",
+    "Open": 71.8,
+    "High": 71.85,
+    "Low": 71.75,
+    "Close": 71.82,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2021-09-20T13:30:00Z",
+    "Ticker": "EURUSD=X",
+    "Open": 1.172,
+    "High": 1.1725,
+    "Low": 1.1715,
+    "Close": 1.1722,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2021-09-20T19:59:00Z",
+    "Ticker": "EURUSD=X",
+    "Open": 1.17,
+    "High": 1.1705,
+    "Low": 1.1695,
+    "Close": 1.1702,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2021-09-20T13:30:00Z",
+    "Ticker": "ZN=F",
+    "Open": 133.1,
+    "High": 133.15,
+    "Low": 133.05,
+    "Close": 133.12,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2021-09-20T19:59:00Z",
+    "Ticker": "ZN=F",
+    "Open": 132.8,
+    "High": 132.85,
+    "Low": 132.75,
+    "Close": 132.82,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2022-01-03T14:30:00Z",
+    "Ticker": "AAPL",
+    "Open": 178,
+    "High": 178.1,
+    "Low": 177.9,
+    "Close": 178.05,
+    "Volume": 170000
+  },
+  {
+    "Timestamp": "2022-06-13T13:30:00Z",
+    "Ticker": "AAPL",
+    "Open": 132,
+    "High": 132.1,
+    "Low": 131,
+    "Close": 131.5,
+    "Volume": 220000
+  },
+  {
+    "Timestamp": "2023-03-06T14:30:00Z",
+    "Ticker": "AAPL",
+    "Open": 153,
+    "High": 153.1,
+    "Low": 152.9,
+    "Close": 153.05,
+    "Volume": 130000
+  },
+  {
+    "Timestamp": "2023-10-23T13:30:00Z",
+    "Ticker": "AAPL",
+    "Open": 170,
+    "High": 170.1,
+    "Low": 169.9,
+    "Close": 170.05,
+    "Volume": 120000
+  },
+  {
+    "Timestamp": "2023-03-08T14:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3980,
+    "High": 3981,
+    "Low": 3970,
+    "Close": 3975.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2023-03-08T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3990,
+    "High": 3991,
+    "Low": 3985,
+    "Close": 3988.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "BRK-B",
+    "Open": 210,
+    "High": 210.1,
+    "Low": 209.9,
+    "Close": 210.05,
+    "Volume": 50000
+  },
+  {
+    "Timestamp": "2018-04-23T13:30:00Z",
+    "Ticker": "BRK-B",
+    "Open": 198,
+    "High": 198.1,
+    "Low": 197.9,
+    "Close": 198.05,
+    "Volume": 60000
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "LLY",
+    "Open": 80,
+    "High": 80.1,
+    "Low": 79.9,
+    "Close": 80.05,
+    "Volume": 40000
+  },
+  {
+    "Timestamp": "2018-04-23T13:30:00Z",
+    "Ticker": "LLY",
+    "Open": 82,
+    "High": 82.1,
+    "Low": 81.9,
+    "Close": 82.05,
+    "Volume": 45000
+  },
+  {
+    "Timestamp": "2019-03-18T13:30:00Z",
+    "Ticker": "BRK-B",
+    "Open": 205,
+    "High": 205.1,
+    "Low": 204.9,
+    "Close": 205.05,
+    "Volume": 55000
+  },
+  {
+    "Timestamp": "2019-10-21T13:30:00Z",
+    "Ticker": "BRK-B",
+    "Open": 215,
+    "High": 215.1,
+    "Low": 214.9,
+    "Close": 215.05,
+    "Volume": 65000
+  },
+  {
+    "Timestamp": "2018-10-15T13:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2760,
+    "High": 2761,
+    "Low": 2759,
+    "Close": 2760.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-10-15T16:00:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2755,
+    "High": 2756,
+    "Low": 2754,
+    "Close": 2755.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-10-15T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2750,
+    "High": 2751,
+    "Low": 2749,
+    "Close": 2750.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-10-15T13:30:00Z",
+    "Ticker": "CL=F",
+    "Open": 71.5,
+    "High": 71.55,
+    "Low": 71.45,
+    "Close": 71.52,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-10-15T19:59:00Z",
+    "Ticker": "CL=F",
+    "Open": 71,
+    "High": 71.05,
+    "Low": 70.95,
+    "Close": 71.02,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-10-15T13:30:00Z",
+    "Ticker": "EURUSD=X",
+    "Open": 1.158,
+    "High": 1.1585,
+    "Low": 1.1575,
+    "Close": 1.1582,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-10-15T19:59:00Z",
+    "Ticker": "EURUSD=X",
+    "Open": 1.156,
+    "High": 1.1565,
+    "Low": 1.1555,
+    "Close": 1.1562,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-10-15T13:30:00Z",
+    "Ticker": "ZN=F",
+    "Open": 118.5,
+    "High": 118.55,
+    "Low": 118.45,
+    "Close": 118.52,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-10-15T19:59:00Z",
+    "Ticker": "ZN=F",
+    "Open": 118.6,
+    "High": 118.65,
+    "Low": 118.55,
+    "Close": 118.62,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2019-07-15T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3014,
+    "High": 3015,
+    "Low": 3013,
+    "Close": 3014.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2020-03-16T13:30:00Z",
+    "Ticker": "BRK-B",
+    "Open": 180,
+    "High": 180.1,
+    "Low": 175,
+    "Close": 176.05,
+    "Volume": "70000 # High Volatility"
+  },
+  {
+    "Timestamp": "2020-07-20T13:30:00Z",
+    "Ticker": "BRK-B",
+    "Open": 190,
+    "High": 190.1,
+    "Low": 189.9,
+    "Close": 190.05,
+    "Volume": 60000
+  },
+  {
+    "Timestamp": "2021-01-25T14:30:00Z",
+    "Ticker": "BRK-B",
+    "Open": 230,
+    "High": 230.1,
+    "Low": 229.9,
+    "Close": 230.05,
+    "Volume": 50000
+  },
+  {
+    "Timestamp": "2021-09-20T13:30:00Z",
+    "Ticker": "BRK-B",
+    "Open": 275,
+    "High": 275.1,
+    "Low": 274.9,
+    "Close": 275.05,
+    "Volume": 45000
+  },
+  {
+    "Timestamp": "2020-07-20T13:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3220,
+    "High": 3221,
+    "Low": 3219,
+    "Close": 3220.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2020-07-20T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3250,
+    "High": 3251,
+    "Low": 3249,
+    "Close": 3250.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2021-01-25T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3850,
+    "High": 3851,
+    "Low": 3849,
+    "Close": 3850.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2022-01-03T14:30:00Z",
+    "Ticker": "BRK-B",
+    "Open": 299,
+    "High": 299.1,
+    "Low": 298.9,
+    "Close": 299.05,
+    "Volume": 40000
+  },
+  {
+    "Timestamp": "2022-06-13T13:30:00Z",
+    "Ticker": "BRK-B",
+    "Open": 270,
+    "High": 270.1,
+    "Low": 268,
+    "Close": 268.5,
+    "Volume": "60000 # Volatility"
+  },
+  {
+    "Timestamp": "2023-03-06T14:30:00Z",
+    "Ticker": "BRK-B",
+    "Open": 305,
+    "High": 305.1,
+    "Low": 304.9,
+    "Close": 305.05,
+    "Volume": 35000
+  },
+  {
+    "Timestamp": "2023-10-23T13:30:00Z",
+    "Ticker": "BRK-B",
+    "Open": 350,
+    "High": 350.1,
+    "Low": 349.9,
+    "Close": 350.05,
+    "Volume": 30000
+  },
+  {
+    "Timestamp": "2022-06-15T13:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3750,
+    "High": 3751,
+    "Low": 3700,
+    "Close": 3730.5,
+    "Volume": "0 # FOMC day volatility"
+  },
+  {
+    "Timestamp": "2022-06-15T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3790,
+    "High": 3791,
+    "Low": 3780,
+    "Close": 3785.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2023-10-25T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 4180,
+    "High": 4181,
+    "Low": 4179,
+    "Close": 4180.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "COST",
+    "Open": 190,
+    "High": 190.1,
+    "Low": 189.9,
+    "Close": 190.05,
+    "Volume": 30000
+  },
+  {
+    "Timestamp": "2018-04-23T13:30:00Z",
+    "Ticker": "COST",
+    "Open": 195,
+    "High": 195.1,
+    "Low": 194.9,
+    "Close": 195.05,
+    "Volume": 35000
+  },
+  {
+    "Timestamp": "2019-03-18T13:30:00Z",
+    "Ticker": "COST",
+    "Open": 240,
+    "High": 240.1,
+    "Low": 239.9,
+    "Close": 240.05,
+    "Volume": 40000
+  },
+  {
+    "Timestamp": "2019-10-21T13:30:00Z",
+    "Ticker": "COST",
+    "Open": 285,
+    "High": 285.1,
+    "Low": 284.9,
+    "Close": 285.05,
+    "Volume": 45000
+  },
+  {
+    "Timestamp": "2018-01-22T14:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2800,
+    "High": 2801,
+    "Low": 2799,
+    "Close": 2800.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-01-22T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2810,
+    "High": 2811,
+    "Low": 2809,
+    "Close": 2810.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2019-05-20T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2840,
+    "High": 2841,
+    "Low": 2839,
+    "Close": 2840.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2020-03-16T13:30:00Z",
+    "Ticker": "COST",
+    "Open": 280,
+    "High": 280.1,
+    "Low": 275,
+    "Close": 276.05,
+    "Volume": "50000 # High Volatility"
+  },
+  {
+    "Timestamp": "2020-07-20T13:30:00Z",
+    "Ticker": "COST",
+    "Open": 315,
+    "High": 315.1,
+    "Low": 314.9,
+    "Close": 315.05,
+    "Volume": 40000
+  },
+  {
+    "Timestamp": "2021-01-25T14:30:00Z",
+    "Ticker": "COST",
+    "Open": 360,
+    "High": 360.1,
+    "Low": 359.9,
+    "Close": 360.05,
+    "Volume": 30000
+  },
+  {
+    "Timestamp": "2021-09-20T13:30:00Z",
+    "Ticker": "COST",
+    "Open": 450,
+    "High": 450.1,
+    "Low": 449.9,
+    "Close": 450.05,
+    "Volume": 35000
+  },
+  {
+    "Timestamp": "2020-10-19T13:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3480,
+    "High": 3481,
+    "Low": 3479,
+    "Close": 3480.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2020-10-19T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3450,
+    "High": 3451,
+    "Low": 3449,
+    "Close": 3450.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2021-05-17T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 4160,
+    "High": 4161,
+    "Low": 4159,
+    "Close": 4160.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2022-01-03T14:30:00Z",
+    "Ticker": "COST",
+    "Open": 560,
+    "High": 560.1,
+    "Low": 559.9,
+    "Close": 560.05,
+    "Volume": 25000
+  },
+  {
+    "Timestamp": "2022-06-13T13:30:00Z",
+    "Ticker": "COST",
+    "Open": 450,
+    "High": 450.1,
+    "Low": 445,
+    "Close": 446.05,
+    "Volume": "45000 # Volatility"
+  },
+  {
+    "Timestamp": "2023-03-06T14:30:00Z",
+    "Ticker": "COST",
+    "Open": 480,
+    "High": 480.1,
+    "Low": 479.9,
+    "Close": 480.05,
+    "Volume": 30000
+  },
+  {
+    "Timestamp": "2023-10-23T13:30:00Z",
+    "Ticker": "COST",
+    "Open": 550,
+    "High": 550.1,
+    "Low": 549.9,
+    "Close": 550.05,
+    "Volume": 28000
+  },
+  {
+    "Timestamp": "2022-10-10T13:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3600,
+    "High": 3601,
+    "Low": 3599,
+    "Close": 3600.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2022-10-10T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3580,
+    "High": 3581,
+    "Low": 3579,
+    "Close": 3580.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2023-07-17T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 4520,
+    "High": 4521,
+    "Low": 4519,
+    "Close": 4520.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "AMD",
+    "Open": 11.5,
+    "High": 11.55,
+    "Low": 11.45,
+    "Close": 11.52,
+    "Volume": 1500000
+  },
+  {
+    "Timestamp": "2018-04-23T13:30:00Z",
+    "Ticker": "AMD",
+    "Open": 10,
+    "High": 10.05,
+    "Low": 9.95,
+    "Close": 10.02,
+    "Volume": 1700000
+  },
+  {
+    "Timestamp": "2019-03-18T13:30:00Z",
+    "Ticker": "AMD",
+    "Open": 25,
+    "High": 25.05,
+    "Low": 24.95,
+    "Close": 25.02,
+    "Volume": 1200000
+  },
+  {
+    "Timestamp": "2019-10-21T13:30:00Z",
+    "Ticker": "AMD",
+    "Open": 30,
+    "High": 30.05,
+    "Low": 29.95,
+    "Close": 30.02,
+    "Volume": 1000000
+  },
+  {
+    "Timestamp": "2018-07-16T13:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2790,
+    "High": 2791,
+    "Low": 2789,
+    "Close": 2790.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-07-16T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2800,
+    "High": 2801,
+    "Low": 2799,
+    "Close": 2800.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2019-01-14T20:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2575,
+    "High": 2576,
+    "Low": 2574,
+    "Close": 2575.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2020-03-16T13:30:00Z",
+    "Ticker": "AMD",
+    "Open": 40,
+    "High": 40.05,
+    "Low": 38,
+    "Close": 38.52,
+    "Volume": "2500000 # High Volatility"
+  },
+  {
+    "Timestamp": "2020-07-20T13:30:00Z",
+    "Ticker": "AMD",
+    "Open": 55,
+    "High": 55.05,
+    "Low": 54.95,
+    "Close": 55.02,
+    "Volume": 1000000
+  },
+  {
+    "Timestamp": "2021-01-25T14:30:00Z",
+    "Ticker": "AMD",
+    "Open": 90,
+    "High": 90.1,
+    "Low": 89.9,
+    "Close": 90.05,
+    "Volume": 800000
+  },
+  {
+    "Timestamp": "2021-09-20T13:30:00Z",
+    "Ticker": "AMD",
+    "Open": 105,
+    "High": 105.1,
+    "Low": 104.9,
+    "Close": 105.05,
+    "Volume": 700000
+  },
+  {
+    "Timestamp": "2020-08-17T13:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3380,
+    "High": 3381,
+    "Low": 3379,
+    "Close": 3380.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2020-08-17T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3385,
+    "High": 3386,
+    "Low": 3384,
+    "Close": 3385.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2021-04-19T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 4165,
+    "High": 4166,
+    "Low": 4164,
+    "Close": 4165.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2022-01-03T14:30:00Z",
+    "Ticker": "AMD",
+    "Open": 150,
+    "High": 150.1,
+    "Low": 149.9,
+    "Close": 150.05,
+    "Volume": 900000
+  },
+  {
+    "Timestamp": "2022-06-13T13:30:00Z",
+    "Ticker": "AMD",
+    "Open": 95,
+    "High": 95.1,
+    "Low": 92,
+    "Close": 93.05,
+    "Volume": "1200000 # Volatility"
+  },
+  {
+    "Timestamp": "2023-03-06T14:30:00Z",
+    "Ticker": "AMD",
+    "Open": 78,
+    "High": 78.1,
+    "Low": 77.9,
+    "Close": 78.05,
+    "Volume": 700000
+  },
+  {
+    "Timestamp": "2023-10-23T13:30:00Z",
+    "Ticker": "AMD",
+    "Open": 100,
+    "High": 100.1,
+    "Low": 99.9,
+    "Close": 100.05,
+    "Volume": 600000
+  },
+  {
+    "Timestamp": "2022-09-21T13:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3850,
+    "High": 3851,
+    "Low": 3800,
+    "Close": 3820.5,
+    "Volume": "0 # FOMC day volatility"
+  },
+  {
+    "Timestamp": "2022-09-21T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3790,
+    "High": 3791,
+    "Low": 3780,
+    "Close": 3785.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2023-05-03T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 4090,
+    "High": 4091,
+    "Low": 4085,
+    "Close": 4088.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "DIS",
+    "Open": 102,
+    "High": 102.1,
+    "Low": 101.9,
+    "Close": 102.05,
+    "Volume": 90000
+  },
+  {
+    "Timestamp": "2018-04-23T13:30:00Z",
+    "Ticker": "DIS",
+    "Open": 100,
+    "High": 100.1,
+    "Low": 99.9,
+    "Close": 100.05,
+    "Volume": 95000
+  },
+  {
+    "Timestamp": "2019-03-18T13:30:00Z",
+    "Ticker": "DIS",
+    "Open": 110,
+    "High": 110.1,
+    "Low": 109.9,
+    "Close": 110.05,
+    "Volume": 80000
+  },
+  {
+    "Timestamp": "2019-10-21T13:30:00Z",
+    "Ticker": "DIS",
+    "Open": 130,
+    "High": 130.1,
+    "Low": 129.9,
+    "Close": 130.05,
+    "Volume": 85000
+  },
+  {
+    "Timestamp": "2018-08-13T13:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2830,
+    "High": 2831,
+    "Low": 2829,
+    "Close": 2830.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-08-13T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 2835,
+    "High": 2836,
+    "Low": 2834,
+    "Close": 2835.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2019-11-11T20:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3085,
+    "High": 3086,
+    "Low": 3084,
+    "Close": 3085.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2020-03-16T13:30:00Z",
+    "Ticker": "DIS",
+    "Open": 90,
+    "High": 90.1,
+    "Low": 85,
+    "Close": 86.05,
+    "Volume": "200000 # High Volatility"
+  },
+  {
+    "Timestamp": "2020-07-20T13:30:00Z",
+    "Ticker": "DIS",
+    "Open": 118,
+    "High": 118.1,
+    "Low": 117.9,
+    "Close": 118.05,
+    "Volume": 100000
+  },
+  {
+    "Timestamp": "2021-01-25T14:30:00Z",
+    "Ticker": "DIS",
+    "Open": 170,
+    "High": 170.1,
+    "Low": 169.9,
+    "Close": 170.05,
+    "Volume": 90000
+  },
+  {
+    "Timestamp": "2021-09-20T13:30:00Z",
+    "Ticker": "DIS",
+    "Open": 175,
+    "High": 175.1,
+    "Low": 174.9,
+    "Close": 175.05,
+    "Volume": 80000
+  },
+  {
+    "Timestamp": "2020-11-16T14:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3600,
+    "High": 3601,
+    "Low": 3599,
+    "Close": 3600.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2020-11-16T20:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 3620,
+    "High": 3621,
+    "Low": 3619,
+    "Close": 3620.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2021-07-19T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 4250,
+    "High": 4251,
+    "Low": 4249,
+    "Close": 4250.5,
+    "Volume": "0 # Market dip"
+  },
+  {
+    "Timestamp": "2022-01-03T14:30:00Z",
+    "Ticker": "DIS",
+    "Open": 155,
+    "High": 155.1,
+    "Low": 154.9,
+    "Close": 155.05,
+    "Volume": 100000
+  },
+  {
+    "Timestamp": "2022-06-13T13:30:00Z",
+    "Ticker": "DIS",
+    "Open": 95,
+    "High": 95.1,
+    "Low": 92,
+    "Close": 93.05,
+    "Volume": "150000 # Volatility"
+  },
+  {
+    "Timestamp": "2023-03-06T14:30:00Z",
+    "Ticker": "DIS",
+    "Open": 99,
+    "High": 99.1,
+    "Low": 98.9,
+    "Close": 99.05,
+    "Volume": 90000
+  },
+  {
+    "Timestamp": "2023-10-23T13:30:00Z",
+    "Ticker": "DIS",
+    "Open": 85,
+    "High": 85.1,
+    "Low": 84.9,
+    "Close": 85.05,
+    "Volume": 95000
+  },
+  {
+    "Timestamp": "2022-12-14T14:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 4000,
+    "High": 4001,
+    "Low": 3980,
+    "Close": 3990.5,
+    "Volume": "0 # FOMC day volatility"
+  },
+  {
+    "Timestamp": "2022-12-14T20:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 4020,
+    "High": 4021,
+    "Low": 4010,
+    "Close": 4015.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2023-08-15T13:30:00Z",
+    "Ticker": "^GSPC",
+    "Open": 4450,
+    "High": 4451,
+    "Low": 4449,
+    "Close": 4450.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2023-08-15T19:59:00Z",
+    "Ticker": "^GSPC",
+    "Open": 4430,
+    "High": 4431,
+    "Low": 4429,
+    "Close": 4430.5,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2022-01-03T14:30:00Z",
+    "Ticker": "INTC",
+    "Open": 53.2,
+    "High": 53.3,
+    "Low": 53.1,
+    "Close": 53.25,
+    "Volume": 100000
+  },
+  {
+    "Timestamp": "2022-01-03T19:59:00Z",
+    "Ticker": "INTC",
+    "Open": 53,
+    "High": 53.1,
+    "Low": 52.9,
+    "Close": 53.05,
+    "Volume": 110000
+  },
+  {
+    "Timestamp": "2023-10-23T13:30:00Z",
+    "Ticker": "VZ",
+    "Open": 35.5,
+    "High": 35.6,
+    "Low": 35.4,
+    "Close": 35.55,
+    "Volume": 120000
+  },
+  {
+    "Timestamp": "2023-10-23T19:59:00Z",
+    "Ticker": "VZ",
+    "Open": 35.2,
+    "High": 35.3,
+    "Low": 35.1,
+    "Close": 35.25,
+    "Volume": 125000
+  },
+  {
+    "Timestamp": "2022-06-13T13:30:00Z",
+    "Ticker": "ABT",
+    "Open": 105.5,
+    "High": 105.6,
+    "Low": 103.4,
+    "Close": 103.55,
+    "Volume": "80000 # Volatility"
+  },
+  {
+    "Timestamp": "2022-06-13T19:59:00Z",
+    "Ticker": "ABT",
+    "Open": 103,
+    "High": 103.1,
+    "Low": 102,
+    "Close": 102.05,
+    "Volume": 85000
+  },
+  {
+    "Timestamp": "2023-03-06T14:30:00Z",
+    "Ticker": "WFC",
+    "Open": 46,
+    "High": 46.1,
+    "Low": 45.9,
+    "Close": 46.05,
+    "Volume": 200000
+  },
+  {
+    "Timestamp": "2023-03-06T19:59:00Z",
+    "Ticker": "WFC",
+    "Open": 45.5,
+    "High": 45.6,
+    "Low": 45.4,
+    "Close": 45.55,
+    "Volume": 210000
+  },
+  {
+    "Timestamp": "2022-01-03T14:30:00Z",
+    "Ticker": "QCOM",
+    "Open": 185,
+    "High": 185.1,
+    "Low": 184.9,
+    "Close": 185.05,
+    "Volume": 70000
+  },
+  {
+    "Timestamp": "2023-10-23T13:30:00Z",
+    "Ticker": "NEE",
+    "Open": 55.5,
+    "High": 55.6,
+    "Low": 55.4,
+    "Close": 55.55,
+    "Volume": 40000
+  },
+  {
+    "Timestamp": "2022-06-13T13:30:00Z",
+    "Ticker": "PFE",
+    "Open": 48,
+    "High": 48.1,
+    "Low": 47,
+    "Close": 47.05,
+    "Volume": "130000 # Volatility"
+  },
+  {
+    "Timestamp": "2023-03-06T14:30:00Z",
+    "Ticker": "CAT",
+    "Open": 230,
+    "High": 230.1,
+    "Low": 229.9,
+    "Close": 230.05,
+    "Volume": 30000
+  },
+  {
+    "Timestamp": "2022-01-03T14:30:00Z",
+    "Ticker": "DHR",
+    "Open": 320,
+    "High": 320.1,
+    "Low": 319.9,
+    "Close": 320.05,
+    "Volume": 20000
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.33,
+    "High": 230.38,
+    "Low": 228.2,
+    "Close": 228.28,
+    "Volume": 700560
+  },
+  {
+    "Timestamp": "2018-03-19T13:31:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.28,
+    "High": 229.81,
+    "Low": 227.97,
+    "Close": 229.49,
+    "Volume": 681545
+  },
+  {
+    "Timestamp": "2018-03-19T13:32:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.49,
+    "High": 230.35,
+    "Low": 228.4,
+    "Close": 228.69,
+    "Volume": 848705
+  },
+  {
+    "Timestamp": "2018-03-19T13:33:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.69,
+    "High": 229.96,
+    "Low": 228.52,
+    "Close": 229.85,
+    "Volume": 944005
+  },
+  {
+    "Timestamp": "2018-03-19T13:34:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.85,
+    "High": 230.28,
+    "Low": 228.73,
+    "Close": 229.11,
+    "Volume": 340835
+  },
+  {
+    "Timestamp": "2018-03-19T13:35:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.11,
+    "High": 230.07,
+    "Low": 228.07,
+    "Close": 229.95,
+    "Volume": 561385
+  },
+  {
+    "Timestamp": "2018-03-19T13:36:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.95,
+    "High": 230.52,
+    "Low": 229.01,
+    "Close": 229.16,
+    "Volume": 986500
+  },
+  {
+    "Timestamp": "2018-03-19T13:37:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.16,
+    "High": 230.67,
+    "Low": 228.92,
+    "Close": 230.34,
+    "Volume": 808570
+  },
+  {
+    "Timestamp": "2018-03-19T13:38:00Z",
+    "Ticker": "NVDA",
+    "Open": 230.34,
+    "High": 230.76,
+    "Low": 229.78,
+    "Close": 230.21,
+    "Volume": 810460
+  },
+  {
+    "Timestamp": "2018-03-19T13:39:00Z",
+    "Ticker": "NVDA",
+    "Open": 230.21,
+    "High": 230.23,
+    "Low": 228.13,
+    "Close": 228.31,
+    "Volume": 584955
+  },
+  {
+    "Timestamp": "2018-03-19T13:40:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.31,
+    "High": 229.72,
+    "Low": 227.84,
+    "Close": 229.32,
+    "Volume": 854605
+  },
+  {
+    "Timestamp": "2018-03-19T13:41:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.32,
+    "High": 230.45,
+    "Low": 228.8,
+    "Close": 229.01,
+    "Volume": 900965
+  },
+  {
+    "Timestamp": "2018-03-19T13:42:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.01,
+    "High": 229.88,
+    "Low": 227.98,
+    "Close": 229.66,
+    "Volume": 875970
+  },
+  {
+    "Timestamp": "2018-03-19T13:43:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.66,
+    "High": 230.74,
+    "Low": 229.18,
+    "Close": 229.23,
+    "Volume": 982905
+  },
+  {
+    "Timestamp": "2018-03-19T13:44:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.23,
+    "High": 230.69,
+    "Low": 228.56,
+    "Close": 229.01,
+    "Volume": 295050
+  },
+  {
+    "Timestamp": "2018-03-19T13:45:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.01,
+    "High": 229.01,
+    "Low": 227.04,
+    "Close": 227.04,
+    "Volume": 529195
+  },
+  {
+    "Timestamp": "2018-03-19T13:46:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.04,
+    "High": 228.41,
+    "Low": 226.08,
+    "Close": 228.3,
+    "Volume": 550940
+  },
+  {
+    "Timestamp": "2018-03-19T13:47:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.3,
+    "High": 228.7,
+    "Low": 226.43,
+    "Close": 226.9,
+    "Volume": 524145
+  },
+  {
+    "Timestamp": "2018-03-19T13:48:00Z",
+    "Ticker": "NVDA",
+    "Open": 226.9,
+    "High": 227.9,
+    "Low": 225.9,
+    "Close": 227.69,
+    "Volume": 806830
+  },
+  {
+    "Timestamp": "2018-03-19T13:49:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.69,
+    "High": 228.92,
+    "Low": 227.14,
+    "Close": 228.8,
+    "Volume": 662950
+  },
+  {
+    "Timestamp": "2018-03-19T13:50:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.8,
+    "High": 230.08,
+    "Low": 228.01,
+    "Close": 228.01,
+    "Volume": 721195
+  },
+  {
+    "Timestamp": "2018-03-19T13:51:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.01,
+    "High": 229.46,
+    "Low": 227.8,
+    "Close": 229.13,
+    "Volume": 913165
+  },
+  {
+    "Timestamp": "2018-03-19T13:52:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.13,
+    "High": 230.01,
+    "Low": 228.08,
+    "Close": 228.08,
+    "Volume": 509845
+  },
+  {
+    "Timestamp": "2018-03-19T13:53:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.08,
+    "High": 228.34,
+    "Low": 226.1,
+    "Close": 227.78,
+    "Volume": 944540
+  },
+  {
+    "Timestamp": "2018-03-19T13:54:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.78,
+    "High": 229.16,
+    "Low": 227,
+    "Close": 228.98,
+    "Volume": 806640
+  },
+  {
+    "Timestamp": "2018-03-19T13:55:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.98,
+    "High": 229.97,
+    "Low": 228.04,
+    "Close": 228.04,
+    "Volume": 851015
+  },
+  {
+    "Timestamp": "2018-03-19T13:56:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.04,
+    "High": 229.7,
+    "Low": 227.96,
+    "Close": 229.34,
+    "Volume": 935560
+  },
+  {
+    "Timestamp": "2018-03-19T13:57:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.34,
+    "High": 230.43,
+    "Low": 228.35,
+    "Close": 228.86,
+    "Volume": 560050
+  },
+  {
+    "Timestamp": "2018-03-19T13:58:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.86,
+    "High": 229.5,
+    "Low": 227.62,
+    "Close": 229.5,
+    "Volume": 776765
+  },
+  {
+    "Timestamp": "2018-03-19T13:59:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.5,
+    "High": 230.32,
+    "Low": 228.3,
+    "Close": 228.67,
+    "Volume": 575040
+  },
+  {
+    "Timestamp": "2018-03-19T16:00:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.67,
+    "High": 229.12,
+    "Low": 227.67,
+    "Close": 228.99,
+    "Volume": 330055
+  },
+  {
+    "Timestamp": "2018-03-19T16:01:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.99,
+    "High": 230.33,
+    "Low": 228.16,
+    "Close": 228.16,
+    "Volume": 574615
+  },
+  {
+    "Timestamp": "2018-03-19T16:02:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.16,
+    "High": 228.88,
+    "Low": 226.29,
+    "Close": 226.29,
+    "Volume": 719635
+  },
+  {
+    "Timestamp": "2018-03-19T16:03:00Z",
+    "Ticker": "NVDA",
+    "Open": 226.29,
+    "High": 227.26,
+    "Low": 225.33,
+    "Close": 227.16,
+    "Volume": 625750
+  },
+  {
+    "Timestamp": "2018-03-19T16:04:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.16,
+    "High": 228.2,
+    "Low": 226.99,
+    "Close": 227.99,
+    "Volume": 906895
+  },
+  {
+    "Timestamp": "2018-03-19T16:05:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.99,
+    "High": 229.81,
+    "Low": 227.99,
+    "Close": 229.36,
+    "Volume": 592560
+  },
+  {
+    "Timestamp": "2018-03-19T16:06:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.36,
+    "High": 230.8,
+    "Low": 228.81,
+    "Close": 229.1,
+    "Volume": 580915
+  },
+  {
+    "Timestamp": "2018-03-19T16:07:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.1,
+    "High": 229.6,
+    "Low": 228.04,
+    "Close": 229.18,
+    "Volume": 808490
+  },
+  {
+    "Timestamp": "2018-03-19T16:08:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.18,
+    "High": 229.83,
+    "Low": 227.29,
+    "Close": 227.69,
+    "Volume": 909770
+  },
+  {
+    "Timestamp": "2018-03-19T16:09:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.69,
+    "High": 228.34,
+    "Low": 226.88,
+    "Close": 228.34,
+    "Volume": 567155
+  },
+  {
+    "Timestamp": "2018-03-19T16:10:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.34,
+    "High": 229.19,
+    "Low": 227.69,
+    "Close": 228.99,
+    "Volume": 838115
+  },
+  {
+    "Timestamp": "2018-03-19T16:11:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.99,
+    "High": 229.87,
+    "Low": 228.83,
+    "Close": 229.87,
+    "Volume": 691500
+  },
+  {
+    "Timestamp": "2018-03-19T16:12:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.87,
+    "High": 230.93,
+    "Low": 229.16,
+    "Close": 229.16,
+    "Volume": 724530
+  },
+  {
+    "Timestamp": "2018-03-19T16:13:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.16,
+    "High": 230.25,
+    "Low": 228.76,
+    "Close": 230.25,
+    "Volume": 697565
+  },
+  {
+    "Timestamp": "2018-03-19T16:14:00Z",
+    "Ticker": "NVDA",
+    "Open": 230.25,
+    "High": 230.37,
+    "Low": 228.27,
+    "Close": 228.38,
+    "Volume": 811605
+  },
+  {
+    "Timestamp": "2018-03-19T16:15:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.38,
+    "High": 229.08,
+    "Low": 227.84,
+    "Close": 229,
+    "Volume": 579810
+  },
+  {
+    "Timestamp": "2018-03-19T16:16:00Z",
+    "Ticker": "NVDA",
+    "Open": 229,
+    "High": 230.01,
+    "Low": 228.89,
+    "Close": 229.66,
+    "Volume": 894160
+  },
+  {
+    "Timestamp": "2018-03-19T16:17:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.66,
+    "High": 230.07,
+    "Low": 228.1,
+    "Close": 228.1,
+    "Volume": 552405
+  },
+  {
+    "Timestamp": "2018-03-19T16:18:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.1,
+    "High": 229.37,
+    "Low": 227.92,
+    "Close": 229.19,
+    "Volume": 657580
+  },
+  {
+    "Timestamp": "2018-03-19T16:19:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.19,
+    "High": 230.04,
+    "Low": 228.23,
+    "Close": 228.23,
+    "Volume": 576895
+  },
+  {
+    "Timestamp": "2018-03-19T16:20:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.23,
+    "High": 229.09,
+    "Low": 227.52,
+    "Close": 228.88,
+    "Volume": 664620
+  },
+  {
+    "Timestamp": "2018-03-19T16:21:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.88,
+    "High": 229.95,
+    "Low": 228.08,
+    "Close": 228.08,
+    "Volume": 977305
+  },
+  {
+    "Timestamp": "2018-03-19T16:22:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.08,
+    "High": 228.64,
+    "Low": 227.01,
+    "Close": 228.48,
+    "Volume": 651310
+  },
+  {
+    "Timestamp": "2018-03-19T16:23:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.48,
+    "High": 229.93,
+    "Low": 227.94,
+    "Close": 229.53,
+    "Volume": 773140
+  },
+  {
+    "Timestamp": "2018-03-19T16:24:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.53,
+    "High": 230.08,
+    "Low": 228.98,
+    "Close": 229.97,
+    "Volume": 594515
+  },
+  {
+    "Timestamp": "2018-03-19T16:25:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.97,
+    "High": 231.1,
+    "Low": 229,
+    "Close": 229,
+    "Volume": 654670
+  },
+  {
+    "Timestamp": "2018-03-19T16:26:00Z",
+    "Ticker": "NVDA",
+    "Open": 229,
+    "High": 229,
+    "Low": 227.37,
+    "Close": 228.85,
+    "Volume": 664465
+  },
+  {
+    "Timestamp": "2018-03-19T16:27:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.85,
+    "High": 229.61,
+    "Low": 227.66,
+    "Close": 227.96,
+    "Volume": 724565
+  },
+  {
+    "Timestamp": "2018-03-19T16:28:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.96,
+    "High": 229.07,
+    "Low": 227.87,
+    "Close": 229.07,
+    "Volume": 585595
+  },
+  {
+    "Timestamp": "2018-03-19T16:29:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.07,
+    "High": 229.53,
+    "Low": 227.84,
+    "Close": 228.01,
+    "Volume": 843570
+  },
+  {
+    "Timestamp": "2018-03-19T19:30:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.01,
+    "High": 229.04,
+    "Low": 227.07,
+    "Close": 227.07,
+    "Volume": 858990
+  },
+  {
+    "Timestamp": "2018-03-19T19:31:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.07,
+    "High": 227.62,
+    "Low": 225.67,
+    "Close": 227.38,
+    "Volume": 857355
+  },
+  {
+    "Timestamp": "2018-03-19T19:32:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.38,
+    "High": 228.96,
+    "Low": 227.38,
+    "Close": 228.53,
+    "Volume": 580355
+  },
+  {
+    "Timestamp": "2018-03-19T19:33:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.53,
+    "High": 229.21,
+    "Low": 227.58,
+    "Close": 228.98,
+    "Volume": 859995
+  },
+  {
+    "Timestamp": "2018-03-19T19:34:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.98,
+    "High": 229.98,
+    "Low": 228.06,
+    "Close": 228.06,
+    "Volume": 984000
+  },
+  {
+    "Timestamp": "2018-03-19T19:35:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.06,
+    "High": 229.14,
+    "Low": 227.22,
+    "Close": 227.22,
+    "Volume": 821155
+  },
+  {
+    "Timestamp": "2018-03-19T19:36:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.22,
+    "High": 227.72,
+    "Low": 225.8,
+    "Close": 227.36,
+    "Volume": 764425
+  },
+  {
+    "Timestamp": "2018-03-19T19:37:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.36,
+    "High": 228.12,
+    "Low": 226.56,
+    "Close": 227.98,
+    "Volume": 859880
+  },
+  {
+    "Timestamp": "2018-03-19T19:38:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.98,
+    "High": 228.03,
+    "Low": 226.1,
+    "Close": 227.53,
+    "Volume": 573075
+  },
+  {
+    "Timestamp": "2018-03-19T19:39:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.53,
+    "High": 228.09,
+    "Low": 226.94,
+    "Close": 227.96,
+    "Volume": 689545
+  },
+  {
+    "Timestamp": "2018-03-19T19:40:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.96,
+    "High": 228.08,
+    "Low": 226.68,
+    "Close": 227.96,
+    "Volume": 755760
+  },
+  {
+    "Timestamp": "2018-03-19T19:41:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.96,
+    "High": 229.33,
+    "Low": 227.96,
+    "Close": 228.88,
+    "Volume": 893050
+  },
+  {
+    "Timestamp": "2018-03-19T19:42:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.88,
+    "High": 229.28,
+    "Low": 227.54,
+    "Close": 227.54,
+    "Volume": 975435
+  },
+  {
+    "Timestamp": "2018-03-19T19:43:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.54,
+    "High": 228.75,
+    "Low": 227.31,
+    "Close": 228.75,
+    "Volume": 690755
+  },
+  {
+    "Timestamp": "2018-03-19T19:44:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.75,
+    "High": 229.91,
+    "Low": 227.97,
+    "Close": 229.91,
+    "Volume": 989005
+  },
+  {
+    "Timestamp": "2018-03-19T19:45:00Z",
+    "Ticker": "NVDA",
+    "Open": 229.91,
+    "High": 230.02,
+    "Low": 228.01,
+    "Close": 228.31,
+    "Volume": 770295
+  },
+  {
+    "Timestamp": "2018-03-19T19:46:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.31,
+    "High": 229.02,
+    "Low": 227.4,
+    "Close": 227.4,
+    "Volume": 709975
+  },
+  {
+    "Timestamp": "2018-03-19T19:47:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.4,
+    "High": 228.56,
+    "Low": 227.4,
+    "Close": 228.11,
+    "Volume": 892265
+  },
+  {
+    "Timestamp": "2018-03-19T19:48:00Z",
+    "Ticker": "NVDA",
+    "Open": 228.11,
+    "High": 229.05,
+    "Low": 227.23,
+    "Close": 227.23,
+    "Volume": 964210
+  },
+  {
+    "Timestamp": "2018-03-19T19:49:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.23,
+    "High": 227.87,
+    "Low": 226.2,
+    "Close": 227.87,
+    "Volume": 888245
+  },
+  {
+    "Timestamp": "2018-03-19T19:50:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.87,
+    "High": 228,
+    "Low": 226.02,
+    "Close": 226.44,
+    "Volume": 792575
+  },
+  {
+    "Timestamp": "2018-03-19T19:51:00Z",
+    "Ticker": "NVDA",
+    "Open": 226.44,
+    "High": 227.56,
+    "Low": 226.44,
+    "Close": 227.19,
+    "Volume": 662940
+  },
+  {
+    "Timestamp": "2018-03-19T19:52:00Z",
+    "Ticker": "NVDA",
+    "Open": 227.19,
+    "High": 228.22,
+    "Low": 226.2,
+    "Close": 226.56,
+    "Volume": 638650
+  },
+  {
+    "Timestamp": "2018-03-19T19:53:00Z",
+    "Ticker": "NVDA",
+    "Open": 226.56,
+    "High": 227.06,
+    "Low": 225.34,
+    "Close": 226.93,
+    "Volume": 948495
+  },
+  {
+    "Timestamp": "2018-03-19T19:54:00Z",
+    "Ticker": "NVDA",
+    "Open": 226.93,
+    "High": 227.2,
+    "Low": 225.31,
+    "Close": 225.31,
+    "Volume": 917915
+  },
+  {
+    "Timestamp": "2018-03-19T19:55:00Z",
+    "Ticker": "NVDA",
+    "Open": 225.31,
+    "High": 226.1,
+    "Low": 224.17,
+    "Close": 224.17,
+    "Volume": 780785
+  },
+  {
+    "Timestamp": "2018-03-19T19:56:00Z",
+    "Ticker": "NVDA",
+    "Open": 224.17,
+    "High": 225.58,
+    "Low": 223.86,
+    "Close": 225.58,
+    "Volume": 703020
+  },
+  {
+    "Timestamp": "2018-03-19T19:57:00Z",
+    "Ticker": "NVDA",
+    "Open": 225.58,
+    "High": 226.41,
+    "Low": 224.91,
+    "Close": 225.01,
+    "Volume": 587300
+  },
+  {
+    "Timestamp": "2018-03-19T19:58:00Z",
+    "Ticker": "NVDA",
+    "Open": 225.01,
+    "High": 225.55,
+    "Low": 223.59,
+    "Close": 224.01,
+    "Volume": 990250
+  },
+  {
+    "Timestamp": "2018-03-19T19:59:00Z",
+    "Ticker": "NVDA",
+    "Open": 224.01,
+    "High": 224.5,
+    "Low": 222.55,
+    "Close": 222.91,
+    "Volume": 794240
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "NVDA",
+    "Open": 235.2,
+    "High": 235.44,
+    "Low": 235,
+    "Close": 235.06,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T16:00:00Z",
+    "Ticker": "NVDA",
+    "Open": 235.06,
+    "High": 235.3,
+    "Low": 234.83,
+    "Close": 235.24,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T19:59:00Z",
+    "Ticker": "NVDA",
+    "Open": 235.24,
+    "High": 235.48,
+    "Low": 235,
+    "Close": 235.12,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "META",
+    "Open": 171.39,
+    "High": 171.67,
+    "Low": 171.04,
+    "Close": 171.34,
+    "Volume": 400870
+  },
+  {
+    "Timestamp": "2018-03-19T13:31:00Z",
+    "Ticker": "META",
+    "Open": 171.34,
+    "High": 171.97,
+    "Low": 170.7,
+    "Close": 171.97,
+    "Volume": 383430
+  },
+  {
+    "Timestamp": "2018-03-19T13:32:00Z",
+    "Ticker": "META",
+    "Open": 171.97,
+    "High": 172.37,
+    "Low": 171.67,
+    "Close": 171.84,
+    "Volume": 313690
+  },
+  {
+    "Timestamp": "2018-03-19T13:33:00Z",
+    "Ticker": "META",
+    "Open": 171.84,
+    "High": 172.23,
+    "Low": 171.42,
+    "Close": 171.52,
+    "Volume": 399890
+  },
+  {
+    "Timestamp": "2018-03-19T13:34:00Z",
+    "Ticker": "META",
+    "Open": 171.52,
+    "High": 172.06,
+    "Low": 170.83,
+    "Close": 171.06,
+    "Volume": 470560
+  },
+  {
+    "Timestamp": "2018-03-19T13:35:00Z",
+    "Ticker": "META",
+    "Open": 171.06,
+    "High": 171.63,
+    "Low": 170.86,
+    "Close": 171.63,
+    "Volume": 298910
+  },
+  {
+    "Timestamp": "2018-03-19T13:36:00Z",
+    "Ticker": "META",
+    "Open": 171.63,
+    "High": 171.97,
+    "Low": 170.94,
+    "Close": 170.94,
+    "Volume": 402670
+  },
+  {
+    "Timestamp": "2018-03-19T13:37:00Z",
+    "Ticker": "META",
+    "Open": 170.94,
+    "High": 171.52,
+    "Low": 170.52,
+    "Close": 171.49,
+    "Volume": 313490
+  },
+  {
+    "Timestamp": "2018-03-19T13:38:00Z",
+    "Ticker": "META",
+    "Open": 171.49,
+    "High": 172.04,
+    "Low": 171.04,
+    "Close": 171.04,
+    "Volume": 578330
+  },
+  {
+    "Timestamp": "2018-03-19T13:39:00Z",
+    "Ticker": "META",
+    "Open": 171.04,
+    "High": 171.17,
+    "Low": 170.02,
+    "Close": 170.07,
+    "Volume": 338620
+  },
+  {
+    "Timestamp": "2018-03-19T13:40:00Z",
+    "Ticker": "META",
+    "Open": 170.07,
+    "High": 170.52,
+    "Low": 169.37,
+    "Close": 170.13,
+    "Volume": 514970
+  },
+  {
+    "Timestamp": "2018-03-19T13:41:00Z",
+    "Ticker": "META",
+    "Open": 170.13,
+    "High": 170.13,
+    "Low": 168.66,
+    "Close": 168.66,
+    "Volume": 461030
+  },
+  {
+    "Timestamp": "2018-03-19T13:42:00Z",
+    "Ticker": "META",
+    "Open": 168.66,
+    "High": 169.12,
+    "Low": 167.98,
+    "Close": 168.97,
+    "Volume": 582040
+  },
+  {
+    "Timestamp": "2018-03-19T13:43:00Z",
+    "Ticker": "META",
+    "Open": 168.97,
+    "High": 169.96,
+    "Low": 168.97,
+    "Close": 169.75,
+    "Volume": 587330
+  },
+  {
+    "Timestamp": "2018-03-19T13:44:00Z",
+    "Ticker": "META",
+    "Open": 169.75,
+    "High": 170.03,
+    "Low": 168.53,
+    "Close": 168.81,
+    "Volume": 339900
+  },
+  {
+    "Timestamp": "2018-03-19T13:45:00Z",
+    "Ticker": "META",
+    "Open": 168.81,
+    "High": 169.66,
+    "Low": 168.35,
+    "Close": 169.27,
+    "Volume": 435200
+  },
+  {
+    "Timestamp": "2018-03-19T13:46:00Z",
+    "Ticker": "META",
+    "Open": 169.27,
+    "High": 169.61,
+    "Low": 168.3,
+    "Close": 168.3,
+    "Volume": 360390
+  },
+  {
+    "Timestamp": "2018-03-19T13:47:00Z",
+    "Ticker": "META",
+    "Open": 168.3,
+    "High": 168.83,
+    "Low": 167.53,
+    "Close": 168.8,
+    "Volume": 392370
+  },
+  {
+    "Timestamp": "2018-03-19T13:48:00Z",
+    "Ticker": "META",
+    "Open": 168.8,
+    "High": 169.64,
+    "Low": 168.8,
+    "Close": 169.47,
+    "Volume": 353870
+  },
+  {
+    "Timestamp": "2018-03-19T13:49:00Z",
+    "Ticker": "META",
+    "Open": 169.47,
+    "High": 170.24,
+    "Low": 168.85,
+    "Close": 168.85,
+    "Volume": 374920
+  },
+  {
+    "Timestamp": "2018-03-19T13:50:00Z",
+    "Ticker": "META",
+    "Open": 168.85,
+    "High": 169.51,
+    "Low": 168.67,
+    "Close": 169.18,
+    "Volume": 300080
+  },
+  {
+    "Timestamp": "2018-03-19T13:51:00Z",
+    "Ticker": "META",
+    "Open": 169.18,
+    "High": 169.21,
+    "Low": 167.86,
+    "Close": 168.08,
+    "Volume": 318180
+  },
+  {
+    "Timestamp": "2018-03-19T13:52:00Z",
+    "Ticker": "META",
+    "Open": 168.08,
+    "High": 168.87,
+    "Low": 167.56,
+    "Close": 168.87,
+    "Volume": 467640
+  },
+  {
+    "Timestamp": "2018-03-19T13:53:00Z",
+    "Ticker": "META",
+    "Open": 168.87,
+    "High": 169.35,
+    "Low": 168.02,
+    "Close": 168.08,
+    "Volume": 379640
+  },
+  {
+    "Timestamp": "2018-03-19T13:54:00Z",
+    "Ticker": "META",
+    "Open": 168.08,
+    "High": 168.63,
+    "Low": 167.95,
+    "Close": 168.63,
+    "Volume": 415290
+  },
+  {
+    "Timestamp": "2018-03-19T13:55:00Z",
+    "Ticker": "META",
+    "Open": 168.63,
+    "High": 169.14,
+    "Low": 168.07,
+    "Close": 168.07,
+    "Volume": 531040
+  },
+  {
+    "Timestamp": "2018-03-19T13:56:00Z",
+    "Ticker": "META",
+    "Open": 168.07,
+    "High": 168.61,
+    "Low": 167.92,
+    "Close": 168.41,
+    "Volume": 392300
+  },
+  {
+    "Timestamp": "2018-03-19T13:57:00Z",
+    "Ticker": "META",
+    "Open": 168.41,
+    "High": 168.44,
+    "Low": 167.39,
+    "Close": 168.28,
+    "Volume": 320670
+  },
+  {
+    "Timestamp": "2018-03-19T13:58:00Z",
+    "Ticker": "META",
+    "Open": 168.28,
+    "High": 168.83,
+    "Low": 167.6,
+    "Close": 167.6,
+    "Volume": 341760
+  },
+  {
+    "Timestamp": "2018-03-19T13:59:00Z",
+    "Ticker": "META",
+    "Open": 167.6,
+    "High": 167.81,
+    "Low": 166.77,
+    "Close": 167.7,
+    "Volume": 418960
+  },
+  {
+    "Timestamp": "2023-10-27T19:57:00Z",
+    "Ticker": "META",
+    "Open": 305.78,
+    "High": 306.68,
+    "Low": 305.78,
+    "Close": 306.68,
+    "Volume": 531040
+  },
+  {
+    "Timestamp": "2023-10-27T19:58:00Z",
+    "Ticker": "META",
+    "Open": 306.68,
+    "High": 307.13,
+    "Low": 306.02,
+    "Close": 306.21,
+    "Volume": 392300
+  },
+  {
+    "Timestamp": "2023-10-27T19:59:00Z",
+    "Ticker": "META",
+    "Open": 306.21,
+    "High": 306.21,
+    "Low": 305.17,
+    "Close": 305.32,
+    "Volume": 320670
+  },
+  {
+    "Timestamp": "2023-10-25T13:30:00Z",
+    "Ticker": "META",
+    "Open": 303.94,
+    "High": 304.7,
+    "Low": 303.34,
+    "Close": 304.18,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2023-10-25T16:00:00Z",
+    "Ticker": "META",
+    "Open": 304.18,
+    "High": 304.94,
+    "Low": 303.58,
+    "Close": 304.09,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2023-10-25T19:59:00Z",
+    "Ticker": "META",
+    "Open": 304.09,
+    "High": 304.85,
+    "Low": 303.49,
+    "Close": 304.85,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "AMGN",
+    "Open": 173.93,
+    "High": 174.02,
+    "Low": 173.46,
+    "Close": 173.67,
+    "Volume": 166320
+  },
+  {
+    "Timestamp": "2018-03-19T13:31:00Z",
+    "Ticker": "AMGN",
+    "Open": 173.67,
+    "High": 173.99,
+    "Low": 173.35,
+    "Close": 173.99,
+    "Volume": 180730
+  },
+  {
+    "Timestamp": "2018-03-19T13:32:00Z",
+    "Ticker": "AMGN",
+    "Open": 173.99,
+    "High": 174.41,
+    "Low": 173.99,
+    "Close": 174.09,
+    "Volume": 192390
+  },
+  {
+    "Timestamp": "2018-03-19T13:33:00Z",
+    "Ticker": "AMGN",
+    "Open": 174.09,
+    "High": 174.26,
+    "Low": 173.54,
+    "Close": 173.64,
+    "Volume": 169040
+  },
+  {
+    "Timestamp": "2018-03-19T13:34:00Z",
+    "Ticker": "AMGN",
+    "Open": 173.64,
+    "High": 174.01,
+    "Low": 173.27,
+    "Close": 173.48,
+    "Volume": 144860
+  },
+  {
+    "Timestamp": "2018-03-19T13:35:00Z",
+    "Ticker": "AMGN",
+    "Open": 173.48,
+    "High": 173.97,
+    "Low": 173.48,
+    "Close": 173.93,
+    "Volume": 130710
+  },
+  {
+    "Timestamp": "2018-03-19T13:36:00Z",
+    "Ticker": "AMGN",
+    "Open": 173.93,
+    "High": 174.12,
+    "Low": 173.3,
+    "Close": 173.3,
+    "Volume": 181120
+  },
+  {
+    "Timestamp": "2018-03-19T13:37:00Z",
+    "Ticker": "AMGN",
+    "Open": 173.3,
+    "High": 173.39,
+    "Low": 172.56,
+    "Close": 173.01,
+    "Volume": 107770
+  },
+  {
+    "Timestamp": "2018-03-19T13:38:00Z",
+    "Ticker": "AMGN",
+    "Open": 173.01,
+    "High": 173.42,
+    "Low": 172.74,
+    "Close": 173.42,
+    "Volume": 177390
+  },
+  {
+    "Timestamp": "2018-03-19T13:39:00Z",
+    "Ticker": "AMGN",
+    "Open": 173.42,
+    "High": 173.73,
+    "Low": 173.04,
+    "Close": 173.04,
+    "Volume": 167990
+  },
+  {
+    "Timestamp": "2018-03-19T13:40:00Z",
+    "Ticker": "AMGN",
+    "Open": 173.04,
+    "High": 173.19,
+    "Low": 172.26,
+    "Close": 172.42,
+    "Volume": 175390
+  },
+  {
+    "Timestamp": "2018-03-19T13:41:00Z",
+    "Ticker": "AMGN",
+    "Open": 172.42,
+    "High": 172.5,
+    "Low": 171.69,
+    "Close": 172.5,
+    "Volume": 166660
+  },
+  {
+    "Timestamp": "2018-03-19T13:42:00Z",
+    "Ticker": "AMGN",
+    "Open": 172.5,
+    "High": 172.82,
+    "Low": 171.92,
+    "Close": 171.99,
+    "Volume": 171620
+  },
+  {
+    "Timestamp": "2018-03-19T13:43:00Z",
+    "Ticker": "AMGN",
+    "Open": 171.99,
+    "High": 172.51,
+    "Low": 171.99,
+    "Close": 172.39,
+    "Volume": 160640
+  },
+  {
+    "Timestamp": "2018-03-19T13:44:00Z",
+    "Ticker": "AMGN",
+    "Open": 172.39,
+    "High": 172.84,
+    "Low": 172.01,
+    "Close": 172.01,
+    "Volume": 172950
+  },
+  {
+    "Timestamp": "2018-03-19T13:45:00Z",
+    "Ticker": "AMGN",
+    "Open": 172.01,
+    "High": 172.01,
+    "Low": 171.09,
+    "Close": 171.9,
+    "Volume": 150910
+  },
+  {
+    "Timestamp": "2018-03-19T13:46:00Z",
+    "Ticker": "AMGN",
+    "Open": 171.9,
+    "High": 172.07,
+    "Low": 171.21,
+    "Close": 171.21,
+    "Volume": 140290
+  },
+  {
+    "Timestamp": "2018-03-19T13:47:00Z",
+    "Ticker": "AMGN",
+    "Open": 171.21,
+    "High": 171.74,
+    "Low": 170.88,
+    "Close": 171.71,
+    "Volume": 141910
+  },
+  {
+    "Timestamp": "2018-03-19T13:48:00Z",
+    "Ticker": "AMGN",
+    "Open": 171.71,
+    "High": 172.02,
+    "Low": 171.06,
+    "Close": 171.06,
+    "Volume": 185370
+  },
+  {
+    "Timestamp": "2018-03-19T13:49:00Z",
+    "Ticker": "AMGN",
+    "Open": 171.06,
+    "High": 171.06,
+    "Low": 170.2,
+    "Close": 170.7,
+    "Volume": 136610
+  },
+  {
+    "Timestamp": "2018-03-19T13:50:00Z",
+    "Ticker": "AMGN",
+    "Open": 170.7,
+    "High": 171.23,
+    "Low": 170.23,
+    "Close": 170.34,
+    "Volume": 150620
+  },
+  {
+    "Timestamp": "2018-03-19T13:51:00Z",
+    "Ticker": "AMGN",
+    "Open": 170.34,
+    "High": 170.46,
+    "Low": 169.74,
+    "Close": 170.14,
+    "Volume": 179480
+  },
+  {
+    "Timestamp": "2018-03-19T13:52:00Z",
+    "Ticker": "AMGN",
+    "Open": 170.14,
+    "High": 170.27,
+    "Low": 169.31,
+    "Close": 169.31,
+    "Volume": 180020
+  },
+  {
+    "Timestamp": "2018-03-19T13:53:00Z",
+    "Ticker": "AMGN",
+    "Open": 169.31,
+    "High": 169.84,
+    "Low": 169.16,
+    "Close": 169.68,
+    "Volume": 227920
+  },
+  {
+    "Timestamp": "2018-03-19T13:54:00Z",
+    "Ticker": "AMGN",
+    "Open": 169.68,
+    "High": 169.86,
+    "Low": 169,
+    "Close": 169,
+    "Volume": 139690
+  },
+  {
+    "Timestamp": "2018-03-19T13:55:00Z",
+    "Ticker": "AMGN",
+    "Open": 169,
+    "High": 169.02,
+    "Low": 168.27,
+    "Close": 168.9,
+    "Volume": 139410
+  },
+  {
+    "Timestamp": "2018-03-19T13:56:00Z",
+    "Ticker": "AMGN",
+    "Open": 168.9,
+    "High": 169.03,
+    "Low": 168.08,
+    "Close": 168.08,
+    "Volume": 174880
+  },
+  {
+    "Timestamp": "2018-03-19T13:57:00Z",
+    "Ticker": "AMGN",
+    "Open": 168.08,
+    "High": 168.26,
+    "Low": 167.71,
+    "Close": 168.09,
+    "Volume": 141870
+  },
+  {
+    "Timestamp": "2018-03-19T13:58:00Z",
+    "Ticker": "AMGN",
+    "Open": 168.09,
+    "High": 168.42,
+    "Low": 167.52,
+    "Close": 167.52,
+    "Volume": 175640
+  },
+  {
+    "Timestamp": "2018-03-19T13:59:00Z",
+    "Ticker": "AMGN",
+    "Open": 167.52,
+    "High": 167.9,
+    "Low": 167.07,
+    "Close": 167.9,
+    "Volume": 169540
+  },
+  {
+    "Timestamp": "2023-10-27T19:57:00Z",
+    "Ticker": "AMGN",
+    "Open": 262.34,
+    "High": 262.34,
+    "Low": 261.3,
+    "Close": 261.83,
+    "Volume": 139410
+  },
+  {
+    "Timestamp": "2023-10-27T19:58:00Z",
+    "Ticker": "AMGN",
+    "Open": 261.83,
+    "High": 262.36,
+    "Low": 261.28,
+    "Close": 261.28,
+    "Volume": 174880
+  },
+  {
+    "Timestamp": "2023-10-27T19:59:00Z",
+    "Ticker": "AMGN",
+    "Open": 261.28,
+    "High": 261.46,
+    "Low": 260.91,
+    "Close": 261.29,
+    "Volume": 141870
+  },
+  {
+    "Timestamp": "2023-10-25T13:30:00Z",
+    "Ticker": "AMGN",
+    "Open": 250.79,
+    "High": 251.29,
+    "Low": 250.29,
+    "Close": 250.31,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2023-10-25T16:00:00Z",
+    "Ticker": "AMGN",
+    "Open": 250.31,
+    "High": 250.81,
+    "Low": 250.06,
+    "Close": 250.79,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2023-10-25T19:59:00Z",
+    "Ticker": "AMGN",
+    "Open": 250.79,
+    "High": 251.29,
+    "Low": 250.29,
+    "Close": 250.44,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "UPS",
+    "Open": 106.34,
+    "High": 106.42,
+    "Low": 106,
+    "Close": 106,
+    "Volume": 158200
+  },
+  {
+    "Timestamp": "2018-03-19T13:31:00Z",
+    "Ticker": "UPS",
+    "Open": 106,
+    "High": 106.3,
+    "Low": 105.91,
+    "Close": 106.24,
+    "Volume": 176100
+  },
+  {
+    "Timestamp": "2018-03-19T13:32:00Z",
+    "Ticker": "UPS",
+    "Open": 106.24,
+    "High": 106.24,
+    "Low": 105.95,
+    "Close": 106.11,
+    "Volume": 121260
+  },
+  {
+    "Timestamp": "2018-03-19T13:33:00Z",
+    "Ticker": "UPS",
+    "Open": 106.11,
+    "High": 106.29,
+    "Low": 105.73,
+    "Close": 105.73,
+    "Volume": 110330
+  },
+  {
+    "Timestamp": "2018-03-19T13:34:00Z",
+    "Ticker": "UPS",
+    "Open": 105.73,
+    "High": 105.87,
+    "Low": 105.45,
+    "Close": 105.87,
+    "Volume": 171890
+  },
+  {
+    "Timestamp": "2018-03-19T13:35:00Z",
+    "Ticker": "UPS",
+    "Open": 105.87,
+    "High": 106.04,
+    "Low": 105.52,
+    "Close": 105.52,
+    "Volume": 123810
+  },
+  {
+    "Timestamp": "2018-03-19T13:36:00Z",
+    "Ticker": "UPS",
+    "Open": 105.52,
+    "High": 105.52,
+    "Low": 105,
+    "Close": 105,
+    "Volume": 156490
+  },
+  {
+    "Timestamp": "2018-03-19T13:37:00Z",
+    "Ticker": "UPS",
+    "Open": 105,
+    "High": 105.1,
+    "Low": 104.76,
+    "Close": 104.82,
+    "Volume": 149980
+  },
+  {
+    "Timestamp": "2018-03-19T13:38:00Z",
+    "Ticker": "UPS",
+    "Open": 104.82,
+    "High": 104.82,
+    "Low": 104.31,
+    "Close": 104.4,
+    "Volume": 167060
+  },
+  {
+    "Timestamp": "2018-03-19T13:39:00Z",
+    "Ticker": "UPS",
+    "Open": 104.4,
+    "High": 104.69,
+    "Low": 104.12,
+    "Close": 104.12,
+    "Volume": 107870
+  },
+  {
+    "Timestamp": "2018-03-19T13:40:00Z",
+    "Ticker": "UPS",
+    "Open": 104.12,
+    "High": 104.12,
+    "Low": 103.76,
+    "Close": 103.99,
+    "Volume": 109010
+  },
+  {
+    "Timestamp": "2018-03-19T13:41:00Z",
+    "Ticker": "UPS",
+    "Open": 103.99,
+    "High": 104.24,
+    "Low": 103.62,
+    "Close": 103.62,
+    "Volume": 171520
+  },
+  {
+    "Timestamp": "2018-03-19T13:42:00Z",
+    "Ticker": "UPS",
+    "Open": 103.62,
+    "High": 103.62,
+    "Low": 103.22,
+    "Close": 103.48,
+    "Volume": 151190
+  },
+  {
+    "Timestamp": "2018-03-19T13:43:00Z",
+    "Ticker": "UPS",
+    "Open": 103.48,
+    "High": 103.8,
+    "Low": 103.14,
+    "Close": 103.14,
+    "Volume": 162140
+  },
+  {
+    "Timestamp": "2018-03-19T13:44:00Z",
+    "Ticker": "UPS",
+    "Open": 103.14,
+    "High": 103.29,
+    "Low": 102.83,
+    "Close": 103.21,
+    "Volume": 170010
+  },
+  {
+    "Timestamp": "2018-03-19T13:45:00Z",
+    "Ticker": "UPS",
+    "Open": 103.21,
+    "High": 103.44,
+    "Low": 102.91,
+    "Close": 103.03,
+    "Volume": 148300
+  },
+  {
+    "Timestamp": "2018-03-19T13:46:00Z",
+    "Ticker": "UPS",
+    "Open": 103.03,
+    "High": 103.2,
+    "Low": 102.63,
+    "Close": 102.63,
+    "Volume": 150880
+  },
+  {
+    "Timestamp": "2018-03-19T13:47:00Z",
+    "Ticker": "UPS",
+    "Open": 102.63,
+    "High": 102.71,
+    "Low": 102.18,
+    "Close": 102.62,
+    "Volume": 190030
+  },
+  {
+    "Timestamp": "2018-03-19T13:48:00Z",
+    "Ticker": "UPS",
+    "Open": 102.62,
+    "High": 102.91,
+    "Low": 102.24,
+    "Close": 102.24,
+    "Volume": 131800
+  },
+  {
+    "Timestamp": "2018-03-19T13:49:00Z",
+    "Ticker": "UPS",
+    "Open": 102.24,
+    "High": 102.32,
+    "Low": 101.94,
+    "Close": 102.29,
+    "Volume": 125190
+  },
+  {
+    "Timestamp": "2018-03-19T13:50:00Z",
+    "Ticker": "UPS",
+    "Open": 102.29,
+    "High": 102.68,
+    "Low": 102.29,
+    "Close": 102.68,
+    "Volume": 117000
+  },
+  {
+    "Timestamp": "2018-03-19T13:51:00Z",
+    "Ticker": "UPS",
+    "Open": 102.68,
+    "High": 102.86,
+    "Low": 102.23,
+    "Close": 102.23,
+    "Volume": 131720
+  },
+  {
+    "Timestamp": "2018-03-19T13:52:00Z",
+    "Ticker": "UPS",
+    "Open": 102.23,
+    "High": 102.51,
+    "Low": 102,
+    "Close": 102,
+    "Volume": 140370
+  },
+  {
+    "Timestamp": "2018-03-19T13:53:00Z",
+    "Ticker": "UPS",
+    "Open": 102,
+    "High": 102,
+    "Low": 101.55,
+    "Close": 101.95,
+    "Volume": 127840
+  },
+  {
+    "Timestamp": "2018-03-19T13:54:00Z",
+    "Ticker": "UPS",
+    "Open": 101.95,
+    "High": 102.29,
+    "Low": 101.61,
+    "Close": 101.61,
+    "Volume": 190040
+  },
+  {
+    "Timestamp": "2018-03-19T13:55:00Z",
+    "Ticker": "UPS",
+    "Open": 101.61,
+    "High": 101.97,
+    "Low": 101.3,
+    "Close": 101.3,
+    "Volume": 155100
+  },
+  {
+    "Timestamp": "2018-03-19T13:56:00Z",
+    "Ticker": "UPS",
+    "Open": 101.3,
+    "High": 101.71,
+    "Low": 101.3,
+    "Close": 101.69,
+    "Volume": 129020
+  },
+  {
+    "Timestamp": "2018-03-19T13:57:00Z",
+    "Ticker": "UPS",
+    "Open": 101.69,
+    "High": 101.97,
+    "Low": 101.38,
+    "Close": 101.38,
+    "Volume": 135980
+  },
+  {
+    "Timestamp": "2018-03-19T13:58:00Z",
+    "Ticker": "UPS",
+    "Open": 101.38,
+    "High": 101.73,
+    "Low": 101.12,
+    "Close": 101.73,
+    "Volume": 130830
+  },
+  {
+    "Timestamp": "2018-03-19T13:59:00Z",
+    "Ticker": "UPS",
+    "Open": 101.73,
+    "High": 101.84,
+    "Low": 101.26,
+    "Close": 101.3,
+    "Volume": 133110
+  },
+  {
+    "Timestamp": "2023-10-27T19:57:00Z",
+    "Ticker": "UPS",
+    "Open": 149.41,
+    "High": 149.41,
+    "Low": 148.94,
+    "Close": 149.11,
+    "Volume": 135980
+  },
+  {
+    "Timestamp": "2023-10-27T19:58:00Z",
+    "Ticker": "UPS",
+    "Open": 149.11,
+    "High": 149.46,
+    "Low": 148.85,
+    "Close": 149.46,
+    "Volume": 130830
+  },
+  {
+    "Timestamp": "2023-10-27T19:59:00Z",
+    "Ticker": "UPS",
+    "Open": 149.46,
+    "High": 149.57,
+    "Low": 148.99,
+    "Close": 149.03,
+    "Volume": 133110
+  },
+  {
+    "Timestamp": "2023-10-25T13:30:00Z",
+    "Ticker": "UPS",
+    "Open": 149.1,
+    "High": 149.4,
+    "Low": 148.8,
+    "Close": 148.81,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2023-10-25T16:00:00Z",
+    "Ticker": "UPS",
+    "Open": 148.81,
+    "High": 149.11,
+    "Low": 148.51,
+    "Close": 149.09,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2023-10-25T19:59:00Z",
+    "Ticker": "UPS",
+    "Open": 149.09,
+    "High": 149.39,
+    "Low": 148.79,
+    "Close": 148.84,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2018-03-19T13:30:00Z",
+    "Ticker": "IBM",
+    "Open": 152.13,
+    "High": 152.22,
+    "Low": 151.73,
+    "Close": 151.73,
+    "Volume": 109380
+  },
+  {
+    "Timestamp": "2018-03-19T13:31:00Z",
+    "Ticker": "IBM",
+    "Open": 151.73,
+    "High": 152.07,
+    "Low": 151.54,
+    "Close": 151.96,
+    "Volume": 125990
+  },
+  {
+    "Timestamp": "2018-03-19T13:32:00Z",
+    "Ticker": "IBM",
+    "Open": 151.96,
+    "High": 152.35,
+    "Low": 151.96,
+    "Close": 152.21,
+    "Volume": 111230
+  },
+  {
+    "Timestamp": "2018-03-19T13:33:00Z",
+    "Ticker": "IBM",
+    "Open": 152.21,
+    "High": 152.21,
+    "Low": 151.68,
+    "Close": 151.68,
+    "Volume": 102170
+  },
+  {
+    "Timestamp": "2018-03-19T13:34:00Z",
+    "Ticker": "IBM",
+    "Open": 151.68,
+    "High": 151.93,
+    "Low": 151.37,
+    "Close": 151.93,
+    "Volume": 104010
+  },
+  {
+    "Timestamp": "2018-03-19T13:35:00Z",
+    "Ticker": "IBM",
+    "Open": 151.93,
+    "High": 152.22,
+    "Low": 151.61,
+    "Close": 151.61,
+    "Volume": 121440
+  },
+  {
+    "Timestamp": "2018-03-19T13:36:00Z",
+    "Ticker": "IBM",
+    "Open": 151.61,
+    "High": 151.73,
+    "Low": 151.1,
+    "Close": 151.1,
+    "Volume": 108870
+  },
+  {
+    "Timestamp": "2018-03-19T13:37:00Z",
+    "Ticker": "IBM",
+    "Open": 151.1,
+    "High": 151.1,
+    "Low": 150.53,
+    "Close": 150.88,
+    "Volume": 116630
+  },
+  {
+    "Timestamp": "2018-03-19T13:38:00Z",
+    "Ticker": "IBM",
+    "Open": 150.88,
+    "High": 151.18,
+    "Low": 150.71,
+    "Close": 151.18,
+    "Volume": 105930
+  },
+  {
+    "Timestamp": "2018-03-19T13:39:00Z",
+    "Ticker": "IBM",
+    "Open": 151.18,
+    "High": 151.64,
+    "Low": 151.18,
+    "Close": 151.52,
+    "Volume": 130980
+  },
+  {
+    "Timestamp": "2018-03-19T13:40:00Z",
+    "Ticker": "IBM",
+    "Open": 151.52,
+    "High": 151.52,
+    "Low": 150.9,
+    "Close": 150.9,
+    "Volume": 100140
+  },
+  {
+    "Timestamp": "2018-03-19T13:41:00Z",
+    "Ticker": "IBM",
+    "Open": 150.9,
+    "High": 151.03,
+    "Low": 150.58,
+    "Close": 150.96,
+    "Volume": 107730
+  },
+  {
+    "Timestamp": "2018-03-19T13:42:00Z",
+    "Ticker": "IBM",
+    "Open": 150.96,
+    "High": 151.32,
+    "Low": 150.66,
+    "Close": 150.66,
+    "Volume": 120130
+  },
+  {
+    "Timestamp": "2018-03-19T13:43:00Z",
+    "Ticker": "IBM",
+    "Open": 150.66,
+    "High": 150.66,
+    "Low": 150.04,
+    "Close": 150.04,
+    "Volume": 102350
+  },
+  {
+    "Timestamp": "2018-03-19T13:44:00Z",
+    "Ticker": "IBM",
+    "Open": 150.04,
+    "High": 150.43,
+    "Low": 149.74,
+    "Close": 150.39,
+    "Volume": 110100
+  },
+  {
+    "Timestamp": "2018-03-19T13:45:00Z",
+    "Ticker": "IBM",
+    "Open": 150.39,
+    "High": 150.45,
+    "Low": 149.82,
+    "Close": 149.82,
+    "Volume": 123870
+  },
+  {
+    "Timestamp": "2018-03-19T13:46:00Z",
+    "Ticker": "IBM",
+    "Open": 149.82,
+    "High": 150.24,
+    "Low": 149.82,
+    "Close": 150.2,
+    "Volume": 102940
+  },
+  {
+    "Timestamp": "2018-03-19T13:47:00Z",
+    "Ticker": "IBM",
+    "Open": 150.2,
+    "High": 150.5,
+    "Low": 149.75,
+    "Close": 149.75,
+    "Volume": 122670
+  },
+  {
+    "Timestamp": "2018-03-19T13:48:00Z",
+    "Ticker": "IBM",
+    "Open": 149.75,
+    "High": 149.87,
+    "Low": 149.27,
+    "Close": 149.85,
+    "Volume": 102040
+  },
+  {
+    "Timestamp": "2018-03-19T13:49:00Z",
+    "Ticker": "IBM",
+    "Open": 149.85,
+    "High": 150.29,
+    "Low": 149.69,
+    "Close": 149.69,
+    "Volume": 111330
+  },
+  {
+    "Timestamp": "2018-03-19T13:50:00Z",
+    "Ticker": "IBM",
+    "Open": 149.69,
+    "High": 149.69,
+    "Low": 149.09,
+    "Close": 149.2,
+    "Volume": 107990
+  },
+  {
+    "Timestamp": "2018-03-19T13:51:00Z",
+    "Ticker": "IBM",
+    "Open": 149.2,
+    "High": 149.2,
+    "Low": 148.61,
+    "Close": 148.93,
+    "Volume": 111250
+  },
+  {
+    "Timestamp": "2018-03-19T13:52:00Z",
+    "Ticker": "IBM",
+    "Open": 148.93,
+    "High": 149.18,
+    "Low": 148.49,
+    "Close": 148.49,
+    "Volume": 104380
+  },
+  {
+    "Timestamp": "2018-03-19T13:53:00Z",
+    "Ticker": "IBM",
+    "Open": 148.49,
+    "High": 148.73,
+    "Low": 148.17,
+    "Close": 148.73,
+    "Volume": 112760
+  },
+  {
+    "Timestamp": "2018-03-19T13:54:00Z",
+    "Ticker": "IBM",
+    "Open": 148.73,
+    "High": 149.18,
+    "Low": 148.73,
+    "Close": 149.13,
+    "Volume": 103000
+  },
+  {
+    "Timestamp": "2018-03-19T13:55:00Z",
+    "Ticker": "IBM",
+    "Open": 149.13,
+    "High": 149.18,
+    "Low": 148.58,
+    "Close": 148.58,
+    "Volume": 137040
+  },
+  {
+    "Timestamp": "2018-03-19T13:56:00Z",
+    "Ticker": "IBM",
+    "Open": 148.58,
+    "High": 148.97,
+    "Low": 148.28,
+    "Close": 148.3,
+    "Volume": 104900
+  },
+  {
+    "Timestamp": "2018-03-19T13:57:00Z",
+    "Ticker": "IBM",
+    "Open": 148.3,
+    "High": 148.3,
+    "Low": 147.72,
+    "Close": 148.1,
+    "Volume": 119700
+  },
+  {
+    "Timestamp": "2018-03-19T13:58:00Z",
+    "Ticker": "IBM",
+    "Open": 148.1,
+    "High": 148.4,
+    "Low": 147.8,
+    "Close": 147.8,
+    "Volume": 113830
+  },
+  {
+    "Timestamp": "2018-03-19T13:59:00Z",
+    "Ticker": "IBM",
+    "Open": 147.8,
+    "High": 147.97,
+    "Low": 147.38,
+    "Close": 147.92,
+    "Volume": 137480
+  },
+  {
+    "Timestamp": "2023-10-27T19:57:00Z",
+    "Ticker": "IBM",
+    "Open": 178.3,
+    "High": 178.3,
+    "Low": 177.72,
+    "Close": 178.1,
+    "Volume": 119700
+  },
+  {
+    "Timestamp": "2023-10-27T19:58:00Z",
+    "Ticker": "IBM",
+    "Open": 178.1,
+    "High": 178.4,
+    "Low": 177.8,
+    "Close": 177.8,
+    "Volume": 113830
+  },
+  {
+    "Timestamp": "2023-10-27T19:59:00Z",
+    "Ticker": "IBM",
+    "Open": 178.02,
+    "High": 178.19,
+    "Low": 177.6,
+    "Close": 178.14,
+    "Volume": 137480
+  },
+  {
+    "Timestamp": "2023-10-25T13:30:00Z",
+    "Ticker": "IBM",
+    "Open": 179.64,
+    "High": 179.91,
+    "Low": 179.28,
+    "Close": 179.89,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2023-10-25T16:00:00Z",
+    "Ticker": "IBM",
+    "Open": 179.89,
+    "High": 180.16,
+    "Low": 179.53,
+    "Close": 179.55,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2023-10-25T19:59:00Z",
+    "Ticker": "IBM",
+    "Open": 179.55,
+    "High": 179.82,
+    "Low": 179.19,
+    "Close": 179.74,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2019-03-18T13:30:00Z",
+    "Ticker": "NVDA",
+    "Open": 270.7,
+    "High": 271.24,
+    "Low": 269.7,
+    "Close": 270.07,
+    "Volume": 887670
+  },
+  {
+    "Timestamp": "2019-03-18T13:31:00Z",
+    "Ticker": "NVDA",
+    "Open": 270.07,
+    "High": 271.44,
+    "Low": 269.89,
+    "Close": 271.24,
+    "Volume": 681530
+  },
+  {
+    "Timestamp": "2019-03-18T13:32:00Z",
+    "Ticker": "NVDA",
+    "Open": 271.24,
+    "High": 271.91,
+    "Low": 270.04,
+    "Close": 270.04,
+    "Volume": 752360
+  },
+  {
+    "Timestamp": "2019-03-18T13:33:00Z",
+    "Ticker": "NVDA",
+    "Open": 270.04,
+    "High": 270.04,
+    "Low": 268.01,
+    "Close": 269.91,
+    "Volume": 596610
+  },
+  {
+    "Timestamp": "2019-03-18T13:34:00Z",
+    "Ticker": "NVDA",
+    "Open": 269.91,
+    "High": 270.84,
+    "Low": 268.84,
+    "Close": 270.84,
+    "Volume": 721630
+  },
+  {
+    "Timestamp": "2019-03-18T13:35:00Z",
+    "Ticker": "NVDA",
+    "Open": 270.84,
+    "High": 271.7,
+    "Low": 270.14,
+    "Close": 270.14,
+    "Volume": 645400
+  },
+  {
+    "Timestamp": "2019-03-18T13:36:00Z",
+    "Ticker": "NVDA",
+    "Open": 270.14,
+    "High": 270.14,
+    "Low": 268.11,
+    "Close": 269.47,
+    "Volume": 608510
+  },
+  {
+    "Timestamp": "2019-03-18T13:37:00Z",
+    "Ticker": "NVDA",
+    "Open": 269.47,
+    "High": 270.81,
+    "Low": 269.27,
+    "Close": 270.81,
+    "Volume": 715610
+  },
+  {
+    "Timestamp": "2019-03-18T13:38:00Z",
+    "Ticker": "NVDA",
+    "Open": 270.81,
+    "High": 271.94,
+    "Low": 270.47,
+    "Close": 271.94,
+    "Volume": 701820
+  },
+  {
+    "Timestamp": "2019-03-18T13:39:00Z",
+    "Ticker": "NVDA",
+    "Open": 271.94,
+    "High": 272.83,
+    "Low": 271.01,
+    "Close": 271.01,
+    "Volume": 631400
+  },
+  {
+    "Timestamp": "2019-03-18T13:40:00Z",
+    "Ticker": "NVDA",
+    "Open": 271.01,
+    "High": 271.08,
+    "Low": 269.33,
+    "Close": 270.97,
+    "Volume": 834890
+  },
+  {
+    "Timestamp": "2019-03-18T13:41:00Z",
+    "Ticker": "NVDA",
+    "Open": 270.97,
+    "High": 272.69,
+    "Low": 270.97,
+    "Close": 272.55,
+    "Volume": 529690
+  },
+  {
+    "Timestamp": "2019-03-18T13:42:00Z",
+    "Ticker": "NVDA",
+    "Open": 272.55,
+    "High": 273.26,
+    "Low": 271.29,
+    "Close": 271.29,
+    "Volume": 711970
+  },
+  {
+    "Timestamp": "2019-03-18T13:43:00Z",
+    "Ticker": "NVDA",
+    "Open": 271.29,
+    "High": 271.29,
+    "Low": 269.26,
+    "Close": 270.78,
+    "Volume": 704900
+  },
+  {
+    "Timestamp": "2019-03-18T13:44:00Z",
+    "Ticker": "NVDA",
+    "Open": 270.78,
+    "High": 271.61,
+    "Low": 269.65,
+    "Close": 269.65,
+    "Volume": 710080
+  },
+  {
+    "Timestamp": "2019-03-18T13:45:00Z",
+    "Ticker": "NVDA",
+    "Open": 269.65,
+    "High": 270.05,
+    "Low": 268.04,
+    "Close": 269.91,
+    "Volume": 821520
+  },
+  {
+    "Timestamp": "2019-03-18T13:46:00Z",
+    "Ticker": "NVDA",
+    "Open": 269.91,
+    "High": 271.04,
+    "Low": 269.01,
+    "Close": 269.01,
+    "Volume": 618310
+  },
+  {
+    "Timestamp": "2019-03-18T13:47:00Z",
+    "Ticker": "NVDA",
+    "Open": 269.01,
+    "High": 269.01,
+    "Low": 267.01,
+    "Close": 268.43,
+    "Volume": 639520
+  },
+  {
+    "Timestamp": "2019-03-18T13:48:00Z",
+    "Ticker": "NVDA",
+    "Open": 268.43,
+    "High": 269.26,
+    "Low": 267.57,
+    "Close": 267.57,
+    "Volume": 738220
+  },
+  {
+    "Timestamp": "2019-03-18T13:49:00Z",
+    "Ticker": "NVDA",
+    "Open": 267.57,
+    "High": 268.63,
+    "Low": 266.92,
+    "Close": 268.46,
+    "Volume": 789040
+  },
+  {
+    "Timestamp": "2019-03-18T13:50:00Z",
+    "Ticker": "NVDA",
+    "Open": 268.46,
+    "High": 269.83,
+    "Low": 267.8,
+    "Close": 267.8,
+    "Volume": 716100
+  },
+  {
+    "Timestamp": "2019-03-18T13:51:00Z",
+    "Ticker": "NVDA",
+    "Open": 267.8,
+    "High": 267.8,
+    "Low": 265.94,
+    "Close": 267.57,
+    "Volume": 692510
+  },
+  {
+    "Timestamp": "2019-03-18T13:52:00Z",
+    "Ticker": "NVDA",
+    "Open": 267.57,
+    "High": 268.07,
+    "Low": 266.08,
+    "Close": 266.08,
+    "Volume": 618940
+  },
+  {
+    "Timestamp": "2019-03-18T13:53:00Z",
+    "Ticker": "NVDA",
+    "Open": 266.08,
+    "High": 266.08,
+    "Low": 264.1,
+    "Close": 265.48,
+    "Volume": 763930
+  },
+  {
+    "Timestamp": "2019-03-18T13:54:00Z",
+    "Ticker": "NVDA",
+    "Open": 265.48,
+    "High": 266.38,
+    "Low": 264.42,
+    "Close": 264.42,
+    "Volume": 700420
+  },
+  {
+    "Timestamp": "2019-03-18T13:55:00Z",
+    "Ticker": "NVDA",
+    "Open": 264.42,
+    "High": 264.42,
+    "Low": 262.46,
+    "Close": 263.98,
+    "Volume": 736120
+  },
+  {
+    "Timestamp": "2019-03-18T13:56:00Z",
+    "Ticker": "NVDA",
+    "Open": 263.98,
+    "High": 264.98,
+    "Low": 263.06,
+    "Close": 263.06,
+    "Volume": 671380
+  },
+  {
+    "Timestamp": "2019-03-18T13:57:00Z",
+    "Ticker": "NVDA",
+    "Open": 263.06,
+    "High": 263.46,
+    "Low": 261.52,
+    "Close": 263.33,
+    "Volume": 744100
+  },
+  {
+    "Timestamp": "2019-03-18T13:58:00Z",
+    "Ticker": "NVDA",
+    "Open": 263.33,
+    "High": 264.46,
+    "Low": 262.53,
+    "Close": 262.53,
+    "Volume": 743160
+  },
+  {
+    "Timestamp": "2019-03-18T13:59:00Z",
+    "Ticker": "NVDA",
+    "Open": 262.53,
+    "High": 262.53,
+    "Low": 260.59,
+    "Close": 261.98,
+    "Volume": 669670
+  },
+  {
+    "Timestamp": "2023-10-27T19:57:00Z",
+    "Ticker": "NVDA",
+    "Open": 1678.8,
+    "High": 1678.8,
+    "Low": 1673.02,
+    "Close": 1676.91,
+    "Volume": 744100
+  },
+  {
+    "Timestamp": "2023-10-27T19:58:00Z",
+    "Ticker": "NVDA",
+    "Open": 1676.91,
+    "High": 1679.97,
+    "Low": 1674.19,
+    "Close": 1674.19,
+    "Volume": 743160
+  },
+  {
+    "Timestamp": "2023-10-27T19:59:00Z",
+    "Ticker": "NVDA",
+    "Open": 1675.31,
+    "High": 1675.31,
+    "Low": 1670.45,
+    "Close": 1673.86,
+    "Volume": 669670
+  },
+  {
+    "Timestamp": "2023-10-25T13:30:00Z",
+    "Ticker": "NVDA",
+    "Open": 1675.82,
+    "High": 1679.99,
+    "Low": 1671.64,
+    "Close": 1679.66,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2023-10-25T16:00:00Z",
+    "Ticker": "NVDA",
+    "Open": 1679.66,
+    "High": 1683.83,
+    "Low": 1675.48,
+    "Close": 1676,
+    "Volume": 0
+  },
+  {
+    "Timestamp": "2023-10-25T19:59:00Z",
+    "Ticker": "NVDA",
+    "Open": 1676,
+    "High": 1680.17,
+    "Low": 1671.82,
+    "Close": 1679.29,
+    "Volume": 0
+  }
+]
