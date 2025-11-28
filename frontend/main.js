@@ -65,26 +65,45 @@ function App() {
 }
 
 function Sidebar({ activeComponent, setActiveComponent, reports }) {
+    const [searchTerm, setSearchTerm] = useState('');
+
     const components = [
         { id: 'home', name: 'Home' },
+        { id: 'analysis', name: 'Analysis' },
         { id: 'clustering_techniques', name: 'Clustering Techniques' },
         { id: 'federated_learning', name: 'Federated Learning' },
     ];
+
+    const filteredComponents = components.filter(component =>
+        component.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    const filteredReports = reports.filter(report =>
+        report.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     return (
         <div className="sidebar">
             <div className="sidebar-header">
                 <h2>Repo Catalog</h2>
             </div>
+            <div className="sidebar-search">
+                <input
+                    type="text"
+                    placeholder="Search..."
+                    value={searchTerm}
+                    onChange={e => setSearchTerm(e.target.value)}
+                />
+            </div>
             <nav className="sidebar-nav">
                 <ul>
-                    {components.map(component => (
+                    {filteredComponents.map(component => (
                         <li key={component.id} className={activeComponent === component.id ? 'active' : ''}>
                             <a href="#" onClick={() => setActiveComponent(component.id)}>{component.name}</a>
                         </li>
                     ))}
-                    {reports.length > 0 && <li className="separator">Reports</li>}
-                    {reports.map(report => (
+                    {filteredReports.length > 0 && <li className="separator">Reports</li>}
+                    {filteredReports.map(report => (
                         <li key={`report-${report}`} className={activeComponent === `report-${report}` ? 'active' : ''}>
                             <a href="#" onClick={() => setActiveComponent(`report-${report}`)}>{report}</a>
                         </li>
@@ -98,6 +117,7 @@ function Sidebar({ activeComponent, setActiveComponent, reports }) {
 function Header({ component }) {
     const titles = {
         home: 'Welcome',
+        analysis: 'Real-Time Analysis',
         clustering_techniques: 'Clustering Techniques',
         federated_learning: 'Federated Learning',
     };
