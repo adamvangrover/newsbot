@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
-from app.api.endpoints import news_analysis, reports, analysis
+from app.api.endpoints import news_analysis, reports, analysis, reasoning
 import os
 
 app = FastAPI(title="NewsBot AI API")
@@ -21,6 +21,7 @@ async def root():
 app.include_router(news_analysis.router)
 app.include_router(reports.router)
 app.include_router(analysis.router)
+app.include_router(reasoning.router, prefix="/api/reasoning", tags=["reasoning"])
 
 # Mount static directory to serve static files
 app.mount("/", StaticFiles(directory="frontend"), name="static")
