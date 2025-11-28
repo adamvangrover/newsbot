@@ -129,3 +129,5 @@ credentials.json
 
 # macOS
 .DS_Store
+*.jsonl
+*.parquet
