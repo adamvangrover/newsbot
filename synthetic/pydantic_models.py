@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import List, Optional, Any
 from pydantic import BaseModel
 from datetime import date, datetime
 
@@ -36,6 +36,21 @@ class EquityDailyPrice(BaseModel):
     adjusted_close_price: float
     volume: int
     vwap: Optional[float] = None
+    ingestion_timestamp: datetime
+    source: Optional[str] = None
+
+class CorporateAction(BaseModel):
+    action_id: int
+    asset_id: int
+    ticker_symbol: Optional[str] = None # Helper
+    action_type: str
+    ex_date: Optional[date] = None
+    record_date: Optional[date] = None
+    payable_date: Optional[date] = None
+    declaration_date: Optional[date] = None
+    value_ratio: Optional[float] = None
+    value_currency: Optional[str] = None
+    notes: Optional[str] = None
     ingestion_timestamp: datetime
     source: Optional[str] = None
 
@@ -97,3 +112,55 @@ class EconomicEvent(BaseModel):
     notes: Optional[str] = None
     ingestion_timestamp: datetime
     source: Optional[str] = None
+
+class CentralBankDocumentType(BaseModel):
+    doc_type_id: int
+    doc_type_name: str
+    issuing_body: Optional[str] = None
+
+class CentralBankDocument(BaseModel):
+    document_id: int
+    doc_type_id: int
+    publish_timestamp_utc: datetime
+    title: Optional[str] = None
+    speaker_author: Optional[str] = None
+    raw_text_s3_path: Optional[str] = None
+    document_url: Optional[str] = None
+    ingestion_timestamp: datetime
+    source: Optional[str] = None
+
+class GeopoliticalEventSource(BaseModel):
+    geopol_source_id: int
+    source_name: str
+
+class GeopoliticalEvent(BaseModel):
+    geopol_event_id: int
+    geopol_source_id: int
+    event_timestamp_utc: datetime
+    country_region_involved: Optional[str] = None
+    event_type: Optional[str] = None
+    description: Optional[str] = None
+    relevance_score: Optional[float] = None
+    affected_assets_tickers: Optional[List[str]] = None
+    ingestion_timestamp: datetime
+
+class SocialMediaPlatform(BaseModel):
+    platform_id: int
+    platform_name: str
+
+class SocialMediaPost(BaseModel):
+    post_id: int
+    platform_id: int
+    post_guid: str
+    author_guid: Optional[str] = None
+    publish_timestamp_utc: datetime
+    post_text: Optional[str] = None
+    tickers_mentioned: Optional[List[str]] = None
+    hashtags: Optional[List[str]] = None
+    like_count: Optional[int] = None
+    retweet_reply_count: Optional[int] = None
+    sentiment_score: Optional[float] = None
+    sentiment_label: Optional[str] = None
+    raw_json_s3_path: Optional[str] = None
+    ingestion_timestamp: datetime
+    source_collection_method: Optional[str] = None

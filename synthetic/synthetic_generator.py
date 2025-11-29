@@ -12,13 +12,14 @@ import networkx as nx
 from .pydantic_models import (
     Asset, AssetUniverse, AssetConstituent, EquityDailyPrice,
     NewsArticleMetadata, SECFilingMetadata, EconomicEvent,
-    NewsSource, EconomicEventType, SECFilingType
+    CorporateAction, NewsSource, EconomicEventType, SECFilingType,
+    CentralBankDocumentType, CentralBankDocument,
+    GeopoliticalEventSource, GeopoliticalEvent,
+    SocialMediaPlatform, SocialMediaPost
 )
 from utils import mock_data_generator as mock_gen
 from semantic_narrative_library.processing.impact_analysis_engine import ImpactAnalyzer
-from semantic_narrative_library.core_models.python.base_types import (
-    NarrativeEntity, KnowledgeGraphData, Relationship, Industry, Company, PoliticalEvent
-)
+from semantic_narrative_library.core_models.python.base_types import NarrativeEntity, NewsItem, PoliticalEvent
 
 fake = Faker()
 
@@ -110,10 +111,17 @@ class SyntheticDataEngine:
         self.start_date = start_date
         self.end_date = end_date
         self.num_assets = num_assets
+
+        # Core Data Structures
         self.assets: List[Asset] = []
         self.universe: AssetUniverse = None
         self.constituents: List[AssetConstituent] = []
+
+        # Market State
         self.market_state: Dict[str, float] = {} # Ticker -> Current Price
+        self.active_scenarios: List[Dict] = []
+
+        # Generated Data Container
 
         # Graph relationships
         self.supply_chain_graph: Dict[str, List[str]] = {} # Supplier -> [Consumers]
@@ -121,31 +129,44 @@ class SyntheticDataEngine:
 
         self.generated_data: Dict[str, List[Any]] = {
             "assets": [],
+            "asset_universe": [], # Will contain just one for now
+            "asset_constituents": [],
             "equity_daily_prices": [],
             "news_articles_metadata": [],
             "sec_filings_metadata": [],
             "economic_events": [],
-            "economic_event_types": [],
+            "corporate_actions": [],
             "news_sources": [],
-            "sec_filing_types": []
+            "economic_event_types": [],
+            "sec_filing_types": [],
+            "central_bank_documents": [],
+            "geopolitical_events": [],
+            "social_media_posts": []
         }
 
-        # Load mocks but convert to Pydantic
-        self.news_sources_dicts = mock_gen.generate_mock_news_sources()
-        self.news_sources = [NewsSource(**ns) for ns in self.news_sources_dicts]
-        self.generated_data["news_sources"] = self.news_sources
+        # Metadata / Static Data
+        self._initialize_metadata()
 
-        self.econ_event_types_dicts = mock_gen.generate_mock_economic_event_types()
-        self.econ_event_types = [EconomicEventType(**e) for e in self.econ_event_types_dicts]
-        self.generated_data["economic_event_types"] = self.econ_event_types
-
-        self.sec_filing_types_dicts = mock_gen.generate_mock_sec_filing_types()
-        self.sec_filing_types = [SECFilingType(**s) for s in self.sec_filing_types_dicts]
-        self.generated_data["sec_filing_types"] = self.sec_filing_types
-
-        self.supply_chain: SupplyChainGraph = None
+        # Engines
         self.impact_analyzer = ImpactAnalyzer()
 
+    def _initialize_metadata(self):
+        """Initializes static metadata (sources, types, etc.)"""
+        self.news_sources = [NewsSource(**x) for x in mock_gen.generate_mock_news_sources()]
+        self.generated_data["news_sources"] = self.news_sources
+
+        self.econ_event_types = [EconomicEventType(**x) for x in mock_gen.generate_mock_economic_event_types(5)]
+        self.generated_data["economic_event_types"] = self.econ_event_types
+
+        self.sec_filing_types = [SECFilingType(**x) for x in mock_gen.generate_mock_sec_filing_types()]
+        self.generated_data["sec_filing_types"] = self.sec_filing_types
+
+        self.cb_doc_types = [CentralBankDocumentType(**x) for x in mock_gen.generate_mock_cb_doc_types()]
+        # No direct table for types in pydantic/sql schema in output dict usually, but useful to keep handy
+
+        self.geopol_sources = [GeopoliticalEventSource(**x) for x in mock_gen.generate_mock_geopol_sources()]
+
+        self.social_platforms = [SocialMediaPlatform(**x) for x in mock_gen.generate_mock_social_platforms()]
 
     def initialize_market(self):
         """Initializes assets, initial prices, and relationships."""
@@ -163,16 +184,20 @@ class SyntheticDataEngine:
             universe_name="Synthetic Index 20",
             description="Top 20 Synthetic Assets"
         )
+        self.generated_data["asset_universe"] = [self.universe]
 
         # Create Constituents
         for asset in self.assets:
-            self.constituents.append(AssetConstituent(
+            const = AssetConstituent(
                 constituent_id=fake.unique.random_int(),
                 universe_id=self.universe.universe_id,
                 asset_id=asset.asset_id,
                 start_date=self.start_date,
-                ingestion_timestamp=datetime.datetime.now(datetime.timezone.utc)
-            ))
+                ingestion_timestamp=datetime.datetime.now(datetime.timezone.utc),
+                source="SyntheticEngine"
+            )
+            self.constituents.append(const)
+            self.generated_data["asset_constituents"].append(const)
 
         # Initialize Prices
         for asset in self.assets:
@@ -208,10 +233,30 @@ class SyntheticDataEngine:
         # We generate news even on weekends sometimes, but price impact is realized on trading days or gap open
         day_events = self._generate_daily_scenarios(current_date)
 
-        # Generate News and determine price impacts
-        daily_news, price_impacts = self._generate_news_and_impacts(current_date, day_events)
+        # 1. Update/Generate Active Scenarios (The "Signal")
+        daily_scenario_impacts = self._process_scenarios(current_date)
+
+        # 2. Generate Economic Events
+        self._generate_economic_events(current_date)
+
+        # 3. Generate Geopolitical Events (External Drivers)
+        geopol_events = self._generate_geopolitical_events(current_date)
+        self.generated_data["geopolitical_events"].extend(geopol_events)
+
+        # 4. Trace impacts from Geopolitical Events
+        geopol_impacts = self._trace_geopol_impacts(geopol_events)
+
+        # Merge Impacts
+        combined_impacts = self._merge_impacts(daily_scenario_impacts, geopol_impacts)
+
+        # 5. Generate News (Signal + Noise)
+        daily_news, price_sentiment_impacts = self._generate_news(current_date, combined_impacts)
         self.generated_data["news_articles_metadata"].extend(daily_news)
 
+        # 6. Generate Prices
+        if is_trading_day:
+            daily_prices = self._generate_prices(current_date, price_sentiment_impacts)
+            self.generated_data["equity_daily_prices"].extend(daily_prices)
         if is_trading_day:
             # Generate Prices
             daily_prices = self._generate_prices(current_date, price_impacts)
@@ -255,11 +300,193 @@ class SyntheticDataEngine:
 
         return scenarios
 
-    def _generate_news_and_impacts(self, current_date: datetime.date, scenarios: List[Dict]) -> Tuple[List[NewsArticleMetadata], Dict[str, float]]:
+        # 7. Generate Other Data (Filings, Corporate Actions, Social Media, CB Docs)
+        self._generate_auxiliary_data(current_date)
+
+    def _process_scenarios(self, current_date: datetime.date) -> Dict[str, float]:
         """
-        Generates news articles and calculates their impact on specific tickers.
-        Returns (List of NewsArticleMetadata, Dict[Ticker, PctChange])
+        Manages long-running scenarios and generates daily impacts.
+        Returns a dictionary of Ticker -> Price Impact %
         """
+        impacts = {}
+
+        # Chance to start a new scenario
+        if random.random() < 0.02: # 2% chance per day of a new major narrative
+            scenario_type = random.choice(["TechBreakthrough", "SupplyChainCrisis", "InflationSpike"])
+            self.active_scenarios.append({
+                "type": scenario_type,
+                "start_date": current_date,
+                "duration": random.randint(5, 20),
+                "day_count": 0,
+                "intensity": random.uniform(0.5, 1.5)
+            })
+
+        # Process active scenarios
+        active_to_keep = []
+        for scenario in self.active_scenarios:
+            scenario["day_count"] += 1
+            if scenario["day_count"] > scenario["duration"]:
+                continue
+
+            # Calculate impact for this day
+            # Decay intensity over time or have a peak
+            progress = scenario["day_count"] / scenario["duration"]
+            daily_intensity = scenario["intensity"] * (1 - abs(progress - 0.5) * 2) # Peak in middle
+
+            if scenario["type"] == "TechBreakthrough":
+                # Impact Tech stocks positively
+                for asset in self.assets:
+                    if asset.asset_class == "Equity": # Simplified check, ideally check sector
+                        # Assume some assets are tech
+                        if hash(asset.ticker_symbol) % 3 == 0: # Random subset
+                            impacts[asset.ticker_symbol] = impacts.get(asset.ticker_symbol, 0) + (0.02 * daily_intensity)
+
+            elif scenario["type"] == "SupplyChainCrisis":
+                # Impact all negatively, some more than others
+                for asset in self.assets:
+                     impacts[asset.ticker_symbol] = impacts.get(asset.ticker_symbol, 0) - (0.015 * daily_intensity)
+
+            elif scenario["type"] == "InflationSpike":
+                # General negative drag
+                for asset in self.assets:
+                    impacts[asset.ticker_symbol] = impacts.get(asset.ticker_symbol, 0) - (0.01 * daily_intensity)
+
+            active_to_keep.append(scenario)
+
+        self.active_scenarios = active_to_keep
+        return impacts
+
+    def _trace_geopol_impacts(self, events: List[GeopoliticalEvent]) -> Dict[str, float]:
+        """
+        Uses ImpactAnalyzer to trace impacts from geopolitical events to assets.
+        """
+        impacts = {}
+        for event in events:
+            # Create a NarrativeEntity for the event to pass to ImpactAnalyzer
+            # Using a simplified mapping since we don't have a full KG loaded here
+            narrative_event = PoliticalEvent(
+                id=f"geopol_{event.geopol_event_id}",
+                name=event.event_type or "Unknown Event",
+                type="PoliticalEvent",
+                event_subtype=event.event_type,
+                location=event.country_region_involved,
+                attributes={"description": event.description}
+            )
+
+            # Trace Impacts
+            # In a real system, we'd pass the full KG. Here we pass None or a mock
+            # The ImpactAnalyzer is currently simulated, so it works with mock data internally
+            chains = self.impact_analyzer.trace_impacts(
+                initial_event_entity=narrative_event,
+                knowledge_graph=None,
+                depth_levels=2
+            )
+
+            for chain in chains:
+                impact_type = chain.get("impact_type")
+                magnitude = chain.get("magnitude") # Low, Medium, High
+
+                # Convert magnitude to float
+                mag_score = 0.005 # Low
+                if magnitude == "Medium": mag_score = 0.015
+                elif magnitude == "High": mag_score = 0.03
+
+                # Determine sign based on impact type (naive heuristic)
+                if "Risk" in impact_type or "Delay" in impact_type or "Negative" in impact_type:
+                    mag_score *= -1
+
+                # Apply to random assets (since we don't have the real Entity Resolution to Ticker map yet)
+                # In a real system, 'impacted_entity_id' would map to an asset_id
+                num_affected = random.randint(1, 3)
+                affected_assets = random.sample(self.assets, min(num_affected, len(self.assets)))
+
+                for asset in affected_assets:
+                    impacts[asset.ticker_symbol] = impacts.get(asset.ticker_symbol, 0) + mag_score
+
+        return impacts
+
+    def _merge_impacts(self, *impact_dicts) -> Dict[str, float]:
+        merged = {}
+        for d in impact_dicts:
+            for k, v in d.items():
+                merged[k] = merged.get(k, 0.0) + v
+        return merged
+
+    def _generate_news(self, current_date: datetime.date, impacts: Dict[str, float]) -> Tuple[List[NewsArticleMetadata], Dict[str, float]]:
+        """
+        Generates news articles.
+        1. Explains the 'Signal' (Impacts) with generated headlines.
+        2. Adds 'Noise' (Random headlines with low/no impact).
+        """
+        news = []
+        final_impacts = impacts.copy() # Start with the calculated impacts
+
+        # 1. Generate Signal News (Explaining the price moves)
+        for ticker, impact in impacts.items():
+            if abs(impact) < 0.005: continue # Ignore small moves
+
+            asset = next((a for a in self.assets if a.ticker_symbol == ticker), None)
+            if not asset: continue
+
+            sentiment = "Positive" if impact > 0 else "Negative"
+            headline = ""
+
+            if sentiment == "Positive":
+                headline = random.choice([
+                    f"{asset.company_name} surges on positive outlook.",
+                    f"Analysts predict strong growth for {ticker}.",
+                    f"{asset.company_name} announces strategic partnership."
+                ])
+            else:
+                headline = random.choice([
+                    f"{asset.company_name} faces headwinds.",
+                    f"Regulatory concerns hit {ticker}.",
+                    f"{asset.company_name} misses key targets."
+                ])
+
+            source = random.choice(self.news_sources)
+            news.append(NewsArticleMetadata(
+                article_id=fake.unique.random_int(),
+                news_source_id=source.news_source_id,
+                headline=headline,
+                publish_timestamp_utc=datetime.datetime.combine(current_date, datetime.time(random.randint(8, 16), random.randint(0, 59)), tzinfo=datetime.timezone.utc),
+                tickers_mentioned=[ticker],
+                ingestion_timestamp=datetime.datetime.now(datetime.timezone.utc),
+                source_api="SyntheticEngine_Signal",
+                sentiment_score=impact * 10 # Scale up for sentiment score
+            ))
+
+        # 2. Generate Noise News
+        # Random chatter, no real impact
+        num_noise = random.randint(2, 5)
+        for _ in range(num_noise):
+            source = random.choice(self.news_sources)
+            noise_type = random.choice(["Repurpose", "Opinion", "Rumor"])
+
+            headline = ""
+            ticker = None
+
+            if random.random() < 0.5:
+                asset = random.choice(self.assets)
+                ticker = asset.ticker_symbol
+                headline = f"Opinion: Is {ticker} a buy right now?"
+            else:
+                headline = "Market stays watchful ahead of data."
+
+            news.append(NewsArticleMetadata(
+                article_id=fake.unique.random_int(),
+                news_source_id=source.news_source_id,
+                headline=headline,
+                publish_timestamp_utc=datetime.datetime.combine(current_date, datetime.time(random.randint(6, 20), random.randint(0, 59)), tzinfo=datetime.timezone.utc),
+                tickers_mentioned=[ticker] if ticker else [],
+                ingestion_timestamp=datetime.datetime.now(datetime.timezone.utc),
+                source_api="SyntheticEngine_Noise",
+                sentiment_score=random.uniform(-0.1, 0.1) # Low sentiment
+            ))
+
+        return news, final_impacts
+
+    def _generate_prices(self, current_date: datetime.date, impacts: Dict[str, float]) -> List[EquityDailyPrice]:
         news_items = []
         price_impacts = {a.ticker_symbol: 0.0 for a in self.assets}
 
@@ -533,12 +760,13 @@ class SyntheticDataEngine:
         prices = []
         for asset in self.assets:
             prev_close = self.market_state[asset.ticker_symbol]
-            impact = price_impacts.get(asset.ticker_symbol, 0.0)
+            impact = impacts.get(asset.ticker_symbol, 0.0)
 
-            # Random drift + Impact
-            drift = random.uniform(-0.015, 0.015)
+            # Random drift (market noise) + Systematic Impact
+            drift = random.uniform(-0.01, 0.01)
             change_pct = drift + impact
 
+            # Ensure we don't go to zero or negative easily
             # Ensure price doesn't go negative
             if prev_close * (1 + change_pct) <= 0:
                 change_pct = 0
@@ -568,30 +796,70 @@ class SyntheticDataEngine:
                 ingestion_timestamp=datetime.datetime.now(datetime.timezone.utc),
                 source="SyntheticEngine"
             ))
-
         return prices
 
-    def _generate_filings(self, current_date: datetime.date) -> List[SECFilingMetadata]:
-        filings = []
-        # Rare event
+    def _generate_economic_events(self, current_date: datetime.date):
+        if random.random() < 0.1: # 10% chance
+            etype = random.choice(self.econ_event_types)
+            self.generated_data["economic_events"].append(EconomicEvent(
+                event_id=fake.unique.random_int(),
+                event_type_id=etype.event_type_id,
+                release_datetime_utc=datetime.datetime.combine(current_date, datetime.time(10, 0), tzinfo=datetime.timezone.utc),
+                period_covered="Previous Month",
+                actual_value=random.uniform(100, 200),
+                consensus_value_pit=random.uniform(100, 200),
+                previous_value=random.uniform(100, 200),
+                unit="Index",
+                ingestion_timestamp=datetime.datetime.now(datetime.timezone.utc),
+                source="SyntheticEngine"
+            ))
+
+    def _generate_geopolitical_events(self, current_date: datetime.date) -> List[GeopoliticalEvent]:
+        events = []
+        if random.random() < 0.05: # 5% chance
+            source = random.choice(self.geopol_sources)
+            events.append(GeopoliticalEvent(
+                geopol_event_id=fake.unique.random_int(),
+                geopol_source_id=source.geopol_source_id,
+                event_timestamp_utc=datetime.datetime.combine(current_date, datetime.time(12, 0), tzinfo=datetime.timezone.utc),
+                country_region_involved="Global",
+                event_type="TradeRestriction" if random.random() < 0.5 else "Conflict",
+                description="Simulated geopolitical event affecting markets.",
+                relevance_score=random.uniform(0.5, 0.9),
+                affected_assets_tickers=[],
+                ingestion_timestamp=datetime.datetime.now(datetime.timezone.utc)
+            ))
+        return events
+
+    def _generate_auxiliary_data(self, current_date: datetime.date):
+        # SEC Filings
         if random.random() < 0.05:
             asset = random.choice(self.assets)
-            filing_type = random.choice(self.sec_filing_types)
-            _cik = mock_gen.generate_cik()
-            _acc_num = mock_gen.generate_accession_number(_cik)
-
-            filings.append(SECFilingMetadata(
+            ftype = random.choice(self.sec_filing_types)
+            self.generated_data["sec_filings_metadata"].append(SECFilingMetadata(
                 filing_id=fake.unique.random_int(),
                 asset_id=asset.asset_id,
                 ticker_symbol=asset.ticker_symbol,
+                cik="0000000000",
+                filing_type_id=ftype.filing_type_id,
                 cik=_cik,
                 filing_type_id=filing_type.filing_type_id,
                 filing_date=current_date,
-                accession_number=_acc_num,
                 ingestion_timestamp=datetime.datetime.now(datetime.timezone.utc),
-                source="SECApi_mock"
+                source="SyntheticEngine"
             ))
-        return filings
+
+        # Social Media
+        if random.random() < 0.3:
+            platform = random.choice(self.social_platforms)
+            self.generated_data["social_media_posts"].append(SocialMediaPost(
+                post_id=fake.unique.random_int(),
+                platform_id=platform.platform_id,
+                post_guid=str(uuid.uuid4()),
+                publish_timestamp_utc=datetime.datetime.combine(current_date, datetime.time(random.randint(0, 23), random.randint(0, 59)), tzinfo=datetime.timezone.utc),
+                post_text="Just a random market thought.",
+                ingestion_timestamp=datetime.datetime.now(datetime.timezone.utc)
+            ))
 
     def _generate_economic_events(self, current_date: datetime.date) -> List[EconomicEvent]:
         events = []
