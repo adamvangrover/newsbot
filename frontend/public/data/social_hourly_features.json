@@ -1,0 +1,499 @@
+[
+  {
+    "Timestamp": "2019-01-03T10:00:00Z",
+    "Ticker": "AAPL",
+    "Social_Media_Volume": 250,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.65
+  },
+  {
+    "Timestamp": "2019-01-03T11:00:00Z",
+    "Ticker": "AAPL",
+    "Social_Media_Volume": 310,
+    "Social_Media_Velocity": 0.24,
+    "Sentiment_Divergence": 0.7
+  },
+  {
+    "Timestamp": "2019-01-03T12:00:00Z",
+    "Ticker": "AAPL",
+    "Social_Media_Volume": 280,
+    "Social_Media_Velocity": -0.1,
+    "Sentiment_Divergence": 0.68
+  },
+  {
+    "Timestamp": "2019-01-15T09:00:00Z",
+    "Ticker": "JPM",
+    "Social_Media_Volume": 180,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.55
+  },
+  {
+    "Timestamp": "2019-01-15T10:00:00Z",
+    "Ticker": "JPM",
+    "Social_Media_Volume": 220,
+    "Social_Media_Velocity": 0.22,
+    "Sentiment_Divergence": 0.6
+  },
+  {
+    "Timestamp": "2019-01-15T11:00:00Z",
+    "Ticker": "JPM",
+    "Social_Media_Volume": 200,
+    "Social_Media_Velocity": -0.09,
+    "Sentiment_Divergence": 0.58
+  },
+  {
+    "Timestamp": "2020-04-30T10:00:00Z",
+    "Ticker": "MSFT",
+    "Social_Media_Volume": 350,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.45
+  },
+  {
+    "Timestamp": "2020-04-30T11:00:00Z",
+    "Ticker": "MSFT",
+    "Social_Media_Volume": 400,
+    "Social_Media_Velocity": 0.14,
+    "Sentiment_Divergence": 0.48
+  },
+  {
+    "Timestamp": "2020-04-30T12:00:00Z",
+    "Ticker": "MSFT",
+    "Social_Media_Volume": 380,
+    "Social_Media_Velocity": -0.05,
+    "Sentiment_Divergence": 0.47
+  },
+  {
+    "Timestamp": "2020-11-09T12:00:00Z",
+    "Ticker": "PFE",
+    "Social_Media_Volume": 800,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.8
+  },
+  {
+    "Timestamp": "2020-11-09T13:00:00Z",
+    "Ticker": "PFE",
+    "Social_Media_Volume": 1200,
+    "Social_Media_Velocity": 0.5,
+    "Sentiment_Divergence": 0.85
+  },
+  {
+    "Timestamp": "2020-11-09T14:00:00Z",
+    "Ticker": "PFE",
+    "Social_Media_Volume": 1500,
+    "Social_Media_Velocity": 0.25,
+    "Sentiment_Divergence": 0.75
+  },
+  {
+    "Timestamp": "2021-02-25T10:00:00Z",
+    "Ticker": "NVDA",
+    "Social_Media_Volume": 400,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.6
+  },
+  {
+    "Timestamp": "2021-02-25T11:00:00Z",
+    "Ticker": "NVDA",
+    "Social_Media_Volume": 550,
+    "Social_Media_Velocity": 0.38,
+    "Sentiment_Divergence": 0.65
+  },
+  {
+    "Timestamp": "2021-05-13T21:00:00Z",
+    "Ticker": "DIS",
+    "Social_Media_Volume": 300,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.72
+  },
+  {
+    "Timestamp": "2021-05-13T22:00:00Z",
+    "Ticker": "DIS",
+    "Social_Media_Volume": 250,
+    "Social_Media_Velocity": -0.17,
+    "Sentiment_Divergence": 0.75
+  },
+  {
+    "Timestamp": "2022-01-18T13:00:00Z",
+    "Ticker": "MSFT",
+    "Social_Media_Volume": 600,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.5
+  },
+  {
+    "Timestamp": "2022-01-18T14:00:00Z",
+    "Ticker": "MSFT",
+    "Social_Media_Volume": 900,
+    "Social_Media_Velocity": 0.5,
+    "Sentiment_Divergence": 0.55
+  },
+  {
+    "Timestamp": "2022-01-18T15:00:00Z",
+    "Ticker": "ATVI",
+    "Social_Media_Volume": 700,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": "0.60 # Activision ticker related to MSFT news"
+  },
+  {
+    "Timestamp": "2022-04-20T22:00:00Z",
+    "Ticker": "TSLA",
+    "Social_Media_Volume": 900,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.78
+  },
+  {
+    "Timestamp": "2022-04-20T23:00:00Z",
+    "Ticker": "TSLA",
+    "Social_Media_Volume": 1100,
+    "Social_Media_Velocity": 0.22,
+    "Sentiment_Divergence": 0.8
+  },
+  {
+    "Timestamp": "2022-09-15T13:00:00Z",
+    "Ticker": "ADBE",
+    "Social_Media_Volume": 350,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.4
+  },
+  {
+    "Timestamp": "2022-09-15T14:00:00Z",
+    "Ticker": "ADBE",
+    "Social_Media_Volume": 500,
+    "Social_Media_Velocity": 0.43,
+    "Sentiment_Divergence": 0.45
+  },
+  {
+    "Timestamp": "2022-09-15T14:00:00Z",
+    "Ticker": "FIGMA",
+    "Social_Media_Volume": 400,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": "0.50 # Figma ticker related to ADBE news"
+  },
+  {
+    "Timestamp": "2023-03-10T14:00:00Z",
+    "Ticker": "SIVB",
+    "Social_Media_Volume": 2000,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": "0.95 # SVB Financial"
+  },
+  {
+    "Timestamp": "2023-03-10T15:00:00Z",
+    "Ticker": "SIVB",
+    "Social_Media_Volume": 3500,
+    "Social_Media_Velocity": 0.75,
+    "Sentiment_Divergence": 0.98
+  },
+  {
+    "Timestamp": "2023-05-01T10:00:00Z",
+    "Ticker": "JPM",
+    "Social_Media_Volume": 400,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.3
+  },
+  {
+    "Timestamp": "2023-05-01T11:00:00Z",
+    "Ticker": "JPM",
+    "Social_Media_Volume": 650,
+    "Social_Media_Velocity": 0.63,
+    "Sentiment_Divergence": 0.35
+  },
+  {
+    "Timestamp": "2023-05-01T11:00:00Z",
+    "Ticker": "FRC",
+    "Social_Media_Volume": 1500,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": "0.90 # First Republic Bank related to JPM news"
+  },
+  {
+    "Timestamp": "2023-05-24T21:00:00Z",
+    "Ticker": "NVDA",
+    "Social_Media_Volume": 1200,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.85
+  },
+  {
+    "Timestamp": "2023-05-24T22:00:00Z",
+    "Ticker": "NVDA",
+    "Social_Media_Volume": 1800,
+    "Social_Media_Velocity": 0.5,
+    "Sentiment_Divergence": 0.88
+  },
+  {
+    "Timestamp": "2023-08-08T11:00:00Z",
+    "Ticker": "LLY",
+    "Social_Media_Volume": 700,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.7
+  },
+  {
+    "Timestamp": "2023-08-08T12:00:00Z",
+    "Ticker": "LLY",
+    "Social_Media_Volume": 950,
+    "Social_Media_Velocity": 0.36,
+    "Sentiment_Divergence": 0.75
+  },
+  {
+    "Timestamp": "2023-09-12T17:00:00Z",
+    "Ticker": "AAPL",
+    "Social_Media_Volume": 500,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.5
+  },
+  {
+    "Timestamp": "2023-09-12T18:00:00Z",
+    "Ticker": "AAPL",
+    "Social_Media_Volume": 700,
+    "Social_Media_Velocity": 0.4,
+    "Sentiment_Divergence": 0.52
+  },
+  {
+    "Timestamp": "2023-12-07T21:00:00Z",
+    "Ticker": "AVGO",
+    "Social_Media_Volume": 300,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.4
+  },
+  {
+    "Timestamp": "2023-12-07T22:00:00Z",
+    "Ticker": "AVGO",
+    "Social_Media_Volume": 450,
+    "Social_Media_Velocity": 0.5,
+    "Sentiment_Divergence": 0.42
+  },
+  {
+    "Timestamp": "2023-12-07T22:00:00Z",
+    "Ticker": "VMW",
+    "Social_Media_Volume": 250,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": "0.35 # VMware related to AVGO news"
+  },
+  {
+    "Timestamp": "2024-01-29T18:00:00Z",
+    "Ticker": "TSLA",
+    "Social_Media_Volume": 600,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.6
+  },
+  {
+    "Timestamp": "2024-01-29T19:00:00Z",
+    "Ticker": "TSLA",
+    "Social_Media_Volume": 550,
+    "Social_Media_Velocity": -0.08,
+    "Sentiment_Divergence": 0.62
+  },
+  {
+    "Timestamp": "2024-02-20T13:00:00Z",
+    "Ticker": "WMT",
+    "Social_Media_Volume": 200,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.3
+  },
+  {
+    "Timestamp": "2024-02-20T14:00:00Z",
+    "Ticker": "WMT",
+    "Social_Media_Volume": 350,
+    "Social_Media_Velocity": 0.75,
+    "Sentiment_Divergence": 0.33
+  },
+  {
+    "Timestamp": "2024-02-20T14:00:00Z",
+    "Ticker": "Vizio",
+    "Social_Media_Volume": 150,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": "0.25 # Vizio ticker related to WMT news"
+  },
+  {
+    "Timestamp": "2024-02-21T21:00:00Z",
+    "Ticker": "NVDA",
+    "Social_Media_Volume": 2500,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.9
+  },
+  {
+    "Timestamp": "2024-02-21T22:00:00Z",
+    "Ticker": "NVDA",
+    "Social_Media_Volume": 4000,
+    "Social_Media_Velocity": 0.6,
+    "Sentiment_Divergence": 0.92
+  },
+  {
+    "Timestamp": "2024-02-21T23:00:00Z",
+    "Ticker": "NVDA",
+    "Social_Media_Volume": 3500,
+    "Social_Media_Velocity": -0.13,
+    "Sentiment_Divergence": 0.89
+  },
+  {
+    "Timestamp": "2023-10-23T10:00:00Z",
+    "Ticker": "CVX",
+    "Social_Media_Volume": 280,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.38
+  },
+  {
+    "Timestamp": "2023-10-23T11:00:00Z",
+    "Ticker": "CVX",
+    "Social_Media_Volume": 420,
+    "Social_Media_Velocity": 0.5,
+    "Sentiment_Divergence": 0.41
+  },
+  {
+    "Timestamp": "2023-10-23T11:00:00Z",
+    "Ticker": "HES",
+    "Social_Media_Volume": 200,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": "0.30 # Hess Corp related to CVX news"
+  },
+  {
+    "Timestamp": "2022-01-03T15:00:00Z",
+    "Ticker": "GOOG",
+    "Social_Media_Volume": 150,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": "0.55 # Older data for more tickers"
+  },
+  {
+    "Timestamp": "2022-01-03T16:00:00Z",
+    "Ticker": "GOOG",
+    "Social_Media_Volume": 180,
+    "Social_Media_Velocity": 0.2,
+    "Sentiment_Divergence": 0.58
+  },
+  {
+    "Timestamp": "2022-01-03T15:00:00Z",
+    "Ticker": "AMZN",
+    "Social_Media_Volume": 220,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.6
+  },
+  {
+    "Timestamp": "2022-01-03T16:00:00Z",
+    "Ticker": "AMZN",
+    "Social_Media_Volume": 250,
+    "Social_Media_Velocity": 0.14,
+    "Sentiment_Divergence": 0.62
+  },
+  {
+    "Timestamp": "2022-01-04T10:00:00Z",
+    "Ticker": "COST",
+    "Social_Media_Volume": 100,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.4
+  },
+  {
+    "Timestamp": "2022-01-04T11:00:00Z",
+    "Ticker": "COST",
+    "Social_Media_Volume": 120,
+    "Social_Media_Velocity": 0.2,
+    "Sentiment_Divergence": 0.42
+  },
+  {
+    "Timestamp": "2022-01-05T14:00:00Z",
+    "Ticker": "CRM",
+    "Social_Media_Volume": 130,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.48
+  },
+  {
+    "Timestamp": "2022-01-05T15:00:00Z",
+    "Ticker": "CRM",
+    "Social_Media_Volume": 160,
+    "Social_Media_Velocity": 0.23,
+    "Sentiment_Divergence": 0.5
+  },
+  {
+    "Timestamp": "2022-01-06T09:00:00Z",
+    "Ticker": "MCD",
+    "Social_Media_Volume": 90,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.35
+  },
+  {
+    "Timestamp": "2022-01-06T10:00:00Z",
+    "Ticker": "MCD",
+    "Social_Media_Volume": 110,
+    "Social_Media_Velocity": 0.22,
+    "Sentiment_Divergence": 0.37
+  },
+  {
+    "Timestamp": "2022-01-07T13:00:00Z",
+    "Ticker": "NEE",
+    "Social_Media_Volume": 80,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.3
+  },
+  {
+    "Timestamp": "2022-01-07T14:00:00Z",
+    "Ticker": "NEE",
+    "Social_Media_Volume": 100,
+    "Social_Media_Velocity": 0.25,
+    "Sentiment_Divergence": 0.32
+  },
+  {
+    "Timestamp": "2022-01-10T10:00:00Z",
+    "Ticker": "LIN",
+    "Social_Media_Volume": 70,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.28
+  },
+  {
+    "Timestamp": "2022-01-10T11:00:00Z",
+    "Ticker": "LIN",
+    "Social_Media_Volume": 90,
+    "Social_Media_Velocity": 0.29,
+    "Sentiment_Divergence": 0.3
+  },
+  {
+    "Timestamp": "2022-01-11T14:00:00Z",
+    "Ticker": "KO",
+    "Social_Media_Volume": 140,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.44
+  },
+  {
+    "Timestamp": "2022-01-11T15:00:00Z",
+    "Ticker": "KO",
+    "Social_Media_Volume": 170,
+    "Social_Media_Velocity": 0.21,
+    "Sentiment_Divergence": 0.46
+  },
+  {
+    "Timestamp": "2022-01-12T09:00:00Z",
+    "Ticker": "PEP",
+    "Social_Media_Volume": 120,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.41
+  },
+  {
+    "Timestamp": "2022-01-12T10:00:00Z",
+    "Ticker": "PEP",
+    "Social_Media_Volume": 150,
+    "Social_Media_Velocity": 0.25,
+    "Sentiment_Divergence": 0.43
+  },
+  {
+    "Timestamp": "2022-01-13T11:00:00Z",
+    "Ticker": "MRK",
+    "Social_Media_Volume": 110,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.39
+  },
+  {
+    "Timestamp": "2022-01-13T12:00:00Z",
+    "Ticker": "MRK",
+    "Social_Media_Volume": 130,
+    "Social_Media_Velocity": 0.18,
+    "Sentiment_Divergence": 0.41
+  },
+  {
+    "Timestamp": "2022-01-14T12:00:00Z",
+    "Ticker": "BAC",
+    "Social_Media_Volume": 200,
+    "Social_Media_Velocity": "N/A",
+    "Sentiment_Divergence": 0.52
+  },
+  {
+    "Timestamp": "2022-01-14T13:00:00Z",
+    "Ticker": "BAC",
+    "Social_Media_Volume": 240,
+    "Social_Media_Velocity": 0.2,
+    "Sentiment_Divergence": 0.54
+  }
+]
