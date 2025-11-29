@@ -9,19 +9,22 @@ app = FastAPI(title="NewsBot AI API")
 # Mount output directory to serve reports
 app.mount("/output", StaticFiles(directory="output"), name="output")
 
-# Mount components directory to serve markdown files
-app.mount("/components", StaticFiles(directory="frontend/components"), name="components")
-
-@app.get("/")
-async def root():
-    # Return the index.html from frontend
-    return FileResponse('frontend/index.html')
-
 # Include routers
 app.include_router(news_analysis.router)
 app.include_router(reports.router)
 app.include_router(analysis.router)
 app.include_router(reasoning.router, prefix="/api/reasoning", tags=["reasoning"])
 
-# Mount static directory to serve static files
-app.mount("/", StaticFiles(directory="frontend"), name="static")
+# Serve React Frontend
+# 1. Mount assets
+app.mount("/assets", StaticFiles(directory="frontend/dist/assets"), name="assets")
+
+# 2. Serve index.html for root and unknown paths (SPA routing)
+@app.get("/{full_path:path}")
+async def serve_spa(full_path: str):
+    # Check if file exists in dist (e.g. favicon.ico)
+    if os.path.exists(f"frontend/dist/{full_path}") and full_path != "":
+        return FileResponse(f"frontend/dist/{full_path}")
+
+    # Otherwise return index.html
+    return FileResponse("frontend/dist/index.html")
