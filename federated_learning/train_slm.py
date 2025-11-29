@@ -52,6 +52,9 @@ class SLMTrainer:
         print(f"[SLMTrainer] Training complete. Final Loss: {final_loss:.4f}")
 
         output_path = "output/junior_analyst_v1.gguf"
+        # Ensure directory exists
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
         with open(output_path, "w") as f:
             f.write(f"Simulated GGUF Model Header for {self.model_name}\n")
             f.write(f"Trained on {len(self.training_data)} samples.\n")
@@ -63,9 +66,11 @@ class SLMTrainer:
 if __name__ == "__main__":
     # Example usage
     trainer = SLMTrainer()
-    # Assuming the synthetic generator ran and created this file
+    # Assuming the synthetic generator ran and created this file in output/
     try:
-        trainer.load_data("synthetic_output_news_articles_metadata.jsonl")
+        # Check if running from root or directory
+        data_path = "output/synthetic_output_news_articles_metadata.jsonl"
+        trainer.load_data(data_path)
         trainer.train(epochs=3)
     except FileNotFoundError:
-        print("Run synthetic generator first to create data.")
+        print(f"File not found. Make sure to run generate_synthetic_dataset.py first and check {data_path}")

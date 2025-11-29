@@ -12,3 +12,7 @@ feedparser
 semantic-kernel
 pytest
 httpx
+pandas
+faker
+pyarrow
+networkx

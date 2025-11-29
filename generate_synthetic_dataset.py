@@ -1,11 +1,17 @@
 import json
 import pandas as pd
 from datetime import date, datetime
+import os
 from synthetic.synthetic_generator import SyntheticDataEngine
 
 def main():
     start_date = date(2023, 10, 1)
     end_date = date(2023, 12, 31)
+
+    # Ensure output directory exists
+    output_dir = "output"
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
 
     engine = SyntheticDataEngine(start_date=start_date, end_date=end_date, num_assets=50)
     data = engine.run()
@@ -30,7 +36,7 @@ def main():
             raise TypeError (f"Type {type(obj)} not serializable")
 
         # Save as JSONL
-        output_file = f"synthetic_output_{key}.jsonl"
+        output_file = f"{output_dir}/synthetic_output_{key}.jsonl"
         with open(output_file, 'w') as f:
             for record in records:
                 f.write(json.dumps(record, default=json_serial) + "\n")
@@ -38,7 +44,7 @@ def main():
 
         # Save as Parquet (requires pyarrow or fastparquet)
         try:
-            parquet_file = f"synthetic_output_{key}.parquet"
+            parquet_file = f"{output_dir}/synthetic_output_{key}.parquet"
             df.to_parquet(parquet_file)
             print(f"Saved {parquet_file}")
         except Exception as e:
