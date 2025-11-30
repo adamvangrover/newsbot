@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repository Explorer | NewsBot Nexus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        code, pre { font-family: 'JetBrains Mono', monospace; }
+        .tree-line {
+            position: relative;
+        }
+        .tree-line::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: #e2e8f0;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 h-screen flex flex-col overflow-hidden">
+
+    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-md z-50 border-b border-slate-200 flex-none">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center gap-2">
+                    <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        <span class="font-bold text-xl tracking-tight text-slate-900">NewsBot Nexus</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-slate-600 hover:text-indigo-600 font-medium transition">Home</a>
+                    <a href="dashboard.html" class="text-slate-600 hover:text-indigo-600 font-medium transition">Dashboard</a>
+                    <a href="reports.html" class="text-slate-600 hover:text-indigo-600 font-medium transition">Reports</a>
+                    <a href="repo.html" class="text-indigo-600 font-medium transition border-b-2 border-indigo-600">Repository</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex flex-1 overflow-hidden">
+        <!-- Sidebar (Tree View) -->
+        <aside class="w-80 bg-white border-r border-slate-200 overflow-y-auto flex-none flex flex-col">
+            <div class="p-4 border-b border-slate-100 bg-slate-50">
+                <h2 class="font-semibold text-slate-700 flex items-center gap-2">
+                    <i data-lucide="git-branch" class="w-4 h-4 text-indigo-500"></i>
+                    File Explorer
+                </h2>
+                <p class="text-xs text-slate-500 mt-1">master branch</p>
+            </div>
+            <div id="file-tree" class="p-2 text-sm">
+                <!-- Tree content will be injected here -->
+                <div class="flex justify-center py-8">
+                    <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-indigo-600"></div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Viewer -->
+        <main class="flex-1 flex flex-col bg-slate-50 overflow-hidden relative">
+            <div id="welcome-state" class="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
+                <div class="w-20 h-20 bg-indigo-50 rounded-full flex items-center justify-center mb-6">
+                    <i data-lucide="code-2" class="w-10 h-10 text-indigo-500"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-slate-900 mb-2">Select a file to view</h1>
+                <p class="text-slate-500 max-w-md">Browse the repository structure on the left to view code, configuration, and documentation.</p>
+            </div>
+
+            <div id="file-viewer" class="hidden flex-col h-full w-full">
+                <div class="h-12 bg-white border-b border-slate-200 flex items-center px-4 justify-between flex-none">
+                    <div class="flex items-center gap-2">
+                         <i id="current-file-icon" data-lucide="file-code" class="w-4 h-4 text-slate-400"></i>
+                         <span id="current-filename" class="font-mono text-sm font-medium text-slate-700">filename.py</span>
+                    </div>
+                    <span id="current-filesize" class="text-xs text-slate-400"></span>
+                </div>
+                <div class="flex-1 overflow-auto bg-[#2d2d2d]">
+                    <pre class="!m-0 !p-4 !bg-transparent h-full"><code id="code-content" class="language-python"></code></pre>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        let repoData = null;
+
+        async function loadRepoMap() {
+            try {
+                const response = await fetch('frontend/public/repo_map.json');
+                repoData = await response.json();
+                renderTree(repoData, document.getElementById('file-tree'));
+                lucide.createIcons();
+            } catch (error) {
+                console.error("Error loading repo map:", error);
+                document.getElementById('file-tree').innerHTML = `<div class="text-red-500 p-4 text-sm">Error loading repository data.<br>${error.message}</div>`;
+            }
+        }
+
+        function getFileIcon(filename, type) {
+            if (type === 'folder') return 'folder';
+            const ext = filename.split('.').pop().toLowerCase();
+            switch (ext) {
+                case 'py': return 'file-code';
+                case 'js': case 'ts': case 'tsx': case 'jsx': return 'file-json';
+                case 'html': return 'layout';
+                case 'css': return 'palette';
+                case 'json': return 'braces';
+                case 'md': return 'file-text';
+                default: return 'file';
+            }
+        }
+
+        function renderTree(node, container, level = 0) {
+            container.innerHTML = '';
+
+            // If it's the root node, just render children
+            if (node.name === "root") {
+                node.children.sort((a, b) => {
+                    if (a.type === b.type) return a.name.localeCompare(b.name);
+                    return a.type === 'folder' ? -1 : 1;
+                });
+                node.children.forEach(child => {
+                    renderNode(child, container, 0);
+                });
+            } else {
+                renderNode(node, container, level);
+            }
+        }
+
+        function renderNode(node, container, level) {
+            const item = document.createElement('div');
+            const paddingLeft = level * 12 + 8; // Indentation
+
+            const isFolder = node.type === 'folder';
+            const iconName = getFileIcon(node.name, node.type);
+
+            item.className = `flex items-center gap-2 py-1.5 px-2 cursor-pointer hover:bg-indigo-50 rounded text-slate-600 hover:text-indigo-700 transition select-none group`;
+            item.style.paddingLeft = `${paddingLeft}px`;
+
+            item.innerHTML = `
+                <i data-lucide="${isFolder ? 'folder' : iconName}" class="w-4 h-4 ${isFolder ? 'text-indigo-400 group-hover:text-indigo-600' : 'text-slate-400 group-hover:text-indigo-500'} transition-colors"></i>
+                <span class="truncate">${node.name}</span>
+            `;
+
+            container.appendChild(item);
+
+            if (isFolder) {
+                const childrenContainer = document.createElement('div');
+                childrenContainer.className = 'hidden border-l border-slate-200 ml-3'; // hidden by default
+                childrenContainer.style.marginLeft = `${paddingLeft + 7}px`;
+
+                item.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const icon = item.querySelector('i');
+                    if (childrenContainer.classList.contains('hidden')) {
+                        childrenContainer.classList.remove('hidden');
+                        icon.setAttribute('data-lucide', 'folder-open');
+                    } else {
+                        childrenContainer.classList.add('hidden');
+                        icon.setAttribute('data-lucide', 'folder');
+                    }
+                    lucide.createIcons();
+                });
+
+                // Sort folders first
+                if (node.children) {
+                    node.children.sort((a, b) => {
+                        if (a.type === b.type) return a.name.localeCompare(b.name);
+                        return a.type === 'folder' ? -1 : 1;
+                    });
+
+                    node.children.forEach(child => {
+                        renderNode(child, childrenContainer, level + 1);
+                    });
+                }
+                container.appendChild(childrenContainer);
+            } else {
+                item.addEventListener('click', () => {
+                    displayFile(node);
+                    // Highlight active file
+                    document.querySelectorAll('#file-tree div').forEach(el => el.classList.remove('bg-indigo-100', 'text-indigo-700', 'font-medium'));
+                    item.classList.add('bg-indigo-100', 'text-indigo-700', 'font-medium');
+                });
+            }
+        }
+
+        function displayFile(node) {
+            const welcome = document.getElementById('welcome-state');
+            const viewer = document.getElementById('file-viewer');
+            const codeBlock = document.getElementById('code-content');
+            const filenameEl = document.getElementById('current-filename');
+            const filesizeEl = document.getElementById('current-filesize');
+
+            welcome.classList.add('hidden');
+            viewer.classList.remove('hidden');
+            viewer.classList.add('flex');
+
+            filenameEl.textContent = node.path;
+            filesizeEl.textContent = formatBytes(node.size);
+
+            if (node.content) {
+                // Escape HTML
+                const safeContent = node.content
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#039;");
+
+                codeBlock.innerHTML = safeContent;
+
+                // Set language for Prism
+                const ext = node.name.split('.').pop().toLowerCase();
+                let lang = 'plaintext';
+                if(ext === 'py') lang = 'python';
+                else if(ext === 'js' || ext === 'jsx') lang = 'javascript';
+                else if(ext === 'ts' || ext === 'tsx') lang = 'typescript';
+                else if(ext === 'html') lang = 'html';
+                else if(ext === 'css') lang = 'css';
+                else if(ext === 'json') lang = 'json';
+                else if(ext === 'md') lang = 'markdown';
+                else if(ext === 'sh') lang = 'bash';
+
+                codeBlock.className = `language-${lang}`;
+                Prism.highlightElement(codeBlock);
+            } else {
+                codeBlock.textContent = `// Content not available for this file type or file is too large.\n// Size: ${formatBytes(node.size)}`;
+                codeBlock.className = 'language-plaintext';
+                Prism.highlightElement(codeBlock);
+            }
+        }
+
+        function formatBytes(bytes, decimals = 2) {
+            if (!+bytes) return '0 Bytes';
+            const k = 1024;
+            const dm = decimals < 0 ? 0 : decimals;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
+        }
+
+        loadRepoMap();
+    </script>
+</body>
+</html>
