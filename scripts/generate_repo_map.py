@@ -8,6 +8,10 @@ EXCLUDE_DIRS = {
     ".git", "__pycache__", "node_modules", "dist", "venv", "env", ".idea", ".vscode", "frontend/dist"
 }
 
+EXCLUDE_FILES = {
+    ".env", ".DS_Store"
+}
+
 EXCLUDE_EXTENSIONS = {
     ".pyc", ".ico", ".png", ".jpg", ".jpeg", ".svg", ".parquet", ".zip", ".tar", ".gz", ".woff", ".woff2", ".ttf", ".eot"
 }
@@ -45,6 +49,9 @@ def build_tree(path):
 
     for entry in entries:
         full_path = os.path.join(path, entry)
+
+        if entry in EXCLUDE_FILES:
+            continue
 
         if os.path.isdir(full_path):
             if entry in EXCLUDE_DIRS:

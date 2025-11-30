@@ -161,6 +161,27 @@ const Home: React.FC = () => {
            </div>
         </Link>
 
+        {/* Repository Explorer */}
+        <Link to="/repo" className="group relative bg-gray-900 border border-gray-800 rounded-xl overflow-hidden hover:border-yellow-500/50 transition-all duration-300 col-span-1 md:col-span-2 lg:col-span-3">
+           <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition-opacity">
+               <ArrowRight className="text-yellow-500 -rotate-45" />
+           </div>
+           <div className="p-8 space-y-4">
+               <div className="w-12 h-12 bg-yellow-900/20 rounded-lg flex items-center justify-center text-yellow-400">
+                   <Database size={24} />
+               </div>
+               <h2 className="text-2xl font-bold text-white">Repository Explorer</h2>
+               <p className="text-gray-400 text-sm">
+                   Directly browse the entire source code of this project within the application. View components, logic, and data structures.
+               </p>
+                <ul className="text-xs text-gray-500 space-y-1 font-mono pt-2 flex gap-4">
+                   <li>• File Tree</li>
+                   <li>• Code Viewer</li>
+                   <li>• Static Map</li>
+               </ul>
+           </div>
+        </Link>
+
       </section>
 
       {/* Architecture Teaser */}
