@@ -3,13 +3,18 @@ import MatrixView from '../components/MatrixView';
 import ImpactGraph from '../components/ImpactGraph';
 import ScenarioSimulator from '../components/ScenarioSimulator';
 
-const Dashboard: React.FC = () => {
+const OperationalDashboard: React.FC = () => {
   return (
     <div className="space-y-6">
       <header className="mb-6 border-b border-gray-800 pb-4">
-        <h1 className="text-3xl font-bold text-green-500 tracking-tighter">
-          OPERATIONAL DASHBOARD <span className="text-xs text-gray-500 font-normal">[Live Feed]</span>
-        </h1>
+        <div>
+          <h1 className="text-3xl font-bold text-green-500 tracking-tighter">
+            OPERATIONAL DASHBOARD <span className="text-xs text-gray-500 font-normal">[Live Feed]</span>
+          </h1>
+          <p className="text-gray-400 mt-2">
+            Real-time monitoring of synthetic market events, impact analysis, and system alerts.
+          </p>
+        </div>
       </header>
 
       <main className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -40,4 +45,4 @@ const Dashboard: React.FC = () => {
   );
 };
 
-export default Dashboard;
+export default OperationalDashboard;

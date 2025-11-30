@@ -10,7 +10,9 @@ import {
   Menu,
   X,
   Server,
-  Layers
+  Radio,
+  Puzzle,
+  Box
 } from 'lucide-react';
 
 interface LayoutProps {
@@ -22,13 +24,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
 
   const navigation = [
-    { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
-    { name: 'System Status', href: '/status', icon: Activity },
-    { name: 'Performance', href: '/performance', icon: Layers },
-    { name: 'Synthetic Data', href: '/showcase', icon: Database },
-    { name: 'Impact Analysis', href: '/impact', icon: Network },
+    { name: 'Live Operations', href: '/dashboard', icon: LayoutDashboard },
+    { name: 'Signal Intelligence', href: '/signals', icon: Radio },
+    { name: 'Data Library', href: '/showcase', icon: Database },
     { name: 'Federated Learning', href: '/federated', icon: Server },
+    { name: 'Plugins', href: '/plugins', icon: Puzzle },
+    { name: 'Resources', href: '/resources', icon: Box },
+    { name: 'Impact Analysis', href: '/impact', icon: Network },
     { name: 'Architecture', href: '/architecture', icon: Cpu },
+    { name: 'System Status', href: '/status', icon: Activity },
     { name: 'About', href: '/about', icon: Info },
   ];
 
