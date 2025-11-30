@@ -8,7 +8,8 @@ import {
   Radio,
   Puzzle,
   Layers,
-  Server
+  Server,
+  Code
 } from 'lucide-react';
 
 const Home: React.FC = () => {
@@ -18,7 +19,7 @@ const Home: React.FC = () => {
       {/* Catalog Header */}
       <section className="text-center space-y-6 pt-12 pb-8">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white">
-          NewsBot <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">Nexus</span> Catalog
+          NewsBot <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">Nexus</span>
         </h1>
         <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
           A comprehensive suite for <span className="text-white">Synthetic Market Intelligence</span>.
@@ -56,7 +57,28 @@ const Home: React.FC = () => {
            </div>
         </Link>
 
-        {/* Module 2: Signal Intelligence */}
+        {/* Module 2: Repository Explorer (Moved up for visibility) */}
+        <Link to="/repo" className="group relative bg-gray-900 border border-gray-800 rounded-xl overflow-hidden hover:border-yellow-500/50 transition-all duration-300">
+           <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition-opacity">
+               <ArrowRight className="text-yellow-500 -rotate-45" />
+           </div>
+           <div className="p-8 space-y-4">
+               <div className="w-12 h-12 bg-yellow-900/20 rounded-lg flex items-center justify-center text-yellow-400">
+                   <Code size={24} />
+               </div>
+               <h2 className="text-2xl font-bold text-white">Repository</h2>
+               <p className="text-gray-400 text-sm">
+                   Browse the entire codebase directly in the browser. View project structure, source code, and configuration.
+               </p>
+               <ul className="text-xs text-gray-500 space-y-1 font-mono pt-2">
+                   <li>• File Explorer</li>
+                   <li>• Code Preview</li>
+                   <li>• Client-side Navigation</li>
+               </ul>
+           </div>
+        </Link>
+
+        {/* Module 3: Signal Intelligence */}
         <Link to="/signals" className="group relative bg-gray-900 border border-gray-800 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300">
            <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition-opacity">
                <ArrowRight className="text-blue-500 -rotate-45" />
@@ -77,7 +99,7 @@ const Home: React.FC = () => {
            </div>
         </Link>
 
-        {/* Module 3: Synthetic Data */}
+        {/* Module 4: Synthetic Data */}
         <Link to="/showcase" className="group relative bg-gray-900 border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500/50 transition-all duration-300">
            <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition-opacity">
                <ArrowRight className="text-purple-500 -rotate-45" />
@@ -98,7 +120,7 @@ const Home: React.FC = () => {
            </div>
         </Link>
 
-        {/* Module 4: Federated Learning */}
+        {/* Module 5: Federated Learning */}
         <Link to="/federated" className="group relative bg-gray-900 border border-gray-800 rounded-xl overflow-hidden hover:border-orange-500/50 transition-all duration-300">
            <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition-opacity">
                <ArrowRight className="text-orange-500 -rotate-45" />
@@ -119,7 +141,7 @@ const Home: React.FC = () => {
            </div>
         </Link>
 
-         {/* Module 5: Plugins & Extensions */}
+         {/* Module 6: Plugins & Extensions */}
         <Link to="/plugins" className="group relative bg-gray-900 border border-gray-800 rounded-xl overflow-hidden hover:border-pink-500/50 transition-all duration-300">
            <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition-opacity">
                <ArrowRight className="text-pink-500 -rotate-45" />
@@ -140,7 +162,7 @@ const Home: React.FC = () => {
            </div>
         </Link>
 
-         {/* Module 6: Resources */}
+         {/* Module 7: Resources */}
         <Link to="/resources" className="group relative bg-gray-900 border border-gray-800 rounded-xl overflow-hidden hover:border-teal-500/50 transition-all duration-300">
            <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition-opacity">
                <ArrowRight className="text-teal-500 -rotate-45" />

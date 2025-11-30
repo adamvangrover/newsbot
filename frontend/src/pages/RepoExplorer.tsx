@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Folder, FileText, ChevronRight, ChevronDown, Code, AlertCircle } from 'lucide-react';
+import { Folder, FileText, ChevronRight, ChevronDown, Code, AlertCircle, Copy, Check } from 'lucide-react';
 
 interface FileNode {
   name: string;
@@ -16,9 +16,10 @@ const RepoExplorer: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<FileNode | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    fetch('/repo_map.json')
+    fetch(`${import.meta.env.BASE_URL}repo_map.json`)
       .then(res => {
         if (!res.ok) throw new Error("Failed to load repo map");
         return res.json();
@@ -32,6 +33,14 @@ const RepoExplorer: React.FC = () => {
         setLoading(false);
       });
   }, []);
+
+  const handleCopy = () => {
+    if (selectedFile?.content) {
+      navigator.clipboard.writeText(selectedFile.content);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
 
   const FileTreeItem: React.FC<{ node: FileNode; depth?: number }> = ({ node, depth = 0 }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -105,12 +114,22 @@ const RepoExplorer: React.FC = () => {
         {selectedFile ? (
           <>
             <div className="bg-gray-800 border-b border-gray-700 px-4 py-2 flex justify-between items-center">
-                <span className="font-mono text-sm text-gray-300">{selectedFile.path}</span>
-                <span className="text-xs text-gray-500">{selectedFile.size} bytes</span>
+                <div className="flex items-center space-x-2">
+                    <span className="font-mono text-sm text-gray-300">{selectedFile.path}</span>
+                    <span className="text-xs text-gray-500">({selectedFile.size} bytes)</span>
+                </div>
+                <button
+                    onClick={handleCopy}
+                    className="flex items-center space-x-1 text-xs bg-gray-700 hover:bg-gray-600 px-2 py-1 rounded transition-colors text-gray-300"
+                    title="Copy to clipboard"
+                >
+                    {copied ? <Check size={14} className="text-green-400" /> : <Copy size={14} />}
+                    <span>{copied ? 'Copied' : 'Copy'}</span>
+                </button>
             </div>
-            <div className="flex-1 overflow-auto p-4">
+            <div className="flex-1 overflow-auto p-4 relative group">
               {selectedFile.content ? (
-                <pre className="text-sm font-mono text-gray-300 whitespace-pre-wrap">
+                <pre className="text-sm font-mono text-gray-300 whitespace-pre-wrap leading-relaxed">
                   {selectedFile.content}
                 </pre>
               ) : (

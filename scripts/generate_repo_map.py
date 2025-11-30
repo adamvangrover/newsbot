@@ -5,7 +5,11 @@ REPO_ROOT = "."
 OUTPUT_FILE = "frontend/public/repo_map.json"
 
 EXCLUDE_DIRS = {
-    ".git", "__pycache__", "node_modules", "dist", "venv", "env", ".idea", ".vscode", "frontend/dist"
+    ".git", "__pycache__", "node_modules", "dist", "venv", "env", ".idea", ".vscode", "frontend/dist", "output", "data"
+}
+
+EXCLUDE_FILES = {
+    ".env", ".env.local", "secrets.json", "package-lock.json", "yarn.lock"
 }
 
 EXCLUDE_EXTENSIONS = {
@@ -53,6 +57,9 @@ def build_tree(path):
             if child:
                 node["children"].append(child)
         else:
+            if entry in EXCLUDE_FILES:
+                continue
+
             ext = os.path.splitext(entry)[1]
             if ext in EXCLUDE_EXTENSIONS:
                 continue

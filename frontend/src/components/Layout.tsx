@@ -71,9 +71,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </nav>
 
         <div className="p-4 border-t border-gray-800">
-            <div className="bg-gray-800/50 p-3 rounded text-xs text-gray-500">
+            <div className="bg-gray-800/50 p-3 rounded text-xs text-gray-500 space-y-1">
                 <p>Status: <span className="text-green-500">● Online</span></p>
                 <p>Version: 2.0.1</p>
+                <a href="https://github.com/your-username/newsbot-nexus" target="_blank" rel="noopener noreferrer" className="block text-blue-400 hover:underline pt-1 border-t border-gray-700 mt-1">
+                   View on GitHub
+                </a>
             </div>
         </div>
       </div>
