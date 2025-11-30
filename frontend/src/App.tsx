@@ -12,6 +12,7 @@ import FederatedLearning from './pages/FederatedLearning';
 import SignalIntelligence from './pages/SignalIntelligence';
 import Resources from './pages/Resources';
 import Plugins from './pages/Plugins';
+import RepoExplorer from './pages/RepoExplorer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<OperationalDashboard />} />
+          <Route path="/repo" element={<RepoExplorer />} />
           <Route path="/signals" element={<SignalIntelligence />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/plugins" element={<Plugins />} />

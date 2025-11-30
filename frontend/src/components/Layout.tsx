@@ -12,7 +12,8 @@ import {
   Server,
   Radio,
   Puzzle,
-  Box
+  Box,
+  Code
 } from 'lucide-react';
 
 interface LayoutProps {
@@ -26,6 +27,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const navigation = [
     { name: 'Live Operations', href: '/dashboard', icon: LayoutDashboard },
     { name: 'Signal Intelligence', href: '/signals', icon: Radio },
+    { name: 'Repository', href: '/repo', icon: Code },
     { name: 'Data Library', href: '/showcase', icon: Database },
     { name: 'Federated Learning', href: '/federated', icon: Server },
     { name: 'Plugins', href: '/plugins', icon: Puzzle },
