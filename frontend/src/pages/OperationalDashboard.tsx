@@ -13,6 +13,7 @@ const OperationalDashboard: React.FC = () => {
           </h1>
           <p className="text-gray-400 mt-2">
             Real-time monitoring of synthetic market events, impact analysis, and system alerts.
+            <span className="text-yellow-500 ml-2 text-xs border border-yellow-700 px-2 py-0.5 rounded">Client-Side Demo Mode</span>
           </p>
         </div>
       </header>
