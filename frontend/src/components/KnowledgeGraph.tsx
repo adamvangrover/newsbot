@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react';
 import ForceGraph2D from 'react-force-graph-2d';
-import { Box, Typography, Paper } from '@mui/material';
 
 export const KnowledgeGraph: React.FC = () => {
     // Generate static graph data
@@ -28,23 +27,23 @@ export const KnowledgeGraph: React.FC = () => {
     }, []);
 
     return (
-        <Paper sx={{ p: 2, height: '80vh', display: 'flex', flexDirection: 'column' }}>
-            <Typography variant="h6" color="primary" gutterBottom>
+        <div className="p-4 h-[80vh] flex flex-col bg-gray-900 border border-gray-800 rounded-lg">
+            <h3 className="text-xl font-bold text-green-500 mb-4">
                 Semantic Knowledge Graph
-            </Typography>
-            <Box sx={{ flexGrow: 1, backgroundColor: '#000', borderRadius: 1, overflow: 'hidden' }}>
+            </h3>
+            <div className="flex-grow bg-black rounded overflow-hidden">
                  {/* @ts-ignore: ForceGraph2D typings issues are common */}
                 <ForceGraph2D
                     graphData={data}
                     nodeLabel="label"
                     nodeColor={node => {
-                        const colors = ['#ff9800', '#2196f3', '#f44336', '#4caf50'];
+                        const colors = ['#f97316', '#3b82f6', '#ef4444', '#22c55e'];
                         return colors[(node as any).group - 1] || '#fff';
                     }}
                     linkColor={() => '#555'}
                     backgroundColor="#000000"
                 />
-            </Box>
-        </Paper>
+            </div>
+        </div>
     );
 };

@@ -1,5 +1,5 @@
-import { IDataProvider, MarketData, AnalystRating, CorporateEarning, SocialSentiment } from './types';
-import axios, { AxiosInstance } from 'axios';
+import type { IDataProvider, MarketData, AnalystRating, CorporateEarning, SocialSentiment } from './types';
+import axios, { type AxiosInstance } from 'axios';
 
 export class LiveProvider implements IDataProvider {
   private client: AxiosInstance;

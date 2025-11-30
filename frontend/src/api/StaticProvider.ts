@@ -1,4 +1,4 @@
-import { IDataProvider, MarketData, AnalystRating, CorporateEarning, SocialSentiment } from './types';
+import type { IDataProvider, MarketData, AnalystRating, CorporateEarning, SocialSentiment } from './types';
 import axios from 'axios';
 
 export class StaticProvider implements IDataProvider {
