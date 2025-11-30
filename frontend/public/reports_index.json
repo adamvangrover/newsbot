@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "report06142025.md",
+    "path": "output/report06142025.md",
+    "size_bytes": 17120,
+    "size_str": "16.72 KB",
+    "modified_timestamp": 1764479907.560337,
+    "modified_date": "2025-11-30 05:18:27",
+    "type": "markdown"
+  },
+  {
+    "filename": "junior_analyst_v1.gguf",
+    "path": "output/junior_analyst_v1.gguf",
+    "size_bytes": 108,
+    "size_str": "108.0 B",
+    "modified_timestamp": 1764479907.560337,
+    "modified_date": "2025-11-30 05:18:27",
+    "type": "model"
+  }
+]
