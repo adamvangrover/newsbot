@@ -10,8 +10,7 @@ import {
   Legend,
   ResponsiveContainer
 } from 'recharts';
-import { MarketData, SocialSentiment } from '../../api/types';
-import { Box, Typography, Paper } from '@mui/material';
+import type { MarketData, SocialSentiment } from '../../api/types';
 
 interface SentimentPriceChartProps {
   marketData: MarketData[];
@@ -52,27 +51,27 @@ export const SentimentPriceChart: React.FC<SentimentPriceChartProps> = ({ market
   }, [marketData, sentimentData]);
 
   return (
-    <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 400 }}>
-      <Typography component="h2" variant="h6" color="primary" gutterBottom>
+    <div className="bg-gray-900 border border-gray-800 p-4 rounded-lg flex flex-col h-[400px]">
+      <h2 className="text-xl font-semibold text-green-500 mb-4">
         Sentiment Correlation ({ticker})
-      </Typography>
-      <Box sx={{ flexGrow: 1 }}>
+      </h2>
+      <div className="flex-grow">
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart data={chartData}>
             <CartesianGrid strokeDasharray="3 3" stroke="#444" />
             <XAxis dataKey="time" stroke="#888" />
-            <YAxis yAxisId="left" stroke="#ff9800" label={{ value: 'Price', angle: -90, position: 'insideLeft' }} />
+            <YAxis yAxisId="left" stroke="#f97316" label={{ value: 'Price', angle: -90, position: 'insideLeft' }} />
             <YAxis yAxisId="right" orientation="right" stroke="#82ca9d" label={{ value: 'Sentiment Volume', angle: 90, position: 'insideRight' }} />
             <Tooltip
                 contentStyle={{ backgroundColor: '#1e1e1e', border: '1px solid #444' }}
                 itemStyle={{ color: '#fff' }}
             />
             <Legend />
-            <Line yAxisId="left" type="monotone" dataKey="price" stroke="#ff9800" dot={false} />
+            <Line yAxisId="left" type="monotone" dataKey="price" stroke="#f97316" dot={false} />
             <Bar yAxisId="right" dataKey="sentimentVolume" barSize={20} fill="#82ca9d" opacity={0.5} />
           </ComposedChart>
         </ResponsiveContainer>
-      </Box>
-    </Paper>
+      </div>
+    </div>
   );
 };

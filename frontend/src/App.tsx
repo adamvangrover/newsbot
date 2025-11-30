@@ -1,39 +1,33 @@
-import MatrixView from './components/MatrixView';
-import ImpactGraph from './components/ImpactGraph';
-import ScenarioSimulator from './components/ScenarioSimulator';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
+import SystemStatus from './pages/SystemStatus';
+import Architecture from './pages/Architecture';
+import Showcase from './pages/Showcase';
+import About from './pages/About';
+import Performance from './pages/Performance';
+import ImpactAnalysis from './pages/ImpactAnalysis';
+import FederatedLearning from './pages/FederatedLearning';
 
 function App() {
   return (
-    <div className="min-h-screen bg-black text-gray-200 p-4 font-sans">
-      <header className="mb-6 border-b border-gray-800 pb-4">
-        <h1 className="text-3xl font-bold text-green-500 tracking-tighter">NEWSBOT NEXUS <span className="text-xs text-gray-500 font-normal">v2.0.1 [Synthetic Reality Engine Active]</span></h1>
-      </header>
-
-      <main className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-
-        {/* Left Column: Intelligence Feed */}
-        <section className="space-y-6">
-          <MatrixView />
-          <ScenarioSimulator />
-        </section>
-
-        {/* Right Column: Visualization */}
-        <section className="space-y-6">
-           <ImpactGraph />
-
-           <div className="bg-gray-900 border border-gray-700 p-4 rounded h-64 overflow-auto font-mono text-sm text-green-300">
-               <h3 className="text-white font-bold mb-2 border-b border-gray-700 pb-1">Agent Monologue</h3>
-               <p>[SYSTEM] Initializing Cognitive Core...</p>
-               <p>[SYSTEM] Connected to Synthetic Data Stream.</p>
-               <p>[AGENT] Analyzing correlation between Oil Prices and Transport Sector...</p>
-               <p>[AGENT] &gt; Detected anomaly in ticker TSLA.</p>
-               <p>[AGENT] &gt; Cross-referencing with news source ID 42.</p>
-               <p>[AGENT] &gt; Confidence Score: 0.87. Flagging as Signal.</p>
-           </div>
-        </section>
-
-      </main>
-    </div>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/status" element={<SystemStatus />} />
+          <Route path="/architecture" element={<Architecture />} />
+          <Route path="/showcase" element={<Showcase />} />
+          <Route path="/performance" element={<Performance />} />
+          <Route path="/impact" element={<ImpactAnalysis />} />
+          <Route path="/federated" element={<FederatedLearning />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 

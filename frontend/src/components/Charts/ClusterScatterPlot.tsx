@@ -8,10 +8,8 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-  ResponsiveContainer,
-  Cell
+  ResponsiveContainer
 } from 'recharts';
-import { Box, Typography, Paper } from '@mui/material';
 
 // Static topics for simulation
 const TOPICS = ['Earnings', 'Geopolitics', 'Mergers', 'Regulations', 'Product Launch'];
@@ -39,11 +37,11 @@ export const ClusterScatterPlot: React.FC = () => {
   }, []);
 
   return (
-    <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 400 }}>
-      <Typography component="h2" variant="h6" color="primary" gutterBottom>
+    <div className="bg-gray-900 border border-gray-800 p-4 rounded-lg flex flex-col h-[400px]">
+      <h2 className="text-xl font-semibold text-green-500 mb-4">
         News Clusters (Semantic Grouping)
-      </Typography>
-      <Box sx={{ flexGrow: 1 }}>
+      </h2>
+      <div className="flex-grow">
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart>
             <CartesianGrid strokeDasharray="3 3" stroke="#444" />
@@ -56,9 +54,9 @@ export const ClusterScatterPlot: React.FC = () => {
                     if (active && payload && payload.length) {
                         const data = payload[0].payload;
                         return (
-                            <div style={{ backgroundColor: '#1e1e1e', padding: '10px', border: '1px solid #444' }}>
-                                <p style={{color: '#fff'}}>{data.topic}</p>
-                                <p style={{color: '#ccc'}}>Impact: {data.z.toFixed(0)}</p>
+                            <div className="bg-gray-900 p-3 border border-gray-700 rounded shadow-lg text-sm">
+                                <p className="text-white font-bold">{data.topic}</p>
+                                <p className="text-gray-400">Impact: {data.z.toFixed(0)}</p>
                             </div>
                         );
                     }
@@ -76,7 +74,7 @@ export const ClusterScatterPlot: React.FC = () => {
             ))}
           </ScatterChart>
         </ResponsiveContainer>
-      </Box>
-    </Paper>
+      </div>
+    </div>
   );
 };

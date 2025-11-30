@@ -10,8 +10,7 @@ import {
   Legend,
   ResponsiveContainer
 } from 'recharts';
-import { MarketData } from '../../api/types';
-import { Box, Typography, Paper } from '@mui/material';
+import type { MarketData } from '../../api/types';
 
 interface PriceAnomalyChartProps {
   data: MarketData[];
@@ -34,11 +33,11 @@ export const PriceAnomalyChart: React.FC<PriceAnomalyChartProps> = ({ data, tick
   }, [data]);
 
   return (
-    <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 400 }}>
-      <Typography component="h2" variant="h6" color="primary" gutterBottom>
+    <div className="bg-gray-900 border border-gray-800 p-4 rounded-lg flex flex-col h-[400px]">
+      <h2 className="text-xl font-semibold text-green-500 mb-4">
         Early Warning Indicator ({ticker})
-      </Typography>
-      <Box sx={{ flexGrow: 1 }}>
+      </h2>
+      <div className="flex-grow">
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart data={processedData}>
             <CartesianGrid strokeDasharray="3 3" stroke="#444" />
@@ -52,7 +51,7 @@ export const PriceAnomalyChart: React.FC<PriceAnomalyChartProps> = ({ data, tick
             <Line
               type="monotone"
               dataKey="Close"
-              stroke="#ff9800"
+              stroke="#f97316"
               dot={false}
               strokeWidth={2}
               name="Price"
@@ -60,7 +59,7 @@ export const PriceAnomalyChart: React.FC<PriceAnomalyChartProps> = ({ data, tick
             <Scatter name="Anomaly" dataKey="anomaly" fill="red" shape="circle" />
           </ComposedChart>
         </ResponsiveContainer>
-      </Box>
-    </Paper>
+      </div>
+    </div>
   );
 };

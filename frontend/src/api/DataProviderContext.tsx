@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useMemo } from 'react';
-import { IDataProvider } from './types';
+import type { IDataProvider } from './types';
 import { StaticProvider } from './StaticProvider';
 import { LiveProvider } from './LiveProvider';
 

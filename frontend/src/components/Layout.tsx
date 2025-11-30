@@ -1,140 +1,119 @@
 import React, { useState } from 'react';
-import { Box, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, AppBar, Toolbar, Typography, IconButton, Switch, FormControlLabel } from '@mui/material';
-import { useNavigate, useLocation } from 'react-router-dom';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import ShowChartIcon from '@mui/icons-material/ShowChart';
-import HubIcon from '@mui/icons-material/Hub';
-import SettingsIcon from '@mui/icons-material/Settings';
-import MenuIcon from '@mui/icons-material/Menu';
-import { useDataProvider } from '../api/DataProviderContext';
-import { SettingsModal } from './SettingsModal';
-
-const drawerWidth = 240;
+import { Link, useLocation } from 'react-router-dom';
+import {
+  LayoutDashboard,
+  Activity,
+  Database,
+  Network,
+  Info,
+  Cpu,
+  Menu,
+  X,
+  Server,
+  Layers
+} from 'lucide-react';
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
-export const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const navigate = useNavigate();
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const { mode, setMode } = useDataProvider();
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [settingsOpen, setSettingsOpen] = useState(false);
 
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-
-  const menuItems = [
-    { text: 'Dashboard', icon: <DashboardIcon />, path: '/' },
-    { text: 'Performance', icon: <ShowChartIcon />, path: '/performance' },
-    { text: 'Federated Learning', icon: <HubIcon />, path: '/federated' },
-    { text: 'Knowledge Graph', icon: <HubIcon />, path: '/knowledge-graph' },
+  const navigation = [
+    { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
+    { name: 'System Status', href: '/status', icon: Activity },
+    { name: 'Performance', href: '/performance', icon: Layers },
+    { name: 'Synthetic Data', href: '/showcase', icon: Database },
+    { name: 'Impact Analysis', href: '/impact', icon: Network },
+    { name: 'Federated Learning', href: '/federated', icon: Server },
+    { name: 'Architecture', href: '/architecture', icon: Cpu },
+    { name: 'About', href: '/about', icon: Info },
   ];
 
-  const drawer = (
-    <div>
-      <Toolbar>
-        <Typography variant="h6" noWrap component="div" sx={{ color: 'primary.main' }}>
-          NewsBot Nexus
-        </Typography>
-      </Toolbar>
-      <List>
-        {menuItems.map((item) => (
-          <ListItem key={item.text} disablePadding>
-            <ListItemButton
-              selected={location.pathname === item.path}
-              onClick={() => navigate(item.path)}
-            >
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </div>
-  );
+  const isActive = (path: string) => location.pathname === path;
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <AppBar
-        position="fixed"
-        sx={{
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-          ml: { sm: `${drawerWidth}px` },
-          bgcolor: 'background.paper',
-          color: 'text.primary',
-          backgroundImage: 'none',
-          borderBottom: '1px solid rgba(255, 255, 255, 0.12)'
-        }}
-      >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-            {menuItems.find(item => item.path === location.pathname)?.text || 'NewsBot'}
-          </Typography>
-          <FormControlLabel
-            control={
-              <Switch
-                checked={mode === 'live'}
-                onChange={(e) => setMode(e.target.checked ? 'live' : 'demo')}
-                color="primary"
-              />
-            }
-            label={mode === 'live' ? "Live Mode" : "Demo Mode"}
-          />
-          <IconButton color="inherit" onClick={() => setSettingsOpen(true)}>
-            <SettingsIcon />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-      <SettingsModal open={settingsOpen} onClose={() => setSettingsOpen(false)} />
-      <Box
-        component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-        aria-label="mailbox folders"
-      >
-        <Drawer
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-          {drawer}
-        </Drawer>
-        <Drawer
-          variant="permanent"
-          sx={{
-            display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-          open
-        >
-          {drawer}
-        </Drawer>
-      </Box>
-      <Box
-        component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
-      >
-        <Toolbar />
+    <div className="min-h-screen bg-black text-gray-200 font-sans flex">
+      {/* Sidebar for Desktop */}
+      <div className="hidden md:flex flex-col w-64 bg-gray-900 border-r border-gray-800 fixed h-full z-10">
+        <div className="p-6 border-b border-gray-800">
+           <Link to="/" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-green-500 rounded-sm flex items-center justify-center">
+                  <span className="text-black font-bold text-xl">N</span>
+              </div>
+              <span className="text-xl font-bold text-white tracking-tight">NewsBot Nexus</span>
+           </Link>
+        </div>
+
+        <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
+          {navigation.map((item) => (
+            <Link
+              key={item.name}
+              to={item.href}
+              className={`flex items-center px-4 py-3 text-sm font-medium rounded-md transition-colors ${
+                isActive(item.href)
+                  ? 'bg-green-900/20 text-green-400 border border-green-900/50'
+                  : 'text-gray-400 hover:bg-gray-800 hover:text-white'
+              }`}
+            >
+              <item.icon className="mr-3 h-5 w-5" />
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="p-4 border-t border-gray-800">
+            <div className="bg-gray-800/50 p-3 rounded text-xs text-gray-500">
+                <p>Status: <span className="text-green-500">● Online</span></p>
+                <p>Version: 2.0.1</p>
+            </div>
+        </div>
+      </div>
+
+      {/* Mobile Header */}
+      <div className="md:hidden fixed top-0 w-full bg-gray-900 border-b border-gray-800 z-20 px-4 py-3 flex items-center justify-between">
+          <Link to="/" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-green-500 rounded-sm flex items-center justify-center">
+                  <span className="text-black font-bold text-xl">N</span>
+              </div>
+              <span className="text-lg font-bold text-white">NewsBot Nexus</span>
+           </Link>
+           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-400 hover:text-white">
+               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+           </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+          <div className="md:hidden fixed inset-0 z-10 bg-black pt-16">
+              <nav className="p-4 space-y-2">
+                  {navigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`flex items-center px-4 py-3 text-base font-medium rounded-md ${
+                        isActive(item.href)
+                          ? 'bg-green-900/20 text-green-400 border border-green-900/50'
+                          : 'text-gray-400 hover:bg-gray-800 hover:text-white'
+                      }`}
+                    >
+                      <item.icon className="mr-4 h-6 w-6" />
+                      {item.name}
+                    </Link>
+                  ))}
+              </nav>
+          </div>
+      )}
+
+      {/* Main Content */}
+      <div className="flex-1 md:ml-64 p-4 md:p-8 pt-20 md:pt-8 w-full overflow-hidden">
         {children}
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 };
+
+export default Layout;
