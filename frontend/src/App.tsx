@@ -13,6 +13,8 @@ import SignalIntelligence from './pages/SignalIntelligence';
 import Resources from './pages/Resources';
 import Plugins from './pages/Plugins';
 import RepoExplorer from './pages/RepoExplorer';
+import FutureProjections from './pages/FutureProjections';
+import AgentsOrchestrator from './pages/AgentsOrchestrator';
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
           <Route path="/showcase" element={<Showcase />} />
           <Route path="/performance" element={<Performance />} />
           <Route path="/impact" element={<ImpactAnalysis />} />
+          <Route path="/projections" element={<FutureProjections />} />
+          <Route path="/agents" element={<AgentsOrchestrator />} />
           <Route path="/federated" element={<FederatedLearning />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<Navigate to="/" replace />} />

@@ -13,7 +13,9 @@ import {
   Radio,
   Puzzle,
   Box,
-  Code
+  Code,
+  GitBranch,
+  Bot
 } from 'lucide-react';
 
 interface LayoutProps {
@@ -33,6 +35,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { name: 'Plugins', href: '/plugins', icon: Puzzle },
     { name: 'Resources', href: '/resources', icon: Box },
     { name: 'Impact Analysis', href: '/impact', icon: Network },
+    { name: 'Evolutionary Projections', href: '/projections', icon: GitBranch },
+    { name: 'Agent Orchestrator', href: '/agents', icon: Bot },
     { name: 'Architecture', href: '/architecture', icon: Cpu },
     { name: 'System Status', href: '/status', icon: Activity },
     { name: 'About', href: '/about', icon: Info },
