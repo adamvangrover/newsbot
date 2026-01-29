@@ -1,6 +1,10 @@
 
-> newsbot-frontend@0.1.0 preview
-> vite preview --port 4173
+> frontend@0.0.0 preview
+> vite preview
 
   ➜  Local:   http://localhost:4173/
   ➜  Network: use --host to expose
+1:04:50 AM [vite] http proxy error: /api/plugins
+AggregateError [ECONNREFUSED]:
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
