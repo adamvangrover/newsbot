@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
-from app.api.endpoints import news_analysis, reports, analysis, reasoning, system, federated, plugins
+from app.api.endpoints import news_analysis, reports, analysis, reasoning, system, federated, plugins, cognitive
 import os
 import asyncio
 from app.core.async_utils import task_manager
@@ -36,6 +36,7 @@ app.include_router(reasoning.router, prefix="/api/reasoning", tags=["reasoning"]
 app.include_router(system.router, prefix="/api/system", tags=["system"])
 app.include_router(federated.router, prefix="/api/federated", tags=["federated"])
 app.include_router(plugins.router, prefix="/api/plugins", tags=["plugins"])
+app.include_router(cognitive.router, prefix="/api/cognitive", tags=["cognitive"])
 
 # Serve React Frontend
 # 1. Mount assets

@@ -4,6 +4,8 @@ from typing import Dict, Any, List
 import logging
 from app.core.event_bus import event_bus
 from app.core.async_utils import task_manager
+from semantic_narrative_library.cognitive.memory import MemoryStore
+from semantic_narrative_library.cognitive.planner import CognitivePlanner
 
 logger = logging.getLogger(__name__)
 
@@ -13,6 +15,8 @@ class AsyncAgent(abc.ABC):
         self.role = role
         self.is_running = False
         self.task_id = None
+        self.memory = MemoryStore()
+        self.planner = CognitivePlanner()
 
     async def start(self):
         self.is_running = True
@@ -49,10 +53,12 @@ class SentimentAgent(AsyncAgent):
         # Randomly publish an insight
         import random
         if random.random() < 0.2:
+            msg = "Bullish sentiment detected in Tech sector."
+            self.memory.add(msg, {"type": "insight"})
             await event_bus.publish("market_insight", {
                 "source": self.name,
                 "type": "Sentiment",
-                "content": "Bullish sentiment detected in Tech sector.",
+                "content": msg,
                 "timestamp": asyncio.get_event_loop().time()
             })
 
@@ -61,9 +67,11 @@ class RiskAgent(AsyncAgent):
         await asyncio.sleep(0.1)
         import random
         if random.random() < 0.1:
+             msg = "Volatility spike detected in Asian markets."
+             self.memory.add(msg, {"type": "alert"})
              await event_bus.publish("risk_alert", {
                 "source": self.name,
                 "type": "Volatility",
-                "content": "Volatility spike detected in Asian markets.",
+                "content": msg,
                 "timestamp": asyncio.get_event_loop().time()
             })
